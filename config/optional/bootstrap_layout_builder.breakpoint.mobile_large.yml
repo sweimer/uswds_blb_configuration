@@ -1,0 +1,7 @@
+langcode: en
+status: 0
+dependencies: {  }
+id: mobile_large
+label: 'Mobile Large'
+base_class: 'mobile-lg:grid-col'
+weight: 0

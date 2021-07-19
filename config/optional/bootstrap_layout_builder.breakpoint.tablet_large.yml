@@ -1,0 +1,7 @@
+langcode: en
+status: 0
+dependencies: {  }
+id: tablet_large
+label: 'Tablet Large'
+base_class: 'tablet-lg:grid-col'
+weight: 0

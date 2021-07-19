@@ -1,0 +1,3079 @@
+.text-base-lightest {
+  color: #f0f0f0 !important;
+}
+
+.ui-dialog-off-canvas .text-base-lightest {
+  color: #f0f0f0 !important;
+}
+
+.text-base-lighter {
+  color: #dfe1e2 !important;
+}
+
+.ui-dialog-off-canvas .text-base-lighter {
+  color: #dfe1e2 !important;
+}
+
+.text-base-light {
+  color: #a9aeb1 !important;
+}
+
+.ui-dialog-off-canvas .text-base-light {
+  color: #a9aeb1 !important;
+}
+
+.text-base {
+  color: #71767a !important;
+}
+
+.ui-dialog-off-canvas .text-base {
+  color: #71767a !important;
+}
+
+.text-base-dark {
+  color: #565c65 !important;
+}
+
+.ui-dialog-off-canvas .text-base-dark {
+  color: #565c65 !important;
+}
+
+.text-base-darker {
+  color: #3d4551 !important;
+}
+
+.ui-dialog-off-canvas .text-base-darker {
+  color: #3d4551 !important;
+}
+
+.text-base-darkest {
+  color: #1b1b1b !important;
+}
+
+.ui-dialog-off-canvas .text-base-darkest {
+  color: #1b1b1b !important;
+}
+
+.text-ink {
+  color: #1b1b1b !important;
+}
+
+.ui-dialog-off-canvas .text-ink {
+  color: #1b1b1b !important;
+}
+
+.text-primary-lighter {
+  color: #d9e8f6 !important;
+}
+
+.ui-dialog-off-canvas .text-primary-lighter {
+  color: #d9e8f6 !important;
+}
+
+.text-primary-light {
+  color: #73b3e7 !important;
+}
+
+.ui-dialog-off-canvas .text-primary-light {
+  color: #73b3e7 !important;
+}
+
+.text-primary {
+  color: #005ea2 !important;
+}
+
+.ui-dialog-off-canvas .text-primary {
+  color: #005ea2 !important;
+}
+
+.text-primary-vivid {
+  color: #0050d8 !important;
+}
+
+.ui-dialog-off-canvas .text-primary-vivid {
+  color: #0050d8 !important;
+}
+
+.text-primary-dark {
+  color: #1a4480 !important;
+}
+
+.ui-dialog-off-canvas .text-primary-dark {
+  color: #1a4480 !important;
+}
+
+.text-primary-darker {
+  color: #162e51 !important;
+}
+
+.ui-dialog-off-canvas .text-primary-darker {
+  color: #162e51 !important;
+}
+
+.text-secondary-lighter {
+  color: #f8dfe2 !important;
+}
+
+.ui-dialog-off-canvas .text-secondary-lighter {
+  color: #f8dfe2 !important;
+}
+
+.text-secondary-light {
+  color: #f2938c !important;
+}
+
+.ui-dialog-off-canvas .text-secondary-light {
+  color: #f2938c !important;
+}
+
+.text-secondary {
+  color: #d83933 !important;
+}
+
+.ui-dialog-off-canvas .text-secondary {
+  color: #d83933 !important;
+}
+
+.text-secondary-vivid {
+  color: #e41d3d !important;
+}
+
+.ui-dialog-off-canvas .text-secondary-vivid {
+  color: #e41d3d !important;
+}
+
+.text-secondary-dark {
+  color: #b50909 !important;
+}
+
+.ui-dialog-off-canvas .text-secondary-dark {
+  color: #b50909 !important;
+}
+
+.text-secondary-darker {
+  color: #8b0a03 !important;
+}
+
+.ui-dialog-off-canvas .text-secondary-darker {
+  color: #8b0a03 !important;
+}
+
+.text-accent-cool-lighter {
+  color: #e1f3f8 !important;
+}
+
+.ui-dialog-off-canvas .text-accent-cool-lighter {
+  color: #e1f3f8 !important;
+}
+
+.text-accent-cool-light {
+  color: #97d4ea !important;
+}
+
+.ui-dialog-off-canvas .text-accent-cool-light {
+  color: #97d4ea !important;
+}
+
+.text-accent-cool {
+  color: #00bde3 !important;
+}
+
+.ui-dialog-off-canvas .text-accent-cool {
+  color: #00bde3 !important;
+}
+
+.text-accent-cool-dark {
+  color: #28a0cb !important;
+}
+
+.ui-dialog-off-canvas .text-accent-cool-dark {
+  color: #28a0cb !important;
+}
+
+.text-accent-cool-darker {
+  color: #07648d !important;
+}
+
+.ui-dialog-off-canvas .text-accent-cool-darker {
+  color: #07648d !important;
+}
+
+.text-accent-warm-lighter {
+  color: #f2e4d4 !important;
+}
+
+.ui-dialog-off-canvas .text-accent-warm-lighter {
+  color: #f2e4d4 !important;
+}
+
+.text-accent-warm-light {
+  color: #ffbc78 !important;
+}
+
+.ui-dialog-off-canvas .text-accent-warm-light {
+  color: #ffbc78 !important;
+}
+
+.text-accent-warm {
+  color: #fa9441 !important;
+}
+
+.ui-dialog-off-canvas .text-accent-warm {
+  color: #fa9441 !important;
+}
+
+.text-accent-warm-dark {
+  color: #c05600 !important;
+}
+
+.ui-dialog-off-canvas .text-accent-warm-dark {
+  color: #c05600 !important;
+}
+
+.text-accent-warm-darker {
+  color: #775540 !important;
+}
+
+.ui-dialog-off-canvas .text-accent-warm-darker {
+  color: #775540 !important;
+}
+
+.text-emergency {
+  color: #9c3d10 !important;
+}
+
+.ui-dialog-off-canvas .text-emergency {
+  color: #9c3d10 !important;
+}
+
+.text-emergency-dark {
+  color: #332d29 !important;
+}
+
+.ui-dialog-off-canvas .text-emergency-dark {
+  color: #332d29 !important;
+}
+
+.text-red {
+  color: #e52207 !important;
+}
+
+.ui-dialog-off-canvas .text-red {
+  color: #e52207 !important;
+}
+
+.text-orange {
+  color: #e66f0e !important;
+}
+
+.ui-dialog-off-canvas .text-orange {
+  color: #e66f0e !important;
+}
+
+.text-gold {
+  color: #ffbe2e !important;
+}
+
+.ui-dialog-off-canvas .text-gold {
+  color: #ffbe2e !important;
+}
+
+.text-yellow {
+  color: #fee685 !important;
+}
+
+.ui-dialog-off-canvas .text-yellow {
+  color: #fee685 !important;
+}
+
+.text-green {
+  color: #538200 !important;
+}
+
+.ui-dialog-off-canvas .text-green {
+  color: #538200 !important;
+}
+
+.text-mint {
+  color: #04c585 !important;
+}
+
+.ui-dialog-off-canvas .text-mint {
+  color: #04c585 !important;
+}
+
+.text-cyan {
+  color: #009ec1 !important;
+}
+
+.ui-dialog-off-canvas .text-cyan {
+  color: #009ec1 !important;
+}
+
+.text-blue {
+  color: #0076d6 !important;
+}
+
+.ui-dialog-off-canvas .text-blue {
+  color: #0076d6 !important;
+}
+
+.text-indigo {
+  color: #676cc8 !important;
+}
+
+.ui-dialog-off-canvas .text-indigo {
+  color: #676cc8 !important;
+}
+
+.text-violet {
+  color: #8168b3 !important;
+}
+
+.ui-dialog-off-canvas .text-violet {
+  color: #8168b3 !important;
+}
+
+.text-magenta {
+  color: #d72d79 !important;
+}
+
+.ui-dialog-off-canvas .text-magenta {
+  color: #d72d79 !important;
+}
+
+@media screen and (max-width: 160px) {
+  .text-card-base-lightest {
+    color: #f0f0f0 !important;
+  }
+  .text-card-base-lighter {
+    color: #dfe1e2 !important;
+  }
+  .text-card-base-light {
+    color: #a9aeb1 !important;
+  }
+  .text-card-base {
+    color: #71767a !important;
+  }
+  .text-card-base-dark {
+    color: #565c65 !important;
+  }
+  .text-card-base-darker {
+    color: #3d4551 !important;
+  }
+  .text-card-base-darkest {
+    color: #1b1b1b !important;
+  }
+  .text-card-ink {
+    color: #1b1b1b !important;
+  }
+  .text-card-primary-lighter {
+    color: #d9e8f6 !important;
+  }
+  .text-card-primary-light {
+    color: #73b3e7 !important;
+  }
+  .text-card-primary {
+    color: #005ea2 !important;
+  }
+  .text-card-primary-vivid {
+    color: #0050d8 !important;
+  }
+  .text-card-primary-dark {
+    color: #1a4480 !important;
+  }
+  .text-card-primary-darker {
+    color: #162e51 !important;
+  }
+  .text-card-secondary-lighter {
+    color: #f8dfe2 !important;
+  }
+  .text-card-secondary-light {
+    color: #f2938c !important;
+  }
+  .text-card-secondary {
+    color: #d83933 !important;
+  }
+  .text-card-secondary-vivid {
+    color: #e41d3d !important;
+  }
+  .text-card-secondary-dark {
+    color: #b50909 !important;
+  }
+  .text-card-secondary-darker {
+    color: #8b0a03 !important;
+  }
+  .text-card-accent-cool-lighter {
+    color: #e1f3f8 !important;
+  }
+  .text-card-accent-cool-light {
+    color: #97d4ea !important;
+  }
+  .text-card-accent-cool {
+    color: #00bde3 !important;
+  }
+  .text-card-accent-cool-dark {
+    color: #28a0cb !important;
+  }
+  .text-card-accent-cool-darker {
+    color: #07648d !important;
+  }
+  .text-card-accent-warm-lighter {
+    color: #f2e4d4 !important;
+  }
+  .text-card-accent-warm-light {
+    color: #ffbc78 !important;
+  }
+  .text-card-accent-warm {
+    color: #fa9441 !important;
+  }
+  .text-card-accent-warm-dark {
+    color: #c05600 !important;
+  }
+  .text-card-accent-warm-darker {
+    color: #775540 !important;
+  }
+  .text-card-emergency {
+    color: #9c3d10 !important;
+  }
+  .text-card-emergency-dark {
+    color: #332d29 !important;
+  }
+  .text-card-red {
+    color: #e52207 !important;
+  }
+  .text-card-orange {
+    color: #e66f0e !important;
+  }
+  .text-card-gold {
+    color: #ffbe2e !important;
+  }
+  .text-card-yellow {
+    color: #fee685 !important;
+  }
+  .text-card-green {
+    color: #538200 !important;
+  }
+  .text-card-mint {
+    color: #04c585 !important;
+  }
+  .text-card-cyan {
+    color: #009ec1 !important;
+  }
+  .text-card-blue {
+    color: #0076d6 !important;
+  }
+  .text-card-indigo {
+    color: #676cc8 !important;
+  }
+  .text-card-violet {
+    color: #8168b3 !important;
+  }
+  .text-card-magenta {
+    color: #d72d79 !important;
+  }
+}
+
+.ui-dialog-off-canvas .text-card-base-lightest {
+  color: #f0f0f0 !important;
+}
+
+.ui-dialog-off-canvas .text-card-base-lighter {
+  color: #dfe1e2 !important;
+}
+
+.ui-dialog-off-canvas .text-card-base-light {
+  color: #a9aeb1 !important;
+}
+
+.ui-dialog-off-canvas .text-card-base {
+  color: #71767a !important;
+}
+
+.ui-dialog-off-canvas .text-card-base-dark {
+  color: #565c65 !important;
+}
+
+.ui-dialog-off-canvas .text-card-base-darker {
+  color: #3d4551 !important;
+}
+
+.ui-dialog-off-canvas .text-card-base-darkest {
+  color: #1b1b1b !important;
+}
+
+.ui-dialog-off-canvas .text-card-ink {
+  color: #1b1b1b !important;
+}
+
+.ui-dialog-off-canvas .text-card-primary-lighter {
+  color: #d9e8f6 !important;
+}
+
+.ui-dialog-off-canvas .text-card-primary-light {
+  color: #73b3e7 !important;
+}
+
+.ui-dialog-off-canvas .text-card-primary {
+  color: #005ea2 !important;
+}
+
+.ui-dialog-off-canvas .text-card-primary-vivid {
+  color: #0050d8 !important;
+}
+
+.ui-dialog-off-canvas .text-card-primary-dark {
+  color: #1a4480 !important;
+}
+
+.ui-dialog-off-canvas .text-card-primary-darker {
+  color: #162e51 !important;
+}
+
+.ui-dialog-off-canvas .text-card-secondary-lighter {
+  color: #f8dfe2 !important;
+}
+
+.ui-dialog-off-canvas .text-card-secondary-light {
+  color: #f2938c !important;
+}
+
+.ui-dialog-off-canvas .text-card-secondary {
+  color: #d83933 !important;
+}
+
+.ui-dialog-off-canvas .text-card-secondary-vivid {
+  color: #e41d3d !important;
+}
+
+.ui-dialog-off-canvas .text-card-secondary-dark {
+  color: #b50909 !important;
+}
+
+.ui-dialog-off-canvas .text-card-secondary-darker {
+  color: #8b0a03 !important;
+}
+
+.ui-dialog-off-canvas .text-card-accent-cool-lighter {
+  color: #e1f3f8 !important;
+}
+
+.ui-dialog-off-canvas .text-card-accent-cool-light {
+  color: #97d4ea !important;
+}
+
+.ui-dialog-off-canvas .text-card-accent-cool {
+  color: #00bde3 !important;
+}
+
+.ui-dialog-off-canvas .text-card-accent-cool-dark {
+  color: #28a0cb !important;
+}
+
+.ui-dialog-off-canvas .text-card-accent-cool-darker {
+  color: #07648d !important;
+}
+
+.ui-dialog-off-canvas .text-card-accent-warm-lighter {
+  color: #f2e4d4 !important;
+}
+
+.ui-dialog-off-canvas .text-card-accent-warm-light {
+  color: #ffbc78 !important;
+}
+
+.ui-dialog-off-canvas .text-card-accent-warm {
+  color: #fa9441 !important;
+}
+
+.ui-dialog-off-canvas .text-card-accent-warm-dark {
+  color: #c05600 !important;
+}
+
+.ui-dialog-off-canvas .text-card-accent-warm-darker {
+  color: #775540 !important;
+}
+
+.ui-dialog-off-canvas .text-card-emergency {
+  color: #9c3d10 !important;
+}
+
+.ui-dialog-off-canvas .text-card-emergency-dark {
+  color: #332d29 !important;
+}
+
+.ui-dialog-off-canvas .text-card-red {
+  color: #e52207 !important;
+}
+
+.ui-dialog-off-canvas .text-card-orange {
+  color: #e66f0e !important;
+}
+
+.ui-dialog-off-canvas .text-card-gold {
+  color: #ffbe2e !important;
+}
+
+.ui-dialog-off-canvas .text-card-yellow {
+  color: #fee685 !important;
+}
+
+.ui-dialog-off-canvas .text-card-green {
+  color: #538200 !important;
+}
+
+.ui-dialog-off-canvas .text-card-mint {
+  color: #04c585 !important;
+}
+
+.ui-dialog-off-canvas .text-card-cyan {
+  color: #009ec1 !important;
+}
+
+.ui-dialog-off-canvas .text-card-blue {
+  color: #0076d6 !important;
+}
+
+.ui-dialog-off-canvas .text-card-indigo {
+  color: #676cc8 !important;
+}
+
+.ui-dialog-off-canvas .text-card-violet {
+  color: #8168b3 !important;
+}
+
+.ui-dialog-off-canvas .text-card-magenta {
+  color: #d72d79 !important;
+}
+
+@media (min-width: 160px) and (max-width: 240px) {
+  .text-card-lg-base-lightest {
+    color: #f0f0f0 !important;
+  }
+  .text-card-lg-base-lighter {
+    color: #dfe1e2 !important;
+  }
+  .text-card-lg-base-light {
+    color: #a9aeb1 !important;
+  }
+  .text-card-lg-base {
+    color: #71767a !important;
+  }
+  .text-card-lg-base-dark {
+    color: #565c65 !important;
+  }
+  .text-card-lg-base-darker {
+    color: #3d4551 !important;
+  }
+  .text-card-lg-base-darkest {
+    color: #1b1b1b !important;
+  }
+  .text-card-lg-ink {
+    color: #1b1b1b !important;
+  }
+  .text-card-lg-primary-lighter {
+    color: #d9e8f6 !important;
+  }
+  .text-card-lg-primary-light {
+    color: #73b3e7 !important;
+  }
+  .text-card-lg-primary {
+    color: #005ea2 !important;
+  }
+  .text-card-lg-primary-vivid {
+    color: #0050d8 !important;
+  }
+  .text-card-lg-primary-dark {
+    color: #1a4480 !important;
+  }
+  .text-card-lg-primary-darker {
+    color: #162e51 !important;
+  }
+  .text-card-lg-secondary-lighter {
+    color: #f8dfe2 !important;
+  }
+  .text-card-lg-secondary-light {
+    color: #f2938c !important;
+  }
+  .text-card-lg-secondary {
+    color: #d83933 !important;
+  }
+  .text-card-lg-secondary-vivid {
+    color: #e41d3d !important;
+  }
+  .text-card-lg-secondary-dark {
+    color: #b50909 !important;
+  }
+  .text-card-lg-secondary-darker {
+    color: #8b0a03 !important;
+  }
+  .text-card-lg-accent-cool-lighter {
+    color: #e1f3f8 !important;
+  }
+  .text-card-lg-accent-cool-light {
+    color: #97d4ea !important;
+  }
+  .text-card-lg-accent-cool {
+    color: #00bde3 !important;
+  }
+  .text-card-lg-accent-cool-dark {
+    color: #28a0cb !important;
+  }
+  .text-card-lg-accent-cool-darker {
+    color: #07648d !important;
+  }
+  .text-card-lg-accent-warm-lighter {
+    color: #f2e4d4 !important;
+  }
+  .text-card-lg-accent-warm-light {
+    color: #ffbc78 !important;
+  }
+  .text-card-lg-accent-warm {
+    color: #fa9441 !important;
+  }
+  .text-card-lg-accent-warm-dark {
+    color: #c05600 !important;
+  }
+  .text-card-lg-accent-warm-darker {
+    color: #775540 !important;
+  }
+  .text-card-lg-emergency {
+    color: #9c3d10 !important;
+  }
+  .text-card-lg-emergency-dark {
+    color: #332d29 !important;
+  }
+  .text-card-lg-red {
+    color: #e52207 !important;
+  }
+  .text-card-lg-orange {
+    color: #e66f0e !important;
+  }
+  .text-card-lg-gold {
+    color: #ffbe2e !important;
+  }
+  .text-card-lg-yellow {
+    color: #fee685 !important;
+  }
+  .text-card-lg-green {
+    color: #538200 !important;
+  }
+  .text-card-lg-mint {
+    color: #04c585 !important;
+  }
+  .text-card-lg-cyan {
+    color: #009ec1 !important;
+  }
+  .text-card-lg-blue {
+    color: #0076d6 !important;
+  }
+  .text-card-lg-indigo {
+    color: #676cc8 !important;
+  }
+  .text-card-lg-violet {
+    color: #8168b3 !important;
+  }
+  .text-card-lg-magenta {
+    color: #d72d79 !important;
+  }
+}
+
+.ui-dialog-off-canvas .text-card-lg-base-lightest {
+  color: #f0f0f0 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-base-lighter {
+  color: #dfe1e2 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-base-light {
+  color: #a9aeb1 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-base {
+  color: #71767a !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-base-dark {
+  color: #565c65 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-base-darker {
+  color: #3d4551 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-base-darkest {
+  color: #1b1b1b !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-ink {
+  color: #1b1b1b !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-primary-lighter {
+  color: #d9e8f6 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-primary-light {
+  color: #73b3e7 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-primary {
+  color: #005ea2 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-primary-vivid {
+  color: #0050d8 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-primary-dark {
+  color: #1a4480 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-primary-darker {
+  color: #162e51 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-secondary-lighter {
+  color: #f8dfe2 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-secondary-light {
+  color: #f2938c !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-secondary {
+  color: #d83933 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-secondary-vivid {
+  color: #e41d3d !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-secondary-dark {
+  color: #b50909 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-secondary-darker {
+  color: #8b0a03 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-accent-cool-lighter {
+  color: #e1f3f8 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-accent-cool-light {
+  color: #97d4ea !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-accent-cool {
+  color: #00bde3 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-accent-cool-dark {
+  color: #28a0cb !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-accent-cool-darker {
+  color: #07648d !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-accent-warm-lighter {
+  color: #f2e4d4 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-accent-warm-light {
+  color: #ffbc78 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-accent-warm {
+  color: #fa9441 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-accent-warm-dark {
+  color: #c05600 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-accent-warm-darker {
+  color: #775540 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-emergency {
+  color: #9c3d10 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-emergency-dark {
+  color: #332d29 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-red {
+  color: #e52207 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-orange {
+  color: #e66f0e !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-gold {
+  color: #ffbe2e !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-yellow {
+  color: #fee685 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-green {
+  color: #538200 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-mint {
+  color: #04c585 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-cyan {
+  color: #009ec1 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-blue {
+  color: #0076d6 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-indigo {
+  color: #676cc8 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-violet {
+  color: #8168b3 !important;
+}
+
+.ui-dialog-off-canvas .text-card-lg-magenta {
+  color: #d72d79 !important;
+}
+
+@media (min-width: 240px) and (max-width: 320px) {
+  .text-mobile-base-lightest {
+    color: #f0f0f0 !important;
+  }
+  .text-mobile-base-lighter {
+    color: #dfe1e2 !important;
+  }
+  .text-mobile-base-light {
+    color: #a9aeb1 !important;
+  }
+  .text-mobile-base {
+    color: #71767a !important;
+  }
+  .text-mobile-base-dark {
+    color: #565c65 !important;
+  }
+  .text-mobile-base-darker {
+    color: #3d4551 !important;
+  }
+  .text-mobile-base-darkest {
+    color: #1b1b1b !important;
+  }
+  .text-mobile-ink {
+    color: #1b1b1b !important;
+  }
+  .text-mobile-primary-lighter {
+    color: #d9e8f6 !important;
+  }
+  .text-mobile-primary-light {
+    color: #73b3e7 !important;
+  }
+  .text-mobile-primary {
+    color: #005ea2 !important;
+  }
+  .text-mobile-primary-vivid {
+    color: #0050d8 !important;
+  }
+  .text-mobile-primary-dark {
+    color: #1a4480 !important;
+  }
+  .text-mobile-primary-darker {
+    color: #162e51 !important;
+  }
+  .text-mobile-secondary-lighter {
+    color: #f8dfe2 !important;
+  }
+  .text-mobile-secondary-light {
+    color: #f2938c !important;
+  }
+  .text-mobile-secondary {
+    color: #d83933 !important;
+  }
+  .text-mobile-secondary-vivid {
+    color: #e41d3d !important;
+  }
+  .text-mobile-secondary-dark {
+    color: #b50909 !important;
+  }
+  .text-mobile-secondary-darker {
+    color: #8b0a03 !important;
+  }
+  .text-mobile-accent-cool-lighter {
+    color: #e1f3f8 !important;
+  }
+  .text-mobile-accent-cool-light {
+    color: #97d4ea !important;
+  }
+  .text-mobile-accent-cool {
+    color: #00bde3 !important;
+  }
+  .text-mobile-accent-cool-dark {
+    color: #28a0cb !important;
+  }
+  .text-mobile-accent-cool-darker {
+    color: #07648d !important;
+  }
+  .text-mobile-accent-warm-lighter {
+    color: #f2e4d4 !important;
+  }
+  .text-mobile-accent-warm-light {
+    color: #ffbc78 !important;
+  }
+  .text-mobile-accent-warm {
+    color: #fa9441 !important;
+  }
+  .text-mobile-accent-warm-dark {
+    color: #c05600 !important;
+  }
+  .text-mobile-accent-warm-darker {
+    color: #775540 !important;
+  }
+  .text-mobile-emergency {
+    color: #9c3d10 !important;
+  }
+  .text-mobile-emergency-dark {
+    color: #332d29 !important;
+  }
+  .text-mobile-red {
+    color: #e52207 !important;
+  }
+  .text-mobile-orange {
+    color: #e66f0e !important;
+  }
+  .text-mobile-gold {
+    color: #ffbe2e !important;
+  }
+  .text-mobile-yellow {
+    color: #fee685 !important;
+  }
+  .text-mobile-green {
+    color: #538200 !important;
+  }
+  .text-mobile-mint {
+    color: #04c585 !important;
+  }
+  .text-mobile-cyan {
+    color: #009ec1 !important;
+  }
+  .text-mobile-blue {
+    color: #0076d6 !important;
+  }
+  .text-mobile-indigo {
+    color: #676cc8 !important;
+  }
+  .text-mobile-violet {
+    color: #8168b3 !important;
+  }
+  .text-mobile-magenta {
+    color: #d72d79 !important;
+  }
+}
+
+.ui-dialog-off-canvas .text-mobile-base-lightest {
+  color: #f0f0f0 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-base-lighter {
+  color: #dfe1e2 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-base-light {
+  color: #a9aeb1 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-base {
+  color: #71767a !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-base-dark {
+  color: #565c65 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-base-darker {
+  color: #3d4551 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-base-darkest {
+  color: #1b1b1b !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-ink {
+  color: #1b1b1b !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-primary-lighter {
+  color: #d9e8f6 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-primary-light {
+  color: #73b3e7 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-primary {
+  color: #005ea2 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-primary-vivid {
+  color: #0050d8 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-primary-dark {
+  color: #1a4480 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-primary-darker {
+  color: #162e51 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-secondary-lighter {
+  color: #f8dfe2 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-secondary-light {
+  color: #f2938c !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-secondary {
+  color: #d83933 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-secondary-vivid {
+  color: #e41d3d !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-secondary-dark {
+  color: #b50909 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-secondary-darker {
+  color: #8b0a03 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-accent-cool-lighter {
+  color: #e1f3f8 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-accent-cool-light {
+  color: #97d4ea !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-accent-cool {
+  color: #00bde3 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-accent-cool-dark {
+  color: #28a0cb !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-accent-cool-darker {
+  color: #07648d !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-accent-warm-lighter {
+  color: #f2e4d4 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-accent-warm-light {
+  color: #ffbc78 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-accent-warm {
+  color: #fa9441 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-accent-warm-dark {
+  color: #c05600 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-accent-warm-darker {
+  color: #775540 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-emergency {
+  color: #9c3d10 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-emergency-dark {
+  color: #332d29 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-red {
+  color: #e52207 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-orange {
+  color: #e66f0e !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-gold {
+  color: #ffbe2e !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-yellow {
+  color: #fee685 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-green {
+  color: #538200 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-mint {
+  color: #04c585 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-cyan {
+  color: #009ec1 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-blue {
+  color: #0076d6 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-indigo {
+  color: #676cc8 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-violet {
+  color: #8168b3 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-magenta {
+  color: #d72d79 !important;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .text-mobile-lg-base-lightest {
+    color: #f0f0f0 !important;
+  }
+  .text-mobile-lg-base-lighter {
+    color: #dfe1e2 !important;
+  }
+  .text-mobile-lg-base-light {
+    color: #a9aeb1 !important;
+  }
+  .text-mobile-lg-base {
+    color: #71767a !important;
+  }
+  .text-mobile-lg-base-dark {
+    color: #565c65 !important;
+  }
+  .text-mobile-lg-base-darker {
+    color: #3d4551 !important;
+  }
+  .text-mobile-lg-base-darkest {
+    color: #1b1b1b !important;
+  }
+  .text-mobile-lg-ink {
+    color: #1b1b1b !important;
+  }
+  .text-mobile-lg-primary-lighter {
+    color: #d9e8f6 !important;
+  }
+  .text-mobile-lg-primary-light {
+    color: #73b3e7 !important;
+  }
+  .text-mobile-lg-primary {
+    color: #005ea2 !important;
+  }
+  .text-mobile-lg-primary-vivid {
+    color: #0050d8 !important;
+  }
+  .text-mobile-lg-primary-dark {
+    color: #1a4480 !important;
+  }
+  .text-mobile-lg-primary-darker {
+    color: #162e51 !important;
+  }
+  .text-mobile-lg-secondary-lighter {
+    color: #f8dfe2 !important;
+  }
+  .text-mobile-lg-secondary-light {
+    color: #f2938c !important;
+  }
+  .text-mobile-lg-secondary {
+    color: #d83933 !important;
+  }
+  .text-mobile-lg-secondary-vivid {
+    color: #e41d3d !important;
+  }
+  .text-mobile-lg-secondary-dark {
+    color: #b50909 !important;
+  }
+  .text-mobile-lg-secondary-darker {
+    color: #8b0a03 !important;
+  }
+  .text-mobile-lg-accent-cool-lighter {
+    color: #e1f3f8 !important;
+  }
+  .text-mobile-lg-accent-cool-light {
+    color: #97d4ea !important;
+  }
+  .text-mobile-lg-accent-cool {
+    color: #00bde3 !important;
+  }
+  .text-mobile-lg-accent-cool-dark {
+    color: #28a0cb !important;
+  }
+  .text-mobile-lg-accent-cool-darker {
+    color: #07648d !important;
+  }
+  .text-mobile-lg-accent-warm-lighter {
+    color: #f2e4d4 !important;
+  }
+  .text-mobile-lg-accent-warm-light {
+    color: #ffbc78 !important;
+  }
+  .text-mobile-lg-accent-warm {
+    color: #fa9441 !important;
+  }
+  .text-mobile-lg-accent-warm-dark {
+    color: #c05600 !important;
+  }
+  .text-mobile-lg-accent-warm-darker {
+    color: #775540 !important;
+  }
+  .text-mobile-lg-emergency {
+    color: #9c3d10 !important;
+  }
+  .text-mobile-lg-emergency-dark {
+    color: #332d29 !important;
+  }
+  .text-mobile-lg-red {
+    color: #e52207 !important;
+  }
+  .text-mobile-lg-orange {
+    color: #e66f0e !important;
+  }
+  .text-mobile-lg-gold {
+    color: #ffbe2e !important;
+  }
+  .text-mobile-lg-yellow {
+    color: #fee685 !important;
+  }
+  .text-mobile-lg-green {
+    color: #538200 !important;
+  }
+  .text-mobile-lg-mint {
+    color: #04c585 !important;
+  }
+  .text-mobile-lg-cyan {
+    color: #009ec1 !important;
+  }
+  .text-mobile-lg-blue {
+    color: #0076d6 !important;
+  }
+  .text-mobile-lg-indigo {
+    color: #676cc8 !important;
+  }
+  .text-mobile-lg-violet {
+    color: #8168b3 !important;
+  }
+  .text-mobile-lg-magenta {
+    color: #d72d79 !important;
+  }
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-base-lightest {
+  color: #f0f0f0 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-base-lighter {
+  color: #dfe1e2 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-base-light {
+  color: #a9aeb1 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-base {
+  color: #71767a !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-base-dark {
+  color: #565c65 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-base-darker {
+  color: #3d4551 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-base-darkest {
+  color: #1b1b1b !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-ink {
+  color: #1b1b1b !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-primary-lighter {
+  color: #d9e8f6 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-primary-light {
+  color: #73b3e7 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-primary {
+  color: #005ea2 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-primary-vivid {
+  color: #0050d8 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-primary-dark {
+  color: #1a4480 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-primary-darker {
+  color: #162e51 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-secondary-lighter {
+  color: #f8dfe2 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-secondary-light {
+  color: #f2938c !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-secondary {
+  color: #d83933 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-secondary-vivid {
+  color: #e41d3d !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-secondary-dark {
+  color: #b50909 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-secondary-darker {
+  color: #8b0a03 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-accent-cool-lighter {
+  color: #e1f3f8 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-accent-cool-light {
+  color: #97d4ea !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-accent-cool {
+  color: #00bde3 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-accent-cool-dark {
+  color: #28a0cb !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-accent-cool-darker {
+  color: #07648d !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-accent-warm-lighter {
+  color: #f2e4d4 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-accent-warm-light {
+  color: #ffbc78 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-accent-warm {
+  color: #fa9441 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-accent-warm-dark {
+  color: #c05600 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-accent-warm-darker {
+  color: #775540 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-emergency {
+  color: #9c3d10 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-emergency-dark {
+  color: #332d29 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-red {
+  color: #e52207 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-orange {
+  color: #e66f0e !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-gold {
+  color: #ffbe2e !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-yellow {
+  color: #fee685 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-green {
+  color: #538200 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-mint {
+  color: #04c585 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-cyan {
+  color: #009ec1 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-blue {
+  color: #0076d6 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-indigo {
+  color: #676cc8 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-violet {
+  color: #8168b3 !important;
+}
+
+.ui-dialog-off-canvas .text-mobile-lg-magenta {
+  color: #d72d79 !important;
+}
+
+@media (min-width: 480px) and (max-width: 640px) {
+  .text-tablet-base-lightest {
+    color: #f0f0f0 !important;
+  }
+  .text-tablet-base-lighter {
+    color: #dfe1e2 !important;
+  }
+  .text-tablet-base-light {
+    color: #a9aeb1 !important;
+  }
+  .text-tablet-base {
+    color: #71767a !important;
+  }
+  .text-tablet-base-dark {
+    color: #565c65 !important;
+  }
+  .text-tablet-base-darker {
+    color: #3d4551 !important;
+  }
+  .text-tablet-base-darkest {
+    color: #1b1b1b !important;
+  }
+  .text-tablet-ink {
+    color: #1b1b1b !important;
+  }
+  .text-tablet-primary-lighter {
+    color: #d9e8f6 !important;
+  }
+  .text-tablet-primary-light {
+    color: #73b3e7 !important;
+  }
+  .text-tablet-primary {
+    color: #005ea2 !important;
+  }
+  .text-tablet-primary-vivid {
+    color: #0050d8 !important;
+  }
+  .text-tablet-primary-dark {
+    color: #1a4480 !important;
+  }
+  .text-tablet-primary-darker {
+    color: #162e51 !important;
+  }
+  .text-tablet-secondary-lighter {
+    color: #f8dfe2 !important;
+  }
+  .text-tablet-secondary-light {
+    color: #f2938c !important;
+  }
+  .text-tablet-secondary {
+    color: #d83933 !important;
+  }
+  .text-tablet-secondary-vivid {
+    color: #e41d3d !important;
+  }
+  .text-tablet-secondary-dark {
+    color: #b50909 !important;
+  }
+  .text-tablet-secondary-darker {
+    color: #8b0a03 !important;
+  }
+  .text-tablet-accent-cool-lighter {
+    color: #e1f3f8 !important;
+  }
+  .text-tablet-accent-cool-light {
+    color: #97d4ea !important;
+  }
+  .text-tablet-accent-cool {
+    color: #00bde3 !important;
+  }
+  .text-tablet-accent-cool-dark {
+    color: #28a0cb !important;
+  }
+  .text-tablet-accent-cool-darker {
+    color: #07648d !important;
+  }
+  .text-tablet-accent-warm-lighter {
+    color: #f2e4d4 !important;
+  }
+  .text-tablet-accent-warm-light {
+    color: #ffbc78 !important;
+  }
+  .text-tablet-accent-warm {
+    color: #fa9441 !important;
+  }
+  .text-tablet-accent-warm-dark {
+    color: #c05600 !important;
+  }
+  .text-tablet-accent-warm-darker {
+    color: #775540 !important;
+  }
+  .text-tablet-emergency {
+    color: #9c3d10 !important;
+  }
+  .text-tablet-emergency-dark {
+    color: #332d29 !important;
+  }
+  .text-tablet-red {
+    color: #e52207 !important;
+  }
+  .text-tablet-orange {
+    color: #e66f0e !important;
+  }
+  .text-tablet-gold {
+    color: #ffbe2e !important;
+  }
+  .text-tablet-yellow {
+    color: #fee685 !important;
+  }
+  .text-tablet-green {
+    color: #538200 !important;
+  }
+  .text-tablet-mint {
+    color: #04c585 !important;
+  }
+  .text-tablet-cyan {
+    color: #009ec1 !important;
+  }
+  .text-tablet-blue {
+    color: #0076d6 !important;
+  }
+  .text-tablet-indigo {
+    color: #676cc8 !important;
+  }
+  .text-tablet-violet {
+    color: #8168b3 !important;
+  }
+  .text-tablet-magenta {
+    color: #d72d79 !important;
+  }
+}
+
+.ui-dialog-off-canvas .text-tablet-base-lightest {
+  color: #f0f0f0 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-base-lighter {
+  color: #dfe1e2 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-base-light {
+  color: #a9aeb1 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-base {
+  color: #71767a !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-base-dark {
+  color: #565c65 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-base-darker {
+  color: #3d4551 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-base-darkest {
+  color: #1b1b1b !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-ink {
+  color: #1b1b1b !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-primary-lighter {
+  color: #d9e8f6 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-primary-light {
+  color: #73b3e7 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-primary {
+  color: #005ea2 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-primary-vivid {
+  color: #0050d8 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-primary-dark {
+  color: #1a4480 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-primary-darker {
+  color: #162e51 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-secondary-lighter {
+  color: #f8dfe2 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-secondary-light {
+  color: #f2938c !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-secondary {
+  color: #d83933 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-secondary-vivid {
+  color: #e41d3d !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-secondary-dark {
+  color: #b50909 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-secondary-darker {
+  color: #8b0a03 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-accent-cool-lighter {
+  color: #e1f3f8 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-accent-cool-light {
+  color: #97d4ea !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-accent-cool {
+  color: #00bde3 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-accent-cool-dark {
+  color: #28a0cb !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-accent-cool-darker {
+  color: #07648d !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-accent-warm-lighter {
+  color: #f2e4d4 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-accent-warm-light {
+  color: #ffbc78 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-accent-warm {
+  color: #fa9441 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-accent-warm-dark {
+  color: #c05600 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-accent-warm-darker {
+  color: #775540 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-emergency {
+  color: #9c3d10 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-emergency-dark {
+  color: #332d29 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-red {
+  color: #e52207 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-orange {
+  color: #e66f0e !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-gold {
+  color: #ffbe2e !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-yellow {
+  color: #fee685 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-green {
+  color: #538200 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-mint {
+  color: #04c585 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-cyan {
+  color: #009ec1 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-blue {
+  color: #0076d6 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-indigo {
+  color: #676cc8 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-violet {
+  color: #8168b3 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-magenta {
+  color: #d72d79 !important;
+}
+
+@media (min-width: 640px) and (max-width: 800px) {
+  .text-tablet-lg-base-lightest {
+    color: #f0f0f0 !important;
+  }
+  .text-tablet-lg-base-lighter {
+    color: #dfe1e2 !important;
+  }
+  .text-tablet-lg-base-light {
+    color: #a9aeb1 !important;
+  }
+  .text-tablet-lg-base {
+    color: #71767a !important;
+  }
+  .text-tablet-lg-base-dark {
+    color: #565c65 !important;
+  }
+  .text-tablet-lg-base-darker {
+    color: #3d4551 !important;
+  }
+  .text-tablet-lg-base-darkest {
+    color: #1b1b1b !important;
+  }
+  .text-tablet-lg-ink {
+    color: #1b1b1b !important;
+  }
+  .text-tablet-lg-primary-lighter {
+    color: #d9e8f6 !important;
+  }
+  .text-tablet-lg-primary-light {
+    color: #73b3e7 !important;
+  }
+  .text-tablet-lg-primary {
+    color: #005ea2 !important;
+  }
+  .text-tablet-lg-primary-vivid {
+    color: #0050d8 !important;
+  }
+  .text-tablet-lg-primary-dark {
+    color: #1a4480 !important;
+  }
+  .text-tablet-lg-primary-darker {
+    color: #162e51 !important;
+  }
+  .text-tablet-lg-secondary-lighter {
+    color: #f8dfe2 !important;
+  }
+  .text-tablet-lg-secondary-light {
+    color: #f2938c !important;
+  }
+  .text-tablet-lg-secondary {
+    color: #d83933 !important;
+  }
+  .text-tablet-lg-secondary-vivid {
+    color: #e41d3d !important;
+  }
+  .text-tablet-lg-secondary-dark {
+    color: #b50909 !important;
+  }
+  .text-tablet-lg-secondary-darker {
+    color: #8b0a03 !important;
+  }
+  .text-tablet-lg-accent-cool-lighter {
+    color: #e1f3f8 !important;
+  }
+  .text-tablet-lg-accent-cool-light {
+    color: #97d4ea !important;
+  }
+  .text-tablet-lg-accent-cool {
+    color: #00bde3 !important;
+  }
+  .text-tablet-lg-accent-cool-dark {
+    color: #28a0cb !important;
+  }
+  .text-tablet-lg-accent-cool-darker {
+    color: #07648d !important;
+  }
+  .text-tablet-lg-accent-warm-lighter {
+    color: #f2e4d4 !important;
+  }
+  .text-tablet-lg-accent-warm-light {
+    color: #ffbc78 !important;
+  }
+  .text-tablet-lg-accent-warm {
+    color: #fa9441 !important;
+  }
+  .text-tablet-lg-accent-warm-dark {
+    color: #c05600 !important;
+  }
+  .text-tablet-lg-accent-warm-darker {
+    color: #775540 !important;
+  }
+  .text-tablet-lg-emergency {
+    color: #9c3d10 !important;
+  }
+  .text-tablet-lg-emergency-dark {
+    color: #332d29 !important;
+  }
+  .text-tablet-lg-red {
+    color: #e52207 !important;
+  }
+  .text-tablet-lg-orange {
+    color: #e66f0e !important;
+  }
+  .text-tablet-lg-gold {
+    color: #ffbe2e !important;
+  }
+  .text-tablet-lg-yellow {
+    color: #fee685 !important;
+  }
+  .text-tablet-lg-green {
+    color: #538200 !important;
+  }
+  .text-tablet-lg-mint {
+    color: #04c585 !important;
+  }
+  .text-tablet-lg-cyan {
+    color: #009ec1 !important;
+  }
+  .text-tablet-lg-blue {
+    color: #0076d6 !important;
+  }
+  .text-tablet-lg-indigo {
+    color: #676cc8 !important;
+  }
+  .text-tablet-lg-violet {
+    color: #8168b3 !important;
+  }
+  .text-tablet-lg-magenta {
+    color: #d72d79 !important;
+  }
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-base-lightest {
+  color: #f0f0f0 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-base-lighter {
+  color: #dfe1e2 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-base-light {
+  color: #a9aeb1 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-base {
+  color: #71767a !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-base-dark {
+  color: #565c65 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-base-darker {
+  color: #3d4551 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-base-darkest {
+  color: #1b1b1b !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-ink {
+  color: #1b1b1b !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-primary-lighter {
+  color: #d9e8f6 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-primary-light {
+  color: #73b3e7 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-primary {
+  color: #005ea2 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-primary-vivid {
+  color: #0050d8 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-primary-dark {
+  color: #1a4480 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-primary-darker {
+  color: #162e51 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-secondary-lighter {
+  color: #f8dfe2 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-secondary-light {
+  color: #f2938c !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-secondary {
+  color: #d83933 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-secondary-vivid {
+  color: #e41d3d !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-secondary-dark {
+  color: #b50909 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-secondary-darker {
+  color: #8b0a03 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-accent-cool-lighter {
+  color: #e1f3f8 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-accent-cool-light {
+  color: #97d4ea !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-accent-cool {
+  color: #00bde3 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-accent-cool-dark {
+  color: #28a0cb !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-accent-cool-darker {
+  color: #07648d !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-accent-warm-lighter {
+  color: #f2e4d4 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-accent-warm-light {
+  color: #ffbc78 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-accent-warm {
+  color: #fa9441 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-accent-warm-dark {
+  color: #c05600 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-accent-warm-darker {
+  color: #775540 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-emergency {
+  color: #9c3d10 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-emergency-dark {
+  color: #332d29 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-red {
+  color: #e52207 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-orange {
+  color: #e66f0e !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-gold {
+  color: #ffbe2e !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-yellow {
+  color: #fee685 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-green {
+  color: #538200 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-mint {
+  color: #04c585 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-cyan {
+  color: #009ec1 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-blue {
+  color: #0076d6 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-indigo {
+  color: #676cc8 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-violet {
+  color: #8168b3 !important;
+}
+
+.ui-dialog-off-canvas .text-tablet-lg-magenta {
+  color: #d72d79 !important;
+}
+
+@media (min-width: 800px) and (max-width: 1040px) {
+  .text-desktop-base-lightest {
+    color: #f0f0f0 !important;
+  }
+  .text-desktop-base-lighter {
+    color: #dfe1e2 !important;
+  }
+  .text-desktop-base-light {
+    color: #a9aeb1 !important;
+  }
+  .text-desktop-base {
+    color: #71767a !important;
+  }
+  .text-desktop-base-dark {
+    color: #565c65 !important;
+  }
+  .text-desktop-base-darker {
+    color: #3d4551 !important;
+  }
+  .text-desktop-base-darkest {
+    color: #1b1b1b !important;
+  }
+  .text-desktop-ink {
+    color: #1b1b1b !important;
+  }
+  .text-desktop-primary-lighter {
+    color: #d9e8f6 !important;
+  }
+  .text-desktop-primary-light {
+    color: #73b3e7 !important;
+  }
+  .text-desktop-primary {
+    color: #005ea2 !important;
+  }
+  .text-desktop-primary-vivid {
+    color: #0050d8 !important;
+  }
+  .text-desktop-primary-dark {
+    color: #1a4480 !important;
+  }
+  .text-desktop-primary-darker {
+    color: #162e51 !important;
+  }
+  .text-desktop-secondary-lighter {
+    color: #f8dfe2 !important;
+  }
+  .text-desktop-secondary-light {
+    color: #f2938c !important;
+  }
+  .text-desktop-secondary {
+    color: #d83933 !important;
+  }
+  .text-desktop-secondary-vivid {
+    color: #e41d3d !important;
+  }
+  .text-desktop-secondary-dark {
+    color: #b50909 !important;
+  }
+  .text-desktop-secondary-darker {
+    color: #8b0a03 !important;
+  }
+  .text-desktop-accent-cool-lighter {
+    color: #e1f3f8 !important;
+  }
+  .text-desktop-accent-cool-light {
+    color: #97d4ea !important;
+  }
+  .text-desktop-accent-cool {
+    color: #00bde3 !important;
+  }
+  .text-desktop-accent-cool-dark {
+    color: #28a0cb !important;
+  }
+  .text-desktop-accent-cool-darker {
+    color: #07648d !important;
+  }
+  .text-desktop-accent-warm-lighter {
+    color: #f2e4d4 !important;
+  }
+  .text-desktop-accent-warm-light {
+    color: #ffbc78 !important;
+  }
+  .text-desktop-accent-warm {
+    color: #fa9441 !important;
+  }
+  .text-desktop-accent-warm-dark {
+    color: #c05600 !important;
+  }
+  .text-desktop-accent-warm-darker {
+    color: #775540 !important;
+  }
+  .text-desktop-emergency {
+    color: #9c3d10 !important;
+  }
+  .text-desktop-emergency-dark {
+    color: #332d29 !important;
+  }
+  .text-desktop-red {
+    color: #e52207 !important;
+  }
+  .text-desktop-orange {
+    color: #e66f0e !important;
+  }
+  .text-desktop-gold {
+    color: #ffbe2e !important;
+  }
+  .text-desktop-yellow {
+    color: #fee685 !important;
+  }
+  .text-desktop-green {
+    color: #538200 !important;
+  }
+  .text-desktop-mint {
+    color: #04c585 !important;
+  }
+  .text-desktop-cyan {
+    color: #009ec1 !important;
+  }
+  .text-desktop-blue {
+    color: #0076d6 !important;
+  }
+  .text-desktop-indigo {
+    color: #676cc8 !important;
+  }
+  .text-desktop-violet {
+    color: #8168b3 !important;
+  }
+  .text-desktop-magenta {
+    color: #d72d79 !important;
+  }
+}
+
+.ui-dialog-off-canvas .text-desktop-base-lightest {
+  color: #f0f0f0 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-base-lighter {
+  color: #dfe1e2 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-base-light {
+  color: #a9aeb1 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-base {
+  color: #71767a !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-base-dark {
+  color: #565c65 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-base-darker {
+  color: #3d4551 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-base-darkest {
+  color: #1b1b1b !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-ink {
+  color: #1b1b1b !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-primary-lighter {
+  color: #d9e8f6 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-primary-light {
+  color: #73b3e7 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-primary {
+  color: #005ea2 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-primary-vivid {
+  color: #0050d8 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-primary-dark {
+  color: #1a4480 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-primary-darker {
+  color: #162e51 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-secondary-lighter {
+  color: #f8dfe2 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-secondary-light {
+  color: #f2938c !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-secondary {
+  color: #d83933 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-secondary-vivid {
+  color: #e41d3d !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-secondary-dark {
+  color: #b50909 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-secondary-darker {
+  color: #8b0a03 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-accent-cool-lighter {
+  color: #e1f3f8 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-accent-cool-light {
+  color: #97d4ea !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-accent-cool {
+  color: #00bde3 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-accent-cool-dark {
+  color: #28a0cb !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-accent-cool-darker {
+  color: #07648d !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-accent-warm-lighter {
+  color: #f2e4d4 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-accent-warm-light {
+  color: #ffbc78 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-accent-warm {
+  color: #fa9441 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-accent-warm-dark {
+  color: #c05600 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-accent-warm-darker {
+  color: #775540 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-emergency {
+  color: #9c3d10 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-emergency-dark {
+  color: #332d29 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-red {
+  color: #e52207 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-orange {
+  color: #e66f0e !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-gold {
+  color: #ffbe2e !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-yellow {
+  color: #fee685 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-green {
+  color: #538200 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-mint {
+  color: #04c585 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-cyan {
+  color: #009ec1 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-blue {
+  color: #0076d6 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-indigo {
+  color: #676cc8 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-violet {
+  color: #8168b3 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-magenta {
+  color: #d72d79 !important;
+}
+
+@media (min-width: 1040px) and (max-width: 1200px) {
+  .text-desktop-lg-base-lightest {
+    color: #f0f0f0 !important;
+  }
+  .text-desktop-lg-base-lighter {
+    color: #dfe1e2 !important;
+  }
+  .text-desktop-lg-base-light {
+    color: #a9aeb1 !important;
+  }
+  .text-desktop-lg-base {
+    color: #71767a !important;
+  }
+  .text-desktop-lg-base-dark {
+    color: #565c65 !important;
+  }
+  .text-desktop-lg-base-darker {
+    color: #3d4551 !important;
+  }
+  .text-desktop-lg-base-darkest {
+    color: #1b1b1b !important;
+  }
+  .text-desktop-lg-ink {
+    color: #1b1b1b !important;
+  }
+  .text-desktop-lg-primary-lighter {
+    color: #d9e8f6 !important;
+  }
+  .text-desktop-lg-primary-light {
+    color: #73b3e7 !important;
+  }
+  .text-desktop-lg-primary {
+    color: #005ea2 !important;
+  }
+  .text-desktop-lg-primary-vivid {
+    color: #0050d8 !important;
+  }
+  .text-desktop-lg-primary-dark {
+    color: #1a4480 !important;
+  }
+  .text-desktop-lg-primary-darker {
+    color: #162e51 !important;
+  }
+  .text-desktop-lg-secondary-lighter {
+    color: #f8dfe2 !important;
+  }
+  .text-desktop-lg-secondary-light {
+    color: #f2938c !important;
+  }
+  .text-desktop-lg-secondary {
+    color: #d83933 !important;
+  }
+  .text-desktop-lg-secondary-vivid {
+    color: #e41d3d !important;
+  }
+  .text-desktop-lg-secondary-dark {
+    color: #b50909 !important;
+  }
+  .text-desktop-lg-secondary-darker {
+    color: #8b0a03 !important;
+  }
+  .text-desktop-lg-accent-cool-lighter {
+    color: #e1f3f8 !important;
+  }
+  .text-desktop-lg-accent-cool-light {
+    color: #97d4ea !important;
+  }
+  .text-desktop-lg-accent-cool {
+    color: #00bde3 !important;
+  }
+  .text-desktop-lg-accent-cool-dark {
+    color: #28a0cb !important;
+  }
+  .text-desktop-lg-accent-cool-darker {
+    color: #07648d !important;
+  }
+  .text-desktop-lg-accent-warm-lighter {
+    color: #f2e4d4 !important;
+  }
+  .text-desktop-lg-accent-warm-light {
+    color: #ffbc78 !important;
+  }
+  .text-desktop-lg-accent-warm {
+    color: #fa9441 !important;
+  }
+  .text-desktop-lg-accent-warm-dark {
+    color: #c05600 !important;
+  }
+  .text-desktop-lg-accent-warm-darker {
+    color: #775540 !important;
+  }
+  .text-desktop-lg-emergency {
+    color: #9c3d10 !important;
+  }
+  .text-desktop-lg-emergency-dark {
+    color: #332d29 !important;
+  }
+  .text-desktop-lg-red {
+    color: #e52207 !important;
+  }
+  .text-desktop-lg-orange {
+    color: #e66f0e !important;
+  }
+  .text-desktop-lg-gold {
+    color: #ffbe2e !important;
+  }
+  .text-desktop-lg-yellow {
+    color: #fee685 !important;
+  }
+  .text-desktop-lg-green {
+    color: #538200 !important;
+  }
+  .text-desktop-lg-mint {
+    color: #04c585 !important;
+  }
+  .text-desktop-lg-cyan {
+    color: #009ec1 !important;
+  }
+  .text-desktop-lg-blue {
+    color: #0076d6 !important;
+  }
+  .text-desktop-lg-indigo {
+    color: #676cc8 !important;
+  }
+  .text-desktop-lg-violet {
+    color: #8168b3 !important;
+  }
+  .text-desktop-lg-magenta {
+    color: #d72d79 !important;
+  }
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-base-lightest {
+  color: #f0f0f0 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-base-lighter {
+  color: #dfe1e2 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-base-light {
+  color: #a9aeb1 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-base {
+  color: #71767a !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-base-dark {
+  color: #565c65 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-base-darker {
+  color: #3d4551 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-base-darkest {
+  color: #1b1b1b !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-ink {
+  color: #1b1b1b !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-primary-lighter {
+  color: #d9e8f6 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-primary-light {
+  color: #73b3e7 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-primary {
+  color: #005ea2 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-primary-vivid {
+  color: #0050d8 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-primary-dark {
+  color: #1a4480 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-primary-darker {
+  color: #162e51 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-secondary-lighter {
+  color: #f8dfe2 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-secondary-light {
+  color: #f2938c !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-secondary {
+  color: #d83933 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-secondary-vivid {
+  color: #e41d3d !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-secondary-dark {
+  color: #b50909 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-secondary-darker {
+  color: #8b0a03 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-accent-cool-lighter {
+  color: #e1f3f8 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-accent-cool-light {
+  color: #97d4ea !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-accent-cool {
+  color: #00bde3 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-accent-cool-dark {
+  color: #28a0cb !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-accent-cool-darker {
+  color: #07648d !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-accent-warm-lighter {
+  color: #f2e4d4 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-accent-warm-light {
+  color: #ffbc78 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-accent-warm {
+  color: #fa9441 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-accent-warm-dark {
+  color: #c05600 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-accent-warm-darker {
+  color: #775540 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-emergency {
+  color: #9c3d10 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-emergency-dark {
+  color: #332d29 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-red {
+  color: #e52207 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-orange {
+  color: #e66f0e !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-gold {
+  color: #ffbe2e !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-yellow {
+  color: #fee685 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-green {
+  color: #538200 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-mint {
+  color: #04c585 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-cyan {
+  color: #009ec1 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-blue {
+  color: #0076d6 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-indigo {
+  color: #676cc8 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-violet {
+  color: #8168b3 !important;
+}
+
+.ui-dialog-off-canvas .text-desktop-lg-magenta {
+  color: #d72d79 !important;
+}
+
+@media (min-width: 1400px) {
+  .text-widscreen-base-lightest {
+    color: #f0f0f0 !important;
+  }
+  .text-widscreen-base-lighter {
+    color: #dfe1e2 !important;
+  }
+  .text-widscreen-base-light {
+    color: #a9aeb1 !important;
+  }
+  .text-widscreen-base {
+    color: #71767a !important;
+  }
+  .text-widscreen-base-dark {
+    color: #565c65 !important;
+  }
+  .text-widscreen-base-darker {
+    color: #3d4551 !important;
+  }
+  .text-widscreen-base-darkest {
+    color: #1b1b1b !important;
+  }
+  .text-widscreen-ink {
+    color: #1b1b1b !important;
+  }
+  .text-widscreen-primary-lighter {
+    color: #d9e8f6 !important;
+  }
+  .text-widscreen-primary-light {
+    color: #73b3e7 !important;
+  }
+  .text-widscreen-primary {
+    color: #005ea2 !important;
+  }
+  .text-widscreen-primary-vivid {
+    color: #0050d8 !important;
+  }
+  .text-widscreen-primary-dark {
+    color: #1a4480 !important;
+  }
+  .text-widscreen-primary-darker {
+    color: #162e51 !important;
+  }
+  .text-widscreen-secondary-lighter {
+    color: #f8dfe2 !important;
+  }
+  .text-widscreen-secondary-light {
+    color: #f2938c !important;
+  }
+  .text-widscreen-secondary {
+    color: #d83933 !important;
+  }
+  .text-widscreen-secondary-vivid {
+    color: #e41d3d !important;
+  }
+  .text-widscreen-secondary-dark {
+    color: #b50909 !important;
+  }
+  .text-widscreen-secondary-darker {
+    color: #8b0a03 !important;
+  }
+  .text-widscreen-accent-cool-lighter {
+    color: #e1f3f8 !important;
+  }
+  .text-widscreen-accent-cool-light {
+    color: #97d4ea !important;
+  }
+  .text-widscreen-accent-cool {
+    color: #00bde3 !important;
+  }
+  .text-widscreen-accent-cool-dark {
+    color: #28a0cb !important;
+  }
+  .text-widscreen-accent-cool-darker {
+    color: #07648d !important;
+  }
+  .text-widscreen-accent-warm-lighter {
+    color: #f2e4d4 !important;
+  }
+  .text-widscreen-accent-warm-light {
+    color: #ffbc78 !important;
+  }
+  .text-widscreen-accent-warm {
+    color: #fa9441 !important;
+  }
+  .text-widscreen-accent-warm-dark {
+    color: #c05600 !important;
+  }
+  .text-widscreen-accent-warm-darker {
+    color: #775540 !important;
+  }
+  .text-widscreen-emergency {
+    color: #9c3d10 !important;
+  }
+  .text-widscreen-emergency-dark {
+    color: #332d29 !important;
+  }
+  .text-widscreen-red {
+    color: #e52207 !important;
+  }
+  .text-widscreen-orange {
+    color: #e66f0e !important;
+  }
+  .text-widscreen-gold {
+    color: #ffbe2e !important;
+  }
+  .text-widscreen-yellow {
+    color: #fee685 !important;
+  }
+  .text-widscreen-green {
+    color: #538200 !important;
+  }
+  .text-widscreen-mint {
+    color: #04c585 !important;
+  }
+  .text-widscreen-cyan {
+    color: #009ec1 !important;
+  }
+  .text-widscreen-blue {
+    color: #0076d6 !important;
+  }
+  .text-widscreen-indigo {
+    color: #676cc8 !important;
+  }
+  .text-widscreen-violet {
+    color: #8168b3 !important;
+  }
+  .text-widscreen-magenta {
+    color: #d72d79 !important;
+  }
+}
+
+.ui-dialog-off-canvas .text-widscreen-base-lightest {
+  color: #f0f0f0 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-base-lighter {
+  color: #dfe1e2 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-base-light {
+  color: #a9aeb1 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-base {
+  color: #71767a !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-base-dark {
+  color: #565c65 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-base-darker {
+  color: #3d4551 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-base-darkest {
+  color: #1b1b1b !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-ink {
+  color: #1b1b1b !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-primary-lighter {
+  color: #d9e8f6 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-primary-light {
+  color: #73b3e7 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-primary {
+  color: #005ea2 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-primary-vivid {
+  color: #0050d8 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-primary-dark {
+  color: #1a4480 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-primary-darker {
+  color: #162e51 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-secondary-lighter {
+  color: #f8dfe2 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-secondary-light {
+  color: #f2938c !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-secondary {
+  color: #d83933 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-secondary-vivid {
+  color: #e41d3d !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-secondary-dark {
+  color: #b50909 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-secondary-darker {
+  color: #8b0a03 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-accent-cool-lighter {
+  color: #e1f3f8 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-accent-cool-light {
+  color: #97d4ea !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-accent-cool {
+  color: #00bde3 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-accent-cool-dark {
+  color: #28a0cb !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-accent-cool-darker {
+  color: #07648d !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-accent-warm-lighter {
+  color: #f2e4d4 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-accent-warm-light {
+  color: #ffbc78 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-accent-warm {
+  color: #fa9441 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-accent-warm-dark {
+  color: #c05600 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-accent-warm-darker {
+  color: #775540 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-emergency {
+  color: #9c3d10 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-emergency-dark {
+  color: #332d29 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-red {
+  color: #e52207 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-orange {
+  color: #e66f0e !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-gold {
+  color: #ffbe2e !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-yellow {
+  color: #fee685 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-green {
+  color: #538200 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-mint {
+  color: #04c585 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-cyan {
+  color: #009ec1 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-blue {
+  color: #0076d6 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-indigo {
+  color: #676cc8 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-violet {
+  color: #8168b3 !important;
+}
+
+.ui-dialog-off-canvas .text-widscreen-magenta {
+  color: #d72d79 !important;
+}

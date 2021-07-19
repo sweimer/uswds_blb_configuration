@@ -1,0 +1,47 @@
+// Custom CSS to get uswds working with the bootstrap_layout_builder UI.
+
+#drupal-off-canvas {
+  .form-item {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .form-type-radio {
+    width: auto;
+  }
+
+  .form-type-checkbox {
+    align-items: center;
+
+    .usa-checkbox__label {
+      padding-left: 0 !important;
+    }
+  }
+
+  .bs-group-title {
+    margin-left: 0 !important;
+  }
+
+  .usa-form-group {
+    margin-top: 0 !important;
+  }
+
+  .spacing-preview {
+    .padding-box {
+      height: auto !important;
+    }
+  }
+
+  // Fixes issues where padding square is going past the margin.
+  #bs-border-preview {
+    width: auto !important;
+  }
+
+  // Fixes issue where "Add Block" list looks off
+  .inline-block-list {
+    li {
+      width: 100% !important;
+      border-bottom: 0 !important;
+    }
+  }
+}

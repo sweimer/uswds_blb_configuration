@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * USWDS blb confgiruation module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function uswds_blb_configuration_theme($existing, $type, $theme, $path) {
+  return [
+    'details__bs' => [
+      'template' => 'details--bs',
+      'base hook' => 'fieldset',
+      'path' => $path . '/templates',
+    ],
+    'blb_section' => [
+      'template' => 'uswds-section',
+      'base hook' => 'content',
+      'path' => $path . '/templates',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function uswds_blb_configuration_page_attachments_alter(array &$page) {
+  $entity_types = array_keys(\Drupal::entityTypeManager()->getDefinitions());
+  $layout_routes = [];
+
+  foreach ($entity_types as $entity_type_id) {
+    $layout_routes[] = 'layout_builder.defaults.' . $entity_type_id . '.view';
+    $layout_routes[] = 'layout_builder.overrides.' . $entity_type_id . '.view';
+    // layout_library module.
+    $layout_routes[] = 'layout_builder.layout_library.' . $entity_type_id . '.view';
+  }
+
+  $route_match = \Drupal::routeMatch();
+  // Attach the libraries only in layout route.
+  if (in_array($route_match->getRouteName(), $layout_routes)) {
+    // TODO Should we attach everything?
+    $page['#attached']['library'][] = 'uswds_blb_configuration/uswds_blb_configuration.all';
+  }
+}

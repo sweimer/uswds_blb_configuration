@@ -1,0 +1,85 @@
+@import "base";
+
+@mixin make-border-style($prop, $abbrev) {
+  // Generate the general classes first.
+  @each $style_key, $style_value in $uswds_border-styles {
+    // The class style.
+    @include base-rule(".#{$abbrev}-#{$style_key}", "#{$prop}", "#{$style_value} !important");
+
+    .#{$abbrev}-left-#{$style_key} {
+      #{$prop}-left-style: $style_value !important;
+    }
+    .#{$abbrev}-right-#{$style_key} {
+      #{$prop}-right-style: $style_value !important;
+    }
+    .#{$abbrev}-bottom-#{$style_key} {
+      #{$prop}-bottom-style: $style_value !important;
+    }
+    .#{$abbrev}-top-#{$style_key} {
+      #{$prop}-top-style: $style_value !important;
+    }
+  }
+}
+
+@mixin make-border-width($prop, $abbrev) {
+  // Generate the general classes first.
+  @each $size, $length in $uswds_spacers {
+    // The class style.
+    @include base-rule(".#{$abbrev}-#{$size}", "#{$prop}", "#{$length} !important");
+
+    .#{$abbrev}-left-#{$size} {
+      #{$prop}-left-width: $length !important;
+    }
+    .#{$abbrev}-top-#{$size} {
+      #{$prop}-top-width: $length !important;
+    }
+    .#{$abbrev}-bottom-#{$size} {
+      #{$prop}-bottom-width: $length !important;
+    }
+    .#{$abbrev}-right-#{$size} {
+      #{$prop}-right-width: $length !important;
+    }
+  }
+}
+
+@mixin make-border-color($prop, $abbrev) {
+  // Generate the general classes first.
+  @each $color_key, $color_value in $uswds_text_colors {
+    // The class style.
+    @include base-rule(".#{$abbrev}-#{$color_key}", "#{$prop}-color", "#{$color_value} !important");
+
+    .#{$abbrev}-left-#{$color_key} {
+      #{$prop}-left-color: $color_value !important;
+    }
+    .#{$abbrev}-top-#{$color_key} {
+      #{$prop}-top-color: $color_value !important;
+    }
+    .#{$abbrev}-bottom-#{$color_key} {
+      #{$prop}-bottom-color: $color_value !important;
+    }
+    .#{$abbrev}-right-#{$color_key} {
+      #{$prop}-right-color: $color_value !important;
+    }
+  }
+}
+
+@mixin make-border-radius($prop, $abbrev) {
+  // Generate the general classes first.
+  @each $radius_key, $radius_value in $uswds_radius {
+    // The class style.
+    @include base-rule(".#{$abbrev}-#{$radius_key}", "#{$prop}-radius", "#{$radius_value} !important");
+
+    .#{$abbrev}-top-left-#{$radius_key} {
+      #{$prop}-top-left-radius: $radius_value !important;
+    }
+    .#{$abbrev}-top-right-#{$radius_key} {
+      #{$prop}-top-right-radius: $radius_value !important;
+    }
+    .#{$abbrev}-bottom-left-#{$radius_key} {
+      #{$prop}-bottom-left-radius: $radius_value !important;
+    }
+    .#{$abbrev}-bottom-right-#{$radius_key} {
+      #{$prop}-bottom-right-radius: $radius_value !important;
+    }
+  }
+}

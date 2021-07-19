@@ -1,0 +1,37 @@
+#drupal-off-canvas .form-item {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+#drupal-off-canvas .form-type-radio {
+  width: auto;
+}
+
+#drupal-off-canvas .form-type-checkbox {
+  align-items: center;
+}
+
+#drupal-off-canvas .form-type-checkbox .usa-checkbox__label {
+  padding-left: 0 !important;
+}
+
+#drupal-off-canvas .bs-group-title {
+  margin-left: 0 !important;
+}
+
+#drupal-off-canvas .usa-form-group {
+  margin-top: 0 !important;
+}
+
+#drupal-off-canvas .spacing-preview .padding-box {
+  height: auto !important;
+}
+
+#drupal-off-canvas #bs-border-preview {
+  width: auto !important;
+}
+
+#drupal-off-canvas .inline-block-list li {
+  width: 100% !important;
+  border-bottom: 0 !important;
+}

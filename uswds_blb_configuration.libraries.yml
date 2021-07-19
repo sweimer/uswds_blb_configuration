@@ -1,0 +1,100 @@
+uswds_blb_configuration.all:
+  css:
+    base:
+      css/theme/uswds-ui.css: { }
+  dependencies:
+    - uswds_blb_configuration/plugin.background_color.layout_builder_form
+    - uswds_blb_configuration/plugin.background_color.build
+    - uswds_blb_configuration/plugin.text_color.layout_builder_form
+    - uswds_blb_configuration/plugin.text_color.build
+    - uswds_blb_configuration/plugin.text_alignment.layout_builder_form
+    - uswds_blb_configuration/plugin.text_alignment.build
+    - uswds_blb_configuration/plugin.padding.layout_builder_form
+    - uswds_blb_configuration/plugin.padding.build
+    - uswds_blb_configuration/plugin.margin.layout_builder_form
+    - uswds_blb_configuration/plugin.margin.build
+    - uswds_blb_configuration/plugin.border.layout_builder_form
+    - uswds_blb_configuration/plugin.border.build
+    - uswds_blb_configuration/plugin.box_shadow.layout_builder_form
+    - uswds_blb_configuration/plugin.box_shadow.build
+
+# background_color
+plugin.background_color.layout_builder_form:
+  css:
+    theme:
+      css/uswds_classes/background-color-classes.css: { }
+  dependencies:
+    - bootstrap_styles/bs_yiq
+
+plugin.background_color.build:
+  css:
+    theme:
+      css/uswds_classes/background-color-classes.css: { }
+
+# text_color
+plugin.text_color.layout_builder_form:
+  css:
+    theme:
+      css/uswds_classes/text-color-classes.css: { }
+  dependencies:
+    - bootstrap_styles/bs_yiq
+
+plugin.text_color.build:
+  css:
+    theme:
+      css/uswds_classes/text-color-classes.css: { }
+
+# text_alignment
+plugin.text_alignment.layout_builder_form:
+  css:
+    theme:
+      css/uswds_classes/text-alignment-classes.css: { }
+
+plugin.text_alignment.build:
+  css:
+    theme:
+      css/uswds_classes/text-alignment-classes.css: { }
+
+# padding
+plugin.padding.layout_builder_form:
+  css:
+    theme:
+      css/uswds_classes/padding-classes.css: { }
+
+plugin.padding.build:
+  css:
+    theme:
+      css/uswds_classes/padding-classes.css: { }
+
+# margin
+plugin.margin.layout_builder_form:
+  css:
+    theme:
+      css/uswds_classes/margin-classes.css: { }
+
+plugin.margin.build:
+  css:
+    theme:
+      css/uswds_classes/margin-classes.css: { }
+
+# border
+plugin.border.layout_builder_form:
+  css:
+    theme:
+      css/uswds_classes/border-classes.css: { }
+
+plugin.border.build:
+  css:
+    theme:
+      css/uswds_classes/border-classes.css: { }
+
+# box_shadow
+plugin.box_shadow.layout_builder_form:
+  css:
+    theme:
+      css/uswds_classes/box-shadow-classes.css: { }
+
+plugin.box_shadow.build:
+  css:
+    theme:
+      css/uswds_classes/box-shadow-classes.css: { }

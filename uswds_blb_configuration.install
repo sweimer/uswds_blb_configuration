@@ -1,0 +1,108 @@
+<?php
+
+/**
+ * @file
+ *
+ * uswds_blb_configuration.install
+ */
+
+use Drupal\Core\Config\FileStorage;
+use Symfony\Component\Yaml\Yaml;
+use Drupal\Core\Config\InstallStorage;
+
+/**
+ * Implements hook_install().
+ */
+function uswds_blb_configuration_install() {
+
+  $config_paths = [
+    drupal_get_path('module', 'bootstrap_layout_builder') . '/config/install',
+    drupal_get_path('module', 'bootstrap_styles') . '/config/install',
+  ];
+
+  // Cycle through files in config directory.
+  foreach ($config_paths as $config_path) {
+    if (is_dir($config_path)) {
+      if ($dh = opendir($config_path)) {
+        while (($fileName = readdir($dh)) !== FALSE) {
+          if (pathinfo($fileName, PATHINFO_EXTENSION) == 'yml') {
+            // Remove file extension.
+            $fileName = str_replace('.yml', '', $fileName);
+            if (!empty(\Drupal::service('config.storage')->read($fileName))) {
+              // Delete active config.
+              \Drupal::configFactory()->getEditable($fileName)->delete();
+            }
+          }
+        }
+        closedir($dh);
+      }
+    }
+  }
+
+  \Drupal::service('config.installer')
+    ->installDefaultConfig('module', 'uswds_blb_configuration');
+  $config_path = drupal_get_path('module', 'uswds_blb_configuration') . '/config/optional';
+  $source = new FileStorage($config_path);
+  $config_storage = \Drupal::service('config.storage');
+  $config_storage->write('bootstrap_styles.settings', $source->read('bootstrap_styles.settings'));
+  $config_storage->write('bootstrap_layout_builder.settings', $source->read('bootstrap_layout_builder.settings'));
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function uswds_blb_configuration_uninstall() {
+  $config_path = drupal_get_path('module', 'uswds_blb_configuration') . '/config/optional';
+
+  // Cycle through files in config directory.
+  if (is_dir($config_path)) {
+    if ($dh = opendir($config_path)) {
+      while (($fileName = readdir($dh)) !== FALSE) {
+        if (pathinfo($fileName, PATHINFO_EXTENSION) == 'yml') {
+          // Remove file extension.
+          $fileName = str_replace('.yml', '', $fileName);
+          if (!empty(\Drupal::service('config.storage')->read($fileName))) {
+            // Delete active config.
+            \Drupal::configFactory()->getEditable($fileName)->delete();
+          }
+        }
+      }
+      closedir($dh);
+    }
+  }
+
+  \Drupal::service('config.installer')
+    ->installDefaultConfig('module', 'bootstrap_layout_builder');
+  \Drupal::service('config.installer')
+    ->installDefaultConfig('module', 'bootstrap_styles');
+}
+
+/**
+ * Fix issue on https://www.drupal.org/project/uswds_paragraph_components/issues/3215519.
+ */
+function uswds_blb_configuration_update_8101() {
+  $module_path = Drupal::service('module_handler')
+    ->getModule('bootstrap_layout_builder')
+    ->getPath();
+
+  // Install configs path.
+  $install_path = $module_path . '/' . InstallStorage::CONFIG_INSTALL_DIRECTORY;
+  if (is_dir($install_path)) {
+
+    // Have forced configs import.
+    $forced_configs_import = [
+      'bootstrap_layout_builder.layout_defaults',
+    ];
+
+    foreach ($forced_configs_import as $config_name) {
+
+      $config_path = $install_path . '/' . $config_name . '.yml';
+      if (file_exists($config_path)) {
+        $config_content = file_get_contents($config_path);
+        $config_data = (array) Yaml::parse($config_content);
+        $config_factory = \Drupal::configFactory()->getEditable($config_name);
+        $config_factory->setData($config_data)->save(TRUE);
+      }
+    }
+  }
+}

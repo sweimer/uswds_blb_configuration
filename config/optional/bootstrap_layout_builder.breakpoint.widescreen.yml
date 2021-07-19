@@ -1,0 +1,7 @@
+langcode: en
+status: 0
+dependencies: {  }
+id: widescreen
+label: Widescreen
+base_class: 'widescreen:grid-col'
+weight: 0
