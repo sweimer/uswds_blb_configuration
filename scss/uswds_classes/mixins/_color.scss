@@ -8,12 +8,18 @@
 //   Like color or background-color.
 // @param $abbrev
 //   The word after class prefix like text or bg.
-@mixin make-color($prop, $abbrev) {
+@mixin make-color($prop, $abbrev, $is_bg_color: false) {
   // Generate the general classes first.
   @each $color_key, $color_value in $uswds_text_colors {
     // The class style.
     @include base-rule(".#{$abbrev}-#{$color_key}", "#{$prop}", "#{$color_value} !important");
 
+    @if $is_bg_color == false {
+      @include base-rule(".#{$abbrev}-#{$color_key} a", "#{$prop}", "#{$color_value}");
+
+      @include base-rule(".#{$abbrev}-#{$color_key} a:visited", "#{$prop}", "#{$color_value}");
+    }
+  
     // Fix the dispaly on off-canvas dialog.
     #{$bs_off_canvas_selector} {
       @include base-rule(".#{$abbrev}-#{$color_key}", "#{$prop}", "#{$color_value} !important");

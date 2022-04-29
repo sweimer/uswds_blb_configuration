@@ -7,4 +7,4 @@
 @import "mixins/color";
 
 // Generate text colors classes by make-color mixin.
-@include make-color(background-color, bg);
+@include make-color(background-color, bg, true);
