@@ -15,11 +15,13 @@
     @include base-rule(".#{$abbrev}-#{$color_key}", "#{$prop}", "#{$color_value} !important");
 
     @if $is_bg_color == false {
-      @include base-rule(".#{$abbrev}-#{$color_key} a", "#{$prop}", "#{$color_value}");
+      @include base-rule(".#{$abbrev}-#{$color_key} .field--type-text-long a", "#{$prop}", "#{$color_value}");
+      @include base-rule(".#{$abbrev}-#{$color_key} .field--type-text-with-summary a", "#{$prop}", "#{$color_value}");
 
-      @include base-rule(".#{$abbrev}-#{$color_key} a:visited", "#{$prop}", "#{$color_value}");
+      @include base-rule(".#{$abbrev}-#{$color_key} .field--type-text-long a:visited", "#{$prop}", "#{$color_value}");
+      @include base-rule(".#{$abbrev}-#{$color_key} .field--type-text-with-summary a:visited", "#{$prop}", "#{$color_value}");
     }
-  
+
     // Fix the dispaly on off-canvas dialog.
     #{$bs_off_canvas_selector} {
       @include base-rule(".#{$abbrev}-#{$color_key}", "#{$prop}", "#{$color_value} !important");

@@ -2,11 +2,19 @@
   color: #f0f0f0 !important;
 }
 
-.text-base-lightest a {
+.text-base-lightest .field--type-text-long a {
   color: #f0f0f0;
 }
 
-.text-base-lightest a:visited {
+.text-base-lightest .field--type-text-with-summary a {
+  color: #f0f0f0;
+}
+
+.text-base-lightest .field--type-text-long a:visited {
+  color: #f0f0f0;
+}
+
+.text-base-lightest .field--type-text-with-summary a:visited {
   color: #f0f0f0;
 }
 
@@ -18,11 +26,19 @@
   color: #dfe1e2 !important;
 }
 
-.text-base-lighter a {
+.text-base-lighter .field--type-text-long a {
   color: #dfe1e2;
 }
 
-.text-base-lighter a:visited {
+.text-base-lighter .field--type-text-with-summary a {
+  color: #dfe1e2;
+}
+
+.text-base-lighter .field--type-text-long a:visited {
+  color: #dfe1e2;
+}
+
+.text-base-lighter .field--type-text-with-summary a:visited {
   color: #dfe1e2;
 }
 
@@ -34,11 +50,19 @@
   color: #a9aeb1 !important;
 }
 
-.text-base-light a {
+.text-base-light .field--type-text-long a {
   color: #a9aeb1;
 }
 
-.text-base-light a:visited {
+.text-base-light .field--type-text-with-summary a {
+  color: #a9aeb1;
+}
+
+.text-base-light .field--type-text-long a:visited {
+  color: #a9aeb1;
+}
+
+.text-base-light .field--type-text-with-summary a:visited {
   color: #a9aeb1;
 }
 
@@ -50,11 +74,19 @@
   color: #71767a !important;
 }
 
-.text-base a {
+.text-base .field--type-text-long a {
   color: #71767a;
 }
 
-.text-base a:visited {
+.text-base .field--type-text-with-summary a {
+  color: #71767a;
+}
+
+.text-base .field--type-text-long a:visited {
+  color: #71767a;
+}
+
+.text-base .field--type-text-with-summary a:visited {
   color: #71767a;
 }
 
@@ -66,11 +98,19 @@
   color: #565c65 !important;
 }
 
-.text-base-dark a {
+.text-base-dark .field--type-text-long a {
   color: #565c65;
 }
 
-.text-base-dark a:visited {
+.text-base-dark .field--type-text-with-summary a {
+  color: #565c65;
+}
+
+.text-base-dark .field--type-text-long a:visited {
+  color: #565c65;
+}
+
+.text-base-dark .field--type-text-with-summary a:visited {
   color: #565c65;
 }
 
@@ -82,11 +122,19 @@
   color: #3d4551 !important;
 }
 
-.text-base-darker a {
+.text-base-darker .field--type-text-long a {
   color: #3d4551;
 }
 
-.text-base-darker a:visited {
+.text-base-darker .field--type-text-with-summary a {
+  color: #3d4551;
+}
+
+.text-base-darker .field--type-text-long a:visited {
+  color: #3d4551;
+}
+
+.text-base-darker .field--type-text-with-summary a:visited {
   color: #3d4551;
 }
 
@@ -98,11 +146,19 @@
   color: #1b1b1b !important;
 }
 
-.text-base-darkest a {
+.text-base-darkest .field--type-text-long a {
   color: #1b1b1b;
 }
 
-.text-base-darkest a:visited {
+.text-base-darkest .field--type-text-with-summary a {
+  color: #1b1b1b;
+}
+
+.text-base-darkest .field--type-text-long a:visited {
+  color: #1b1b1b;
+}
+
+.text-base-darkest .field--type-text-with-summary a:visited {
   color: #1b1b1b;
 }
 
@@ -114,11 +170,19 @@
   color: #1b1b1b !important;
 }
 
-.text-ink a {
+.text-ink .field--type-text-long a {
   color: #1b1b1b;
 }
 
-.text-ink a:visited {
+.text-ink .field--type-text-with-summary a {
+  color: #1b1b1b;
+}
+
+.text-ink .field--type-text-long a:visited {
+  color: #1b1b1b;
+}
+
+.text-ink .field--type-text-with-summary a:visited {
   color: #1b1b1b;
 }
 
@@ -130,11 +194,19 @@
   color: #d9e8f6 !important;
 }
 
-.text-primary-lighter a {
+.text-primary-lighter .field--type-text-long a {
   color: #d9e8f6;
 }
 
-.text-primary-lighter a:visited {
+.text-primary-lighter .field--type-text-with-summary a {
+  color: #d9e8f6;
+}
+
+.text-primary-lighter .field--type-text-long a:visited {
+  color: #d9e8f6;
+}
+
+.text-primary-lighter .field--type-text-with-summary a:visited {
   color: #d9e8f6;
 }
 
@@ -146,11 +218,19 @@
   color: #73b3e7 !important;
 }
 
-.text-primary-light a {
+.text-primary-light .field--type-text-long a {
   color: #73b3e7;
 }
 
-.text-primary-light a:visited {
+.text-primary-light .field--type-text-with-summary a {
+  color: #73b3e7;
+}
+
+.text-primary-light .field--type-text-long a:visited {
+  color: #73b3e7;
+}
+
+.text-primary-light .field--type-text-with-summary a:visited {
   color: #73b3e7;
 }
 
@@ -162,11 +242,19 @@
   color: #005ea2 !important;
 }
 
-.text-primary a {
+.text-primary .field--type-text-long a {
   color: #005ea2;
 }
 
-.text-primary a:visited {
+.text-primary .field--type-text-with-summary a {
+  color: #005ea2;
+}
+
+.text-primary .field--type-text-long a:visited {
+  color: #005ea2;
+}
+
+.text-primary .field--type-text-with-summary a:visited {
   color: #005ea2;
 }
 
@@ -178,11 +266,19 @@
   color: #0050d8 !important;
 }
 
-.text-primary-vivid a {
+.text-primary-vivid .field--type-text-long a {
   color: #0050d8;
 }
 
-.text-primary-vivid a:visited {
+.text-primary-vivid .field--type-text-with-summary a {
+  color: #0050d8;
+}
+
+.text-primary-vivid .field--type-text-long a:visited {
+  color: #0050d8;
+}
+
+.text-primary-vivid .field--type-text-with-summary a:visited {
   color: #0050d8;
 }
 
@@ -194,11 +290,19 @@
   color: #1a4480 !important;
 }
 
-.text-primary-dark a {
+.text-primary-dark .field--type-text-long a {
   color: #1a4480;
 }
 
-.text-primary-dark a:visited {
+.text-primary-dark .field--type-text-with-summary a {
+  color: #1a4480;
+}
+
+.text-primary-dark .field--type-text-long a:visited {
+  color: #1a4480;
+}
+
+.text-primary-dark .field--type-text-with-summary a:visited {
   color: #1a4480;
 }
 
@@ -210,11 +314,19 @@
   color: #162e51 !important;
 }
 
-.text-primary-darker a {
+.text-primary-darker .field--type-text-long a {
   color: #162e51;
 }
 
-.text-primary-darker a:visited {
+.text-primary-darker .field--type-text-with-summary a {
+  color: #162e51;
+}
+
+.text-primary-darker .field--type-text-long a:visited {
+  color: #162e51;
+}
+
+.text-primary-darker .field--type-text-with-summary a:visited {
   color: #162e51;
 }
 
@@ -226,11 +338,19 @@
   color: #f8dfe2 !important;
 }
 
-.text-secondary-lighter a {
+.text-secondary-lighter .field--type-text-long a {
   color: #f8dfe2;
 }
 
-.text-secondary-lighter a:visited {
+.text-secondary-lighter .field--type-text-with-summary a {
+  color: #f8dfe2;
+}
+
+.text-secondary-lighter .field--type-text-long a:visited {
+  color: #f8dfe2;
+}
+
+.text-secondary-lighter .field--type-text-with-summary a:visited {
   color: #f8dfe2;
 }
 
@@ -242,11 +362,19 @@
   color: #f2938c !important;
 }
 
-.text-secondary-light a {
+.text-secondary-light .field--type-text-long a {
   color: #f2938c;
 }
 
-.text-secondary-light a:visited {
+.text-secondary-light .field--type-text-with-summary a {
+  color: #f2938c;
+}
+
+.text-secondary-light .field--type-text-long a:visited {
+  color: #f2938c;
+}
+
+.text-secondary-light .field--type-text-with-summary a:visited {
   color: #f2938c;
 }
 
@@ -258,11 +386,19 @@
   color: #d83933 !important;
 }
 
-.text-secondary a {
+.text-secondary .field--type-text-long a {
   color: #d83933;
 }
 
-.text-secondary a:visited {
+.text-secondary .field--type-text-with-summary a {
+  color: #d83933;
+}
+
+.text-secondary .field--type-text-long a:visited {
+  color: #d83933;
+}
+
+.text-secondary .field--type-text-with-summary a:visited {
   color: #d83933;
 }
 
@@ -274,11 +410,19 @@
   color: #e41d3d !important;
 }
 
-.text-secondary-vivid a {
+.text-secondary-vivid .field--type-text-long a {
   color: #e41d3d;
 }
 
-.text-secondary-vivid a:visited {
+.text-secondary-vivid .field--type-text-with-summary a {
+  color: #e41d3d;
+}
+
+.text-secondary-vivid .field--type-text-long a:visited {
+  color: #e41d3d;
+}
+
+.text-secondary-vivid .field--type-text-with-summary a:visited {
   color: #e41d3d;
 }
 
@@ -290,11 +434,19 @@
   color: #b50909 !important;
 }
 
-.text-secondary-dark a {
+.text-secondary-dark .field--type-text-long a {
   color: #b50909;
 }
 
-.text-secondary-dark a:visited {
+.text-secondary-dark .field--type-text-with-summary a {
+  color: #b50909;
+}
+
+.text-secondary-dark .field--type-text-long a:visited {
+  color: #b50909;
+}
+
+.text-secondary-dark .field--type-text-with-summary a:visited {
   color: #b50909;
 }
 
@@ -306,11 +458,19 @@
   color: #8b0a03 !important;
 }
 
-.text-secondary-darker a {
+.text-secondary-darker .field--type-text-long a {
   color: #8b0a03;
 }
 
-.text-secondary-darker a:visited {
+.text-secondary-darker .field--type-text-with-summary a {
+  color: #8b0a03;
+}
+
+.text-secondary-darker .field--type-text-long a:visited {
+  color: #8b0a03;
+}
+
+.text-secondary-darker .field--type-text-with-summary a:visited {
   color: #8b0a03;
 }
 
@@ -322,11 +482,19 @@
   color: #e1f3f8 !important;
 }
 
-.text-accent-cool-lighter a {
+.text-accent-cool-lighter .field--type-text-long a {
   color: #e1f3f8;
 }
 
-.text-accent-cool-lighter a:visited {
+.text-accent-cool-lighter .field--type-text-with-summary a {
+  color: #e1f3f8;
+}
+
+.text-accent-cool-lighter .field--type-text-long a:visited {
+  color: #e1f3f8;
+}
+
+.text-accent-cool-lighter .field--type-text-with-summary a:visited {
   color: #e1f3f8;
 }
 
@@ -338,11 +506,19 @@
   color: #97d4ea !important;
 }
 
-.text-accent-cool-light a {
+.text-accent-cool-light .field--type-text-long a {
   color: #97d4ea;
 }
 
-.text-accent-cool-light a:visited {
+.text-accent-cool-light .field--type-text-with-summary a {
+  color: #97d4ea;
+}
+
+.text-accent-cool-light .field--type-text-long a:visited {
+  color: #97d4ea;
+}
+
+.text-accent-cool-light .field--type-text-with-summary a:visited {
   color: #97d4ea;
 }
 
@@ -354,11 +530,19 @@
   color: #00bde3 !important;
 }
 
-.text-accent-cool a {
+.text-accent-cool .field--type-text-long a {
   color: #00bde3;
 }
 
-.text-accent-cool a:visited {
+.text-accent-cool .field--type-text-with-summary a {
+  color: #00bde3;
+}
+
+.text-accent-cool .field--type-text-long a:visited {
+  color: #00bde3;
+}
+
+.text-accent-cool .field--type-text-with-summary a:visited {
   color: #00bde3;
 }
 
@@ -370,11 +554,19 @@
   color: #28a0cb !important;
 }
 
-.text-accent-cool-dark a {
+.text-accent-cool-dark .field--type-text-long a {
   color: #28a0cb;
 }
 
-.text-accent-cool-dark a:visited {
+.text-accent-cool-dark .field--type-text-with-summary a {
+  color: #28a0cb;
+}
+
+.text-accent-cool-dark .field--type-text-long a:visited {
+  color: #28a0cb;
+}
+
+.text-accent-cool-dark .field--type-text-with-summary a:visited {
   color: #28a0cb;
 }
 
@@ -386,11 +578,19 @@
   color: #07648d !important;
 }
 
-.text-accent-cool-darker a {
+.text-accent-cool-darker .field--type-text-long a {
   color: #07648d;
 }
 
-.text-accent-cool-darker a:visited {
+.text-accent-cool-darker .field--type-text-with-summary a {
+  color: #07648d;
+}
+
+.text-accent-cool-darker .field--type-text-long a:visited {
+  color: #07648d;
+}
+
+.text-accent-cool-darker .field--type-text-with-summary a:visited {
   color: #07648d;
 }
 
@@ -402,11 +602,19 @@
   color: #f2e4d4 !important;
 }
 
-.text-accent-warm-lighter a {
+.text-accent-warm-lighter .field--type-text-long a {
   color: #f2e4d4;
 }
 
-.text-accent-warm-lighter a:visited {
+.text-accent-warm-lighter .field--type-text-with-summary a {
+  color: #f2e4d4;
+}
+
+.text-accent-warm-lighter .field--type-text-long a:visited {
+  color: #f2e4d4;
+}
+
+.text-accent-warm-lighter .field--type-text-with-summary a:visited {
   color: #f2e4d4;
 }
 
@@ -418,11 +626,19 @@
   color: #ffbc78 !important;
 }
 
-.text-accent-warm-light a {
+.text-accent-warm-light .field--type-text-long a {
   color: #ffbc78;
 }
 
-.text-accent-warm-light a:visited {
+.text-accent-warm-light .field--type-text-with-summary a {
+  color: #ffbc78;
+}
+
+.text-accent-warm-light .field--type-text-long a:visited {
+  color: #ffbc78;
+}
+
+.text-accent-warm-light .field--type-text-with-summary a:visited {
   color: #ffbc78;
 }
 
@@ -434,11 +650,19 @@
   color: #fa9441 !important;
 }
 
-.text-accent-warm a {
+.text-accent-warm .field--type-text-long a {
   color: #fa9441;
 }
 
-.text-accent-warm a:visited {
+.text-accent-warm .field--type-text-with-summary a {
+  color: #fa9441;
+}
+
+.text-accent-warm .field--type-text-long a:visited {
+  color: #fa9441;
+}
+
+.text-accent-warm .field--type-text-with-summary a:visited {
   color: #fa9441;
 }
 
@@ -450,11 +674,19 @@
   color: #c05600 !important;
 }
 
-.text-accent-warm-dark a {
+.text-accent-warm-dark .field--type-text-long a {
   color: #c05600;
 }
 
-.text-accent-warm-dark a:visited {
+.text-accent-warm-dark .field--type-text-with-summary a {
+  color: #c05600;
+}
+
+.text-accent-warm-dark .field--type-text-long a:visited {
+  color: #c05600;
+}
+
+.text-accent-warm-dark .field--type-text-with-summary a:visited {
   color: #c05600;
 }
 
@@ -466,11 +698,19 @@
   color: #775540 !important;
 }
 
-.text-accent-warm-darker a {
+.text-accent-warm-darker .field--type-text-long a {
   color: #775540;
 }
 
-.text-accent-warm-darker a:visited {
+.text-accent-warm-darker .field--type-text-with-summary a {
+  color: #775540;
+}
+
+.text-accent-warm-darker .field--type-text-long a:visited {
+  color: #775540;
+}
+
+.text-accent-warm-darker .field--type-text-with-summary a:visited {
   color: #775540;
 }
 
@@ -482,11 +722,19 @@
   color: #9c3d10 !important;
 }
 
-.text-emergency a {
+.text-emergency .field--type-text-long a {
   color: #9c3d10;
 }
 
-.text-emergency a:visited {
+.text-emergency .field--type-text-with-summary a {
+  color: #9c3d10;
+}
+
+.text-emergency .field--type-text-long a:visited {
+  color: #9c3d10;
+}
+
+.text-emergency .field--type-text-with-summary a:visited {
   color: #9c3d10;
 }
 
@@ -498,11 +746,19 @@
   color: #332d29 !important;
 }
 
-.text-emergency-dark a {
+.text-emergency-dark .field--type-text-long a {
   color: #332d29;
 }
 
-.text-emergency-dark a:visited {
+.text-emergency-dark .field--type-text-with-summary a {
+  color: #332d29;
+}
+
+.text-emergency-dark .field--type-text-long a:visited {
+  color: #332d29;
+}
+
+.text-emergency-dark .field--type-text-with-summary a:visited {
   color: #332d29;
 }
 
@@ -514,11 +770,19 @@
   color: #e52207 !important;
 }
 
-.text-red a {
+.text-red .field--type-text-long a {
   color: #e52207;
 }
 
-.text-red a:visited {
+.text-red .field--type-text-with-summary a {
+  color: #e52207;
+}
+
+.text-red .field--type-text-long a:visited {
+  color: #e52207;
+}
+
+.text-red .field--type-text-with-summary a:visited {
   color: #e52207;
 }
 
@@ -530,11 +794,19 @@
   color: #e66f0e !important;
 }
 
-.text-orange a {
+.text-orange .field--type-text-long a {
   color: #e66f0e;
 }
 
-.text-orange a:visited {
+.text-orange .field--type-text-with-summary a {
+  color: #e66f0e;
+}
+
+.text-orange .field--type-text-long a:visited {
+  color: #e66f0e;
+}
+
+.text-orange .field--type-text-with-summary a:visited {
   color: #e66f0e;
 }
 
@@ -546,11 +818,19 @@
   color: #ffbe2e !important;
 }
 
-.text-gold a {
+.text-gold .field--type-text-long a {
   color: #ffbe2e;
 }
 
-.text-gold a:visited {
+.text-gold .field--type-text-with-summary a {
+  color: #ffbe2e;
+}
+
+.text-gold .field--type-text-long a:visited {
+  color: #ffbe2e;
+}
+
+.text-gold .field--type-text-with-summary a:visited {
   color: #ffbe2e;
 }
 
@@ -562,11 +842,19 @@
   color: #fee685 !important;
 }
 
-.text-yellow a {
+.text-yellow .field--type-text-long a {
   color: #fee685;
 }
 
-.text-yellow a:visited {
+.text-yellow .field--type-text-with-summary a {
+  color: #fee685;
+}
+
+.text-yellow .field--type-text-long a:visited {
+  color: #fee685;
+}
+
+.text-yellow .field--type-text-with-summary a:visited {
   color: #fee685;
 }
 
@@ -578,11 +866,19 @@
   color: #538200 !important;
 }
 
-.text-green a {
+.text-green .field--type-text-long a {
   color: #538200;
 }
 
-.text-green a:visited {
+.text-green .field--type-text-with-summary a {
+  color: #538200;
+}
+
+.text-green .field--type-text-long a:visited {
+  color: #538200;
+}
+
+.text-green .field--type-text-with-summary a:visited {
   color: #538200;
 }
 
@@ -594,11 +890,19 @@
   color: #04c585 !important;
 }
 
-.text-mint a {
+.text-mint .field--type-text-long a {
   color: #04c585;
 }
 
-.text-mint a:visited {
+.text-mint .field--type-text-with-summary a {
+  color: #04c585;
+}
+
+.text-mint .field--type-text-long a:visited {
+  color: #04c585;
+}
+
+.text-mint .field--type-text-with-summary a:visited {
   color: #04c585;
 }
 
@@ -610,11 +914,19 @@
   color: #009ec1 !important;
 }
 
-.text-cyan a {
+.text-cyan .field--type-text-long a {
   color: #009ec1;
 }
 
-.text-cyan a:visited {
+.text-cyan .field--type-text-with-summary a {
+  color: #009ec1;
+}
+
+.text-cyan .field--type-text-long a:visited {
+  color: #009ec1;
+}
+
+.text-cyan .field--type-text-with-summary a:visited {
   color: #009ec1;
 }
 
@@ -626,11 +938,19 @@
   color: #0076d6 !important;
 }
 
-.text-blue a {
+.text-blue .field--type-text-long a {
   color: #0076d6;
 }
 
-.text-blue a:visited {
+.text-blue .field--type-text-with-summary a {
+  color: #0076d6;
+}
+
+.text-blue .field--type-text-long a:visited {
+  color: #0076d6;
+}
+
+.text-blue .field--type-text-with-summary a:visited {
   color: #0076d6;
 }
 
@@ -642,11 +962,19 @@
   color: #676cc8 !important;
 }
 
-.text-indigo a {
+.text-indigo .field--type-text-long a {
   color: #676cc8;
 }
 
-.text-indigo a:visited {
+.text-indigo .field--type-text-with-summary a {
+  color: #676cc8;
+}
+
+.text-indigo .field--type-text-long a:visited {
+  color: #676cc8;
+}
+
+.text-indigo .field--type-text-with-summary a:visited {
   color: #676cc8;
 }
 
@@ -658,11 +986,19 @@
   color: #8168b3 !important;
 }
 
-.text-violet a {
+.text-violet .field--type-text-long a {
   color: #8168b3;
 }
 
-.text-violet a:visited {
+.text-violet .field--type-text-with-summary a {
+  color: #8168b3;
+}
+
+.text-violet .field--type-text-long a:visited {
+  color: #8168b3;
+}
+
+.text-violet .field--type-text-with-summary a:visited {
   color: #8168b3;
 }
 
@@ -674,11 +1010,19 @@
   color: #d72d79 !important;
 }
 
-.text-magenta a {
+.text-magenta .field--type-text-long a {
   color: #d72d79;
 }
 
-.text-magenta a:visited {
+.text-magenta .field--type-text-with-summary a {
+  color: #d72d79;
+}
+
+.text-magenta .field--type-text-long a:visited {
+  color: #d72d79;
+}
+
+.text-magenta .field--type-text-with-summary a:visited {
   color: #d72d79;
 }
 
