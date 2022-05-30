@@ -1,0 +1,302 @@
+<?php
+
+/**
+ * @file
+ * Functions for getting Media Library working in USWDS.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
+use Drupal\views\Form\ViewsForm;
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function uswds_blb_configuration_media_library_theme_registry_alter(&$theme_registry) {
+  $path = \Drupal::service('extension.list.module')->getPath('uswds_blb_configuration_media_library') . '/templates';
+
+  $theme_registry['container__media_library_content'] = $theme_registry['container'];
+  $theme_registry['container__media_library_content']['template'] = 'container--media-library-content';
+  $theme_registry['container__media_library_content']['path'] = $path;
+
+  $theme_registry['container__media_library_widget_selection'] = $theme_registry['container'];
+  $theme_registry['container__media_library_widget_selection']['template'] = 'container--media-library-widget-selection';
+  $theme_registry['container__media_library_widget_selection']['path'] = $path;
+
+  $theme_registry['details__media_library_add_form_selected_media'] = $theme_registry['details'];
+  $theme_registry['details__media_library_add_form_selected_media']['template'] = 'details--media-library-add-form-selected-media';
+  $theme_registry['details__media_library_add_form_selected_media']['path'] = $path;
+
+  $theme_registry['fieldset__media_library_widget']['template'] = 'fieldset--media-library-widget';
+  $theme_registry['fieldset__media_library_widget']['path'] = $path;
+
+  $theme_registry['form__media_library_add_form_upload'] = $theme_registry['form'];
+  $theme_registry['form__media_library_add_form_upload']['template'] = 'form--media-library-add-form-upload';
+  $theme_registry['form__media_library_add_form_upload']['path'] = $path;
+
+  $theme_registry['form__views_form_media_library_widget_image'] = $theme_registry['form'];
+  $theme_registry['form__views_form_media_library_widget_image']['template'] = 'form--views-form-media-library-widget-image';
+  $theme_registry['form__views_form_media_library_widget_image']['path'] = $path;
+
+  $theme_registry['form__views_form_media_library_widget_table_image'] = $theme_registry['form'];
+  $theme_registry['form__views_form_media_library_widget_table_image']['template'] = 'form--views-form-media-library-widget-image';
+  $theme_registry['form__views_form_media_library_widget_table_image']['path'] = $path;
+
+  $theme_registry['form_element_label__edit_media_library_select'] = $theme_registry['form_element_label'];
+  $theme_registry['form_element_label__edit_media_library_select']['template'] = 'form-element-label--edit-media-library-select';
+  $theme_registry['form_element_label__edit_media_library_select']['path'] = $path;
+
+  $theme_registry['input__edit_media_library'] = $theme_registry['input'];
+  $theme_registry['input__edit_media_library']['template'] = 'input--edit-media-library';
+  $theme_registry['input__edit_media_library']['path'] = $path;
+
+  // TODO INPUT
+
+  $theme_registry['item_list__media_library_add_form_media_list']['template'] = 'item-list--media-library-add-form-media-list';
+  $theme_registry['item_list__media_library_add_form_media_list']['path'] = $path;
+
+  $theme_registry['links__media_library_menu']['template'] = 'links--media-library-menu';
+  $theme_registry['links__media_library_menu']['path'] = $path;
+
+  $theme_registry['media_library_item__widget']['template'] = 'media-library-item';
+  $theme_registry['media_library_item__widget']['path'] = $path;
+
+  $theme_registry['media_library_item']['template'] = 'media-library-item';
+  $theme_registry['media_library_item']['path'] = $path;
+
+  $theme_registry['media_library_item__small']['template'] = 'media-library-item--small';
+  $theme_registry['media_library_item__small']['path'] = $path;
+
+  $theme_registry['media_library_wrapper']['template'] = 'media-library-wrapper';
+  $theme_registry['media_library_wrapper']['path'] = $path;
+
+  $theme_registry['views_view__media_library__widget'] = $theme_registry['views_view'];
+  $theme_registry['views_view__media_library__widget']['template'] = 'views-view--media-library';
+  $theme_registry['views_view__media_library__widget']['path'] = $path;
+
+  $theme_registry['views_view__media_library__widget_table'] = $theme_registry['views_view'];
+  $theme_registry['views_view__media_library__widget_table']['template'] = 'views-view--media-library';
+  $theme_registry['views_view__media_library__widget_table']['path'] = $path;
+
+  $theme_registry['views_view_unformatted__media_library'] = $theme_registry['views_view_unformatted'];
+  $theme_registry['views_view_unformatted__media_library']['template'] = 'views-view-unformatted--media-library';
+  $theme_registry['views_view_unformatted__media_library']['path'] = $path;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function uswds_blb_configuration_media_library_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  foreach (Element::children($form) as $key) {
+    $form[$key]['#attributes']['data-twig-suggestion'] = $form['#id'];
+  }
+
+  $form['actions']['submit']['#attributes']['data-twig-suggestion'] = $form['#id'];
+
+  $form_object = $form_state->getFormObject();
+  if ($form_object instanceof ViewsForm && str_starts_with($form_object->getBaseFormId(), 'views_form_media_library')) {
+    if (isset($form['header'])) {
+      $form['header']['#attributes']['class'][] = 'media-library-views-form__header';
+      $form['header']['media_bulk_form']['#attributes']['class'][] = 'media-library-views-form__bulk_form';
+    }
+    $form['actions']['submit']['#attributes']['class'] = ['media-library-select'];
+
+    if (!isset($form['#attributes']['class']) || !in_array('media-library-views-form', $form['#attributes']['class'])) {
+      $form['#attributes']['class'][] = 'media-library-views-form';
+    }
+  }
+  // Add after build to add a CSS class to the form actions.
+  if ($form_id === 'views_exposed_form' && str_starts_with($form['#id'], 'views-exposed-form-media-library-widget')) {
+    $form['actions']['#attributes']['class'][] = 'media-library-view--form-actions';
+  }
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function uswds_blb_configuration_media_library_form_media_library_add_form_alter(array &$form, FormStateInterface $form_state) {
+  $form['#attributes']['class'][] = 'media-library-add-form';
+  $form['#attached']['library'][] = 'uswds_blb_configuration_media_library/media_library';
+
+  // If there are unsaved media items, apply styling classes to various parts
+  // of the form.
+  if (isset($form['media'])) {
+    $form['#attributes']['class'][] = 'media-library-add-form--with-input';
+    // Put a wrapper around the informational message above the unsaved media
+    // items.
+    $form['description']['#template'] = '<p class="media-library-add-form__description">{{ text }}</p>';
+  }
+  else {
+    $form['#attributes']['class'][] = 'media-library-add-form--without-input';
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function uswds_blb_configuration_media_library_form_media_library_add_form_upload_alter(array &$form, FormStateInterface $form_state) {
+  $form['#attributes']['class'][] = 'media-library-add-form--upload';
+
+  if (isset($form['container'])) {
+    $form['container']['#attributes']['class'][] = 'media-library-add-form__input-wrapper';
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function uswds_blb_configuration_media_library_form_media_library_add_form_oembed_alter(array &$form, FormStateInterface $form_state) {
+  $form['#attributes']['class'][] = 'media-library-add-form--oembed';
+
+  // If no media items have been added yet, add a couple of styling classes
+  // to the initial URL form.
+  if (isset($form['container'])) {
+    $form['container']['#attributes']['class'][] = 'media-library-add-form__input-wrapper';
+    $form['container']['url']['#attributes']['class'][] = 'media-library-add-form-oembed-url';
+    $form['container']['submit']['#attributes']['class'][] = 'media-library-add-form-oembed-submit';
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function uswds_blb_configuration_media_library_views_pre_render(ViewExecutable $view) {
+  $add_classes = function (&$option, array $classes_to_add) {
+    $classes = preg_split('/\s+/', $option);
+    $classes = array_filter($classes);
+    $classes = array_merge($classes, $classes_to_add);
+    $option = implode(' ', array_unique($classes));
+  };
+
+  if ($view->id() === 'media_library') {
+    if ($view->display_handler->options['defaults']['css_class']) {
+      $add_classes($view->displayHandlers->get('default')->options['css_class'], ['media-library-view']);
+    }
+    else {
+      $add_classes($view->display_handler->options['css_class'], ['media-library-view']);
+    }
+
+    if ($view->current_display === 'page') {
+      if (array_key_exists('media_bulk_form', $view->field)) {
+        $add_classes($view->field['media_bulk_form']->options['element_class'], ['media-library-item__click-to-select-checkbox']);
+      }
+      if (array_key_exists('rendered_entity', $view->field)) {
+        $add_classes($view->field['rendered_entity']->options['element_class'], ['media-library-item__content']);
+      }
+      if (array_key_exists('edit_media', $view->field)) {
+        $add_classes($view->field['edit_media']->options['alter']['link_class'], ['media-library-item__edit']);
+      }
+      if (array_key_exists('delete_media', $view->field)) {
+        $add_classes($view->field['delete_media']->options['alter']['link_class'], ['media-library-item__remove']);
+      }
+    }
+    elseif (str_starts_with($view->current_display, 'widget')) {
+      if (array_key_exists('rendered_entity', $view->field)) {
+        $add_classes($view->field['rendered_entity']->options['element_class'], ['media-library-item__content']);
+      }
+      if (array_key_exists('media_library_select_form', $view->field)) {
+        $add_classes($view->field['media_library_select_form']->options['element_wrapper_class'], ['media-library-item__click-to-select-checkbox']);
+      }
+
+      if ($view->display_handler->options['defaults']['css_class']) {
+        $add_classes($view->displayHandlers->get('default')->options['css_class'], ['media-library-view--widget']);
+      }
+      else {
+        $add_classes($view->display_handler->options['css_class'], ['media-library-view--widget']);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestion_HOOK_alter().
+ */
+function uswds_blb_configuration_media_library_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  $formId = $variables['element']['#form_id'] ?? NULL;
+  if (isset($formId)) {
+    if (str_contains($formId, 'media_library')) {
+      $suggestions[] = 'form__' . str_replace('-', '_', $formId);
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestion_HOOK_alter().
+ */
+function uswds_blb_configuration_media_library_theme_suggestions_form_element_label_alter(array &$suggestions, array $variables) {
+  $formId = $variables['element']['#id'] ?? NULL;
+  if (isset($formId)) {
+    if (str_contains($formId, 'edit-media-library-select')) {
+      $suggestions[] = 'form_element_label__edit_media_library_select';
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestion_HOOK_alter().
+ */
+function uswds_blb_configuration_media_library_theme_suggestions_input_alter(array &$suggestions, array $variables) {
+  $formId = $variables['element']['#id'] ?? NULL;
+  if (isset($formId)) {
+    if ($formId && str_contains($formId, 'edit-media-library-select')) {
+      $suggestions[] = 'input__edit_media_library';
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_item_list__media_library_add_form_media_list().
+ *
+ * This targets each new, unsaved media item added to the media library, before
+ * they are saved.
+ */
+function uswds_blb_configuration_media_library_preprocess_item_list__media_library_add_form_media_list(array &$variables) {
+  foreach ($variables['items'] as &$item) {
+    $item['value']['preview']['#attributes']['class'][] = 'media-library-add-form__preview';
+    $item['value']['fields']['#attributes']['class'][] = 'media-library-add-form__fields';
+    $item['value']['remove_button']['#attributes']['class'][] = 'media-library-add-form__remove-button';
+
+    // #source_field_name is set by AddFormBase::buildEntityFormElement()
+    // to help themes and form_alter hooks identify the source field.
+    $fields = &$item['value']['fields'];
+    $source_field_name = $fields['#source_field_name'];
+    if (isset($fields[$source_field_name])) {
+      $fields[$source_field_name]['#attributes']['class'][] = 'media-library-add-form__source-field';
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_media_library_item__small().
+ *
+ * This targets each pre-selected media item selected when adding new media in
+ * the modal media library dialog.
+ */
+function uswds_blb_configuration_media_library_preprocess_media_library_item__small(array &$variables) {
+  $variables['content']['select']['#attributes']['class'][] = 'media-library-item__click-to-select-checkbox';
+}
+
+/**
+ * Implements hook_preprocess_media_library_item__widget().
+ *
+ * This targets each media item selected in an entity reference field.
+ */
+function uswds_blb_configuration_media_library_preprocess_media_library_item__widget(array &$variables) {
+  $variables['content']['remove_button']['#attributes']['class'][] = 'media-library-item__remove';
+}
+
+/**
+ * Implements hook_preprocess_views_view_fields().
+ *
+ * This targets each rendered media item in the grid display of the media
+ * library's modal dialog.
+ */
+function uswds_blb_configuration_media_library_preprocess_views_view_fields__media_library(array &$variables) {
+  // Add classes to media rendered entity field, so it can be targeted for
+  // styling. Adding this class in a template is very difficult to do.
+  if (isset($variables['fields']['rendered_entity']->wrapper_attributes)) {
+    $variables['fields']['rendered_entity']->wrapper_attributes->addClass('media-library-item__click-to-select-trigger');
+  }
+}
