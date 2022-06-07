@@ -6,9 +6,9 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Render\Element;
 use Drupal\views\Form\ViewsForm;
 use Drupal\views\ViewExecutable;
+use Drupal\views_ui\Form\Ajax\ViewsFormInterface;
 
 /**
  * Implements hook_theme_registry_alter().
@@ -35,6 +35,10 @@ function uswds_blb_configuration_media_library_theme_registry_alter(&$theme_regi
   $theme_registry['form__media_library_add_form_upload']['template'] = 'form--media-library-add-form-upload';
   $theme_registry['form__media_library_add_form_upload']['path'] = $path;
 
+  $theme_registry['form__views_exposed_form_media_library_widget'] = $theme_registry['form'];
+  $theme_registry['form__views_exposed_form_media_library_widget']['template'] = 'form--views-exposed-form-media-library-widget';
+  $theme_registry['form__views_exposed_form_media_library_widget']['path'] = $path;
+
   $theme_registry['form__views_form_media_library_widget_image'] = $theme_registry['form'];
   $theme_registry['form__views_form_media_library_widget_image']['template'] = 'form--views-form-media-library-widget-image';
   $theme_registry['form__views_form_media_library_widget_image']['path'] = $path;
@@ -42,6 +46,10 @@ function uswds_blb_configuration_media_library_theme_registry_alter(&$theme_regi
   $theme_registry['form__views_form_media_library_widget_table_image'] = $theme_registry['form'];
   $theme_registry['form__views_form_media_library_widget_table_image']['template'] = 'form--views-form-media-library-widget-image';
   $theme_registry['form__views_form_media_library_widget_table_image']['path'] = $path;
+
+  $theme_registry['form_element_media_library'] = $theme_registry['form_element'];
+  $theme_registry['form_element_media_library']['template'] = 'form-element-media-library';
+  $theme_registry['form_element_media_library']['path'] = $path;
 
   $theme_registry['form_element_label__edit_media_library_select'] = $theme_registry['form_element_label'];
   $theme_registry['form_element_label__edit_media_library_select']['template'] = 'form-element-label--edit-media-library-select';
@@ -51,16 +59,15 @@ function uswds_blb_configuration_media_library_theme_registry_alter(&$theme_regi
   $theme_registry['input__edit_media_library']['template'] = 'input--edit-media-library';
   $theme_registry['input__edit_media_library']['path'] = $path;
 
-  // TODO INPUT
-
   $theme_registry['item_list__media_library_add_form_media_list']['template'] = 'item-list--media-library-add-form-media-list';
   $theme_registry['item_list__media_library_add_form_media_list']['path'] = $path;
 
   $theme_registry['links__media_library_menu']['template'] = 'links--media-library-menu';
   $theme_registry['links__media_library_menu']['path'] = $path;
 
-  $theme_registry['media_library_item__widget']['template'] = 'media-library-item';
-  $theme_registry['media_library_item__widget']['path'] = $path;
+  $theme_registry['media__media_library'] = $theme_registry['media'];
+  $theme_registry['media__media_library']['template'] = 'media--media-library';
+  $theme_registry['media__media_library']['path'] = $path;
 
   $theme_registry['media_library_item']['template'] = 'media-library-item';
   $theme_registry['media_library_item']['path'] = $path;
@@ -70,6 +77,9 @@ function uswds_blb_configuration_media_library_theme_registry_alter(&$theme_regi
 
   $theme_registry['media_library_wrapper']['template'] = 'media-library-wrapper';
   $theme_registry['media_library_wrapper']['path'] = $path;
+
+  $theme_registry['views_mini_pager']['template'] = 'views-mini-pager';
+  $theme_registry['views_mini_pager']['path'] = $path;
 
   $theme_registry['views_view__media_library__widget'] = $theme_registry['views_view'];
   $theme_registry['views_view__media_library__widget']['template'] = 'views-view--media-library';
@@ -85,60 +95,45 @@ function uswds_blb_configuration_media_library_theme_registry_alter(&$theme_regi
 }
 
 /**
- * Implements hook_form_alter().
+ * Implements hook_preprocess_links__media_library_menu().
+ *
+ * This targets the menu of available media types in the media library's modal
+ * dialog.
+ *
+ * (COPIED FROM CLARO - Will mark any deviations)
+ *
+ * @todo Do this in the relevant template once
+ *   https://www.drupal.org/project/drupal/issues/3088856 is resolved.
  */
-function uswds_blb_configuration_media_library_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+function uswds_blb_configuration_media_library_preprocess_links__media_library_menu(array &$variables) {
+  foreach ($variables['links'] as &$link) {
+    // Add a class to the Media Library menu items.
+    $link['attributes']->addClass('media-library-menu__item');
 
-  foreach (Element::children($form) as $key) {
-    $form[$key]['#attributes']['data-twig-suggestion'] = $form['#id'];
-  }
-
-  $form['actions']['submit']['#attributes']['data-twig-suggestion'] = $form['#id'];
-
-  $form_object = $form_state->getFormObject();
-  if ($form_object instanceof ViewsForm && str_starts_with($form_object->getBaseFormId(), 'views_form_media_library')) {
-    if (isset($form['header'])) {
-      $form['header']['#attributes']['class'][] = 'media-library-views-form__header';
-      $form['header']['media_bulk_form']['#attributes']['class'][] = 'media-library-views-form__bulk_form';
+    // This conditional exists because the media-library-menu__link class is
+    // currently added by Classy, but Claro will eventually not use Classy as a
+    // base theme.
+    // @todo remove conditional, keep class addition in
+    //   https://drupal.org/node/3110137
+    // @see classy_preprocess_links__media_library_menu()
+    if (!isset($link['link']['#options']['attributes']['class']) || !in_array('media-library-menu__link', $link['link']['#options']['attributes']['class'])) {
+      $link['link']['#options']['attributes']['class'][] = 'media-library-menu__link';
     }
-    $form['actions']['submit']['#attributes']['class'] = ['media-library-select'];
-
-    if (!isset($form['#attributes']['class']) || !in_array('media-library-views-form', $form['#attributes']['class'])) {
-      $form['#attributes']['class'][] = 'media-library-views-form';
-    }
-  }
-  // Add after build to add a CSS class to the form actions.
-  if ($form_id === 'views_exposed_form' && str_starts_with($form['#id'], 'views-exposed-form-media-library-widget')) {
-    $form['actions']['#attributes']['class'][] = 'media-library-view--form-actions';
-  }
-}
-
-/**
- * Implements hook_form_BASE_FORM_ID_alter().
- */
-function uswds_blb_configuration_media_library_form_media_library_add_form_alter(array &$form, FormStateInterface $form_state) {
-  $form['#attributes']['class'][] = 'media-library-add-form';
-  $form['#attached']['library'][] = 'uswds_blb_configuration_media_library/media_library';
-
-  // If there are unsaved media items, apply styling classes to various parts
-  // of the form.
-  if (isset($form['media'])) {
-    $form['#attributes']['class'][] = 'media-library-add-form--with-input';
-    // Put a wrapper around the informational message above the unsaved media
-    // items.
-    $form['description']['#template'] = '<p class="media-library-add-form__description">{{ text }}</p>';
-  }
-  else {
-    $form['#attributes']['class'][] = 'media-library-add-form--without-input';
   }
 }
 
 /**
  * Implements hook_form_FORM_ID_alter().
+ *
+ * (COPIED FROM CLARO - Will mark any deviations)
  */
 function uswds_blb_configuration_media_library_form_media_library_add_form_upload_alter(array &$form, FormStateInterface $form_state) {
   $form['#attributes']['class'][] = 'media-library-add-form--upload';
-
+  if (isset($form['container']['upload'])) {
+    // Set this flag so we can prevent the details' element from being added
+    // in \Drupal\claro\ClaroPreRender::managedFile.
+    $form['container']['upload']['#do_not_wrap_in_details'] = TRUE;
+  }
   if (isset($form['container'])) {
     $form['container']['#attributes']['class'][] = 'media-library-add-form__input-wrapper';
   }
@@ -146,6 +141,8 @@ function uswds_blb_configuration_media_library_form_media_library_add_form_uploa
 
 /**
  * Implements hook_form_FORM_ID_alter().
+ *
+ * (COPIED FROM CLARO - Will mark any deviations)
  */
 function uswds_blb_configuration_media_library_form_media_library_add_form_oembed_alter(array &$form, FormStateInterface $form_state) {
   $form['#attributes']['class'][] = 'media-library-add-form--oembed';
@@ -160,7 +157,62 @@ function uswds_blb_configuration_media_library_form_media_library_add_form_oembe
 }
 
 /**
+ * Implements hook_preprocess_item_list__media_library_add_form_media_list().
+ *
+ * This targets each new, unsaved media item added to the media library, before
+ * they are saved.
+ *
+ * (COPIED FROM CLARO - Will mark any deviations)
+ */
+function uswds_blb_configuration_media_library_preprocess_item_list__media_library_add_form_media_list(array &$variables) {
+  foreach ($variables['items'] as &$item) {
+    $item['value']['preview']['#attributes']['class'][] = 'media-library-add-form__preview';
+    $item['value']['fields']['#attributes']['class'][] = 'media-library-add-form__fields';
+    $item['value']['remove_button']['#attributes']['class'][] = 'media-library-add-form__remove-button';
+
+    $item['value']['remove_button']['#attributes']['class'][] = 'button--extrasmall';
+    // #source_field_name is set by AddFormBase::buildEntityFormElement()
+    // to help themes and form_alter hooks identify the source field.
+    $fields = &$item['value']['fields'];
+    $source_field_name = $fields['#source_field_name'];
+
+    // Set this flag so we can remove the details element.
+    $fields[$source_field_name]['widget'][0]['#do_not_wrap_in_details'] = TRUE;
+
+    if (isset($fields[$source_field_name])) {
+      $fields[$source_field_name]['#attributes']['class'][] = 'media-library-add-form__source-field';
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_media_library_item__widget().
+ *
+ * This targets each media item selected in an entity reference field.
+ *
+ * (COPIED FROM CLARO - Will mark any deviations)
+ */
+function uswds_blb_configuration_media_library_preprocess_media_library_item__widget(array &$variables) {
+  $variables['content']['remove_button']['#attributes']['class'][] = 'media-library-item__remove';
+  $variables['content']['remove_button']['#attributes']['class'][] = 'icon-link';
+}
+
+/**
+ * Implements hook_preprocess_media_library_item__small().
+ *
+ * This targets each pre-selected media item selected when adding new media in
+ * the modal media library dialog.
+ *
+ * (COPIED FROM CLARO - Will mark any deviations)
+ */
+function uswds_blb_configuration_media_library_preprocess_media_library_item__small(array &$variables) {
+  $variables['content']['select']['#attributes']['class'][] = 'media-library-item__click-to-select-checkbox';
+}
+
+/**
  * Implements hook_views_pre_render().
+ *
+ * (COPIED FROM CLARO - Will mark any deviations)
  */
 function uswds_blb_configuration_media_library_views_pre_render(ViewExecutable $view) {
   $add_classes = function (&$option, array $classes_to_add) {
@@ -187,12 +239,14 @@ function uswds_blb_configuration_media_library_views_pre_render(ViewExecutable $
       }
       if (array_key_exists('edit_media', $view->field)) {
         $add_classes($view->field['edit_media']->options['alter']['link_class'], ['media-library-item__edit']);
+        $add_classes($view->field['edit_media']->options['alter']['link_class'], ['icon-link']);
       }
       if (array_key_exists('delete_media', $view->field)) {
         $add_classes($view->field['delete_media']->options['alter']['link_class'], ['media-library-item__remove']);
+        $add_classes($view->field['delete_media']->options['alter']['link_class'], ['icon-link']);
       }
     }
-    elseif (str_starts_with($view->current_display, 'widget')) {
+    elseif (strpos($view->current_display, 'widget') === 0) {
       if (array_key_exists('rendered_entity', $view->field)) {
         $add_classes($view->field['rendered_entity']->options['element_class'], ['media-library-item__content']);
       }
@@ -209,6 +263,98 @@ function uswds_blb_configuration_media_library_views_pre_render(ViewExecutable $
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_views_view_fields().
+ *
+ * This targets each rendered media item in the grid display of the media
+ * library's modal dialog.
+ *
+ * (COPIED FROM CLARO - Will mark any deviations)
+ */
+function uswds_blb_configuration_media_library_preprocess_views_view_fields__media_library(array &$variables) {
+  // Add classes to media rendered entity field so it can be targeted for
+  // styling. Adding this class in a template is very difficult to do.
+  if (isset($variables['fields']['rendered_entity']->wrapper_attributes)) {
+    $variables['fields']['rendered_entity']->wrapper_attributes->addClass('media-library-item__click-to-select-trigger');
+  }
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ *
+ * (COPIED FROM CLARO - Will mark any deviations)
+ */
+function uswds_blb_configuration_media_library_form_media_library_add_form_alter(array &$form, FormStateInterface $form_state) {
+  $form['#attributes']['class'][] = 'media-library-add-form';
+
+  $themeHandler = \Drupal::service('theme_handler');
+  if ($themeHandler->themeExists('claro')) {
+    $form['#attached']['library'][] = 'claro/global-styling';
+    $form['#attached']['library'][] = 'claro/media_library.theme';
+    $form['#attached']['library'][] = 'claro/views';
+  }
+  if ($themeHandler->themeExists('gin')) {
+    $form['#attached']['library'][] = 'gin/media_library';
+    $form['#attached']['library'][] = 'gin/gin';
+  }
+  $form['#attached']['library'][] = 'uswds_blb_configuration_media_library/media_library';
+
+  // If there are unsaved media items, apply styling classes to various parts
+  // of the form.
+  if (isset($form['media'])) {
+    $form['#attributes']['class'][] = 'media-library-add-form--with-input';
+
+    // Put a wrapper around the informational message above the unsaved media
+    // items.
+    $form['description']['#template'] = '<p class="media-library-add-form__description">{{ text }}</p>';
+  }
+  else {
+    $form['#attributes']['class'][] = 'media-library-add-form--without-input';
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * (COPIED FROM CLARO - Will mark any deviations)
+ */
+function uswds_blb_configuration_media_library_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  $build_info = $form_state->getBuildInfo();
+  $form_object = $form_state->getFormObject();
+
+  // Make entity forms delete link use the action-link component.
+  if (isset($form['actions']['delete']['#type']) && $form['actions']['delete']['#type'] === 'link' && !empty($build_info['callback_object']) && $build_info['callback_object'] instanceof EntityForm) {
+    $form['actions']['delete'] = _claro_convert_link_to_action_link($form['actions']['delete'], 'trash', 'default', 'danger');
+  }
+
+  if (($form_object instanceof ViewsForm || $form_object instanceof ViewsFormInterface) && isset($form['override']['#prefix'])) {
+    // Replace form--inline class so positioning of override form elements don't
+    // have to depend on floats.
+    $form['override']['#prefix'] = str_replace('form--inline', 'form--flex', $form['override']['#prefix']);
+  }
+
+  if ($form_object instanceof ViewsForm && strpos($form_object->getBaseFormId(), 'views_form_media_library') === 0) {
+    if (isset($form['header'])) {
+      $form['header']['#attributes']['class'][] = 'media-library-views-form__header';
+      $form['header']['media_bulk_form']['#attributes']['class'][] = 'media-library-views-form__bulk_form';
+    }
+    $form['actions']['submit']['#attributes']['class'] = ['media-library-select'];
+
+    // The conditional below exists because the media-library-views-form class is
+    // is currently added by Classy, but Claro will eventually not use Classy as
+    // a base theme.
+    // @todo remove conditional, keep class addition in
+    //   https://drupal.org/node/3110137
+    // @see https://www.drupal.org/node/3109287
+    // @see classy_form_alter()
+    if (!isset($form['#attributes']['class']) || !in_array('media-library-views-form', $form['#attributes']['class'])) {
+      $form['#attributes']['class'][] = 'media-library-views-form';
+    }
+  }
+}
+
+// Custom hooks to not use uswds_base ones
 
 /**
  * Implements hook_theme_suggestion_HOOK_alter().
@@ -237,66 +383,24 @@ function uswds_blb_configuration_media_library_theme_suggestions_form_element_la
 /**
  * Implements hook_theme_suggestion_HOOK_alter().
  */
+function uswds_blb_configuration_media_library_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
+  $formId = $variables['element']['#id'] ?? NULL;
+  if (isset($formId)) {
+    $current_path = \Drupal::service('path.current')->getPath();
+    if (str_contains($current_path, 'media-library')) {
+      $suggestions[] = 'form_element_media_library';
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestion_HOOK_alter().
+ */
 function uswds_blb_configuration_media_library_theme_suggestions_input_alter(array &$suggestions, array $variables) {
   $formId = $variables['element']['#id'] ?? NULL;
   if (isset($formId)) {
     if ($formId && str_contains($formId, 'edit-media-library-select')) {
       $suggestions[] = 'input__edit_media_library';
     }
-  }
-}
-
-/**
- * Implements hook_preprocess_item_list__media_library_add_form_media_list().
- *
- * This targets each new, unsaved media item added to the media library, before
- * they are saved.
- */
-function uswds_blb_configuration_media_library_preprocess_item_list__media_library_add_form_media_list(array &$variables) {
-  foreach ($variables['items'] as &$item) {
-    $item['value']['preview']['#attributes']['class'][] = 'media-library-add-form__preview';
-    $item['value']['fields']['#attributes']['class'][] = 'media-library-add-form__fields';
-    $item['value']['remove_button']['#attributes']['class'][] = 'media-library-add-form__remove-button';
-
-    // #source_field_name is set by AddFormBase::buildEntityFormElement()
-    // to help themes and form_alter hooks identify the source field.
-    $fields = &$item['value']['fields'];
-    $source_field_name = $fields['#source_field_name'];
-    if (isset($fields[$source_field_name])) {
-      $fields[$source_field_name]['#attributes']['class'][] = 'media-library-add-form__source-field';
-    }
-  }
-}
-
-/**
- * Implements hook_preprocess_media_library_item__small().
- *
- * This targets each pre-selected media item selected when adding new media in
- * the modal media library dialog.
- */
-function uswds_blb_configuration_media_library_preprocess_media_library_item__small(array &$variables) {
-  $variables['content']['select']['#attributes']['class'][] = 'media-library-item__click-to-select-checkbox';
-}
-
-/**
- * Implements hook_preprocess_media_library_item__widget().
- *
- * This targets each media item selected in an entity reference field.
- */
-function uswds_blb_configuration_media_library_preprocess_media_library_item__widget(array &$variables) {
-  $variables['content']['remove_button']['#attributes']['class'][] = 'media-library-item__remove';
-}
-
-/**
- * Implements hook_preprocess_views_view_fields().
- *
- * This targets each rendered media item in the grid display of the media
- * library's modal dialog.
- */
-function uswds_blb_configuration_media_library_preprocess_views_view_fields__media_library(array &$variables) {
-  // Add classes to media rendered entity field, so it can be targeted for
-  // styling. Adding this class in a template is very difficult to do.
-  if (isset($variables['fields']['rendered_entity']->wrapper_attributes)) {
-    $variables['fields']['rendered_entity']->wrapper_attributes->addClass('media-library-item__click-to-select-trigger');
   }
 }
