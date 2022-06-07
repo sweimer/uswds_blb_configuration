@@ -16,6 +16,7 @@
 
     @if $is_bg_color == false {
       @include base-rule(".#{$abbrev}-#{$color_key} .field--type-text-long a", "#{$prop}", "#{$color_value}");
+      @include base-rule(".#{$abbrev}-#{$color_key} > h2", "#{$prop}", "#{$color_value}");
       @include base-rule(".#{$abbrev}-#{$color_key} .field--type-text-with-summary a", "#{$prop}", "#{$color_value}");
 
       @include base-rule(".#{$abbrev}-#{$color_key} .field--type-text-long a:visited", "#{$prop}", "#{$color_value}");

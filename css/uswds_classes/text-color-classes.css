@@ -6,6 +6,10 @@
   color: #f0f0f0;
 }
 
+.text-base-lightest > h2 {
+  color: #f0f0f0;
+}
+
 .text-base-lightest .field--type-text-with-summary a {
   color: #f0f0f0;
 }
@@ -27,6 +31,10 @@
 }
 
 .text-base-lighter .field--type-text-long a {
+  color: #dfe1e2;
+}
+
+.text-base-lighter > h2 {
   color: #dfe1e2;
 }
 
@@ -54,6 +62,10 @@
   color: #a9aeb1;
 }
 
+.text-base-light > h2 {
+  color: #a9aeb1;
+}
+
 .text-base-light .field--type-text-with-summary a {
   color: #a9aeb1;
 }
@@ -75,6 +87,10 @@
 }
 
 .text-base .field--type-text-long a {
+  color: #71767a;
+}
+
+.text-base > h2 {
   color: #71767a;
 }
 
@@ -102,6 +118,10 @@
   color: #565c65;
 }
 
+.text-base-dark > h2 {
+  color: #565c65;
+}
+
 .text-base-dark .field--type-text-with-summary a {
   color: #565c65;
 }
@@ -123,6 +143,10 @@
 }
 
 .text-base-darker .field--type-text-long a {
+  color: #3d4551;
+}
+
+.text-base-darker > h2 {
   color: #3d4551;
 }
 
@@ -150,6 +174,10 @@
   color: #1b1b1b;
 }
 
+.text-base-darkest > h2 {
+  color: #1b1b1b;
+}
+
 .text-base-darkest .field--type-text-with-summary a {
   color: #1b1b1b;
 }
@@ -171,6 +199,10 @@
 }
 
 .text-ink .field--type-text-long a {
+  color: #1b1b1b;
+}
+
+.text-ink > h2 {
   color: #1b1b1b;
 }
 
@@ -198,6 +230,10 @@
   color: #d9e8f6;
 }
 
+.text-primary-lighter > h2 {
+  color: #d9e8f6;
+}
+
 .text-primary-lighter .field--type-text-with-summary a {
   color: #d9e8f6;
 }
@@ -219,6 +255,10 @@
 }
 
 .text-primary-light .field--type-text-long a {
+  color: #73b3e7;
+}
+
+.text-primary-light > h2 {
   color: #73b3e7;
 }
 
@@ -246,6 +286,10 @@
   color: #005ea2;
 }
 
+.text-primary > h2 {
+  color: #005ea2;
+}
+
 .text-primary .field--type-text-with-summary a {
   color: #005ea2;
 }
@@ -267,6 +311,10 @@
 }
 
 .text-primary-vivid .field--type-text-long a {
+  color: #0050d8;
+}
+
+.text-primary-vivid > h2 {
   color: #0050d8;
 }
 
@@ -294,6 +342,10 @@
   color: #1a4480;
 }
 
+.text-primary-dark > h2 {
+  color: #1a4480;
+}
+
 .text-primary-dark .field--type-text-with-summary a {
   color: #1a4480;
 }
@@ -315,6 +367,10 @@
 }
 
 .text-primary-darker .field--type-text-long a {
+  color: #162e51;
+}
+
+.text-primary-darker > h2 {
   color: #162e51;
 }
 
@@ -342,6 +398,10 @@
   color: #f8dfe2;
 }
 
+.text-secondary-lighter > h2 {
+  color: #f8dfe2;
+}
+
 .text-secondary-lighter .field--type-text-with-summary a {
   color: #f8dfe2;
 }
@@ -363,6 +423,10 @@
 }
 
 .text-secondary-light .field--type-text-long a {
+  color: #f2938c;
+}
+
+.text-secondary-light > h2 {
   color: #f2938c;
 }
 
@@ -390,6 +454,10 @@
   color: #d83933;
 }
 
+.text-secondary > h2 {
+  color: #d83933;
+}
+
 .text-secondary .field--type-text-with-summary a {
   color: #d83933;
 }
@@ -411,6 +479,10 @@
 }
 
 .text-secondary-vivid .field--type-text-long a {
+  color: #e41d3d;
+}
+
+.text-secondary-vivid > h2 {
   color: #e41d3d;
 }
 
@@ -438,6 +510,10 @@
   color: #b50909;
 }
 
+.text-secondary-dark > h2 {
+  color: #b50909;
+}
+
 .text-secondary-dark .field--type-text-with-summary a {
   color: #b50909;
 }
@@ -459,6 +535,10 @@
 }
 
 .text-secondary-darker .field--type-text-long a {
+  color: #8b0a03;
+}
+
+.text-secondary-darker > h2 {
   color: #8b0a03;
 }
 
@@ -486,6 +566,10 @@
   color: #e1f3f8;
 }
 
+.text-accent-cool-lighter > h2 {
+  color: #e1f3f8;
+}
+
 .text-accent-cool-lighter .field--type-text-with-summary a {
   color: #e1f3f8;
 }
@@ -507,6 +591,10 @@
 }
 
 .text-accent-cool-light .field--type-text-long a {
+  color: #97d4ea;
+}
+
+.text-accent-cool-light > h2 {
   color: #97d4ea;
 }
 
@@ -534,6 +622,10 @@
   color: #00bde3;
 }
 
+.text-accent-cool > h2 {
+  color: #00bde3;
+}
+
 .text-accent-cool .field--type-text-with-summary a {
   color: #00bde3;
 }
@@ -555,6 +647,10 @@
 }
 
 .text-accent-cool-dark .field--type-text-long a {
+  color: #28a0cb;
+}
+
+.text-accent-cool-dark > h2 {
   color: #28a0cb;
 }
 
@@ -582,6 +678,10 @@
   color: #07648d;
 }
 
+.text-accent-cool-darker > h2 {
+  color: #07648d;
+}
+
 .text-accent-cool-darker .field--type-text-with-summary a {
   color: #07648d;
 }
@@ -603,6 +703,10 @@
 }
 
 .text-accent-warm-lighter .field--type-text-long a {
+  color: #f2e4d4;
+}
+
+.text-accent-warm-lighter > h2 {
   color: #f2e4d4;
 }
 
@@ -630,6 +734,10 @@
   color: #ffbc78;
 }
 
+.text-accent-warm-light > h2 {
+  color: #ffbc78;
+}
+
 .text-accent-warm-light .field--type-text-with-summary a {
   color: #ffbc78;
 }
@@ -651,6 +759,10 @@
 }
 
 .text-accent-warm .field--type-text-long a {
+  color: #fa9441;
+}
+
+.text-accent-warm > h2 {
   color: #fa9441;
 }
 
@@ -678,6 +790,10 @@
   color: #c05600;
 }
 
+.text-accent-warm-dark > h2 {
+  color: #c05600;
+}
+
 .text-accent-warm-dark .field--type-text-with-summary a {
   color: #c05600;
 }
@@ -699,6 +815,10 @@
 }
 
 .text-accent-warm-darker .field--type-text-long a {
+  color: #775540;
+}
+
+.text-accent-warm-darker > h2 {
   color: #775540;
 }
 
@@ -726,6 +846,10 @@
   color: #9c3d10;
 }
 
+.text-emergency > h2 {
+  color: #9c3d10;
+}
+
 .text-emergency .field--type-text-with-summary a {
   color: #9c3d10;
 }
@@ -747,6 +871,10 @@
 }
 
 .text-emergency-dark .field--type-text-long a {
+  color: #332d29;
+}
+
+.text-emergency-dark > h2 {
   color: #332d29;
 }
 
@@ -774,6 +902,10 @@
   color: #e52207;
 }
 
+.text-red > h2 {
+  color: #e52207;
+}
+
 .text-red .field--type-text-with-summary a {
   color: #e52207;
 }
@@ -795,6 +927,10 @@
 }
 
 .text-orange .field--type-text-long a {
+  color: #e66f0e;
+}
+
+.text-orange > h2 {
   color: #e66f0e;
 }
 
@@ -822,6 +958,10 @@
   color: #ffbe2e;
 }
 
+.text-gold > h2 {
+  color: #ffbe2e;
+}
+
 .text-gold .field--type-text-with-summary a {
   color: #ffbe2e;
 }
@@ -843,6 +983,10 @@
 }
 
 .text-yellow .field--type-text-long a {
+  color: #fee685;
+}
+
+.text-yellow > h2 {
   color: #fee685;
 }
 
@@ -870,6 +1014,10 @@
   color: #538200;
 }
 
+.text-green > h2 {
+  color: #538200;
+}
+
 .text-green .field--type-text-with-summary a {
   color: #538200;
 }
@@ -891,6 +1039,10 @@
 }
 
 .text-mint .field--type-text-long a {
+  color: #04c585;
+}
+
+.text-mint > h2 {
   color: #04c585;
 }
 
@@ -918,6 +1070,10 @@
   color: #009ec1;
 }
 
+.text-cyan > h2 {
+  color: #009ec1;
+}
+
 .text-cyan .field--type-text-with-summary a {
   color: #009ec1;
 }
@@ -939,6 +1095,10 @@
 }
 
 .text-blue .field--type-text-long a {
+  color: #0076d6;
+}
+
+.text-blue > h2 {
   color: #0076d6;
 }
 
@@ -966,6 +1126,10 @@
   color: #676cc8;
 }
 
+.text-indigo > h2 {
+  color: #676cc8;
+}
+
 .text-indigo .field--type-text-with-summary a {
   color: #676cc8;
 }
@@ -990,6 +1154,10 @@
   color: #8168b3;
 }
 
+.text-violet > h2 {
+  color: #8168b3;
+}
+
 .text-violet .field--type-text-with-summary a {
   color: #8168b3;
 }
@@ -1011,6 +1179,10 @@
 }
 
 .text-magenta .field--type-text-long a {
+  color: #d72d79;
+}
+
+.text-magenta > h2 {
   color: #d72d79;
 }
 
