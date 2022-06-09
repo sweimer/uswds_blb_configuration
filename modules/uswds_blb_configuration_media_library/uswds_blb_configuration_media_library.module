@@ -39,13 +39,13 @@ function uswds_blb_configuration_media_library_theme_registry_alter(&$theme_regi
   $theme_registry['form__views_exposed_form_media_library_widget']['template'] = 'form--views-exposed-form-media-library-widget';
   $theme_registry['form__views_exposed_form_media_library_widget']['path'] = $path;
 
-  $theme_registry['form__views_form_media_library_widget_image'] = $theme_registry['form'];
-  $theme_registry['form__views_form_media_library_widget_image']['template'] = 'form--views-form-media-library-widget-image';
-  $theme_registry['form__views_form_media_library_widget_image']['path'] = $path;
+  $theme_registry['form__views_form_media_library_widget'] = $theme_registry['form'];
+  $theme_registry['form__views_form_media_library_widget']['template'] = 'form--views-form-media-library-widget';
+  $theme_registry['form__views_form_media_library_widget']['path'] = $path;
 
-  $theme_registry['form__views_form_media_library_widget_table_image'] = $theme_registry['form'];
-  $theme_registry['form__views_form_media_library_widget_table_image']['template'] = 'form--views-form-media-library-widget-image';
-  $theme_registry['form__views_form_media_library_widget_table_image']['path'] = $path;
+  $theme_registry['form__views_form_media_library_widget_table'] = $theme_registry['form'];
+  $theme_registry['form__views_form_media_library_widget_table']['template'] = 'form--views-form-media-library-widget';
+  $theme_registry['form__views_form_media_library_widget_table']['path'] = $path;
 
   $theme_registry['form_element_media_library'] = $theme_registry['form_element'];
   $theme_registry['form_element_media_library']['template'] = 'form-element-media-library';
@@ -362,7 +362,10 @@ function uswds_blb_configuration_media_library_form_alter(array &$form, FormStat
 function uswds_blb_configuration_media_library_theme_suggestions_form_alter(array &$suggestions, array $variables) {
   $formId = $variables['element']['#form_id'] ?? NULL;
   if (isset($formId)) {
-    if (str_contains($formId, 'media_library')) {
+    if (str_contains($formId, 'media_library_widget')) {
+      $suggestions[] = 'form__views_exposed_form_media_library_widget';
+    }
+    elseif (str_contains($formId, 'media_library')) {
       $suggestions[] = 'form__' . str_replace('-', '_', $formId);
     }
   }
