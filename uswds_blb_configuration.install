@@ -16,8 +16,8 @@ use Drupal\Core\Config\InstallStorage;
 function uswds_blb_configuration_install() {
 
   $config_paths = [
-    drupal_get_path('module', 'bootstrap_layout_builder') . '/config/install',
-    drupal_get_path('module', 'bootstrap_styles') . '/config/install',
+    \Drupal::service('extension.list.module')->getPath('bootstrap_layout_builder') . '/config/install',
+    \Drupal::service('extension.list.module')->getPath('bootstrap_styles') . '/config/install',
   ];
 
   // Cycle through files in config directory.
@@ -41,7 +41,7 @@ function uswds_blb_configuration_install() {
 
   \Drupal::service('config.installer')
     ->installDefaultConfig('module', 'uswds_blb_configuration');
-  $config_path = drupal_get_path('module', 'uswds_blb_configuration') . '/config/optional';
+  $config_path = \Drupal::service('extension.list.module')->getPath('uswds_blb_configuration') . '/config/optional';
   $source = new FileStorage($config_path);
   $config_storage = \Drupal::service('config.storage');
   $config_storage->write('bootstrap_styles.settings', $source->read('bootstrap_styles.settings'));
@@ -52,7 +52,7 @@ function uswds_blb_configuration_install() {
  * Implements hook_uninstall().
  */
 function uswds_blb_configuration_uninstall() {
-  $config_path = drupal_get_path('module', 'uswds_blb_configuration') . '/config/optional';
+  $config_path = \Drupal::service('extension.list.module')->getPath('uswds_blb_configuration') . '/config/optional';
 
   // Cycle through files in config directory.
   if (is_dir($config_path)) {

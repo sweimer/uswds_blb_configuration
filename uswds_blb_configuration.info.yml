@@ -1,7 +1,7 @@
 name: USWDS Bootstrap Layout Builder Configuration
 type: module
 description: Configuration for using USWDS vs Bootstrap with Bootstrap Layout Builder module.
-core_version_requirement: ^9
+core_version_requirement: ^9 || ^10
 package: 'Layout Builder'
 dependencies:
   - bootstrap_layout_builder:bootstrap_layout_builder
