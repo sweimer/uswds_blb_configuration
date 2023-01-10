@@ -1,7 +1,7 @@
 langcode: en
-status: 1
+status: true
 dependencies: {  }
 id: tablet
 label: Tablet
 base_class: 'tablet:grid-col'
-weight: 0
+weight: -6

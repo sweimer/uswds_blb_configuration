@@ -1,7 +1,7 @@
 langcode: en
-status: 0
+status: false
 dependencies: {  }
 id: widescreen
 label: Widescreen
 base_class: 'widescreen:grid-col'
-weight: 0
+weight: -2
