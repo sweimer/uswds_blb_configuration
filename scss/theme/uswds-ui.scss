@@ -5,10 +5,6 @@
   // CSS for when the right sidebar is open.
   #drupal-off-canvas {
 
-    .node-layout-builder-form {
-      max-width: 100%;
-    }
-
     // Fix issue where icons aren't appearing full width.
     .form-item {
       width: 100%;
@@ -92,6 +88,10 @@
         border-bottom: 0 !important;
       }
     }
+  }
+
+  .node-layout-builder-form {
+    max-width: 100%;
   }
 
   .usa-alert {
