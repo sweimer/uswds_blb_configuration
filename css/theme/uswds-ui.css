@@ -1,3 +1,11 @@
+.layout-builder-form #drupal-off-canvas .node-layout-builder-form {
+  max-width: 100%;
+}
+
+.layout-builder-form #drupal-off-canvas .form-item {
+  width: 100%;
+}
+
 .layout-builder-form #drupal-off-canvas .inline-block-create-button {
   width: auto !important;
 }

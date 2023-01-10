@@ -5,6 +5,15 @@
   // CSS for when the right sidebar is open.
   #drupal-off-canvas {
 
+    .node-layout-builder-form {
+      max-width: 100%;
+    }
+
+    // Fix issue where icons aren't appearing full width.
+    .form-item {
+      width: 100%;
+    }
+
     // Fix issue with overflowing Create Custom block button.
     .inline-block-create-button {
       width: auto !important;
