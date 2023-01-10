@@ -1,7 +1,3 @@
-.layout-builder-form #drupal-off-canvas .node-layout-builder-form {
-  max-width: 100%;
-}
-
 .layout-builder-form #drupal-off-canvas .form-item {
   width: 100%;
 }
@@ -75,6 +71,10 @@
 .layout-builder-form #drupal-off-canvas .inline-block-list li {
   width: 100% !important;
   border-bottom: 0 !important;
+}
+
+.layout-builder-form .node-layout-builder-form {
+  max-width: 100%;
 }
 
 .layout-builder-form .usa-alert {
