@@ -16,6 +16,6 @@
         "source": "https://git.drupalcode.org/project/uswds_blb_configuration"
     },
     "require": {
-        "drupal/bootstrap_layout_builder": "^2.0"
+        "drupal/bootstrap_layout_builder": "^2.1"
     }
 }
