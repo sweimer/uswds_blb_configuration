@@ -1,0 +1,13 @@
+uswds_blb_configuration.admin_config:
+  title: 'USWDS Layout Builder'
+  route_name: entity.uswds_breakpoint.collection
+  parent: system.admin_config_content
+  description: 'Manage USWDS Layout Builder Settings.'
+  weight: 10
+
+uswds_blb_configuration.settings:
+  title: 'Uswds Styles - tmp'
+  route_name: uswds_blb_configuration.style_settings
+  parent: system.admin_config_content
+  description: 'Manage USWDS Styles Settings.'
+  weight: 10

@@ -10,18 +10,18 @@
  * @ingroup themeable
  */
 #}
-{% set classes = [
-  'layout',
-  'grid-row',
-  content['#settings']['remove_gutters'] is same as('1') ? 'no-gutters' : 'grid-gap',
-  'layout-builder__layout'
-] %}
-
 {% if content %}
+  {% set classes = [
+    'layout',
+    'grid-row',
+    content['#settings']['remove_gutters'] is same as('1') ? 'no-gutters' : '',
+    'layout-builder__layout'
+  ] %}
+
   <div {{ attributes.addClass(classes) }}>
     {{ title_prefix }}
     {% for i in 1..12 %}
-      {% set region = "blb_region_col_" ~ i %}
+      {% set region = "uswds_region_col_" ~ i %}
       {% if content[region] %}
         <div {{ region_attributes[region] }}>
           {{ content[region] }}

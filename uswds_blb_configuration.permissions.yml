@@ -1,0 +1,9 @@
+configure uswds layout builder:
+  title: 'Configure USWDS Layout Builder'
+  description: 'Allows access to configuration for USWDS Layout Builder.'
+  restrict access: true
+
+configure uswds styles:
+  title: 'Configure USWDS Styles'
+  description: 'Allows access to configuration for USWDS Styles.'
+  restrict access: true

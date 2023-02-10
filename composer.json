@@ -1,21 +1,10 @@
 {
-    "name": "drupal/uswds_blb_configuration",
-    "description": "A set of USWDS configuration to work with Bootstrap Layout Builder.",
-    "type": "drupal-module",
-    "license": "GPL-2.0-or-later",
-    "authors": [
-        {
-            "name": "Stephen Mustgrave",
-            "email": "smustgrave@gmail.com",
-            "role": "Maintainer"
-        }
-    ],
-    "homepage": "https://drupal.org/project/uswds_blb_configuration",
-    "support": {
-        "issues": "https://drupal.org/project/issues/uswds_blb_configuration",
-        "source": "https://git.drupalcode.org/project/uswds_blb_configuration"
-    },
-    "require": {
-        "drupal/bootstrap_layout_builder": "^2.1"
-    }
+  "name": "drupal/uswds_blb_configuration",
+  "type": "drupal-module",
+  "keywords": ["Drupal", "USWDS", "Grid", "Layout Builder"],
+  "license": "GPL-2.0+",
+  "description": "Add USWDS Grid support to Layout Builder module.",
+  "require": {
+    "drupal/core": "^9.3 || ^10"
+  }
 }

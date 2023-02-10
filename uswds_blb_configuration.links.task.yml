@@ -1,0 +1,16 @@
+uswds_blb_configuration.breakpoints_collection:
+  route_name: entity.uswds_breakpoint.collection
+  title: 'Breakpoints'
+  base_route: entity.uswds_breakpoint.collection
+uswds_blb_configuration.layouts_collection:
+  route_name: entity.uswds_layout.collection
+  title: 'Layouts'
+  base_route: entity.uswds_breakpoint.collection
+uswds_blb_configuration.styles:
+  route_name: uswds_blb_configuration.styles
+  title: 'Styles'
+  base_route: entity.uswds_breakpoint.collection
+uswds_blb_configuration.settings:
+  route_name: uswds_blb_configuration.settings
+  title: 'Settings'
+  base_route: entity.uswds_breakpoint.collection

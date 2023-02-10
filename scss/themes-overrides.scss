@@ -1,0 +1,125 @@
+// Custom CSS to get uswds working with the bootstrap_layout_builder UI.
+
+.layout-builder-form {
+
+  // CSS for when the right sidebar is open.
+  //#drupal-off-canvas {
+  //
+  //  .inline-block-create-button {
+  //    &:before {
+  //      margin-top: unset !important;
+  //    }
+  //  }
+  //
+  //  // Fix issue where icons aren't appearing full width.
+  //  .form-item {
+  //    width: 100%;
+  //  }
+  //
+  //  // Fix issue with overflowing Create Custom block button.
+  //  .inline-block-create-button {
+  //    width: auto !important;
+  //  }
+  //
+  //  // Fix issue with overflowing buttons.
+  //  .button--primary,
+  //  .js-media-library-open-button {
+  //    margin: 0 auto !important;
+  //    display: block !important;
+  //    width: 80% !important;
+  //  }
+  //
+  //  .block-categories {
+  //    padding-top: 1rem;
+  //  }
+  //
+  //  .inline-block-list {
+  //    display: inherit !important;
+  //
+  //    li {
+  //      display: inherit !important;
+  //    }
+  //  }
+  //
+  //  .form-type-radio {
+  //    width: auto;
+  //  }
+  //
+  //  .form-type-checkbox {
+  //    align-items: center;
+  //
+  //    .usa-checkbox__label {
+  //      padding-left: 0 !important;
+  //    }
+  //  }
+  //
+  //  .bs_background--position {
+  //    padding-bottom: 1.5rem;
+  //  }
+  //
+  //  .bs_background--position,
+  //  .bs_background--repeat {
+  //    max-width: 100% !important;
+  //
+  //    .form-radios {
+  //      max-width: unset !important;
+  //    }
+  //  }
+  //
+  //  .bs-group-title {
+  //    margin-left: 0 !important;
+  //  }
+  //
+  //  .usa-form-group {
+  //    margin-top: 0 !important;
+  //  }
+  //
+  //  .spacing-preview {
+  //    .padding-box {
+  //      height: auto !important;
+  //    }
+  //  }
+  //
+  //  // Fixes issue with container icons.
+  //  .usa-radio__label {
+  //    padding-left: 0 !important;
+  //    padding-right: 0 !important;
+  //  }
+  //
+  //  // Fixes issues where padding square is going past the margin.
+  //  #bs-border-preview {
+  //    width: auto !important;
+  //  }
+  //
+  //  // Fixes issue where "Add Block" list looks off
+  //  .inline-block-list {
+  //    li {
+  //      width: 100% !important;
+  //      border-bottom: 0 !important;
+  //    }
+  //  }
+  //}
+
+  .node-layout-builder-form {
+    max-width: 100%;
+  }
+
+  .usa-alert {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    .usa-alert__body {
+      margin: 0 !important;
+    }
+  }
+
+  .entity-view-display-layout-builder-form {
+    max-width: 100% !important;
+    padding: 1rem 0;
+
+    .layout-builder__message {
+      padding-top: 1rem;
+    }
+  }
+}

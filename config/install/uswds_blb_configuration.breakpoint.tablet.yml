@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: tablet
+label: Tablet
+base_class: 'tablet:grid-col'
+weight: -6

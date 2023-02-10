@@ -1,0 +1,10 @@
+entity.uswds_breakpoint.add_form:
+  route_name: 'entity.uswds_breakpoint.add_form'
+  title: 'Add breakpoint'
+  appears_on:
+  - entity.uswds_breakpoint.collection
+entity.uswds_layout_option.add_form:
+  route_name: 'entity.uswds_layout_option.add_form'
+  title: 'Add option'
+  appears_on:
+  - entity.uswds_layout.options_form

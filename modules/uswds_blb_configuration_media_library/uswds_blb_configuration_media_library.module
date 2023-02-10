@@ -341,20 +341,11 @@ function uswds_blb_configuration_media_library_form_alter(array &$form, FormStat
     }
     $form['actions']['submit']['#attributes']['class'] = ['media-library-select'];
 
-    // The conditional below exists because the media-library-views-form class is
-    // is currently added by Classy, but Claro will eventually not use Classy as
-    // a base theme.
-    // @todo remove conditional, keep class addition in
-    //   https://drupal.org/node/3110137
-    // @see https://www.drupal.org/node/3109287
-    // @see classy_form_alter()
     if (!isset($form['#attributes']['class']) || !in_array('media-library-views-form', $form['#attributes']['class'])) {
       $form['#attributes']['class'][] = 'media-library-views-form';
     }
   }
 }
-
-// Custom hooks to not use uswds_base ones
 
 /**
  * Implements hook_theme_suggestion_HOOK_alter().

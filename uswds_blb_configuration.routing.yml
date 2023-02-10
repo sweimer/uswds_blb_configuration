@@ -1,0 +1,45 @@
+entity.uswds_layout.options_form:
+  path: '/admin/config/uswds-layout-builder/layouts/{uswds_layout}/options'
+  defaults:
+    _entity_form: 'uswds_layout.options'
+    _title: 'List layout options'
+  requirements:
+    _permission: 'configure uswds layout builder'
+uswds_blb_configuration.styles:
+  path: '/admin/config/uswds-layout-builder/styles'
+  defaults:
+    _form: '\Drupal\uswds_blb_configuration\Form\StylesForm'
+    _title: 'USWDS Layout Builder Styles'
+  requirements:
+    _permission: 'configure uswds layout builder'
+uswds_blb_configuration.settings:
+  path: '/admin/config/uswds-layout-builder/settings'
+  defaults:
+    _form: '\Drupal\uswds_blb_configuration\Form\SettingsForm'
+    _title: 'USWDS Layout Builder Settings'
+  requirements:
+    _permission: 'configure uswds layout builder'
+
+uswds_blb_configuration.style_settings:
+  path: '/admin/config/uswds-layout-builder/style-settings'
+  defaults:
+    _form: '\Drupal\uswds_blb_configuration\Form\StylesSettingsForm'
+    _title: 'USWDS Styles Settings'
+  requirements:
+    _permission: 'configure uswds styles'
+
+uswds_blb_configuration.ajax_temp_store_set:
+  path: '/uswds_blb_configuration/ajax/temp_store/set'
+  defaults:
+    _controller: '\Drupal\uswds_blb_configuration\Controller\TempStoreController::set'
+    _title: 'Temp Store Set Value'
+  requirements:
+    _permission: 'access content'
+
+uswds_blb_configuration.ajax_temp_store_get:
+  path: '/uswds_blb_configuration/ajax/temp_store/get'
+  defaults:
+    _controller: '\Drupal\uswds_blb_configuration\Controller\TempStoreController::get'
+    _title: 'Temp Store Get Value'
+  requirements:
+    _permission: 'access content'

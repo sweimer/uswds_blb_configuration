@@ -1,0 +1,50 @@
+@import "../../variables";
+@import "../../mixins";
+
+// Input boxes
+.uswds_input-boxes {
+  .fieldset-wrapper > div {
+    display: flex;
+
+    // Our actual form item.
+    > div {
+      @include uswds_boxed_inputs;
+
+      input {
+        @include uswds_invert_icon_color_when_checked;
+      }
+    }
+  }
+}
+
+// Input boxes with icons
+.input-icon {
+  @include smooth-all-transition;
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  &._none {
+    background-image: url('../../../images/plugins/none.svg');
+  }
+}
+
+.uswds_input-boxes--box-model .fieldset-wrapper > div > div {
+  input ~ label {
+    font-size: 0;
+    text-indent: -999em;
+
+    &:after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      display: block;
+      border: 2px solid $gray-666;
+    }
+  }
+}

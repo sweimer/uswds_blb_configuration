@@ -1,7 +1,9 @@
-name: USWDS Bootstrap Layout Builder Configuration
+name: USWDS Layout Builder Configuration
 type: module
-description: Configuration for using USWDS vs Bootstrap with Bootstrap Layout Builder module.
+description: Configuration for using USWDS in layout builder.
 core_version_requirement: ^9 || ^10
+configure: uswds_blb_configuration.settings
 package: 'Layout Builder'
 dependencies:
-  - bootstrap_layout_builder:bootstrap_layout_builder
+  - drupal:layout_builder
+  - drupal:media_library

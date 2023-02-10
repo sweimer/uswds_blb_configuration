@@ -1,0 +1,7 @@
+services:
+  plugin.manager.uswds_styles:
+    class: Drupal\uswds_blb_configuration\Style\StyleManager
+    arguments: ['@container.namespaces', '@cache.default', '@module_handler']
+  plugin.manager.uswds_styles_group:
+    class: Drupal\uswds_blb_configuration\StylesGroup\StylesGroupManager
+    arguments: ['@container.namespaces', '@cache.default', '@module_handler', '@plugin.manager.uswds_styles', '@config.factory']

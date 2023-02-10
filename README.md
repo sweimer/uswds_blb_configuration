@@ -1,8 +1,13 @@
-# USWDS Bootstrap Layout Builder Configuration
+# USWDS Layout Builder Configuration
 
 ## INTRODUCTION
 
-This provides configuration and integration of Bootstrap layout builder to work within the [USWDS](https://designsystem.digital.gov/) framework.
+This module is a fork of the [Bootstrap Layout Builider](https://www.drupal.org/project/bootstrap_layout_builder) module +
+[Bootstrap Styles](https://www.drupal.org/project/bootstrap_styles) module. It will utilize USWDS specific classes and
+configuration.
+
+This provides configuration and integration of Bootstrap layout builder to work
+within the [USWDS](https://designsystem.digital.gov/) framework.
 
 * For a full description of the module, visit the project page:
   https://drupal.org/project/uswds_blb_configuration
@@ -14,24 +19,25 @@ This provides configuration and integration of Bootstrap layout builder to work 
 
 This module requires the following modules outside of Drupal core:
 
-* [Bootstrap Layout Builider](https://www.drupal.org/project/bootstrap_layout_builder)
-* USWDS framework's CSS and JS included in your theme. https://designsystem.digital.gov/
+* USWDS framework's https://designsystem.digital.gov/
 
 ## Recommended Modules/Themes
 
 * [USWDS - United States Web Design System Base](https://www.drupal.org/project/uswds_base)
   * Simple theme that provides just templates
 * [USWDS Paragraph Components](https://www.drupal.org/project/uswds_paragraph_components)
-  * Provides custom paragraph bundles that match up with USWDS components can be used as custom block types to be used in layout builder.
+  * Provides custom paragraph bundles that match up with USWDS components can
+  * be used as custom block types to be used in layout builder.
 
 ### Layout Builder workarounds
 
 One issue with layout builder is the lack of space on the off canvas sidebar.
 
 Some workarounds
+
 * [Paragraph Blocks](https://www.drupal.org/project/paragraph_blocks)
-  * Allows users to create the components on the edit screen. And they get turned into blocks to be used
-    in layout builder
+  * Allows users to create the components on the edit screen. And they get turned
+  * into blocks to be used in layout builder
 * [Layout Builder iFrame Modal](https://www.drupal.org/project/layout_builder_iframe_modal)
   * Renders the layout builder sidebar in a centered iframe.
 
@@ -44,7 +50,7 @@ Some workarounds
 
 ## CONFIGURATION
 
-* Go to /admin/config/bootstrap-layout-builder/breakpoints is the main configuration page for
+* Go to /admin/config/uswds-layout-builder/breakpoints is the main configuration page for
   * Breakpoints
   * Layouts
   * Styles
@@ -52,3 +58,7 @@ Some workarounds
 ## MAINTAINERS
 
 * [smustgrave](https://www.drupal.org/u/smustgrave)
+
+## Shout-outs
+To the maintainers of [Bootstrap Layout Builider](https://www.drupal.org/project/bootstrap_layout_builder) module +
+[Bootstrap Styles](https://www.drupal.org/project/bootstrap_styles) who did most of the leg work allowing me to fork.

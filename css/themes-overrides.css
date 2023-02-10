@@ -1,0 +1,22 @@
+.layout-builder-form .node-layout-builder-form {
+  max-width: 100%;
+}
+
+.layout-builder-form .usa-alert {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.layout-builder-form .usa-alert .usa-alert__body {
+  margin: 0 !important;
+}
+
+.layout-builder-form .entity-view-display-layout-builder-form {
+  max-width: 100% !important;
+  padding: 1rem 0;
+}
+
+.layout-builder-form .entity-view-display-layout-builder-form .layout-builder__message {
+  padding-top: 1rem;
+}
