@@ -12,6 +12,13 @@ uswds_blb_configuration.styles:
     _title: 'USWDS Layout Builder Styles'
   requirements:
     _permission: 'configure uswds layout builder'
+uswds_blb_configuration.style_settings:
+  path: '/admin/config/uswds-layout-builder/styles-settings'
+  defaults:
+    _form: '\Drupal\uswds_blb_configuration\Form\StylesSettingsForm'
+    _title: 'USWDS Styles Settings'
+  requirements:
+    _permission: 'configure uswds layout builder'
 uswds_blb_configuration.settings:
   path: '/admin/config/uswds-layout-builder/settings'
   defaults:
@@ -20,13 +27,6 @@ uswds_blb_configuration.settings:
   requirements:
     _permission: 'configure uswds layout builder'
 
-uswds_blb_configuration.style_settings:
-  path: '/admin/config/uswds-layout-builder/style-settings'
-  defaults:
-    _form: '\Drupal\uswds_blb_configuration\Form\StylesSettingsForm'
-    _title: 'USWDS Styles Settings'
-  requirements:
-    _permission: 'configure uswds styles'
 
 uswds_blb_configuration.ajax_temp_store_set:
   path: '/uswds_blb_configuration/ajax/temp_store/set'

@@ -6,10 +6,19 @@ uswds_blb_configuration.layouts_collection:
   route_name: entity.uswds_layout.collection
   title: 'Layouts'
   base_route: entity.uswds_breakpoint.collection
-uswds_blb_configuration.styles:
-  route_name: uswds_blb_configuration.styles
+uswds_blb_configuration.styles_menu:
   title: 'Styles'
+  route_name: uswds_blb_configuration.styles
   base_route: entity.uswds_breakpoint.collection
+uswds_blb_configuration.styles_main:
+  title: 'Styles'
+  route_name: uswds_blb_configuration.styles
+  parent_id: uswds_blb_configuration.styles_menu
+uswds_blb_configuration.styles_settings:
+  title: 'Style settings'
+  route_name: uswds_blb_configuration.style_settings
+  parent_id: uswds_blb_configuration.styles_menu
+  weight: 1
 uswds_blb_configuration.settings:
   route_name: uswds_blb_configuration.settings
   title: 'Settings'
