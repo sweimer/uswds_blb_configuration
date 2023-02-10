@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: HjxatWBZ-C8h8TUEzNs1tF-ef7aMjX4eeb3EtB21u68
 id: blb_col_7
 label: 'USWDS 7 Cols'
 number_of_columns: '7'

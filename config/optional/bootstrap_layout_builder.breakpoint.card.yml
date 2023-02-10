@@ -1,7 +1,0 @@
-langcode: en
-status: false
-dependencies: {  }
-id: card
-label: Card
-base_class: 'card:grid-col'
-weight: -10

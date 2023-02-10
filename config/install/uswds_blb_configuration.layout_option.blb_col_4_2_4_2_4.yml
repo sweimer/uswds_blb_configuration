@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: Brk6uczBTXArEbqloZp9rU4afwZQg_TFUBZQr-vn01w
 id: blb_col_4_2_4_2_4
 layout_id: blb_col_4
 label: '2/12 4/12 2/12 4/12'
@@ -11,10 +9,8 @@ breakpoints:
   desktop: desktop
   mobile: mobile
   tablet: tablet
-  mobile_large: 0
-  card: 0
-  card_large: 0
-  desktop_large: 0
-  tablet_large: 0
-  widescreen: 0
+default_breakpoints:
+  desktop: desktop
+  mobile: '0'
+  tablet: '0'
 weight: 0

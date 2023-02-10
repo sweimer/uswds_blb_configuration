@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: 1pxG96dBdkBHNERvvgVSeGRQQXkLkX97hsy0vOOCokg
 id: blb_col_3_full_width
 layout_id: blb_col_3
 label: 'Full width'
@@ -10,11 +8,9 @@ structure: '12'
 breakpoints:
   mobile: mobile
   tablet: tablet
-  desktop: 0
-  mobile_large: 0
-  card: 0
-  card_large: 0
-  desktop_large: 0
-  tablet_large: 0
-  widescreen: 0
+  desktop: desktop
+default_breakpoints:
+  desktop: desktop
+  mobile: '0'
+  tablet: '0'
 weight: 0

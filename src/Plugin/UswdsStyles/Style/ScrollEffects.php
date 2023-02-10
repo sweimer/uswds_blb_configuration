@@ -76,7 +76,7 @@ class ScrollEffects extends StylePluginBase {
   public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
     $this->config()
       ->set('scroll_effects_library_type', $form_state->getValue('scroll_effects_library_type'))
-      ->set('scroll_effects_attr_type', $form_state->getValue('scroll_effects_attr_type'))
+      ->set('scroll_effects_attr_type', (bool) $form_state->getValue('scroll_effects_attr_type'))
       ->set('scroll_effects_data_key', $form_state->getValue('scroll_effects_data_key'))
       ->set('scroll_effects', $form_state->getValue('scroll_effects'))
       ->save();

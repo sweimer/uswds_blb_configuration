@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: desktop
-label: Desktop
-base_class: 'desktop:grid-col'
-weight: -4

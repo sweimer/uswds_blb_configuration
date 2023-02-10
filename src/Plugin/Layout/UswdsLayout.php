@@ -425,8 +425,6 @@ class UswdsLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
         ->load($breakpoint_id);
       $layout_options = $breakpoint->getLayoutOptions($layout_id);
       if ($layout_options) {
-        $options = $this->entityTypeManager->getStorage('uswds_layout_option')
-          ->loadByProperties(['layout_id' => $layout_id]);
         $default_value = NULL;
         if ($this->configuration['breakpoints'] && isset($this->configuration['breakpoints'][$breakpoint_id])) {
           $default_value = $this->configuration['breakpoints'][$breakpoint_id];

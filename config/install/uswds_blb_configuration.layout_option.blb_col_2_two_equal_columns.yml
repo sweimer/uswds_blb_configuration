@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: plk5IMSJ8KK29XWGusQl1R0rnorFWBpeUBeVm2B5lVc
 id: blb_col_2_two_equal_columns
 layout_id: blb_col_2
 label: 'Two equal columns'
@@ -11,10 +9,8 @@ breakpoints:
   desktop: desktop
   mobile: mobile
   tablet: tablet
-  mobile_large: 0
-  card: 0
-  card_large: 0
-  desktop_large: 0
-  tablet_large: 0
-  widescreen: 0
+default_breakpoints:
+  desktop: desktop
+  mobile: '0'
+  tablet: '0'
 weight: '-10'

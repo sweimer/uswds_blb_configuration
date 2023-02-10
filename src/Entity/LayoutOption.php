@@ -160,6 +160,14 @@ class LayoutOption extends ConfigEntityBase implements LayoutOptionInterface {
   /**
    * {@inheritdoc}
    */
+  public function setBreakpoints($breakpoints) {
+    $this->breakpoints = $breakpoints;
+    return $this;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function getBreakpointsIds() {
     $ids = [];
     if ($this->breakpoints) {

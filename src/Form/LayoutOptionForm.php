@@ -214,6 +214,7 @@ class LayoutOptionForm extends EntityForm implements ContainerInjectionInterface
     }
 
     $entity = $this->entity;
+    $entity->setBreakpoints(array_filter($form_state->getValue('breakpoints')));
     if ($layout_id) {
       $entity->setLayoutId($layout_id);
     }

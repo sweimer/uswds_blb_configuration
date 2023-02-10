@@ -75,6 +75,17 @@ interface LayoutOptionInterface extends ConfigEntityInterface {
   public function setWeight(int $weight);
 
   /**
+   * Sets the breakspoint for a specific layout option.
+   *
+   * @param $breakpoints
+   *   Array of breakpoints that are checked.
+   *
+   * @return $this
+   *   The called layout option entity.
+   */
+  public function setBreakpoints($breakpoints);
+
+  /**
    * Returns array of enabled breakpoints ids.
    *
    * @return array

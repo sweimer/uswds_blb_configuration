@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: mobile
-label: Mobile
-base_class: grid-col
-weight: -8
