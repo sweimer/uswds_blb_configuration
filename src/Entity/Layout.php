@@ -49,17 +49,17 @@ class Layout extends ConfigEntityBase implements LayoutInterface {
   /**
    * The machine name for the configuration entity.
    */
-  protected string $id;
+  protected $id;
 
   /**
    * The human-readable name of the configuration entity.
    */
-  protected string $label;
+  protected $label;
 
   /**
    * The number of layout columns.
    */
-  protected string $number_of_columns;
+  protected $number_of_columns;
 
   /**
    * {@inheritdoc}

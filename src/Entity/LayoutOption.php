@@ -68,28 +68,28 @@ class LayoutOption extends ConfigEntityBase implements LayoutOptionInterface {
    *
    * @var string
    */
-  protected string $label;
+  protected $label;
 
   /**
    * The layout id.
    *
    * @var string
    */
-  protected string $layout_id;
+  protected $layout_id;
 
   /**
    * The structure of option columns.
    *
    * @var string
    */
-  protected string $structure;
+  protected $structure;
 
   /**
    * The enabled breakpoints for this option.
    *
    * @var array
    */
-  protected array $breakpoints;
+  protected $breakpoints;
 
   /**
    * The enabled default breakpoints for this option.

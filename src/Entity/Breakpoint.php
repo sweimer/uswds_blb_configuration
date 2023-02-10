@@ -55,21 +55,21 @@ class Breakpoint extends ConfigEntityBase implements BreakpointInterface {
    *
    * @var string
    */
-  protected string $id;
+  protected $id;
 
   /**
    * The USWDS layout Builder breakpoint label.
    *
    * @var string
    */
-  protected string $label;
+  protected $label;
 
   /**
    * The breakpoint base class.
    *
    * @var string
    */
-  protected string $base_class;
+  protected $base_class;
 
   /**
    * The breakpoint status.
@@ -83,7 +83,7 @@ class Breakpoint extends ConfigEntityBase implements BreakpointInterface {
    *
    * @var int
    */
-  protected int $weight = 0;
+  protected $weight = 0;
 
   /**
    * {@inheritdoc}
