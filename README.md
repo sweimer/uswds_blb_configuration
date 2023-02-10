@@ -34,7 +34,6 @@ This module requires the following modules outside of Drupal core:
 One issue with layout builder is the lack of space on the off canvas sidebar.
 
 Some workarounds
-
 * [Paragraph Blocks](https://www.drupal.org/project/paragraph_blocks)
   * Allows users to create the components on the edit screen. And they get turned
   * into blocks to be used in layout builder

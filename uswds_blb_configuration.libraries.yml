@@ -181,7 +181,7 @@ plugin.text_color.layout_builder_form:
 # scroll_effects
 plugin.scroll_effects.build:
   dependencies:
-    - aos.remote
+    - uswds_blb_configuration/aos.remote
 
 # AOS remote library.
 aos.remote:
