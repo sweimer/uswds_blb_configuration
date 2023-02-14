@@ -369,6 +369,9 @@ uswds_blb_configuration.style_settings:
     scroll_effects_library_type:
       type: string
       label: "Scroll effects library type"
+    scroll_effects_advanced_settings:
+      type: boolean
+      label: "Show advanced animation settings"
 
 uswds_blb_configuration.container_wrapper:
   type: config_entity

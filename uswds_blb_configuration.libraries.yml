@@ -192,11 +192,11 @@ aos.remote:
     url: https://github.com/michalsnik/aos/blob/master/LICENSE
     gpl-compatible: true
   js:
-    https://unpkg.com/aos@2.3.1/dist/aos.js: { type: external, weight: -3, minified: true }
+    https://unpkg.com/aos@2.3.4/dist/aos.js: { type: external, weight: -3, minified: true }
     js/plugins/scroll_effects/build.js: { }
   css:
     theme:
-      https://unpkg.com/aos@2.3.1/dist/aos.css: { }
+      https://unpkg.com/aos@2.3.4/dist/aos.css: { }
 
 # AOS local library.
 aos.local:

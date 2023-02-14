@@ -363,6 +363,8 @@
 #layout-builder-modal form {
   color: #383A40;
   font-family: inherit;
+  display: inline-block;
+  width: 100%;
 }
 
 #layout-builder-modal input[type="checkbox"] {
@@ -411,10 +413,14 @@
 }
 
 #layout-builder-modal .form-select {
-  background: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMwMHB4JyB3aWR0aD0nMzAwcHgnICBmaWxsPSIjNWM2MDZiIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwIDEwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iIzVjNjA2YiIgZD0iTTUwLjExMSw3Mi42NTljLTEuMDYxLDAtMi4wNzgtMC40MjItMi44MjktMS4xNzJMMTcuMjc1LDQxLjQ3NGMtMS41NjItMS41NjItMS41NjItNC4wOTUsMC4wMDEtNS42NTcgIGMxLjU2My0xLjU2Miw0LjA5Ni0xLjU2Miw1LjY1NywwbDI3LjE3OCwyNy4xODVsMjcuMTc4LTI3LjE4NWMxLjU2Mi0xLjU2Miw0LjA5NS0xLjU2Miw1LjY1NywwICBjMS41NjIsMS41NjIsMS41NjIsNC4wOTQsMC4wMDEsNS42NTdMNTIuOTQsNzEuNDg3QzUyLjE4OSw3Mi4yMzcsNTEuMTcyLDcyLjY1OSw1MC4xMTEsNzIuNjU5eiI+PC9wYXRoPjwvc3ZnPg==");
   background-size: 25px;
-  background-position: right 10px center;
-  background-repeat: no-repeat;
+  background: no-repeat right 10px center;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+#layout-builder-modal .form-select:not([multiple]) {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -1438,6 +1444,8 @@
 #drupal-off-canvas form {
   color: #383A40;
   font-family: inherit;
+  display: inline-block;
+  width: 100%;
 }
 
 #drupal-off-canvas input[type="checkbox"] {
@@ -1486,10 +1494,14 @@
 }
 
 #drupal-off-canvas .form-select {
-  background: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMwMHB4JyB3aWR0aD0nMzAwcHgnICBmaWxsPSIjNWM2MDZiIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwIDEwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iIzVjNjA2YiIgZD0iTTUwLjExMSw3Mi42NTljLTEuMDYxLDAtMi4wNzgtMC40MjItMi44MjktMS4xNzJMMTcuMjc1LDQxLjQ3NGMtMS41NjItMS41NjItMS41NjItNC4wOTUsMC4wMDEtNS42NTcgIGMxLjU2My0xLjU2Miw0LjA5Ni0xLjU2Miw1LjY1NywwbDI3LjE3OCwyNy4xODVsMjcuMTc4LTI3LjE4NWMxLjU2Mi0xLjU2Miw0LjA5NS0xLjU2Miw1LjY1NywwICBjMS41NjIsMS41NjIsMS41NjIsNC4wOTQsMC4wMDEsNS42NTdMNTIuOTQsNzEuNDg3QzUyLjE4OSw3Mi4yMzcsNTEuMTcyLDcyLjY1OSw1MC4xMTEsNzIuNjU5eiI+PC9wYXRoPjwvc3ZnPg==");
   background-size: 25px;
-  background-position: right 10px center;
-  background-repeat: no-repeat;
+  background: no-repeat right 10px center;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+#drupal-off-canvas .form-select:not([multiple]) {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -2390,7 +2402,7 @@
 
 #drupal-off-canvas .input-icon._none,
 #layout-builder-modal .input-icon._none {
-  background-image: url("../../../images/plugins/none.svg");
+  background-image: url("./../../images/plugins/none.svg");
 }
 
 #drupal-off-canvas .uswds_input-boxes--box-model .fieldset-wrapper > div > div input ~ label,
@@ -2956,13 +2968,14 @@
   text-align: center;
   width: 75px;
   transform: translateY(-10px);
-  transition: all .25s ease-out;
+  transition: all .25s ease-in-out;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
   border-radius: 4px;
   white-space: normal;
   z-index: 1;
   font-size: .875rem;
   font-weight: normal;
+  will-change: opacity;
 }
 
 #drupal-off-canvas .uswds_tooltip.uswds_tooltip-lg,
@@ -3011,6 +3024,22 @@
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0px);
+}
+
+#drupal-off-canvas .uswds_full-label > .form-item > label,
+#layout-builder-modal .uswds_full-label > .form-item > label {
+  display: block;
+}
+
+#drupal-off-canvas .uswds_full-label > .form-item > label .uswds_tooltip-lg,
+#layout-builder-modal .uswds_full-label > .form-item > label .uswds_tooltip-lg {
+  width: 100%;
+  margin-left: -50%;
+}
+
+#drupal-off-canvas .uswds_full-label > .form-item > label .uswds_tooltip-lg:after,
+#layout-builder-modal .uswds_full-label > .form-item > label .uswds_tooltip-lg:after {
+  left: 2rem;
 }
 
 #drupal-off-canvas .media-library-item,

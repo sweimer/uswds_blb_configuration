@@ -9,6 +9,8 @@
 form {
   color: $panel_text_color;
   font-family: inherit;
+  display: inline-block;
+  width: 100%;
 }
 
 input[type="checkbox"] {
@@ -56,13 +58,17 @@ label {
 }
 
 .form-select {
-  background: $form_select_icon;
   background-size: 25px;
-  background-position: right 10px center;
-  background-repeat: no-repeat;
+  background: no-repeat right 10px center;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+
+  &:not([multiple]) {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
 
   option {
     color: $black;

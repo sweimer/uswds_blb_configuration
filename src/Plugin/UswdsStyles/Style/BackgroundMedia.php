@@ -407,7 +407,9 @@ class BackgroundMedia extends StylePluginBase implements ContainerFactoryPluginI
 
           $build['#theme_wrappers']['uswds_video_background'] = [
             '#video_background_url' => $background_video_url,
+            '#attributes' => $build['#theme_wrappers']['uswds_container_wrapper']['#attributes'],
           ];
+          unset($build['#theme_wrappers']['uswds_container_wrapper']['#attributes']['class'][0]);
         }
       }
     }
