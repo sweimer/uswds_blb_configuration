@@ -53,7 +53,7 @@
 }
 
 // Dark Mode
-[data-bs-mode="dark"] .uswds-toggle-switch--input:checked + .uswds-toggle-switch--slider {
+[data-uswds-mode="dark"] .uswds-toggle-switch--input:checked + .uswds-toggle-switch--slider {
   background: $white;
 
   &:before {

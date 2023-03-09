@@ -38,11 +38,11 @@
   border-radius: 3px;
 }
 
-#drupal-off-canvas .uswds_breakpoint_col.bp-selected {
+#drupal-off-canvas .uswds_breakpoint_col.uswds-selected {
   color: #ffffff;
   background-color: #277abd;
 }
 
-#drupal-off-canvas .uswds_breakpoint_col.bp-selected:hover {
+#drupal-off-canvas .uswds_breakpoint_col.uswds-selected:hover {
   color: #444444;
 }

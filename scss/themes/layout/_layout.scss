@@ -166,21 +166,21 @@ $conainer_icon_path: '../../images/layout/';
 }
 
 // Graphical Layout Columns
-.blb_breakpoint_cols label:hover .blb_breakpoint_col {
+.uswds_breakpoint_cols label:hover .uswds_breakpoint_col {
   background-color: rgba($panel_text_color, .8);
   color: $panel_bg_color;
 }
 
-input:checked + label .blb_breakpoint_col {
+input:checked + label .uswds_breakpoint_col {
   color: $panel_bg_color;
   background-color: $panel_link_color;
 }
 
-.blb_breakpoint_col {
+.uswds_breakpoint_col {
   color: $panel_text_color;
   background-color: rgba($panel_text_color, .2);
 
-  &.bp-selected {
+  &.uswds-selected {
     color: $panel_text_color;
     background-color: $panel_link_color;
   }

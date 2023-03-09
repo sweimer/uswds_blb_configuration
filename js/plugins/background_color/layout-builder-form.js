@@ -18,7 +18,7 @@
           var bgColor = $(value).next('label').css('background-color');
           var bgColorHex = rgb2hex(bgColor);
           var bgColorContrast = getContrast(bgColorHex);
-          $(value).next('label').addClass('bs_yiq-' + bgColorContrast);
+          $(value).next('label').addClass('uswds_yiq-' + bgColorContrast);
         }
       });
 

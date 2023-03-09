@@ -36,21 +36,21 @@
   display: flex;
 }
 
-#drupal-off-canvas .bs-justify-content-between,
-#layout-builder-modal .bs-justify-content-between {
+#drupal-off-canvas .uswds-justify-content-between,
+#layout-builder-modal .uswds-justify-content-between {
   justify-content: space-between;
 }
 
-#drupal-off-canvas .bs_row,
-#layout-builder-modal .bs_row {
+#drupal-off-canvas .uswds_row,
+#layout-builder-modal .uswds_row {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
 }
 
-#drupal-off-canvas .bs_col,
-#layout-builder-modal .bs_col {
+#drupal-off-canvas .uswds_col,
+#layout-builder-modal .uswds_col {
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
   -webkit-box-flex: 1;
@@ -62,20 +62,20 @@
   padding-left: 15px;
 }
 
-#drupal-off-canvas .bs_col--50,
-#layout-builder-modal .bs_col--50 {
+#drupal-off-canvas .uswds_col--50,
+#layout-builder-modal .uswds_col--50 {
   flex: 50%;
   max-width: 50%;
 }
 
-#drupal-off-canvas .bs_col--100,
-#layout-builder-modal .bs_col--100 {
+#drupal-off-canvas .uswds_col--100,
+#layout-builder-modal .uswds_col--100 {
   flex: 100%;
   max-width: 100%;
 }
 
-#drupal-off-canvas .bs-group-title,
-#layout-builder-modal .bs-group-title {
+#drupal-off-canvas .uswds-group-title,
+#layout-builder-modal .uswds-group-title {
   margin-left: 15px;
   display: flex;
   align-items: center;

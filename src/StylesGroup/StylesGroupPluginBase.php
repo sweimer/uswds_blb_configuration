@@ -89,7 +89,7 @@ abstract class StylesGroupPluginBase extends PluginBase implements StylesGroupPl
   public function getTitleWithIcon() {
     return [
       '#markup' => $this->getSvgIconMarkup($this->getIconPath()),
-      '#prefix' => '<span class="bs-group-title">',
+      '#prefix' => '<span class="uswds-group-title">',
       '#suffix' => $this->getTitle() . '</span>',
     ];
   }

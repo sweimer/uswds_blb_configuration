@@ -2,6 +2,7 @@
 
 namespace Drupal\uswds_blb_configuration\Plugin\UswdsStyles\Style;
 
+use Drupal\uswds_blb_configuration\ResponsiveTrait;
 use Drupal\uswds_blb_configuration\Style\StylePluginBase;
 use Drupal\Core\Form\FormStateInterface;
 
@@ -18,6 +19,8 @@ use Drupal\Core\Form\FormStateInterface;
  * )
  */
 class Margin extends StylePluginBase {
+
+  use ResponsiveTrait;
 
   /**
    * {@inheritdoc}
@@ -45,11 +48,16 @@ class Margin extends StylePluginBase {
       '#tree' => FALSE,
       '#attributes' => [
         'class' => [
-          'bs-admin-d-lg-flex',
-          'bs-admin-group-form-item-lg-ml',
+          'uswds-admin-group-form-item-lg-ml',
         ],
       ],
     ];
+
+    // Responsive.
+    // Loop through the breakpoints keys.
+    foreach ($this->getBreakpointsKeys() as $breakpoint_key) {
+      $this->createBreakpointFormField($form, $breakpoint_key, 'margin_group', ['spacing']);
+    }
 
     $form['spacing']['margin_group']['margin'] = [
       '#type' => 'textarea',
@@ -59,6 +67,25 @@ class Margin extends StylePluginBase {
       '#rows' => 5,
     ];
 
+    // Responsive.
+    // Loop through the breakpoints keys.
+    foreach ($this->getBreakpointsKeys() as $breakpoint_key) {
+      // Then create a field for breakpoint.
+      $this->createBreakpointFormField(
+        $form,
+        $breakpoint_key,
+        'margin',
+        [
+          'spacing',
+          'margin_group',
+        ],
+        [
+          'spacing',
+          'margin_group_' . $breakpoint_key,
+        ]
+      );
+    }
+
     for ($i = 0; $i < 4; $i++) {
       $form['spacing']['margin_group']['margin_' . $directions[$i]] = [
         '#type' => 'textarea',
@@ -67,6 +94,25 @@ class Margin extends StylePluginBase {
         '#cols' => 60,
         '#rows' => 5,
       ];
+
+      // Responsive.
+      // Loop through the breakpoints keys.
+      foreach ($this->getBreakpointsKeys() as $breakpoint_key) {
+        // Then create a field for each breakpoint.
+        $this->createBreakpointFormField(
+          $form,
+          $breakpoint_key,
+          'margin_' . $directions[$i],
+          [
+            'spacing',
+            'margin_group',
+          ],
+          [
+            'spacing',
+            'margin_group_' . $breakpoint_key,
+          ],
+        );
+      }
     }
 
     return $form;
@@ -83,6 +129,17 @@ class Margin extends StylePluginBase {
       ->set('margin_right', $form_state->getValue('margin_right'))
       ->set('margin_bottom', $form_state->getValue('margin_bottom'))
       ->save();
+
+    // Responsive.
+    $fields = [
+      'margin',
+      'margin_left',
+      'margin_top',
+      'margin_right',
+      'margin_bottom',
+    ];
+
+    $this->submitBreakpointsConfigurationForm($form_state, $fields);
   }
 
   /**
@@ -112,10 +169,9 @@ class Margin extends StylePluginBase {
       '#validated' => TRUE,
       '#attributes' => [
         'class' => [
-          'bs_col--full',
           'uswds_input-boxes',
           'uswds_input-boxes--box-model',
-          'bs_margin--type',
+          'uswds_margin--type',
         ],
       ],
       '#disable_live_preview' => TRUE,
@@ -138,10 +194,13 @@ class Margin extends StylePluginBase {
       ],
       '#states' => [
         'visible' => [
-          ':input.bs_margin--type' => ['value' => 'margin'],
+          ':input.uswds_margin--type' => ['value' => 'margin'],
         ],
       ],
     ];
+
+    // Responsive.
+    $this->createBreakpointsStyleFormClassIndexBasedFields($form, 'margin', 'spacing', $storage);
 
     // Loop through the directions.
     for ($i = 0; $i < 4; $i++) {
@@ -162,19 +221,35 @@ class Margin extends StylePluginBase {
         ],
         '#states' => [
           'visible' => [
-            ':input.bs_margin--type' => ['value' => 'margin_' . $directions[$i]],
+            ':input.uswds_margin--type' => ['value' => 'margin_' . $directions[$i]],
           ],
         ],
       ];
+
+      // Responsive.
+      $this->createBreakpointsStyleFormClassIndexBasedFields($form, 'margin_' . $directions[$i], 'spacing', $storage);
     }
 
     // Pass margin options to drupal settings.
     $margin_options = [];
     $margin_options['margin'] = array_keys($this->getStyleOptions('margin'));
+
+    // Responsive.
+    foreach ($this->getBreakpointsKeys() as $breakpoint_key) {
+      $margin_options['margin_' . $breakpoint_key] = array_keys($this->getStyleOptions('margin_' . $breakpoint_key));
+    }
+
     for ($i = 0; $i < 4; $i++) {
       $margin_options['margin_' . $directions[$i]] = array_keys($this->getStyleOptions('margin_' . $directions[$i]));
+
+      // Responsive.
+      foreach ($this->getBreakpointsKeys() as $breakpoint_key) {
+        $margin_options['margin_' . $directions[$i] . '_' . $breakpoint_key] = array_keys($this->getStyleOptions('margin_' . $directions[$i] . '_' . $breakpoint_key));
+      }
     }
     $form['#attached']['drupalSettings']['uswds_blb_configuration']['spacing']['margin_classes_options'] = $margin_options;
+    // Responsive.
+    $form['#attached']['drupalSettings']['uswds_blb_configuration']['breakpoints'] = $this->getBreakpointsKeys();
 
     // Attach the Layout Builder form style for this plugin.
     $form['#attached']['library'][] = 'uswds_blb_configuration/plugin.margin.layout_builder_form';
@@ -198,9 +273,19 @@ class Margin extends StylePluginBase {
       ],
     ];
 
+    // Responsive.
+    $responsive_target_fields = [
+      'margin',
+    ];
+
     for ($i = 0; $i < 4; $i++) {
       $schema['margin_' . $directions[$i]]['class'] = $this->getStyleOptionClassByIndex('margin_' . $directions[$i], $group_elements['margin_' . $directions[$i]]);
+      // Responsive.
+      $responsive_target_fields[] = 'margin_' . $directions[$i];
     }
+
+    // Responsive.
+    $this->saveBreakpointsStyleFormClassIndexBasedFields($group_elements, $schema, $responsive_target_fields);
 
     return $schema;
   }
@@ -217,6 +302,11 @@ class Margin extends StylePluginBase {
       'bottom',
     ];
 
+    // Responsive.
+    $responsive_target_fields = [
+      'margin',
+    ];
+
     if (isset($storage['margin']['class'])) {
       $classes[] = $storage['margin']['class'];
     }
@@ -224,13 +314,18 @@ class Margin extends StylePluginBase {
     for ($i = 0; $i < 4; $i++) {
       if (isset($storage['margin_' . $directions[$i]]['class'])) {
         $classes[] = $storage['margin_' . $directions[$i]]['class'];
+        // Responsive.
+        $responsive_target_fields[] = 'margin_' . $directions[$i];
       }
     }
+
+    // Responsive.
+    $this->buildBreakpoints($classes, $storage, $responsive_target_fields);
 
     // Add the classes to the build.
     $build = $this->addClassesToBuild($build, $classes, $theme_wrapper);
 
-    // Attach bs-classes to the build.
+    // Attach uswds-classes to the build.
     $build['#attached']['library'][] = 'uswds_blb_configuration/plugin.margin.build';
 
     return $build;

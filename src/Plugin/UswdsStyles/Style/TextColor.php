@@ -19,11 +19,6 @@ use Drupal\Core\Form\FormStateInterface;
  */
 class TextColor extends StylePluginBase {
 
-  // phpcs:disable
-  // @todo uncomment when responsive is fixed.
-  // use ResponsiveTrait;
-  // phpcs:enable
-
   /**
    * {@inheritdoc}
    */
@@ -39,15 +34,6 @@ class TextColor extends StylePluginBase {
       '#rows' => 5,
     ];
 
-    // phpcs:disable
-    // @todo uncomment when responsive is fixed.
-    // Responsive.
-    $fields = [
-      'text_colors' => ['typography'],
-    ];
-    //  $this->buildBreakpointsConfigurationForm($form, $fields);
-    // phpcs:enable
-
     return $form;
   }
 
@@ -58,16 +44,6 @@ class TextColor extends StylePluginBase {
     $this->config()
       ->set('text_colors', $form_state->getValue('text_colors'))
       ->save();
-
-    // phpcs:disable
-    // @todo uncomment when responsive is fixed.
-    // Responsive.
-    // $fields = [
-    // 'text_colors',
-    // ];
-
-    // $this->submitBreakpointsConfigurationForm($form_state, $fields);
-    // phpcs:enable
   }
 
   /**
@@ -90,12 +66,6 @@ class TextColor extends StylePluginBase {
       ],
     ];
 
-    // phpcs:disable
-    // @todo uncomment when responsive is fixed.
-    // Responsive.
-    // $this->createBreakpointsStyleFormFields($form, 'text_color', 'typography', $storage, 'text_colors');
-    // phpcs:enable
-
     // Attach the Layout Builder form style for this plugin.
     $form['#attached']['library'][] = 'uswds_blb_configuration/plugin.text_color.layout_builder_form';
 
@@ -106,23 +76,11 @@ class TextColor extends StylePluginBase {
    * {@inheritdoc}
    */
   public function submitStyleFormElements(array $group_elements) {
-    $storage = [
+    return [
       'text_color' => [
         'class' => $group_elements['text_color'],
       ],
     ];
-
-    // phpcs:disable
-    // @todo uncomment when responsive is fixed.
-    // Responsive.
-    //    $fields = [
-    //      'text_color',
-    //    ];
-    //
-    //    $this->saveBreakpointsStyleFormFields($group_elements, $storage, $fields);
-    // phpcs:enable
-
-    return $storage;
   }
 
   /**
@@ -134,19 +92,10 @@ class TextColor extends StylePluginBase {
       $classes[] = $storage['text_color']['class'];
     }
 
-    // phpcs:disable
-    // @todo uncomment when responsive is fixed.
-    // Responsive.
-    // $fields = [
-      // 'text_color',
-    // ];
-    //  $this->buildBreakpoints($classes, $storage, $fields);
-    // phpcs:enable
-
     // Add the classes to the build.
     $build = $this->addClassesToBuild($build, $classes, $theme_wrapper);
 
-    // Attach bs-classes to the build.
+    // Attach uswds-classes to the build.
     $build['#attached']['library'][] = 'uswds_blb_configuration/plugin.text_color.build';
 
     return $build;

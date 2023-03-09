@@ -4,6 +4,7 @@ namespace Drupal\uswds_blb_configuration;
 
 use Drupal\Component\Utility\NestedArray;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 
 /**
  * A Trait for responsive methods.
@@ -11,6 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
 trait ResponsiveTrait {
 
   use HelperTrait;
+  use StringTranslationTrait;
 
   /**
    * The available breakpoint.
@@ -19,12 +21,23 @@ trait ResponsiveTrait {
    *   Array of breakpoints.
    */
   protected function getBreakpoints() {
-    return [
-      'desktop' => $this->t('Desktop'),
-      'laptop' => $this->t('Laptop'),
-      'tablet' => $this->t('Tablet'),
-      'mobile' => $this->t('Mobile'),
-    ];
+    $enabled = [];
+
+    $entity_storage = \Drupal::service('entity_type.manager')->getStorage('uswds_breakpoint');
+
+    // Query the terms sorted by weight.
+    $query_result = $entity_storage->getQuery()
+      ->sort('weight', 'DESC')
+      ->execute();
+
+    // Load the terms.
+    $breakpoints = $entity_storage->loadMultiple($query_result);
+    foreach ($breakpoints as $breakpoint) {
+      if ($breakpoint->getStatus()) {
+        $enabled[$breakpoint->id()] = $breakpoint->label();
+      }
+    }
+    return $enabled;
   }
 
   /**
@@ -46,7 +59,7 @@ trait ResponsiveTrait {
       '#default_value' => 'all',
       '#validated' => TRUE,
       '#attributes' => [
-        'class' => ['bs_col--full', 'uswds_responsive', 'uswds_responsive_bar'],
+        'class' => ['uswds_responsive', 'uswds_responsive_bar'],
       ],
       '#disable_live_preview' => TRUE,
     ];
@@ -82,7 +95,6 @@ trait ResponsiveTrait {
       '#validated' => TRUE,
       '#attributes' => [
         'class' => [
-          'bs_col--full',
           'uswds_responsive',
           'uswds_responsive_' . $group_name,
         ],
@@ -92,7 +104,13 @@ trait ResponsiveTrait {
 
     // Loop through the breakpoints.
     foreach ($this->getBreakpoints() as $breakpoint_key => $breakpoint_value) {
-      $form['uswds_responsive_' . $group_name]['#options'][$breakpoint_key] = $this->getSvgIconMarkup($icon_path . 'responsive/device-' . $breakpoint_key . '.svg');
+      if (file_exists($icon_path . 'responsive/device-' . $breakpoint_key . '.svg')) {
+        $form['uswds_responsive_' . $group_name]['#options'][$breakpoint_key] = $this->getSvgIconMarkup($icon_path . 'responsive/device-' . $breakpoint_key . '.svg');
+      }
+      else {
+        // todo default image.
+        // $form['uswds_responsive_' . $group_name]['#options'][$breakpoint_key] = file_get_contents(DRUPAL_ROOT . '/' . $icon_path . 'responsive/uswds-default.png');
+      }
     }
   }
 
@@ -369,9 +387,11 @@ trait ResponsiveTrait {
     foreach ($fields as $field_name) {
       // Loop through the breakpoints.
       foreach ($this->getBreakpointsKeys() as $breakpoint) {
-        $storage[$field_name . '_' . $breakpoint] = [
-          'class' => $this->getStyleOptionClassByIndex($field_name . '_' . $breakpoint, $group_elements[$field_name . '_' . $breakpoint]),
-        ];
+        if ($this->getStyleOptionClassByIndex($field_name . '_' . $breakpoint, $group_elements[$field_name . '_' . $breakpoint]) !== '_none') {
+          $storage[$field_name . '_' . $breakpoint] = [
+            'class' => $this->getStyleOptionClassByIndex($field_name . '_' . $breakpoint, $group_elements[$field_name . '_' . $breakpoint]),
+          ];
+        }
       }
     }
   }
@@ -392,7 +412,12 @@ trait ResponsiveTrait {
       // Loop through the breakpoints.
       foreach ($this->getBreakpointsKeys() as $breakpoint) {
         if (isset($storage[$field_name . '_' . $breakpoint]['class'])) {
-          $classes[] = $storage[$field_name . '_' . $breakpoint]['class'];
+          if ($breakpoint !== 'mobile') {
+            $classes[] = $breakpoint . ':' . $storage[$field_name . '_' . $breakpoint]['class'];
+          }
+          else {
+            $classes[] = $storage[$field_name . '_' . $breakpoint]['class'];
+          }
         }
       }
     }

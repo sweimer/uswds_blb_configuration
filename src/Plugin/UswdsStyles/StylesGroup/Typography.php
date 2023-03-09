@@ -19,11 +19,6 @@ use Drupal\Core\Form\FormStateInterface;
  */
 class Typography extends StylesGroupPluginBase {
 
-  // phpcs:disable
-  // @todo uncomment when responsive is fixed.
-  // use ResponsiveTrait;
-  // phpcs:enable
-
   /**
    * {@inheritdoc}
    */
@@ -41,11 +36,6 @@ class Typography extends StylesGroupPluginBase {
    * {@inheritdoc}
    */
   public function buildStyleFormElements(array &$form, FormStateInterface $form_state, $storage) {
-    // phpcs:disable
-    // @todo uncomment when responsive is fixed.
-    // $this->buildBreakpointsFields($form, 'typography');
-    // phpcs:enable
-
     return $form;
   }
 

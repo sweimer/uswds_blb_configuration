@@ -246,7 +246,7 @@ class StylesGroupManager extends DefaultPluginManager {
       }
     }
 
-    return array_merge($storage, $options);
+    return $options;
   }
 
   /**

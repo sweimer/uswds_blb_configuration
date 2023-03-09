@@ -10,7 +10,7 @@
   Drupal.behaviors.shadowPreview = {
     attach: function (context) {
 
-      var previewElement = $('.uswds-shadow-preview [data-bs-element="bs_preview-element"]');
+      var previewElement = $('.uswds-shadow-preview [data-uswds-element="uswds_preview-element"]');
 
       // Refresh preview classes.
       function refreshShadowClasses(el) {
@@ -18,7 +18,7 @@
         var shadow_classes = '';
 
         // Setup our shadow classes.
-        $('input.bs-field-box-shadow').each(function() {
+        $('input.uswds-field-box-shadow').each(function() {
           if ($(this).is(':checked') && $(this).val() != '_none') {
             shadow_classes += $(this).val() + ' ';
           }
@@ -35,7 +35,7 @@
 
       // Refresh the box shadow classes on change.
       var input_triggers = [
-        'input[class^="bs-field-box-shadow"]',
+        'input[class^="uswds-field-box-shadow"]',
       ];
 
       $.each(input_triggers, function (index, value) {
@@ -46,8 +46,8 @@
 
       // Toggle our bg color mode.
       function togglePreviewBackgroundColor(el) {
-        var previewBgElement = el.closest('[data-bs-element="bs_preview-box"]');
-        previewBgElement.attr('data-bs-mode', previewBgElement.attr('data-bs-mode') === 'light' ? 'dark' : 'light');
+        var previewBgElement = el.closest('[data-uswds-element="uswds_preview-box"]');
+        previewBgElement.attr('data-uswds-mode', previewBgElement.attr('data-uswds-mode') === 'light' ? 'dark' : 'light');
       }
 
       $('.uswds-shadow-preview .uswds-toggle-switch', context).on('change', function() {

@@ -83,7 +83,6 @@ abstract class StylePluginBase extends PluginBase implements StylePluginInterfac
    */
   public function getStyleOptions(string $name) {
     $config = $this->config();
-    $options = [];
     $config_options = $config->get($name);
 
     $options = ['_none' => $this->t('N/A')];

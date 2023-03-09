@@ -292,7 +292,7 @@ class BackgroundMedia extends StylePluginBase implements ContainerFactoryPluginI
       ],
       '#default_value' => $storage['background_media']['background_options']['background_position'] ?? 'center',
       '#attributes' => [
-        'class' => ['bs_background--position bs_col bs_col--50'],
+        'class' => ['uswds_background--position uswds_col uswds_col--50'],
       ],
     ];
 
@@ -307,7 +307,7 @@ class BackgroundMedia extends StylePluginBase implements ContainerFactoryPluginI
       ],
       '#default_value' => $storage['background_media']['background_options']['background_repeat'] ?? 'no-repeat',
       '#attributes' => [
-        'class' => ['bs_background--repeat bs_col bs_col--50'],
+        'class' => ['uswds_background--repeat uswds_col uswds_col--50'],
       ],
     ];
 
@@ -320,7 +320,7 @@ class BackgroundMedia extends StylePluginBase implements ContainerFactoryPluginI
       ],
       '#default_value' => $storage['background_media']['background_options']['background_attachment'] ?? 'not_fixed',
       '#attributes' => [
-        'class' => ['uswds_background--attachment bs_col bs_col--100'],
+        'class' => ['uswds_background--attachment uswds_col uswds_col--100'],
       ],
       '#prefix' => '<hr class="uswds_divider"/>',
       '#suffix' => '<hr class="uswds_divider"/>',
@@ -336,7 +336,7 @@ class BackgroundMedia extends StylePluginBase implements ContainerFactoryPluginI
       ],
       '#default_value' => $storage['background_media']['background_options']['background_size'] ?? 'cover',
       '#attributes' => [
-        'class' => ['uswds_background--size bs_col bs_col--100'],
+        'class' => ['uswds_background--size uswds_col uswds_col--100'],
       ],
       '#suffix' => '<hr class="uswds_divider"/>',
     ];

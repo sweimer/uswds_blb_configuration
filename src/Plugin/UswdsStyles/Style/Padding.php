@@ -2,6 +2,7 @@
 
 namespace Drupal\uswds_blb_configuration\Plugin\UswdsStyles\Style;
 
+use Drupal\uswds_blb_configuration\ResponsiveTrait;
 use Drupal\uswds_blb_configuration\Style\StylePluginBase;
 use Drupal\Core\Form\FormStateInterface;
 
@@ -19,10 +20,7 @@ use Drupal\Core\Form\FormStateInterface;
  */
 class Padding extends StylePluginBase {
 
-  // phpcs:disable
-  // @todo uncomment when responsive is fixed.
-  // use ResponsiveTrait;
-  // phpcs:enable
+  use ResponsiveTrait;
 
   /**
    * {@inheritdoc}
@@ -49,21 +47,15 @@ class Padding extends StylePluginBase {
       '#title_display' => 'invisible',
       '#tree' => FALSE,
       '#attributes' => [
-        'class' => [
-          'bs-admin-d-lg-flex',
-          'bs-admin-group-form-item-lg-ml',
-        ],
+        'class' => [],
       ],
     ];
 
-    // phpcs:disable
-    // @todo uncomment when responsive is fixed.
     // Responsive.
     // Loop through the breakpoints keys.
-    //    foreach ($this->getBreakpointsKeys() as $breakpoint_key) {
-    //      $this->createBreakpointFormField($form, $breakpoint_key, 'padding_group', ['spacing']);
-    //    }
-    // phpcs:enable
+    foreach ($this->getBreakpointsKeys() as $breakpoint_key) {
+      $this->createBreakpointFormField($form, $breakpoint_key, 'padding_group', ['spacing']);
+    }
 
     $form['spacing']['padding_group']['padding'] = [
       '#type' => 'textarea',
@@ -73,27 +65,24 @@ class Padding extends StylePluginBase {
       '#rows' => 5,
     ];
 
-    // phpcs:disable
-    // @todo uncomment when responsive is fixed.
     // Responsive.
     // Loop through the breakpoints keys.
-    //    foreach ($this->getBreakpointsKeys() as $breakpoint_key) {
-    //      // Then create a field for breakpoint.
-    //      $this->createBreakpointFormField(
-    //        $form,
-    //        $breakpoint_key,
-    //        'padding',
-    //        [
-    //          'spacing',
-    //          'padding_group',
-    //        ],
-    //        [
-    //          'spacing',
-    //          'padding_group_' . $breakpoint_key,
-    //        ]
-    //      );
-    //    }
-    // phpcs:enable
+    foreach ($this->getBreakpointsKeys() as $breakpoint_key) {
+      // Then create a field for breakpoint.
+      $this->createBreakpointFormField(
+        $form,
+        $breakpoint_key,
+        'padding',
+        [
+          'spacing',
+          'padding_group',
+        ],
+        [
+          'spacing',
+          'padding_group_' . $breakpoint_key,
+        ]
+      );
+    }
 
     for ($i = 0; $i < 4; $i++) {
       $form['spacing']['padding_group']['padding_' . $directions[$i]] = [
@@ -103,27 +92,25 @@ class Padding extends StylePluginBase {
         '#cols' => 60,
         '#rows' => 5,
       ];
-      // phpcs:disable
-      // @todo uncomment when responsive is fixed.
+
       // Responsive.
       // Loop through the breakpoints keys.
-      //      foreach ($this->getBreakpointsKeys() as $breakpoint_key) {
-      //        // Then create a field for each breakpoint.
-      //        $this->createBreakpointFormField(
-      //          $form,
-      //          $breakpoint_key,
-      //          'padding_' . $directions[$i],
-      //          [
-      //            'spacing',
-      //            'padding_group',
-      //          ],
-      //          [
-      //            'spacing',
-      //            'padding_group_' . $breakpoint_key,
-      //          ],
-      //        );
-      //      }
-      // phpcs:enable
+      foreach ($this->getBreakpointsKeys() as $breakpoint_key) {
+        // Then create a field for each breakpoint.
+        $this->createBreakpointFormField(
+          $form,
+          $breakpoint_key,
+          'padding_' . $directions[$i],
+          [
+            'spacing',
+            'padding_group',
+          ],
+          [
+            'spacing',
+            'padding_group_' . $breakpoint_key,
+          ],
+        );
+      }
     }
 
     return $form;
@@ -141,19 +128,16 @@ class Padding extends StylePluginBase {
       ->set('padding_bottom', $form_state->getValue('padding_bottom'))
       ->save();
 
-    // phpcs:disable
-    // @todo uncomment when responsive is fixed.
     // Responsive.
-    //    $fields = [
-    //      'padding',
-    //      'padding_left',
-    //      'padding_top',
-    //      'padding_right',
-    //      'padding_bottom',
-    //    ];
-    //
-    //    $this->submitBreakpointsConfigurationForm($form_state, $fields);
-    // phpcs:enable
+    $fields = [
+      'padding',
+      'padding_left',
+      'padding_top',
+      'padding_right',
+      'padding_bottom',
+    ];
+
+    $this->submitBreakpointsConfigurationForm($form_state, $fields);
   }
 
   /**
@@ -183,7 +167,6 @@ class Padding extends StylePluginBase {
       '#validated' => TRUE,
       '#attributes' => [
         'class' => [
-          'bs_col--full',
           'uswds_input-boxes',
           'uswds_input-boxes--box-model',
           'uswds_padding--type',
@@ -214,11 +197,8 @@ class Padding extends StylePluginBase {
       ],
     ];
 
-    // phpcs:disable
-    // @todo uncomment when responsive is fixed.
     // Responsive.
-    // $this->createBreakpointsStyleFormClassIndexBasedFields($form, 'padding', 'spacing', $storage);
-    // phpcs:enable
+    $this->createBreakpointsStyleFormClassIndexBasedFields($form, 'padding', 'spacing', $storage);
 
     // Loop through the directions.
     for ($i = 0; $i < 4; $i++) {
@@ -244,44 +224,30 @@ class Padding extends StylePluginBase {
         ],
       ];
 
-      // phpcs:disable
-      // @todo uncomment when responsive is fixed.
       // Responsive.
-      // $this->createBreakpointsStyleFormClassIndexBasedFields($form, 'padding_' . $directions[$i], 'spacing', $storage);
-      // phpcs:enable
+      $this->createBreakpointsStyleFormClassIndexBasedFields($form, 'padding_' . $directions[$i], 'spacing', $storage);
     }
 
     // Pass padding options to drupal settings.
     $padding_options = [];
     $padding_options['padding'] = array_keys($this->getStyleOptions('padding'));
 
-    // phpcs:disable
-    // @todo uncomment when responsive is fixed.
     // Responsive.
-    //    foreach ($this->getBreakpointsKeys() as $breakpoint_key) {
-    //      $padding_options['padding_' . $breakpoint_key] = array_keys($this->getStyleOptions('padding_' . $breakpoint_key));
-    //    }
-    // phpcs:enable
+    foreach ($this->getBreakpointsKeys() as $breakpoint_key) {
+      $padding_options['padding_' . $breakpoint_key] = array_keys($this->getStyleOptions('padding_' . $breakpoint_key));
+    }
 
     for ($i = 0; $i < 4; $i++) {
       $padding_options['padding_' . $directions[$i]] = array_keys($this->getStyleOptions('padding_' . $directions[$i]));
 
-      // phpcs:disable
-      // @todo uncomment when responsive is fixed.
       // Responsive.
-      //      foreach ($this->getBreakpointsKeys() as $breakpoint_key) {
-      //        $padding_options['padding_' . $directions[$i] . '_' . $breakpoint_key] = array_keys($this->getStyleOptions('padding_' . $directions[$i] . '_' . $breakpoint_key));
-      //      }
-      // phpcs:enable
-
+      foreach ($this->getBreakpointsKeys() as $breakpoint_key) {
+        $padding_options['padding_' . $directions[$i] . '_' . $breakpoint_key] = array_keys($this->getStyleOptions('padding_' . $directions[$i] . '_' . $breakpoint_key));
+      }
     }
     $form['#attached']['drupalSettings']['uswds_blb_configuration']['spacing']['padding_classes_options'] = $padding_options;
-
-    // phpcs:disable
-    // @todo uncomment when responsive is fixed.
     // Responsive.
-    // $form['#attached']['drupalSettings']['uswds_blb_configuration']['breakpoints'] = $this->getBreakpointsKeys();
-    // phpcs:enable
+    $form['#attached']['drupalSettings']['uswds_blb_configuration']['breakpoints'] = $this->getBreakpointsKeys();
 
     // Attach the Layout Builder form style for this plugin.
     $form['#attached']['library'][] = 'uswds_blb_configuration/plugin.padding.layout_builder_form';
@@ -293,15 +259,13 @@ class Padding extends StylePluginBase {
    * {@inheritdoc}
    */
   public function submitStyleFormElements(array $group_elements) {
-    // phpcs:disable
-    // @todo uncomment when responsive is fixed.
-    //    $directions = [
-    //      'left',
-    //      'top',
-    //      'right',
-    //      'bottom',
-    //    ];
-    // phpcs:enable
+
+    $directions = [
+      'left',
+      'top',
+      'right',
+      'bottom',
+    ];
 
     $storage = [
       'padding' => [
@@ -309,22 +273,19 @@ class Padding extends StylePluginBase {
       ],
     ];
 
-    // phpcs:disable
-    // @todo uncomment when responsive is fixed.
     // Responsive.
-    //    $responsive_target_fields = [
-    //      'padding',
-    //    ];
-    //
-    //    for ($i = 0; $i < 4; $i++) {
-    //      $storage['padding_' . $directions[$i]]['class'] = $this->getStyleOptionClassByIndex('padding_' . $directions[$i], $group_elements['padding_' . $directions[$i]]);
-    //      // Responsive.
-    //      $responsive_target_fields[] = 'padding_' . $directions[$i];
-    //    }
-    //
-    //    // Responsive.
-    //    $this->saveBreakpointsStyleFormClassIndexBasedFields($group_elements, $storage, $responsive_target_fields);
-    // phpcs:enable
+    $responsive_target_fields = [
+      'padding',
+    ];
+
+    for ($i = 0; $i < 4; $i++) {
+      $storage['padding_' . $directions[$i]]['class'] = $this->getStyleOptionClassByIndex('padding_' . $directions[$i], $group_elements['padding_' . $directions[$i]]);
+      // Responsive.
+      $responsive_target_fields[] = 'padding_' . $directions[$i];
+    }
+
+    // Responsive.
+    $this->saveBreakpointsStyleFormClassIndexBasedFields($group_elements, $storage, $responsive_target_fields);
 
     return $storage;
   }
@@ -334,43 +295,37 @@ class Padding extends StylePluginBase {
    */
   public function build(array $build, array $storage, $theme_wrapper = NULL) {
     $classes = [];
-    // phpcs:disable
-    // @todo uncomment when responsive is fixed.
-    //    $directions = [
-    //      'left',
-    //      'top',
-    //      'right',
-    //      'bottom',
-    //    ];
-    // phpcs:enable
+    $directions = [
+      'left',
+      'top',
+      'right',
+      'bottom',
+    ];
 
     if (isset($storage['padding']['class'])) {
       $classes[] = $storage['padding']['class'];
     }
 
-    // phpcs:disable
-    // @todo uncomment when responsive is fixed.
     // Responsive.
-    //    $responsive_target_fields = [
-    //      'padding',
-    //    ];
-    //
-    //    for ($i = 0; $i < 4; $i++) {
-    //      if (isset($storage['padding_' . $directions[$i]]['class'])) {
-    //        $classes[] = $storage['padding_' . $directions[$i]]['class'];
-    //        // Responsive.
-    //        $responsive_target_fields[] = 'padding_' . $directions[$i];
-    //      }
-    //    }
+    $responsive_target_fields = [
+      'padding',
+    ];
+
+    for ($i = 0; $i < 4; $i++) {
+      if (isset($storage['padding_' . $directions[$i]]['class'])) {
+        $classes[] = $storage['padding_' . $directions[$i]]['class'];
+        // Responsive.
+        $responsive_target_fields[] = 'padding_' . $directions[$i];
+      }
+    }
 
     // Responsive.
-    // $this->buildBreakpoints($classes, $storage, $responsive_target_fields);
-    // phpcs:enable
+    $this->buildBreakpoints($classes, $storage, $responsive_target_fields);
 
     // Add the classes to the build.
     $build = $this->addClassesToBuild($build, $classes, $theme_wrapper);
 
-    // Attach bs-classes to the build.
+    // Attach uswds-classes to the build.
     $build['#attached']['library'][] = 'uswds_blb_configuration/plugin.padding.build';
 
     return $build;

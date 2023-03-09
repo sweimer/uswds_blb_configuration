@@ -45,8 +45,7 @@ class Border extends StylePluginBase {
       '#tree' => FALSE,
       '#attributes' => [
         'class' => [
-          'bs-admin-d-lg-flex',
-          'bs-admin-group-form-item-lg-ml',
+          'uswds-admin-group-form-item-lg-ml',
         ],
       ],
     ];
@@ -83,8 +82,7 @@ class Border extends StylePluginBase {
       '#tree' => FALSE,
       '#attributes' => [
         'class' => [
-          'bs-admin-d-lg-flex',
-          'bs-admin-group-form-item-lg-ml',
+          'uswds-admin-group-form-item-lg-ml',
         ],
       ],
     ];
@@ -121,8 +119,7 @@ class Border extends StylePluginBase {
       '#tree' => FALSE,
       '#attributes' => [
         'class' => [
-          'bs-admin-d-lg-flex',
-          'bs-admin-group-form-item-lg-ml',
+          'uswds-admin-group-form-item-lg-ml',
         ],
       ],
     ];
@@ -159,8 +156,7 @@ class Border extends StylePluginBase {
       '#tree' => FALSE,
       '#attributes' => [
         'class' => [
-          'bs-admin-d-lg-flex',
-          'bs-admin-group-form-item-lg-ml',
+          'uswds-admin-group-form-item-lg-ml',
         ],
       ],
     ];
@@ -248,10 +244,10 @@ class Border extends StylePluginBase {
       '#validated' => TRUE,
       '#attributes' => [
         'class' => [
-          'bs_col--full',
+          'uswds_col--full',
           'uswds_input-boxes',
           'uswds_input-boxes--box-model',
-          'bs_border--type',
+          'uswds_border--type',
         ],
       ],
       '#disable_live_preview' => TRUE,
@@ -264,11 +260,11 @@ class Border extends StylePluginBase {
       '#default_value' => $storage['border']['border_style']['class'] ?? NULL,
       '#validated' => TRUE,
       '#attributes' => [
-        'class' => ['bs-field-border-style', 'uswds_input-circles'],
+        'class' => ['uswds-field-border-style', 'uswds_input-circles'],
       ],
       '#states' => [
         'visible' => [
-          ':input.bs_border--type' => ['value' => 'border'],
+          ':input.uswds_border--type' => ['value' => 'border'],
         ],
       ],
     ];
@@ -287,11 +283,11 @@ class Border extends StylePluginBase {
       '#default_value' => $default_value,
       '#validated' => TRUE,
       '#attributes' => [
-        'class' => ['bs-field-border-width'],
+        'class' => ['uswds-field-border-width'],
       ],
       '#states' => [
         'visible' => [
-          ':input.bs_border--type' => ['value' => 'border'],
+          ':input.uswds_border--type' => ['value' => 'border'],
         ],
       ],
     ];
@@ -303,11 +299,11 @@ class Border extends StylePluginBase {
       '#default_value' => $storage['border']['border_color']['class'] ?? NULL,
       '#validated' => TRUE,
       '#attributes' => [
-        'class' => ['bs-field-border-color', 'uswds_input-circles'],
+        'class' => ['uswds-field-border-color', 'uswds_input-circles'],
       ],
       '#states' => [
         'visible' => [
-          ':input.bs_border--type' => ['value' => 'border'],
+          ':input.uswds_border--type' => ['value' => 'border'],
         ],
       ],
     ];
@@ -322,12 +318,12 @@ class Border extends StylePluginBase {
         '#validated' => TRUE,
         '#attributes' => [
           'class' => [
-            'bs-field-border-style-' . $directions[$i], 'uswds_input-circles',
+            'uswds-field-border-style-' . $directions[$i], 'uswds_input-circles',
           ],
         ],
         '#states' => [
           'visible' => [
-            ':input.bs_border--type' => ['value' => 'border_' . $directions[$i]],
+            ':input.uswds_border--type' => ['value' => 'border_' . $directions[$i]],
           ],
         ],
       ];
@@ -346,11 +342,11 @@ class Border extends StylePluginBase {
         '#default_value' => $default_value,
         '#validated' => TRUE,
         '#attributes' => [
-          'class' => ['bs-field-border-width-' . $directions[$i]],
+          'class' => ['uswds-field-border-width-' . $directions[$i]],
         ],
         '#states' => [
           'visible' => [
-            ':input.bs_border--type' => ['value' => 'border_' . $directions[$i]],
+            ':input.uswds_border--type' => ['value' => 'border_' . $directions[$i]],
           ],
         ],
       ];
@@ -363,12 +359,12 @@ class Border extends StylePluginBase {
         '#validated' => TRUE,
         '#attributes' => [
           'class' => [
-            'bs-field-border-color-' . $directions[$i], 'uswds_input-circles',
+            'uswds-field-border-color-' . $directions[$i], 'uswds_input-circles',
           ],
         ],
         '#states' => [
           'visible' => [
-            ':input.bs_border--type' => ['value' => 'border_' . $directions[$i]],
+            ':input.uswds_border--type' => ['value' => 'border_' . $directions[$i]],
           ],
         ],
       ];
@@ -404,7 +400,7 @@ class Border extends StylePluginBase {
       '#default_value' => $default_value,
       '#validated' => TRUE,
       '#attributes' => [
-        'class' => ['bs-field-rounded-corners'],
+        'class' => ['uswds-field-rounded-corners'],
       ],
       '#description' => $this->getSvgIconMarkup($icon_path . 'plugins/border/border-radius.svg'),
     ];
@@ -424,7 +420,7 @@ class Border extends StylePluginBase {
         '#default_value' => $default_value,
         '#validated' => TRUE,
         '#attributes' => [
-          'class' => ['bs-field-rounded-corner-' . $corner_key],
+          'class' => ['uswds-field-rounded-corner-' . $corner_key],
         ],
         '#description' => $this->getSvgIconMarkup($icon_path . 'plugins/border/border-radius-' . $corner_key . '.svg'),
       ];
@@ -544,7 +540,7 @@ class Border extends StylePluginBase {
     // Add the classes to the build.
     $build = $this->addClassesToBuild($build, $classes, $theme_wrapper);
 
-    // Attach bs-classes to the build.
+    // Attach uswds-classes to the build.
     $build['#attached']['library'][] = 'uswds_blb_configuration/plugin.border.build';
 
     return $build;

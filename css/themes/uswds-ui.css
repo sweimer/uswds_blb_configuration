@@ -33,21 +33,21 @@
   padding-left: 0 !important;
 }
 
-.layout-builder-form #drupal-off-canvas .bs_background--position {
+.layout-builder-form #drupal-off-canvas .uswds_background--position {
   padding-bottom: 1.5rem;
 }
 
-.layout-builder-form #drupal-off-canvas .bs_background--position,
-.layout-builder-form #drupal-off-canvas .bs_background--repeat {
+.layout-builder-form #drupal-off-canvas .uswds_background--position,
+.layout-builder-form #drupal-off-canvas .uswds_background--repeat {
   max-width: 100% !important;
 }
 
-.layout-builder-form #drupal-off-canvas .bs_background--position .form-radios,
-.layout-builder-form #drupal-off-canvas .bs_background--repeat .form-radios {
+.layout-builder-form #drupal-off-canvas .uswds_background--position .form-radios,
+.layout-builder-form #drupal-off-canvas .uswds_background--repeat .form-radios {
   max-width: unset !important;
 }
 
-.layout-builder-form #drupal-off-canvas .bs-group-title {
+.layout-builder-form #drupal-off-canvas .uswds-group-title {
   margin-left: 0 !important;
 }
 
@@ -64,7 +64,7 @@
   padding-right: 0 !important;
 }
 
-.layout-builder-form #drupal-off-canvas #bs-border-preview {
+.layout-builder-form #drupal-off-canvas #uswds-border-preview {
   width: auto !important;
 }
 

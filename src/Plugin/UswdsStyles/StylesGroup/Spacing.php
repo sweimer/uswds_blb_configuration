@@ -2,6 +2,7 @@
 
 namespace Drupal\uswds_blb_configuration\Plugin\UswdsStyles\StylesGroup;
 
+use Drupal\uswds_blb_configuration\ResponsiveTrait;
 use Drupal\uswds_blb_configuration\StylesGroup\StylesGroupPluginBase;
 use Drupal\Core\Form\FormStateInterface;
 
@@ -18,10 +19,8 @@ use Drupal\Core\Form\FormStateInterface;
  * )
  */
 class Spacing extends StylesGroupPluginBase {
-  // phpcs:disable
-  // @todo uncomment when responsive is fixed.
-  // use ResponsiveTrait;
-  // phpcs:enable
+
+  use ResponsiveTrait;
 
   /**
    * {@inheritdoc}
@@ -40,10 +39,7 @@ class Spacing extends StylesGroupPluginBase {
    * {@inheritdoc}
    */
   public function buildStyleFormElements(array &$form, FormStateInterface $form_state, $storage) {
-    // phpcs:disable
-    // @todo uncomment when responsive is fixed.
-    //  $this->buildBreakpointsFields($form, 'spacing');
-    // phpcs:enable
+    $this->buildBreakpointsFields($form, 'spacing');
 
     $form['spacing_preview'] = [
       '#theme' => 'spacing_preview',

@@ -8,6 +8,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Serialization\Yaml;
+use Drupal\uswds_blb_configuration\ResponsiveTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\uswds_blb_configuration\StylesGroup\StylesGroupManager;
@@ -27,10 +28,7 @@ use Drupal\uswds_blb_configuration\Ajax\RefreshResponsive;
  */
 class UswdsLayout extends LayoutDefault implements ContainerFactoryPluginInterface {
 
-  // phpcs:disable
-  // @todo uncomment when responsive is fixed.
-  // use ResponsiveTrait;
-  // phpcs:enable
+  use ResponsiveTrait;
 
   /**
    * The config factory.
@@ -333,18 +331,15 @@ class UswdsLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
       ],
     ];
 
-    // phpcs:disable
-    // @todo uncomment when responsive is fixed.
-    //    if ($this->responsiveIsEnabled()) {
-    //      // Add the responsive previewer.
-    //      $this->buildResponsivePreviewer($form['ui']);
-    //    }
-    // phpcs:enable
+    if ($this->responsiveIsEnabled()) {
+      // Add the responsive previewer.
+      $this->buildResponsivePreviewer($form['ui']);
+    }
 
     $form['ui']['tab_content'] = [
       '#type' => 'container',
       '#attributes' => [
-        'class' => 'bs_tab-content',
+        'class' => 'uswds_tab-content',
         'id' => 'uswds_tabContent',
       ],
     ];

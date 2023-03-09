@@ -59,7 +59,7 @@ class BoxShadow extends StylePluginBase {
       '#default_value' => $storage['box_shadow']['class'] ?? NULL,
       '#validated' => TRUE,
       '#attributes' => [
-        'class' => ['bs-field-box-shadow'],
+        'class' => ['uswds-field-box-shadow'],
       ],
     ];
 
@@ -97,7 +97,7 @@ class BoxShadow extends StylePluginBase {
     // Add the classes to the build.
     $build = $this->addClassesToBuild($build, $classes, $theme_wrapper);
 
-    // Attach bs-classes to the build.
+    // Attach uswds-classes to the build.
     $build['#attached']['library'][] = 'uswds_blb_configuration/plugin.box_shadow.build';
 
     return $build;

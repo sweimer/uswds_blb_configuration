@@ -9,7 +9,7 @@
   // Do all the things to kill our previewer.
   $(document).on("keyup", function (e) {
     if (e.key == "Escape") {
-      if ($('.bs-responsive-preview-wrapper').length) {
+      if ($('.uswds-responsive-preview-wrapper').length) {
         destroyPreviewer();
       }
     }
@@ -59,34 +59,34 @@
     var $clonedDom = $('html').clone();
 
     var $iframeWrapper = $('' +
-      '<div id="bs-responsive-preview-wrapper" class="bs-responsive-preview-wrapper">' +
-      '<div class="bs-responsive-preview-scroll-track">' +
-      '<div class="bs-responsive-preview-scroll-pane">' +
-      '<div class="bs-responsive-preview-container">' +
+      '<div id="uswds-responsive-preview-wrapper" class="uswds-responsive-preview-wrapper">' +
+      '<div class="uswds-responsive-preview-scroll-track">' +
+      '<div class="uswds-responsive-preview-scroll-pane">' +
+      '<div class="uswds-responsive-preview-container">' +
       '</div>' +
       '</div>' +
       '</div>' +
       '</div>');
 
-    var $iframe = $('<iframe id="bs-responsive-preview" width="100%" height="100%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>')
+    var $iframe = $('<iframe id="uswds-responsive-preview" width="100%" height="100%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>')
       .on('load', function () {
-        var highlightedSection = $(this).contents().find("#bs-preview-highlighted");
+        var highlightedSection = $(this).contents().find("#uswds-preview-highlighted");
         this.contentWindow.scrollTo(0, highlightedSection.offset().top);
       });
 
     // append the iframe to our deepest div
-    $iframeWrapper.find('.bs-responsive-preview-container').append($iframe);
+    $iframeWrapper.find('.uswds-responsive-preview-container').append($iframe);
 
     // append the whole previewer to the window
     $($iframeWrapper).appendTo('body');
 
     // set the device width
-    $iframeWrapper.find('.bs-responsive-preview-container').css({
+    $iframeWrapper.find('.uswds-responsive-preview-container').css({
       'width': devices[currentDevice],
     });
 
     // Add Id selector to the highlighted section.
-    $clonedDom.find('.is-layout-builder-highlighted').attr('id', 'bs-preview-highlighted');
+    $clonedDom.find('.is-layout-builder-highlighted').attr('id', 'uswds-preview-highlighted');
 
     var removedClasses = [
       'layout-builder',
@@ -120,7 +120,7 @@
     var $filterdHtml = $clonedDom.html();
     var $iframeDoc = $iframe[0].contentDocument || $iframe[0].contentWindow.document;
     $iframeDoc.write($filterdHtml);
-    $iframe.contents().find('.bs-ui-widget-overlay').remove();
+    $iframe.contents().find('.uswds-ui-widget-overlay').remove();
     $iframeDoc.close();
 
     setPreviewerSize();
@@ -130,20 +130,20 @@
    * Close our responsive plugin previewer.
    */
   function destroyPreviewer() {
-    $('#bs-responsive-preview-wrapper').remove();
+    $('#uswds-responsive-preview-wrapper').remove();
   }
 
   /**
    * Sets the viewport width and height dimensions on the envModel.
    */
   function setPreviewerSize() {
-    if($('#drupal-off-canvas').length > 0) {
+    if ($('#drupal-off-canvas').length > 0) {
       var viewportWidth = document.documentElement.clientWidth;
       var offcanvasWidth = $('#drupal-off-canvas').css('width');
       var toolbarHeight = $('.ui-dialog-off-canvas').css('top');
 
-      $('.bs-responsive-preview-container').css('max-width', (viewportWidth - offcanvasWidth));
-      $('.bs-responsive-preview-scroll-pane').css({
+      $('.uswds-responsive-preview-container').css('max-width', (viewportWidth - offcanvasWidth));
+      $('.uswds-responsive-preview-scroll-pane').css({
         'padding-right': offcanvasWidth,
         'padding-top': toolbarHeight
       });
@@ -155,16 +155,17 @@
     attach: function (context) {
 
       // Listen to uswds_responsive device click.
-     once("input_uswds_responsive","input.uswds_responsive",context).forEach( function(value,i){
-       value.onclick = function () {
-        var currentDevice = $(this).val();
-        // set it in the temp store.
-        setTempStore('active_device', currentDevice);
-        loadPreviewer(currentDevice);
-      };});
+      once("input_uswds_responsive", "input.uswds_responsive", context).forEach(function (value, i) {
+        value.onclick = function () {
+          var currentDevice = $(this).val();
+          // set it in the temp store.
+          setTempStore('active_device', currentDevice);
+          loadPreviewer(currentDevice);
+        };
+      });
 
       // Close our previewer if the offcanvas menu is closed.
-      once("click-ui-dialog-titlebar-close",document, context).forEach(function(value,i){
+      once("click-ui-dialog-titlebar-close", document, context).forEach(function (value, i) {
         value.onclick = function () {
           destroyPreviewer();
         }
@@ -207,9 +208,9 @@
     attach: function (context) {
 
       // Allows us to attach tooltips to radio option labels.
-      once('bs-svg-tooltips',"svg[data-bs-tooltip-label]", context).forEach(function (value,i) {
-        var placement = $(value).attr('data-bs-tooltip-placement') ? $(value).attr('data-bs-tooltip-placement') : 'top';
-        var label = $(value).attr('data-bs-tooltip-label') ? $(value).attr('data-bs-tooltip-label') : '';
+      once('uswds-svg-tooltips', "svg[data-uswds-tooltip-label]", context).forEach(function (value, i) {
+        var placement = $(value).attr('data-uswds-tooltip-placement') ? $(value).attr('data-uswds-tooltip-placement') : 'top';
+        var label = $(value).attr('data-uswds-tooltip-label') ? $(value).attr('data-uswds-tooltip-label') : '';
         $(value).after('<div class="uswds_tooltip" data-placement="' + placement + '" role="tooltip">' + label + '</div>');
       });
 

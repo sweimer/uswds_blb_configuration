@@ -131,7 +131,7 @@ class ScrollEffects extends StylePluginBase {
       // Anchor placements.
       $form['advanced']['options']['anchor_placement'] = [
         '#type' => 'select',
-        '#title' => $this->t('Anchor Placement') . ' <span class="bs-icon bs-icon--more-info"></span><div class="uswds_tooltip uswds_tooltip-lg" data-placement="top" role="tooltip">' . $this->t('Defines which position of the element (relative to the window), should trigger the animation. Default: Top Bottom') . '</div>',
+        '#title' => $this->t('Anchor Placement') . ' <span class="uswds-icon uswds-icon--more-info"></span><div class="uswds_tooltip uswds_tooltip-lg" data-placement="top" role="tooltip">' . $this->t('Defines which position of the element (relative to the window), should trigger the animation. Default: Top Bottom') . '</div>',
         '#options' => [
           'top-bottom' => $this->t('Top Bottom'),
           'top-center' => $this->t('Top Center'),
@@ -153,7 +153,7 @@ class ScrollEffects extends StylePluginBase {
       // Easing functions.
       $form['advanced']['options']['anchor_element'] = [
         '#type' => 'textfield',
-        '#title' => $this->t('Anchor Element') . ' <span class="bs-icon bs-icon--more-info"></span><div class="uswds_tooltip uswds_tooltip-lg" data-placement="top" role="tooltip">' . $this->t('Trigger animation on one element, while you scroll to another - useful in animating fixed elements.') . '</div>',
+        '#title' => $this->t('Anchor Element') . ' <span class="uswds-icon uswds-icon--more-info"></span><div class="uswds_tooltip uswds_tooltip-lg" data-placement="top" role="tooltip">' . $this->t('Trigger animation on one element, while you scroll to another - useful in animating fixed elements.') . '</div>',
         '#default_value' => $storage['scroll_effects']['anchor_element'] ?? NULL,
         '#validated' => TRUE,
         '#pattern' => '[a-zA-Z][a-zA-Z0-9-_.]',
@@ -178,7 +178,7 @@ class ScrollEffects extends StylePluginBase {
       // Easing functions.
       $form['advanced']['options']['easing_functions'] = [
         '#type' => 'select',
-        '#title' => $this->t('Easing Type') . ' <span class="bs-icon bs-icon--more-info"></span><div class="uswds_tooltip uswds_tooltip-lg" data-placement="top" role="tooltip">' . $this->t('Default easing for AOS animations. Default: Ease') . '</div>',
+        '#title' => $this->t('Easing Type') . ' <span class="uswds-icon uswds-icon--more-info"></span><div class="uswds_tooltip uswds_tooltip-lg" data-placement="top" role="tooltip">' . $this->t('Default easing for AOS animations. Default: Ease') . '</div>',
         '#options' => [
           'ease' => $this->t('Ease'),
           'ease-in' => $this->t('Ease In'),
@@ -209,7 +209,7 @@ class ScrollEffects extends StylePluginBase {
       // Offset.
       $form['advanced']['options']['offset'] = [
         '#type' => 'number',
-        '#title' => $this->t('Offset (px)') . ' <span class="bs-icon bs-icon--more-info"></span><div class="uswds_tooltip uswds_tooltip-lg" data-placement="top" role="tooltip">' . $this->t('Offset (in px) from the original trigger point.') . '</div>',
+        '#title' => $this->t('Offset (px)') . ' <span class="uswds-icon uswds-icon--more-info"></span><div class="uswds_tooltip uswds_tooltip-lg" data-placement="top" role="tooltip">' . $this->t('Offset (in px) from the original trigger point.') . '</div>',
         '#default_value' => $storage['scroll_effects']['offset'] ?? NULL,
         '#validated' => TRUE,
         '#placeholder' => 0,
@@ -220,7 +220,7 @@ class ScrollEffects extends StylePluginBase {
       // Duration.
       $form['advanced']['options']['duration'] = [
         '#type' => 'number',
-        '#title' => $this->t('Duration') . ' <span class="bs-icon bs-icon--more-info"></span><div class="uswds_tooltip uswds_tooltip-lg" data-placement="top" role="tooltip">' . $this->t('Values from 0 to 3000, with step 50ms. Default: 400') . '</div>',
+        '#title' => $this->t('Duration') . ' <span class="uswds-icon uswds-icon--more-info"></span><div class="uswds_tooltip uswds_tooltip-lg" data-placement="top" role="tooltip">' . $this->t('Values from 0 to 3000, with step 50ms. Default: 400') . '</div>',
         '#default_value' => $storage['scroll_effects']['duration'] ?? NULL,
         '#validated' => TRUE,
         '#placeholder' => 400,
@@ -234,7 +234,7 @@ class ScrollEffects extends StylePluginBase {
       // Delay.
       $form['advanced']['options']['delay'] = [
         '#type' => 'number',
-        '#title' => $this->t('Delay') . ' <span class="bs-icon bs-icon--more-info"></span><div class="uswds_tooltip uswds_tooltip-lg" data-placement="top" role="tooltip">' . $this->t('Values from 0 to 3000, with step 50ms. Default: 0') . '</div>',
+        '#title' => $this->t('Delay') . ' <span class="uswds-icon uswds-icon--more-info"></span><div class="uswds_tooltip uswds_tooltip-lg" data-placement="top" role="tooltip">' . $this->t('Values from 0 to 3000, with step 50ms. Default: 0') . '</div>',
         '#default_value' => $storage['scroll_effects']['delay'] ?? NULL,
         '#validated' => TRUE,
         '#placeholder' => 0,

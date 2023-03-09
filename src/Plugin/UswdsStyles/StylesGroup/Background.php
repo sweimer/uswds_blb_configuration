@@ -18,10 +18,6 @@ use Drupal\Core\Form\FormStateInterface;
  * )
  */
 class Background extends StylesGroupPluginBase {
-  // phpcs:disable
-  // @todo uncomment when responsive is fixed.
-  // use ResponsiveTrait;
-  // phpcs:enable
 
   /**
    * {@inheritdoc}
@@ -40,11 +36,6 @@ class Background extends StylesGroupPluginBase {
    * {@inheritdoc}
    */
   public function buildStyleFormElements(array &$form, FormStateInterface $form_state, $storage) {
-    // phpcs:disable
-    // @todo uncomment when responsive is fixed.
-    // Responsive.
-    // $this->buildBreakpointsFields($form, 'background');
-    // phpcs:enable
 
     $form['background_type'] = [
       '#type' => 'radios',
@@ -54,7 +45,7 @@ class Background extends StylesGroupPluginBase {
       '#default_value' => NULL,
       '#validated' => TRUE,
       '#attributes' => [
-        'class' => ['bs_col--full', 'uswds_background--type'],
+        'class' => ['uswds_col--full', 'uswds_background--type'],
       ],
       '#disable_live_preview' => TRUE,
     ];
