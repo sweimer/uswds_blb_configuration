@@ -196,9 +196,17 @@
 }
 
 // Squared input style (spacing/borders inputs)
-@mixin uswds_boxed_inputs($width: 100%, $max-width: 100%, $height: 35px, $bg: $box_input_bg, $active_color: inherit, $active_bg: $box_input_bg_checked) {
+@mixin uswds_boxed_inputs($width: 100%, $max-width: 100%, $height: 35px, $bg: $box_input_bg, $active_color: inherit, $active_bg: $box_input_bg_checked, $responsive: false) {
   position: relative;
-  flex: $width;
+
+  @if $responsive {
+    flex-grow: 5;
+    flex-shrink: 0;
+    flex-basis: 20%;
+  } @else {
+    flex: $width;
+  }
+
   max-width: $max-width;
   width: $width;
   margin: 0;

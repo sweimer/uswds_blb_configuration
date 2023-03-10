@@ -331,11 +331,6 @@ class UswdsLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
       ],
     ];
 
-    if ($this->responsiveIsEnabled()) {
-      // Add the responsive previewer.
-      $this->buildResponsivePreviewer($form['ui']);
-    }
-
     $form['ui']['tab_content'] = [
       '#type' => 'container',
       '#attributes' => [
@@ -546,12 +541,9 @@ class UswdsLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
     }
     // Check if the responsive enabled.
     if ($this->responsiveIsEnabled()) {
-      // Attach responsive preview.
-      $form['#attached']['library'][] = 'uswds_blb_configuration/uswds_responsive_preview';
+      // Attach USWDS Styles base library.
+      $form['#attached']['library'][] = 'uswds_blb_configuration/layout_builder_form_style';
     }
-
-    // Attach USWDS Styles base library.
-    $form['#attached']['library'][] = 'uswds_blb_configuration/layout_builder_form_style';
 
     return $form;
   }

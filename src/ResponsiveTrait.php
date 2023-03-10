@@ -41,39 +41,6 @@ trait ResponsiveTrait {
   }
 
   /**
-   * Build the responsive previewer form elements.
-   *
-   * @param array $form
-   *   An associative array containing the structure of the form.
-   */
-  protected function buildResponsivePreviewer(array &$form) {
-    $icon_path = \Drupal::service('extension.list.module')->getPath('uswds_blb_configuration') . '/images/';
-
-    $form['uswds_responsive'] = [
-      '#type' => 'radios',
-      '#options' => [
-        'all' => $this->getSvgIconMarkup($icon_path . 'responsive/device-all.svg'),
-      ],
-      '#title' => $this->t('Responsive'),
-      '#title_display' => 'invisible',
-      '#default_value' => 'all',
-      '#validated' => TRUE,
-      '#attributes' => [
-        'class' => ['uswds_responsive', 'uswds_responsive_bar'],
-      ],
-      '#disable_live_preview' => TRUE,
-    ];
-
-    // Loop through the breakpoints.
-    foreach ($this->getBreakpoints() as $breakpoint_key => $breakpoint_value) {
-      $form['uswds_responsive']['#options'][$breakpoint_key] = $this->getSvgIconMarkup($icon_path . 'responsive/device-' . $breakpoint_key . '.svg');
-    }
-
-    // Attach admin form style.
-    $form['#attached']['library'][] = 'uswds_blb_configuration/uswds_responsive';
-  }
-
-  /**
    * Build the breakpoints style form elements.
    *
    * @param array $form
@@ -112,6 +79,7 @@ trait ResponsiveTrait {
         // $form['uswds_responsive_' . $group_name]['#options'][$breakpoint_key] = file_get_contents(DRUPAL_ROOT . '/' . $icon_path . 'responsive/uswds-default.png');
       }
     }
+    $form['#attached']['library'][] = 'uswds_blb_configuration/uswds_responsive';
   }
 
   /**

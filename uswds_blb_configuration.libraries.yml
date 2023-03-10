@@ -37,9 +37,6 @@ uswds_yiq:
 
 # Responsive
 uswds_responsive:
-  css:
-    theme:
-      css/responsive.css: { }
   js:
     js/components/responsive.js: { }
   dependencies:

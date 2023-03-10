@@ -7,23 +7,6 @@
   // Configure Section.
   Drupal.behaviors.bootstrapLayoutBuilderConfigureSection = {
     attach(context) {
-      // // Custom solution for Bootstrap 3 Drupal theme.
-      // $('input.blb_container_type', context).each(function() {
-      //   var checked = $(this).prop("checked");
-      //   if (typeof checked !== typeof undefined && checked !== false) {
-      //     $(this).parent('label').addClass('active');
-      //   }
-      // });
-
-      // Custom solution for Bootstrap 3 & Bario Drupal themes.
-      // $('.blb_container_type .fieldset-wrapper label', context).on('click', function () {
-      //   $(this).parents('.fieldset-wrapper').find('label').removeClass('active');
-      //   $(this).parents('.fieldset-wrapper').find('input').prop("checked", false);
-      //   // Temp comment the following line because of conflict with live preview.
-      //   // $(this).parent().find('input').prop('checked', true);
-      //   $(this).addClass('active');
-      // });
-
       // Graphical Layout Columns
       $(".uswds_breakpoint_cols", context).each(function () {
         const numOfCols = 12;

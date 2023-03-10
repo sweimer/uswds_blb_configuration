@@ -191,10 +191,11 @@
 .uswds_responsive {
   .fieldset-wrapper > div {
     display: flex;
+    flex-flow: row wrap;
 
     // Our actual form item.
     > div {
-      @include uswds_boxed_inputs($height: 42px, $bg: $panel_bg_color, $active_color: $panel_bg_color, $active_bg: $panel_link_color);
+      @include uswds_boxed_inputs($height: 42px, $bg: $panel_bg_color, $active_color: $panel_bg_color, $active_bg: $panel_link_color, $responsive: true);
     }
   }
 }
