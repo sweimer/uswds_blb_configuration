@@ -1983,13 +1983,13 @@
   padding: 0 10px 0 0;
 }
 
-#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div,
-#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div {
+#drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div,
+#layout-builder-modal .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div {
   display: flex;
 }
 
-#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div,
-#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div {
+#drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div,
+#layout-builder-modal .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div {
   position: relative;
   flex: 100%;
   max-width: 100%;
@@ -1998,8 +1998,8 @@
   padding: 0;
 }
 
-#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div input,
-#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div input {
+#drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input,
+#layout-builder-modal .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -2011,8 +2011,8 @@
   border: 0;
 }
 
-#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div input + label,
-#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div input + label {
+#drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input + label,
+#layout-builder-modal .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input + label {
   transition: all .3s ease-in-out;
   padding: 8px;
   height: 70px;
@@ -2026,36 +2026,36 @@
   background-color: #e6e6e6;
 }
 
-#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div input + label:hover,
-#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div input + label:hover {
+#drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input + label:hover,
+#layout-builder-modal .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input + label:hover {
   background-color: #b3b3b3;
 }
 
-#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div input + label:hover:after,
-#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div input + label:hover:after {
+#drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input + label:hover:after,
+#layout-builder-modal .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input + label:hover:after {
   border-color: #4d4d4d;
 }
 
-#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div input:checked + label,
-#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div input:checked + label {
+#drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input:checked + label,
+#layout-builder-modal .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input:checked + label {
   color: inherit;
   background-color: #4d4d4d;
 }
 
-#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div input:checked + label svg,
-#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div input:checked + label svg *,
-#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div input:checked + label svg,
-#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div input:checked + label svg * {
+#drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input:checked + label svg,
+#drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input:checked + label svg *,
+#layout-builder-modal .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input:checked + label svg,
+#layout-builder-modal .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input:checked + label svg * {
   color: inherit;
 }
 
-#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div input:checked + label:after,
-#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div input:checked + label:after {
+#drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input:checked + label:after,
+#layout-builder-modal .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input:checked + label:after {
   border-color: #e6e6e6;
 }
 
-#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div input + label,
-#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div input + label {
+#drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input + label,
+#layout-builder-modal .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input + label {
   font-size: 10px;
   font-weight: normal;
   padding: 8px;
@@ -2071,33 +2071,33 @@
   flex-direction: column;
 }
 
-#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div input + label:hover,
-#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div input + label:hover {
+#drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input + label:hover,
+#layout-builder-modal .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input + label:hover {
   background-color: #e6e6e6;
 }
 
-#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div input:checked + label,
-#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div input:checked + label {
+#drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input:checked + label,
+#layout-builder-modal .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input:checked + label {
   font-weight: bold;
   color: #26A5FF;
   background-color: #d9d9d9;
 }
 
-#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div input:checked + label .input-icon:after,
-#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div input:checked + label .input-icon:after {
+#drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input:checked + label .input-icon:after,
+#layout-builder-modal .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input:checked + label .input-icon:after {
   background-image: url("../../images/layout/container-active.svg");
 }
 
-#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div .input-icon,
-#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div .input-icon {
+#drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div .input-icon,
+#layout-builder-modal .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div .input-icon {
   width: 50px !important;
   height: 26px;
   margin-bottom: 10px;
   background: url("../../images/layout/stripe-sm.svg") center top repeat;
 }
 
-#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div .input-icon:after,
-#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div .input-icon:after {
+#drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div .input-icon:after,
+#layout-builder-modal .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div .input-icon:after {
   content: '';
   display: block;
   margin: 0 auto 1rem auto;
@@ -2110,18 +2110,18 @@
   background-size: 100% 26px;
 }
 
-#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div .input-icon.container:after,
-#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div .input-icon.container:after {
+#drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div .input-icon.container:after,
+#layout-builder-modal .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div .input-icon.container:after {
   width: 60%;
 }
 
-#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div .input-icon.container-fluid:after,
-#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div .input-icon.container-fluid:after {
+#drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div .input-icon.container-fluid:after,
+#layout-builder-modal .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div .input-icon.container-fluid:after {
   width: 80%;
 }
 
-#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div .input-icon.w-100:after,
-#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div .input-icon.w-100:after {
+#drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div .input-icon.w-100:after,
+#layout-builder-modal .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div .input-icon.w-100:after {
   width: 100%;
 }
 

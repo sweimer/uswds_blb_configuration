@@ -364,20 +364,44 @@ class UswdsLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
       ];
     }
 
-    $container_types = [
-      'container' => $this->t('Boxed'),
-      'container-fluid' => $this->t('Full'),
-      'w-100' => $this->t('Edge to Edge'),
-    ];
+    // Get Bootstrap Layout Builder deafult layout options and defaults.
+    $uswds_layout_defaults = \Drupal::config('uswds_blb_configuration.layout_defaults');
+
+    // Container type defaults.
+    $container_type_defaults = $uswds_layout_defaults->get('container_type');
+
+    // Container types.
+    $container_types = [];
+    if (isset($container_type_defaults['form_options'])) {
+      $container_types = $container_type_defaults['form_options'];
+    }
+
+    // Container type default value.
+    $container_type_default_value = '';
+    if (!empty($this->configuration['container'])) {
+      $container_type_default_value = $this->configuration['container'];
+    }
+    else {
+      if (isset($container_type_defaults['default_value'])) {
+        $container_type_default_value = $container_type_defaults['default_value'];
+      }
+    }
+
+    // Container type weight.
+    $container_type_weight = '';
+    if (isset($container_type_defaults['weight'])) {
+      $container_type_weight = $container_type_defaults['weight'];
+    }
 
     $form['ui']['tab_content']['layout']['container_type'] = [
       '#type' => 'radios',
       '#title' => $this->t('Container type'),
       '#options' => $container_types,
-      '#default_value' => !empty($this->configuration['container']) ? $this->configuration['container'] : 'container',
+      '#default_value' => $container_type_default_value,
       '#attributes' => [
-        'class' => ['blb_container_type'],
+        'class' => ['uswds_lb_container_type'],
       ],
+      "#weight" => $container_type_weight,
     ];
 
     // Add icons to the container types.
@@ -385,19 +409,41 @@ class UswdsLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
       $form['ui']['tab_content']['layout']['container_type']['#options'][$key] = '<span class="input-icon ' . $key . '"></span>' . $value;
     }
 
-    $gutter_types = [
-      0 => $this->t('With Gutters'),
-      1 => $this->t('No Gutters'),
-    ];
+    // Remove gutters defaults.
+    $remove_gutters_defaults = $uswds_layout_defaults->get('remove_gutters');
+
+    // Gutters types.
+    $gutter_types = [];
+    if (isset($remove_gutters_defaults['form_options'])) {
+      $gutter_types = $remove_gutters_defaults['form_options'];
+    }
+
+    // Remove gutters default value.
+    $remove_gutters_default_value = 0;
+    if (isset($this->configuration['remove_gutters'])) {
+      $remove_gutters_default_value = (int) $this->configuration['remove_gutters'];
+    }
+    else {
+      if (isset($remove_gutters_defaults['default_value'])) {
+        $remove_gutters_default_value = (int) $remove_gutters_defaults['default_value'];
+      }
+    }
+
+    // Remove gutters weight.
+    $remove_gutters_weight = '';
+    if (isset($remove_gutters_defaults['weight'])) {
+      $remove_gutters_weight = $remove_gutters_defaults['weight'];
+    }
 
     $form['ui']['tab_content']['layout']['remove_gutters'] = [
       '#type' => 'radios',
       '#title' => $this->t('Gutters'),
       '#options' => $gutter_types,
-      '#default_value' => (int) !empty($this->configuration['remove_gutters']) ? 1 : 0,
+      '#default_value' => $remove_gutters_default_value,
       '#attributes' => [
         'class' => ['blb_gutter_type'],
       ],
+      '#weight' => $remove_gutters_weight,
     ];
 
     // Add icons to the gutter types.
@@ -448,6 +494,16 @@ class UswdsLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
           $form['ui']['tab_content']['layout']['breakpoints'][$breakpoint_id]['#ajax']['event'] = 'click';
           $form['ui']['tab_content']['layout']['breakpoints'][$breakpoint_id]['#ajax']['progress'] = ['type' => 'none'];
         }
+      }
+    }
+
+    if (isset($form['ui']['tab_content']['layout']['breakpoints'])) {
+      // Breakpoints defaults.
+      $breakpoints_defaults = $uswds_layout_defaults->get('breakpoints');
+
+      // Breakpoints weight.
+      if (isset($breakpoints_defaults['weight'])) {
+        $form['ui']['tab_content']['layout']['breakpoints']['#weight'] = $breakpoints_defaults['weight'];
       }
     }
 
