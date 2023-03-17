@@ -2,11 +2,6 @@
   width: 100%;
 }
 
-.layout-builder-form #drupal-off-canvas .inline-block-create-button {
-  width: auto !important;
-}
-
-.layout-builder-form #drupal-off-canvas .button--primary,
 .layout-builder-form #drupal-off-canvas .js-media-library-open-button {
   margin: 0 auto !important;
   display: block !important;

@@ -9,8 +9,11 @@
 /* Generic elements. */
 a,
 .link {
-  color: $panel_link_color;
   font-family: inherit;
+
+  &:hover {
+    border: 1px solid $panel_link_color;
+  }
 }
 
 hr {
@@ -58,4 +61,8 @@ hr {
   div, em {
     color: darken($state_error, 20%);
   }
+}
+
+.dialog-cancel {
+  margin-top: 1rem;
 }

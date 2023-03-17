@@ -10,13 +10,7 @@
       width: 100%;
     }
 
-    // Fix issue with overflowing Create Custom block button.
-    .inline-block-create-button {
-      width: auto !important;
-    }
-
     // Fix issue with overflowing buttons.
-    .button--primary,
     .js-media-library-open-button {
       margin: 0 auto !important;
       display: block !important;

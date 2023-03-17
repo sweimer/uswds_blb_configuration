@@ -45,8 +45,9 @@ summary {
   font-weight: normal;
   display: flex;
   align-items: center;
-  background-color: $summary_bg_color;
+  background-color: $summary_bg_color_active;
   cursor: pointer;
+  color: $summary_link_color_active;
 
   * {
     cursor: pointer;
@@ -70,8 +71,8 @@ summary {
     right: 15px;
     content: '';
     display: inline-block;
-    border-right: 2px solid $summary_link_color;
-    border-bottom: 2px solid $summary_link_color;
+    border-right: 2px solid $summary_link_color_hover;
+    border-bottom: 2px solid  $summary_link_color_hover;
     width: 9px;
     height: 9px;
     transform: rotate(45deg);
@@ -88,25 +89,12 @@ summary {
   &:focus {
     color: $summary_link_color_hover;
     background-color: $summary_bg_color_hover;
-
-    &:after {
-      border-right-color: $summary_link_color_hover;
-      border-bottom-color: $summary_link_color_hover;
-    }
   }
 }
 
 details[open] > summary {
-  color: $summary_link_color_active;
-  background-color: $summary_bg_color_active;
-
   &:after {
     top: 20px;
     transform: rotate(-135deg);
   }
-}
-
-details[open] > summary:hover {
-  color: $summary_link_color_active;
-  background-color: $summary_bg_color_active;
 }

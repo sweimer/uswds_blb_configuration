@@ -179,9 +179,4 @@ input:checked + label .uswds_breakpoint_col {
 .uswds_breakpoint_col {
   color: $panel_text_color;
   background-color: rgba($panel_text_color, .2);
-
-  &.uswds-selected {
-    color: $panel_text_color;
-    background-color: $panel_link_color;
-  }
 }
