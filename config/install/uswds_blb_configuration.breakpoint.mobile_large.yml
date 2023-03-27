@@ -4,4 +4,4 @@ dependencies: {  }
 id: mobile_large
 label: 'Mobile Large'
 base_class: 'mobile-lg:grid-col'
-weight: -7
+weight: 7

@@ -4,4 +4,4 @@ dependencies: {  }
 id: card
 label: Card
 base_class: 'card:grid-col'
-weight: -10
+weight: 10

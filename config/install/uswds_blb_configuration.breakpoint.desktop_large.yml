@@ -4,4 +4,4 @@ dependencies: {  }
 id: desktop_large
 label: 'Desktop Large'
 base_class: 'desktop-lg:grid-col'
-weight: -3
+weight: 3

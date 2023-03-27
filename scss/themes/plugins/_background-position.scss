@@ -5,10 +5,9 @@ $bg-pos-toggle-size: 15px;
 
 // Background position
 .uswds_background--position {
-  margin: 0;
 
   .form-radios {
-    border: 1px solid $box_input_hover_border;
+    border: 1px solid $white;
     height: 70px;
     position: relative;
     display: flex;

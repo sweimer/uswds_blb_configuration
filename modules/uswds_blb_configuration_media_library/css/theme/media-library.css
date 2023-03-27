@@ -13,10 +13,21 @@
   box-sizing: border-box;
 }
 
+.media-library-view .views-exposed-form.usa-form {
+  display: block !important;
+  width: 100% !important;
+  max-width: 50% !important;
+}
+
 .media-library-view .views-exposed-form .usa-label {
   margin-top: 0;
 }
 
 .media-library-view .views-exposed-form .usa-button {
   margin-top: 2.375rem;
+}
+
+.media-library-views-form__rows .media-library-item__attributes {
+  bottom: 10px !important;
+  background: transparent;
 }

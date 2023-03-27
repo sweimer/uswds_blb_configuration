@@ -7,3 +7,4 @@ package: 'Layout Builder'
 dependencies:
   - drupal:layout_builder
   - drupal:media_library
+  - media_library_form_element:media_library_form_element

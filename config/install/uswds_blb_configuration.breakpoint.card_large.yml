@@ -4,4 +4,4 @@ dependencies: {  }
 id: card_large
 label: 'Card Large'
 base_class: 'card-lg:grid-col'
-weight: -9
+weight: 9

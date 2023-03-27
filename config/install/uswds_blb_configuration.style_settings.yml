@@ -1,11 +1,13 @@
+_core:
+  default_config_hash: UoG3R4b32PxUznK3aiCdnosg26KxWHWmLEZgkfmz8Zw
 layout_builder_theme: dark
 background_colors: "bg-base-lightest|Base Lightest\r\nbg-base-lighter|Base Lighter\r\nbg-base-light|Base Light\r\nbg-base|Base\r\nbg-base-dark|Base Dark\r\nbg-base-darker|Base Darker\r\nbg-base-darkest|Base Darkest\r\nbg-ink|Ink\r\nbg-primary-lighter|Primary Lighter\r\nbg-primary-light|Primary Light\r\nbg-primary|Primary\r\nbg-primary-vivid|Primary Vivid\r\nbg-primary-dark|Primary Dark\r\nbg-primary-darker|Primary Darker\r\nbg-secondary-lighter|Secondary Lighter\r\nbg-secondary-light|Secondary Light\r\nbg-secondary|Secondary\r\nbg-secondary-vivid|Secondary Vivid\r\nbg-secondary-dark|Secondary Dark\r\nbg-secondary-darker|Secondary Darker\r\nbg-accent-cool-lighter|Accent Cool Lighter\r\nbg-accent-cool-light|Accent Cool Light\r\nbg-accent-cool|Accent Cool\r\nbg-accent-cool-dark|Accent Cool Dark\r\nbg-accent-cool-darker|Accent Cool Darker\r\nbg-accent-warm-lighter|Accent Warm Lighter\r\nbg-accent-warm-light|Accent Warm Light\r\nbg-accent-warm|Accent Warm\r\nbg-accent-warm-dark|Accent Warm Dark\r\nbg-accent-warm-darker|Accent Warm Darker\r\nbg-emergency|Emergency\r\nbg-emergency-dark|Emergency Dark\r\nbg-red|Red\r\nbg-orange|Orange\r\nbg-gold|Gold\r\nbg-yellow|Yellow\r\nbg-green|Green\r\nbg-mint|Mint\r\nbg-cyan|Cyan\r\nbg-blue|Blue\r\nbg-indigo|Indigo\r\nbg-violet|Violet\r\nbg-magenta|Magenta"
 background_image:
   bundle: image
   field: field_media_image
 background_local_video:
-  bundle: file
-  field: field_media_file
+  bundle: video
+  field: field_media_video_file
 text_colors: "text-base-lightest|Base Lightest\r\ntext-base-lighter|Base Lighter\r\ntext-base-light|Base Light\r\ntext-base|Base\r\ntext-base-dark|Base Dark\r\ntext-base-darker|Base Darker\r\ntext-base-darkest|Base Darkest\r\ntext-ink|Ink\r\ntext-primary-lighter|Primary Lighter\r\ntext-primary-light|Primary Light\r\ntext-primary|Primary\r\ntext-primary-vivid|Primary Vivid\r\ntext-primary-dark|Primary Dark\r\ntext-primary-darker|Primary Darker\r\ntext-secondary-lighter|Secondary Lighter\r\ntext-secondary-light|Secondary Light\r\ntext-secondary|Secondary\r\ntext-secondary-vivid|Secondary Vivid\r\ntext-secondary-dark|Secondary Dark\r\ntext-secondary-darker|Secondary Darker\r\ntext-accent-cool-lighter|Accent Cool Lighter\r\ntext-accent-cool-light|Accent Cool Light\r\ntext-accent-cool|Accent Cool\r\ntext-accent-cool-dark|Accent Cool Dark\r\ntext-accent-cool-darker|Accent Cool Darker\r\ntext-accent-warm-lighter|Accent Warm Lighter\r\ntext-accent-warm-light|Accent Warm Light\r\ntext-accent-warm|Accent Warm\r\ntext-accent-warm-dark|Accent Warm Dark\r\ntext-accent-warm-darker|Accent Warm Darker\r\ntext-emergency|Emergency\r\ntext-emergency-dark|Emergency Dark\r\ntext-red|Red\r\ntext-orange|Orange\r\ntext-gold|Gold\r\ntext-yellow|Yellow\r\ntext-green|Green\r\ntext-mint|Mint\r\ntext-cyan|Cyan\r\ntext-blue|Blue\r\ntext-indigo|Indigo\r\ntext-violet|Violet\r\ntext-magenta|Magenta"
 text_alignment: "text-left|Left\r\ntext-center|Center\r\ntext-right|Right\r\ntext-justify|Justify"
 padding: "padding-1|Padding 1\r\npadding-2|Padding 2\r\npadding-3|Padding 3\r\npadding-4|Padding 4\r\npadding-5|Padding 5"
@@ -38,9 +40,41 @@ rounded_corner_top_left: "radius-top-left-sm|Radius Small\r\nradius-top-left-md|
 rounded_corner_top_right: "radius-top-right-sm|Radius Small\r\nradius-top-right-md|Radius Medium\r\nradius-top-right-lg|Radius Large\r\nradius-top-right-pill|Radius Pill"
 rounded_corner_bottom_left: "radius-bottom-left-sm|Radius Small\r\nradius-bottom-left-md|Radius Medium\r\nradius-bottom-left-lg|Radius Large\r\nradius-bottom-left-pill|Radius Pill"
 rounded_corner_bottom_right: "radius-bottom-right-sm|Radius Small\r\nradius-bottom-right-md|Radius Medium\r\nradius-bottom-right-lg|Radius Large\r\nradius-bottom-right-pill|Radius Pill"
+box_shadow: ''
 scroll_effects: "fade-up|Fade Up\r\nfade-down|Fade Down\r\nfade-left|Fade Left\r\nfade-right|Fade Right\r\nfade-up-right|Fade Up Right\r\nfade-up-left|Fade Up Left\r\nfade-down-right|Fade Down Right\r\nfade-down-left|Fade Down Left\r\nflip-left|Flip Left\r\nflip-right|Flip Right\r\nflip-up|Flip Up\r\nflip-down|Flip Down\r\nzoom-in|Zoom In\r\nzoom-in-up|Zoom In Up\r\nzoom-in-down|Zoom In Down\r\nzoom-in-left|Zoom In Left\r\nzoom-in-right|Zoom In Right\r\nzoom-out|Zoom Out\r\nzoom-out-up|Zoom Out Up\r\nzoom-out-down|Zoom Out Down\r\nzoom-out-right|Zoom Out Right\r\nzoom-out-left|Zoom Out Left"
 attribute_type: data
 data_key: aos
 scroll_effects_attr_type: false
 scroll_effects_data_key: data-aos
 scroll_effects_library_type: external
+scroll_effects_advanced_settings: false
+padding_mobile: "padding-1|Padding 1\r\npadding-2|Padding 2\r\npadding-3|Padding 3\r\npadding-4|Padding 4\r\npadding-5|Padding 5"
+padding_tablet: "padding-1|Padding 1\r\npadding-2|Padding 2\r\npadding-3|Padding 3\r\npadding-4|Padding 4\r\npadding-5|Padding 5"
+padding_desktop: "padding-1|Padding 1\r\npadding-2|Padding 2\r\npadding-3|Padding 3\r\npadding-4|Padding 4\r\npadding-5|Padding 5"
+padding_left_mobile: "padding-left-1|Padding Left 1\r\npadding-left-2|Padding Left 2\r\npadding-left-3|Padding Left 3\r\npadding-left-4|Padding Left 4\r\npadding-left-5|Padding Left 5"
+padding_left_tablet: "padding-left-1|Padding Left 1\r\npadding-left-2|Padding Left 2\r\npadding-left-3|Padding Left 3\r\npadding-left-4|Padding Left 4\r\npadding-left-5|Padding Left 5"
+padding_left_desktop: "padding-left-1|Padding Left 1\r\npadding-left-2|Padding Left 2\r\npadding-left-3|Padding Left 3\r\npadding-left-4|Padding Left 4\r\npadding-left-5|Padding Left 5"
+padding_top_mobile: "padding-top-1|Padding Top 1\r\npadding-top-2|Padding Top 2\r\npadding-top-3|Padding Top 3\r\npadding-top-4|Padding Top 4\r\npadding-top-5|Padding Top 5"
+padding_top_tablet: "padding-top-1|Padding Top 1\r\npadding-top-2|Padding Top 2\r\npadding-top-3|Padding Top 3\r\npadding-top-4|Padding Top 4\r\npadding-top-5|Padding Top 5"
+padding_top_desktop: "padding-top-1|Padding Top 1\r\npadding-top-2|Padding Top 2\r\npadding-top-3|Padding Top 3\r\npadding-top-4|Padding Top 4\r\npadding-top-5|Padding Top 5"
+padding_right_mobile: "padding-right-1|Padding Right 1\r\npadding-right-2|Padding Right 2\r\npadding-right-3|Padding Right 3\r\npadding-right-4|Padding Right 4\r\npadding-right-5|Padding Right 5"
+padding_right_tablet: "padding-right-1|Padding Right 1\r\npadding-right-2|Padding Right 2\r\npadding-right-3|Padding Right 3\r\npadding-right-4|Padding Right 4\r\npadding-right-5|Padding Right 5"
+padding_right_desktop: "padding-right-1|Padding Right 1\r\npadding-right-2|Padding Right 2\r\npadding-right-3|Padding Right 3\r\npadding-right-4|Padding Right 4\r\npadding-right-5|Padding Right 5"
+padding_bottom_mobile: "padding-bottom-1|Padding Bottom 1\r\npadding-bottom-2|Padding Bottom 2\r\npadding-bottom-3|Padding Bottom 3\r\npadding-bottom-4|Padding Bottom 4\r\npadding-bottom-5|Padding Bottom 5"
+padding_bottom_tablet: "padding-bottom-1|Padding Bottom 1\r\npadding-bottom-2|Padding Bottom 2\r\npadding-bottom-3|Padding Bottom 3\r\npadding-bottom-4|Padding Bottom 4\r\npadding-bottom-5|Padding Bottom 5"
+padding_bottom_desktop: "padding-bottom-1|Padding Bottom 1\r\npadding-bottom-2|Padding Bottom 2\r\npadding-bottom-3|Padding Bottom 3\r\npadding-bottom-4|Padding Bottom 4\r\npadding-bottom-5|Padding Bottom 5"
+margin_mobile: "margin-top-1|Margin Top 1\r\nmargin-top-2|Margin Top 2\r\nmargin-top-3|Margin Top 3\r\nmargin-top-4|Margin Top 4\r\nmargin-top-5|Margin Top 5"
+margin_tablet: "margin-top-1|Margin Top 1\r\nmargin-top-2|Margin Top 2\r\nmargin-top-3|Margin Top 3\r\nmargin-top-4|Margin Top 4\r\nmargin-top-5|Margin Top 5"
+margin_desktop: "margin-top-1|Margin Top 1\r\nmargin-top-2|Margin Top 2\r\nmargin-top-3|Margin Top 3\r\nmargin-top-4|Margin Top 4\r\nmargin-top-5|Margin Top 5"
+margin_left_mobile: "margin-left-1|Margin Left 1\r\nmargin-left-2|Margin Left 2\r\nmargin-left-3|Margin Left 3\r\nmargin-left-4|Margin Left 4\r\nmargin-left-5|Margin Left 5"
+margin_left_tablet: "margin-left-1|Margin Left 1\r\nmargin-left-2|Margin Left 2\r\nmargin-left-3|Margin Left 3\r\nmargin-left-4|Margin Left 4\r\nmargin-left-5|Margin Left 5"
+margin_left_desktop: "margin-left-1|Margin Left 1\r\nmargin-left-2|Margin Left 2\r\nmargin-left-3|Margin Left 3\r\nmargin-left-4|Margin Left 4\r\nmargin-left-5|Margin Left 5"
+margin_top_mobile: "margin-top-1|Margin Top 1\r\nmargin-top-2|Margin Top 2\r\nmargin-top-3|Margin Top 3\r\nmargin-top-4|Margin Top 4\r\nmargin-top-5|Margin Top 5"
+margin_top_tablet: "margin-top-1|Margin Top 1\r\nmargin-top-2|Margin Top 2\r\nmargin-top-3|Margin Top 3\r\nmargin-top-4|Margin Top 4\r\nmargin-top-5|Margin Top 5"
+margin_top_desktop: "margin-top-1|Margin Top 1\r\nmargin-top-2|Margin Top 2\r\nmargin-top-3|Margin Top 3\r\nmargin-top-4|Margin Top 4\r\nmargin-top-5|Margin Top 5"
+margin_right_mobile: "margin-right-1|Margin Right 1\r\nmargin-right-2|Margin Right 2\r\nmargin-right-3|Margin Right 3\r\nmargin-right-4|Margin Right 4\r\nmargin-right-5|Margin Right 5"
+margin_right_tablet: "margin-right-1|Margin Right 1\r\nmargin-right-2|Margin Right 2\r\nmargin-right-3|Margin Right 3\r\nmargin-right-4|Margin Right 4\r\nmargin-right-5|Margin Right 5"
+margin_right_desktop: "margin-right-1|Margin Right 1\r\nmargin-right-2|Margin Right 2\r\nmargin-right-3|Margin Right 3\r\nmargin-right-4|Margin Right 4\r\nmargin-right-5|Margin Right 5"
+margin_bottom_mobile: "margin-bottom-1|Margin Bottom 1\r\nmargin-bottom-2|Margin Bottom 2\r\nmargin-bottom-3|Margin Bottom 3\r\nmargin-bottom-4|Margin Bottom 4\r\nmargin-bottom-5|Margin Bottom 5"
+margin_bottom_tablet: "margin-bottom-1|Margin Bottom 1\r\nmargin-bottom-2|Margin Bottom 2\r\nmargin-bottom-3|Margin Bottom 3\r\nmargin-bottom-4|Margin Bottom 4\r\nmargin-bottom-5|Margin Bottom 5"
+margin_bottom_desktop: "margin-bottom-1|Margin Bottom 1\r\nmargin-bottom-2|Margin Bottom 2\r\nmargin-bottom-3|Margin Bottom 3\r\nmargin-bottom-4|Margin Bottom 4\r\nmargin-bottom-5|Margin Bottom 5"

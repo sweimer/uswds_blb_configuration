@@ -36,8 +36,6 @@ $conainer_icon_path: '../../images/layout/';
         // Active state.
         &:checked + label {
           font-weight: bold;
-          color: $panel_link_color;
-          background-color: $icon_box_input_bg_checked;
 
           .input-icon:after {
             background-image: url($conainer_icon_path + 'container-active.svg');

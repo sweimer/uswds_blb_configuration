@@ -19,9 +19,8 @@
  * @see template_preprocess_input()
  */
 #}
-{% spaceless %}
   {% if input_group %}
-    <div class="input-group">
+<div class="input-group">
   {% endif %}
 
   {% if prefix %}
@@ -37,8 +36,7 @@
   {% endif %}
 
   {% if input_group %}
-    </div>
-  {% endif %}
+</div>
+{% endif %}
 
   {{ children }}
-{% endspaceless %}

@@ -234,20 +234,18 @@ class BackgroundMedia extends StylePluginBase implements ContainerFactoryPluginI
     // Background media.
     $config = $this->config();
     // Check if the bundle exist.
-    if ($config->get('background_image.bundle') && $this->entityTypeManager->getStorage('media_type')->load($config->get('background_image.bundle'))) {
-      $form['background_image'] = [
-        '#type' => 'media_library',
-        '#title' => $this->t('Background image'),
-        '#description' => $this->t('Background image'),
-        '#allowed_bundles' => [$config->get('background_image.bundle')],
-        '#default_value' => $storage['background_media']['image']['media_id'] ?? NULL,
-        '#states' => [
-          'visible' => [
-            ':input.uswds_background--type' => ['value' => 'image'],
-          ],
+    $form['background_image'] = [
+      '#type' => 'media_library',
+      '#title' => $this->t('Background image'),
+      '#description' => $this->t('Background image'),
+      '#allowed_bundles' => [$config->get('background_image.bundle')],
+      '#default_value' => $storage['background_media']['image']['media_id'] ?? NULL,
+      '#states' => [
+        'visible' => [
+          ':input.uswds_background--type' => ['value' => 'image'],
         ],
-      ];
-    }
+      ],
+    ];
     // Check if the bundle exist.
     if ($config->get('background_local_video.bundle') && $this->entityTypeManager->getStorage('media_type')->load($config->get('background_local_video.bundle'))) {
       $form['background_video'] = [

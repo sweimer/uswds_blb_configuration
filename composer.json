@@ -1,10 +1,16 @@
 {
-  "name": "drupal/uswds_blb_configuration",
-  "type": "drupal-module",
-  "keywords": ["Drupal", "USWDS", "Grid", "Layout Builder"],
-  "license": "GPL-2.0+",
-  "description": "Add USWDS Grid support to Layout Builder module.",
-  "require": {
-    "drupal/core": "^9.3 || ^10"
-  }
+    "name": "drupal/uswds_blb_configuration",
+    "type": "drupal-module",
+    "keywords": [
+        "Drupal",
+        "USWDS",
+        "Grid",
+        "Layout Builder"
+    ],
+    "license": "GPL-2.0+",
+    "description": "Add USWDS Grid support to Layout Builder module.",
+    "require": {
+        "drupal/core": "^9.3 || ^10",
+        "drupal/media_library_form_element": "^2.0"
+    }
 }

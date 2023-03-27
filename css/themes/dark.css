@@ -557,7 +557,6 @@
   transition: all .3s ease-in-out;
   position: relative;
   display: inline-block;
-  width: 90%;
   height: auto;
   cursor: pointer;
   text-align: center;
@@ -1009,6 +1008,10 @@
 .ui-dialog.ui-dialog-off-canvas .ui-dialog-title:before {
   background: transparent url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMwMHB4JyB3aWR0aD0nMzAwcHgnICBmaWxsPSIjZmZmZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNjQgNjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDY0IDY0IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48cGF0aCBkPSJNNTEsMzBoLTcuMzVjLTAuODI3LTIuMzI2LTMuMDQ0LTQtNS42NS00cy00LjgyMywxLjY3NC01LjY1LDRIMTNjLTEuMTA0LDAtMiwwLjg5Ni0yLDJzMC44OTYsMiwyLDJoMTkuMzUgICBjMC44MjcsMi4zMjYsMy4wNDQsNCw1LjY1LDRzNC44MjMtMS42NzQsNS42NS00SDUxYzEuMTA0LDAsMi0wLjg5NiwyLTJTNTIuMTA0LDMwLDUxLDMweiI+PC9wYXRoPjxwYXRoIGQ9Ik0xMywxOWg4LjM1YzAuODI3LDIuMzI2LDMuMDQ0LDQsNS42NSw0czQuODIzLTEuNjc0LDUuNjUtNEg1MWMxLjEwNCwwLDItMC44OTYsMi0ycy0wLjg5Ni0yLTItMkgzMi42NSAgIGMtMC44MjctMi4zMjYtMy4wNDQtNC01LjY1LTRzLTQuODIzLDEuNjc0LTUuNjUsNEgxM2MtMS4xMDQsMC0yLDAuODk2LTIsMlMxMS44OTYsMTksMTMsMTl6Ij48L3BhdGg+PHBhdGggZD0iTTUxLDQ1SDMyLjY1Yy0wLjgyNy0yLjMyNi0zLjA0NC00LTUuNjUtNHMtNC44MjMsMS42NzQtNS42NSw0SDEzYy0xLjEwNCwwLTIsMC44OTYtMiwyczAuODk2LDIsMiwyaDguMzUgICBjMC44MjcsMi4zMjYsMy4wNDQsNCw1LjY1LDRzNC44MjMtMS42NzQsNS42NS00SDUxYzEuMTA0LDAsMi0wLjg5NiwyLTJTNTIuMTA0LDQ1LDUxLDQ1eiI+PC9wYXRoPjwvZz48L3N2Zz4=") no-repeat scroll center center;
   background-size: 100% auto;
+}
+
+.ui-dialog.ui-dialog-off-canvas .layout-selection {
+  text-align: center;
 }
 
 .ui-dialog .ui-resizable-w {
@@ -1619,7 +1622,6 @@
   transition: all .3s ease-in-out;
   position: relative;
   display: inline-block;
-  width: 90%;
   height: auto;
   cursor: pointer;
   text-align: center;
@@ -2041,8 +2043,6 @@
 #drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input:checked + label,
 #layout-builder-modal .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input:checked + label {
   font-weight: bold;
-  color: #277abd;
-  background-color: #5C606B;
 }
 
 #drupal-off-canvas .fieldgroup.uswds_lb_container_type .fieldset-wrapper > div > div input:checked + label .input-icon:after,
@@ -2553,7 +2553,7 @@
   transition: all .3s ease-in-out;
   font-size: .875rem;
   border: 1px solid #5C606B;
-  padding: 10px;
+  padding: 5px;
   height: 40px;
   width: 100%;
   display: flex;
@@ -3366,7 +3366,7 @@
   transition: all .3s ease-in-out;
   font-size: .875rem;
   border: 1px solid #5C606B;
-  padding: 10px;
+  padding: 5px;
   height: 40px;
   width: 100%;
   display: flex;
@@ -3418,7 +3418,7 @@
 
 #drupal-off-canvas .uswds_background--position .form-radios,
 #layout-builder-modal .uswds_background--position .form-radios {
-  border: 1px solid #2F3138;
+  border: 1px solid #ffffff;
   height: 70px;
   position: relative;
   display: flex;
@@ -3567,7 +3567,7 @@
   transition: all .3s ease-in-out;
   font-size: .875rem;
   border: 1px solid #2F3138;
-  padding: 10px;
+  padding: 5px;
   height: 35px;
   width: 100%;
   display: flex;
