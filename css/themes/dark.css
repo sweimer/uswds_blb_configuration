@@ -170,7 +170,7 @@
   padding: 11px 20px;
   color: #444444;
   border-radius: 8px;
-  background: #26A5FF;
+  background: #26A5FF !important;
   font-weight: normal;
   font-family: inherit;
   border: 0;
@@ -184,14 +184,6 @@
 #layout-builder-modal input[type="submit"].button:active {
   color: #444444;
   background: #008ef2;
-}
-
-#layout-builder-modal button.button--primary,
-#layout-builder-modal input[type="submit"].button--primary {
-  color: #444444;
-  background: #26A5FF;
-  border: 0;
-  text-align: center;
 }
 
 #layout-builder-modal button.button--primary:hover, #layout-builder-modal button.button--primary:focus, #layout-builder-modal button.button--primary:active,
@@ -1235,7 +1227,7 @@
   padding: 11px 20px;
   color: #444444;
   border-radius: 8px;
-  background: #26A5FF;
+  background: #26A5FF !important;
   font-weight: normal;
   font-family: inherit;
   border: 0;
@@ -1249,14 +1241,6 @@
 #drupal-off-canvas input[type="submit"].button:active {
   color: #444444;
   background: #008ef2;
-}
-
-#drupal-off-canvas button.button--primary,
-#drupal-off-canvas input[type="submit"].button--primary {
-  color: #444444;
-  background: #26A5FF;
-  border: 0;
-  text-align: center;
 }
 
 #drupal-off-canvas button.button--primary:hover, #drupal-off-canvas button.button--primary:focus, #drupal-off-canvas button.button--primary:active,
@@ -3411,11 +3395,6 @@
   color: #ffffff;
 }
 
-#drupal-off-canvas .uswds_background--position,
-#layout-builder-modal .uswds_background--position {
-  margin: 0;
-}
-
 #drupal-off-canvas .uswds_background--position .form-radios,
 #layout-builder-modal .uswds_background--position .form-radios {
   border: 1px solid #ffffff;
@@ -3425,11 +3404,6 @@
   width: 100%;
   max-width: 50%;
   margin-top: 4px;
-}
-
-#drupal-off-canvas .uswds_background--position .form-radios > div,
-#layout-builder-modal .uswds_background--position .form-radios > div {
-  margin: 0;
 }
 
 #drupal-off-canvas .uswds_background--position .form-radios input,

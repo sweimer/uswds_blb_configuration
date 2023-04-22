@@ -16,7 +16,7 @@ input[type="submit"].button {
   padding: 11px 20px;
   color: $button_text_color;
   border-radius: $border_radius;
-  background: $button_bg_color;
+  background: $button_bg_color !important;
   font-weight: normal;
   font-family: inherit;
   border: 0;
@@ -33,11 +33,6 @@ input[type="submit"].button {
 
 button.button--primary,
 input[type="submit"].button--primary {
-  color: $button_text_color;
-  background: $button_bg_color;
-  border: 0;
-  text-align: center;
-
   &:hover,
   &:focus,
   &:active {
