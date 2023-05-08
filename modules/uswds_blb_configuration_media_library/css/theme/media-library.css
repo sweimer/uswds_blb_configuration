@@ -13,6 +13,28 @@
   box-sizing: border-box;
 }
 
+#views-exposed-form-media-library-widget .media-library-content {
+  width: unset !important;
+}
+
+#views-exposed-form-media-library-widget .media-library-content .usa-button {
+  margin-top: 2rem !important;
+}
+
+.media-library-views-form {
+  display: block;
+  flex-wrap: wrap !important;
+}
+
+.media-library-add-form {
+  display: block !important;
+  width: 100% !important;
+  max-width: 50% !important;
+  border: 1px solid lightgrey;
+  margin: 1rem;
+  padding: 1rem;
+}
+
 .media-library-view .views-exposed-form.usa-form {
   display: block !important;
   width: 100% !important;

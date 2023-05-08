@@ -10,89 +10,7 @@ use Drupal\views\Form\ViewsForm;
 use Drupal\views\ViewExecutable;
 use Drupal\views_ui\Form\Ajax\ViewsFormInterface;
 
-/**
- * Implements hook_theme_registry_alter().
- */
-function uswds_blb_configuration_media_library_theme_registry_alter(&$theme_registry) {
-  $path = \Drupal::service('extension.list.module')->getPath('uswds_blb_configuration_media_library') . '/templates';
-
-  $theme_registry['container__media_library_content'] = $theme_registry['container'];
-  $theme_registry['container__media_library_content']['template'] = 'container--media-library-content';
-  $theme_registry['container__media_library_content']['path'] = $path;
-
-  $theme_registry['container__media_library_widget_selection'] = $theme_registry['container'];
-  $theme_registry['container__media_library_widget_selection']['template'] = 'container--media-library-widget-selection';
-  $theme_registry['container__media_library_widget_selection']['path'] = $path;
-
-  $theme_registry['details__media_library_add_form_selected_media'] = $theme_registry['details'];
-  $theme_registry['details__media_library_add_form_selected_media']['template'] = 'details--media-library-add-form-selected-media';
-  $theme_registry['details__media_library_add_form_selected_media']['path'] = $path;
-
-  $theme_registry['fieldset__media_library_widget']['template'] = 'fieldset--media-library-widget';
-  $theme_registry['fieldset__media_library_widget']['path'] = $path;
-
-  $theme_registry['form__media_library_add_form_upload'] = $theme_registry['form'];
-  $theme_registry['form__media_library_add_form_upload']['template'] = 'form--media-library-add-form-upload';
-  $theme_registry['form__media_library_add_form_upload']['path'] = $path;
-
-  $theme_registry['form__views_exposed_form_media_library_widget'] = $theme_registry['form'];
-  $theme_registry['form__views_exposed_form_media_library_widget']['template'] = 'form--views-exposed-form-media-library-widget';
-  $theme_registry['form__views_exposed_form_media_library_widget']['path'] = $path;
-
-  $theme_registry['form__views_form_media_library_widget'] = $theme_registry['form'];
-  $theme_registry['form__views_form_media_library_widget']['template'] = 'form--views-form-media-library-widget';
-  $theme_registry['form__views_form_media_library_widget']['path'] = $path;
-
-  $theme_registry['form__views_form_media_library_widget_table'] = $theme_registry['form'];
-  $theme_registry['form__views_form_media_library_widget_table']['template'] = 'form--views-form-media-library-widget';
-  $theme_registry['form__views_form_media_library_widget_table']['path'] = $path;
-
-  $theme_registry['form_element_media_library'] = $theme_registry['form_element'];
-  $theme_registry['form_element_media_library']['template'] = 'form-element-media-library';
-  $theme_registry['form_element_media_library']['path'] = $path;
-
-  $theme_registry['form_element_label__edit_media_library_select'] = $theme_registry['form_element_label'];
-  $theme_registry['form_element_label__edit_media_library_select']['template'] = 'form-element-label--edit-media-library-select';
-  $theme_registry['form_element_label__edit_media_library_select']['path'] = $path;
-
-  $theme_registry['input__edit_media_library'] = $theme_registry['input'];
-  $theme_registry['input__edit_media_library']['template'] = 'input--edit-media-library';
-  $theme_registry['input__edit_media_library']['path'] = $path;
-
-  $theme_registry['item_list__media_library_add_form_media_list']['template'] = 'item-list--media-library-add-form-media-list';
-  $theme_registry['item_list__media_library_add_form_media_list']['path'] = $path;
-
-  $theme_registry['links__media_library_menu']['template'] = 'links--media-library-menu';
-  $theme_registry['links__media_library_menu']['path'] = $path;
-
-  $theme_registry['media__media_library'] = $theme_registry['media'];
-  $theme_registry['media__media_library']['template'] = 'media--media-library';
-  $theme_registry['media__media_library']['path'] = $path;
-
-  $theme_registry['media_library_item']['template'] = 'media-library-item';
-  $theme_registry['media_library_item']['path'] = $path;
-
-  $theme_registry['media_library_item__small']['template'] = 'media-library-item--small';
-  $theme_registry['media_library_item__small']['path'] = $path;
-
-  $theme_registry['media_library_wrapper']['template'] = 'media-library-wrapper';
-  $theme_registry['media_library_wrapper']['path'] = $path;
-
-  $theme_registry['views_mini_pager']['template'] = 'views-mini-pager';
-  $theme_registry['views_mini_pager']['path'] = $path;
-
-  $theme_registry['views_view__media_library__widget'] = $theme_registry['views_view'];
-  $theme_registry['views_view__media_library__widget']['template'] = 'views-view--media-library';
-  $theme_registry['views_view__media_library__widget']['path'] = $path;
-
-  $theme_registry['views_view__media_library__widget_table'] = $theme_registry['views_view'];
-  $theme_registry['views_view__media_library__widget_table']['template'] = 'views-view--media-library';
-  $theme_registry['views_view__media_library__widget_table']['path'] = $path;
-
-  $theme_registry['views_view_unformatted__media_library'] = $theme_registry['views_view_unformatted'];
-  $theme_registry['views_view_unformatted__media_library']['template'] = 'views-view-unformatted--media-library';
-  $theme_registry['views_view_unformatted__media_library']['path'] = $path;
-}
+require_once dirname(__FILE__) . '/includes/theme_suggestions.inc';
 
 /**
  * Implements hook_preprocess_links__media_library_menu().
@@ -296,7 +214,6 @@ function uswds_blb_configuration_media_library_form_media_library_add_form_alter
   }
   if ($themeHandler->themeExists('gin')) {
     $form['#attached']['library'][] = 'gin/media_library';
-    $form['#attached']['library'][] = 'gin/gin';
   }
   $form['#attached']['library'][] = 'uswds_blb_configuration_media_library/media_library';
 
@@ -343,58 +260,6 @@ function uswds_blb_configuration_media_library_form_alter(array &$form, FormStat
 
     if (!isset($form['#attributes']['class']) || !in_array('media-library-views-form', $form['#attributes']['class'])) {
       $form['#attributes']['class'][] = 'media-library-views-form';
-    }
-  }
-}
-
-/**
- * Implements hook_theme_suggestion_HOOK_alter().
- */
-function uswds_blb_configuration_media_library_theme_suggestions_form_alter(array &$suggestions, array $variables) {
-  $formId = $variables['element']['#form_id'] ?? NULL;
-  if (isset($formId)) {
-    if (str_contains($formId, 'media_library_widget')) {
-      $suggestions[] = 'form__views_exposed_form_media_library_widget';
-    }
-    elseif (str_contains($formId, 'media_library')) {
-      $suggestions[] = 'form__' . str_replace('-', '_', $formId);
-    }
-  }
-}
-
-/**
- * Implements hook_theme_suggestion_HOOK_alter().
- */
-function uswds_blb_configuration_media_library_theme_suggestions_form_element_label_alter(array &$suggestions, array $variables) {
-  $formId = $variables['element']['#id'] ?? NULL;
-  if (isset($formId)) {
-    if (str_contains($formId, 'edit-media-library-select')) {
-      $suggestions[] = 'form_element_label__edit_media_library_select';
-    }
-  }
-}
-
-/**
- * Implements hook_theme_suggestion_HOOK_alter().
- */
-function uswds_blb_configuration_media_library_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
-  $formId = $variables['element']['#id'] ?? NULL;
-  if (isset($formId)) {
-    $current_path = \Drupal::service('path.current')->getPath();
-    if (str_contains($current_path, 'media-library')) {
-      $suggestions[] = 'form_element_media_library';
-    }
-  }
-}
-
-/**
- * Implements hook_theme_suggestion_HOOK_alter().
- */
-function uswds_blb_configuration_media_library_theme_suggestions_input_alter(array &$suggestions, array $variables) {
-  $formId = $variables['element']['#id'] ?? NULL;
-  if (isset($formId)) {
-    if ($formId && str_contains($formId, 'edit-media-library-select')) {
-      $suggestions[] = 'input__edit_media_library';
     }
   }
 }

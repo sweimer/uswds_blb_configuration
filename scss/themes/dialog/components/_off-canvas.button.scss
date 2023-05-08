@@ -11,7 +11,7 @@ button.link:focus {
 }
 
 button.button,
-input[type="submit"].button {
+input[type="submit"].button:not(.media-library-item__remove button) {
   margin: 1rem 0 0 0;
   padding: 11px 20px;
   color: $button_text_color;
