@@ -15,6 +15,10 @@ layout_builder_form_style:
     - core/drupal
     - core/once
 
+content_tab:
+  js:
+    js/content-tab-scripts.js: { }
+
 # Offcanvas Font
 offcanvas-font:
   css:

@@ -5,3 +5,8 @@ services:
   plugin.manager.uswds_styles_group:
     class: Drupal\uswds_blb_configuration\StylesGroup\StylesGroupManager
     arguments: ['@container.namespaces', '@cache.default', '@module_handler', '@plugin.manager.uswds_styles', '@config.factory']
+  uswds_layout_builder_blocks.render_block_component_subscriber:
+    class: Drupal\uswds_blb_configuration\EventSubscriber\BlockComponentRenderArraySubscriber
+    arguments: ['@entity_type.manager', '@config.factory', '@plugin.manager.uswds_styles_group']
+    tags:
+      - { name: event_subscriber }

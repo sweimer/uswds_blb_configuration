@@ -5,9 +5,10 @@
  * USWDS Layout Builder module.
  */
 
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Element;
-use Drupal\Core\Template\Attribute;
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Template\Attribute;
 
 /**
  * Implements hook_help().
@@ -174,10 +175,10 @@ function uswds_blb_configuration_page_attachments_alter(array &$page) {
  */
 function uswds_blb_configuration_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
   $parents = $variables['element']['#array_parents'] ?? FALSE;
-  $bs_parents = ['ui', 'tab_content', 'appearance', 'layout_settings'];
+  $uswds_parents = ['ui', 'tab_content', 'appearance', 'layout_settings'];
 
   // UI/Tab content are expected, and one of appearance or layout settings.
-  if ($parents && count(array_intersect($bs_parents, $parents)) >= 3) {
+  if ($parents && count(array_intersect($uswds_parents, $parents)) >= 3) {
     $suggestions[] = $hook . '__bs';
   }
 }
@@ -199,4 +200,148 @@ function uswds_blb_configuration_library_info_alter(&$libraries, $extension) {
 
     }
   }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function uswds_blb_configuration_form_alter(&$form, FormStateInterface $form_state) {
+  if ($form['#form_id'] === 'layout_builder_add_block' || $form['#form_id'] === 'layout_builder_update_block') {
+    $allowed = FALSE;
+
+    /** @var \Drupal\layout_builder\Form\ConfigureBlockFormBase $form_object */
+    $form_object = $form_state->getFormObject();
+    $component = $form_object->getCurrentComponent();
+
+    $block_plugin_id = $component->getPluginId();
+
+    $config = \Drupal::config('uswds_blb_configuration.block_styles');
+
+    // If this is a reusable block, retrieve the block bundle.
+    $bundle = FALSE;
+    if (str_starts_with($block_plugin_id, "block_content:")) {
+      $uuid = str_replace('block_content:', '', $block_plugin_id);
+      $bundle = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $uuid)
+        ->bundle();
+    }
+
+    if (
+      empty($config->get('block_restrictions'))
+      || in_array($block_plugin_id, $config->get('block_restrictions'))
+      || $bundle && in_array('inline_block:' . $bundle, $config->get('block_restrictions'))
+    ) {
+      // Return parent form.
+      $allowed = TRUE;
+    }
+
+    if ($allowed) {
+      // Our main set of tabs.
+      $form['ui'] = [
+        '#type' => 'container',
+        '#weight' => -100,
+        '#attributes' => [
+          'id' => 'uswds_ui',
+        ],
+        '#tree' => FALSE,
+        '#parents' => ['ui'],
+      ];
+
+      $tabs = [
+        [
+          'machine_name' => 'content',
+          'icon' => 'content.svg',
+          'title' => t('Content'),
+          'active' => TRUE,
+        ],
+        [
+          'machine_name' => 'appearance',
+          'icon' => 'appearance.svg',
+          'title' => t('Style'),
+        ],
+      ];
+
+      // Create our tabs from above.
+      $form['ui']['nav_tabs'] = [
+        '#type' => 'html_tag',
+        '#tag' => 'ul',
+        '#attributes' => [
+          'class' => 'uswds_nav-tabs',
+          'id' => 'uswds_nav-tabs',
+          'role' => 'tablist',
+        ],
+      ];
+
+      $form['ui']['tab_content'] = [
+        '#type' => 'container',
+        '#attributes' => [
+          'class' => 'blb_tab-content',
+          'id' => 'uswds_tabContent',
+        ],
+        '#tree' => FALSE,
+        '#parents' => ['tab_content'],
+      ];
+
+      // Create our tab & tab panes.
+      foreach ($tabs as $tab) {
+        $form['ui']['nav_tabs'][$tab['machine_name']] = [
+          '#type' => 'inline_template',
+          '#template' => '<li><a data-target="{{ target|clean_class }}" class="{{active}}"><span role="img">{% include icon %}</span>{{ title }}</a></li>',
+          '#context' => [
+            'title' => $tab['title'],
+            'target' => $tab['machine_name'],
+            'active' => isset($tab['active']) && $tab['active'] == TRUE ? 'active' : '',
+            'icon' => \Drupal::service('extension.list.module')->getPath('uswds_blb_configuration') . '/images/ui/' . ($tab['icon'] ?: 'default.svg'),
+          ],
+        ];
+
+        $form['ui']['tab_content'][$tab['machine_name']] = [
+          '#type' => 'container',
+          '#attributes' => [
+            'class' => [
+              'uswds_tab-pane',
+              'uswds_tab-pane--' . $tab['machine_name'],
+              isset($tab['active']) && $tab['active'] ? 'active' : '',
+            ],
+          ],
+          '#tree' => FALSE,
+          '#parents' => [$tab['machine_name']],
+        ];
+      }
+
+      $form['ui']['tab_content']['appearance']['#tree'] = TRUE;
+
+      $configuration = [
+        'uswds_styles' => [
+          'block_style' => [],
+        ],
+      ];
+
+      if ($component->get('uswds_styles')) {
+        $uswds_styles = $component->get('uswds_styles');
+        if (isset($uswds_styles['block_style'])) {
+          $configuration['uswds_styles'] = $uswds_styles;
+        }
+      }
+
+      $form['ui']['tab_content']['appearance'] += \Drupal::service('plugin.manager.uswds_styles_group')->buildStylesFormElements($form['ui']['tab_content']['appearance'], $form_state, $configuration['uswds_styles']['block_style'], 'uswds_blb_configuration.block_styles');
+
+      $form['#attached']['library'][] = 'uswds_blb_configuration/content_tab';
+
+      array_unshift($form['#submit'], '_uswds_blb_configuration_submit_block_form');
+    }
+  }
+}
+
+/**
+ * Custom submit handler for submitting LB block forms.
+ */
+function _uswds_blb_configuration_submit_block_form(array &$form, FormStateInterface $form_state) {
+  $uswds_styles = [];
+  $uswds_styles['block_style'] = [];
+  $uswds_styles['block_style'] = \Drupal::service('plugin.manager.uswds_styles_group')->submitStylesFormElements($form['ui']['tab_content']['appearance'], $form_state, ['appearance'], $uswds_styles['block_style'], 'uswds_blb_configuration.block_styles');
+
+  // Save styles' configurations.
+  $formObject = $form_state->getFormObject();
+  $component = $formObject->getCurrentComponent();
+  $component->set('uswds_styles', $uswds_styles);
 }

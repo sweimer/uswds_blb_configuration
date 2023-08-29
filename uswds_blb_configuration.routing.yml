@@ -5,11 +5,18 @@ entity.uswds_layout.options_form:
     _title: 'List layout options'
   requirements:
     _permission: 'configure uswds layout builder'
-uswds_blb_configuration.styles:
+uswds_blb_configuration.section_styles:
   path: '/admin/config/uswds-layout-builder/styles'
   defaults:
-    _form: '\Drupal\uswds_blb_configuration\Form\StylesForm'
-    _title: 'USWDS Layout Builder Styles'
+    _form: '\Drupal\uswds_blb_configuration\Form\SectionStylesForm'
+    _title: 'USWDS Layout Builder Styles - Sections'
+  requirements:
+    _permission: 'configure uswds layout builder'
+uswds_blb_configuration.block_styles:
+  path: '/admin/config/uswds-layout-builder/styles-blocks'
+  defaults:
+    _form: '\Drupal\uswds_blb_configuration\Form\BlockStylesForm'
+    _title: 'USWDS Layout Builder Styles - Blocks'
   requirements:
     _permission: 'configure uswds layout builder'
 uswds_blb_configuration.style_settings:

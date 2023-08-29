@@ -139,7 +139,7 @@ uswds_blb_configuration.settings:
         field:
           type: string
           label: 'Field'
-uswds_blb_configuration.styles:
+uswds_blb_configuration.section_styles:
   type: config_entity
   label: 'USWDS Layout Builder Styles'
   mapping:

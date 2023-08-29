@@ -508,7 +508,7 @@ class UswdsLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
     }
 
     // Container wrapper styling.
-    $form['ui']['tab_content']['appearance'] = $this->stylesGroupManager->buildStylesFormElements($form['ui']['tab_content']['appearance'], $form_state, $this->configuration['container_wrapper']['uswds_blb_configuration'], 'uswds_blb_configuration.styles');
+    $form['ui']['tab_content']['appearance'] = $this->stylesGroupManager->buildStylesFormElements($form['ui']['tab_content']['appearance'], $form_state, $this->configuration['container_wrapper']['uswds_blb_configuration'], 'uswds_blb_configuration.sections_styles');
 
     // Move default admin label input to setting tab.
     $form['ui']['tab_content']['settings']['label'] = $form['label'];
@@ -723,7 +723,7 @@ class UswdsLayout extends LayoutDefault implements ContainerFactoryPluginInterfa
     $this->configuration['container'] = $form_state->getValue(array_merge($layout_tab, ['container_type']));
 
     // Styles tab.
-    $this->configuration['container_wrapper']['uswds_blb_configuration'] = $this->stylesGroupManager->submitStylesFormElements($form['ui']['tab_content']['appearance'], $form_state, $style_tab, $this->configuration['container_wrapper']['uswds_blb_configuration'], 'uswds_blb_configuration.styles');
+    $this->configuration['container_wrapper']['uswds_blb_configuration'] = $this->stylesGroupManager->submitStylesFormElements($form['ui']['tab_content']['appearance'], $form_state, $style_tab, $this->configuration['container_wrapper']['uswds_blb_configuration'], 'uswds_blb_configuration.sections_styles');
 
     // Container classes from advanced mode.
     if (!$this->sectionSettingsIsHidden()) {

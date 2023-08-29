@@ -8,11 +8,15 @@ uswds_blb_configuration.layouts_collection:
   base_route: entity.uswds_breakpoint.collection
 uswds_blb_configuration.styles_menu:
   title: 'Styles'
-  route_name: uswds_blb_configuration.styles
+  route_name: uswds_blb_configuration.section_styles
   base_route: entity.uswds_breakpoint.collection
 uswds_blb_configuration.styles_main:
-  title: 'Styles'
-  route_name: uswds_blb_configuration.styles
+  title: 'Section Styles'
+  route_name: uswds_blb_configuration.section_styles
+  parent_id: uswds_blb_configuration.styles_menu
+uswds_blb_configuration.styles_blocks:
+  title: 'Block Styles'
+  route_name: uswds_blb_configuration.block_styles
   parent_id: uswds_blb_configuration.styles_menu
 uswds_blb_configuration.styles_settings:
   title: 'Style settings'
