@@ -106,9 +106,6 @@ class BackgroundColor extends StylePluginBase {
       $build = $this->addClassesToBuild($build, $classes, $theme_wrapper);
     }
 
-    // Attach uswds-classes to the build.
-    $build['#attached']['library'][] = 'uswds_blb_configuration/plugin.background_color.build';
-
     return $build;
   }
 

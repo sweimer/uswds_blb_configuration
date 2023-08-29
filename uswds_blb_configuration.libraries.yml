@@ -67,19 +67,8 @@ theme.dark:
 
 # Plugins.
 
-# typography
-plugin.text_color.build:
-  css:
-    theme:
-      css/uswds_classes/text-color-classes.css: { }
-
 # text_alignment
 plugin.text_alignment.layout_builder_form:
-  css:
-    theme:
-      css/uswds_classes/text-alignment-classes.css: { }
-
-plugin.text_alignment.build:
   css:
     theme:
       css/uswds_classes/text-alignment-classes.css: { }
@@ -90,18 +79,8 @@ plugin.padding.layout_builder_form:
     theme:
       css/uswds_classes/padding-classes.css: { }
 
-plugin.padding.build:
-  css:
-    theme:
-      css/uswds_classes/padding-classes.css: { }
-
 # margin
 plugin.margin.layout_builder_form:
-  css:
-    theme:
-      css/uswds_classes/margin-classes.css: { }
-
-plugin.margin.build:
   css:
     theme:
       css/uswds_classes/margin-classes.css: { }
@@ -114,18 +93,8 @@ plugin.border.layout_builder_form:
   js:
     js/plugins/border/layout-builder-form.js: { }
 
-plugin.border.build:
-  css:
-    theme:
-      css/uswds_classes/border-classes.css: { }
-
 # box_shadow
 plugin.box_shadow.layout_builder_form:
-  css:
-    theme:
-      css/uswds_classes/box-shadow-classes.css: { }
-
-plugin.box_shadow.build:
   css:
     theme:
       css/uswds_classes/box-shadow-classes.css: { }
@@ -155,11 +124,6 @@ plugin.background_color.layout_builder_form:
     js/plugins/background_color/layout-builder-form.js: { }
   dependencies:
     - uswds_blb_configuration/uswds_yiq
-
-plugin.background_color.build:
-  css:
-    theme:
-      css/uswds_classes/background-color-classes.css: { }
 
 # background_media
 plugin.background_media.build:

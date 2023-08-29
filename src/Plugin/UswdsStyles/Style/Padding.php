@@ -323,12 +323,7 @@ class Padding extends StylePluginBase {
     $this->buildBreakpoints($classes, $storage, $responsive_target_fields);
 
     // Add the classes to the build.
-    $build = $this->addClassesToBuild($build, $classes, $theme_wrapper);
-
-    // Attach uswds-classes to the build.
-    $build['#attached']['library'][] = 'uswds_blb_configuration/plugin.padding.build';
-
-    return $build;
+    return $this->addClassesToBuild($build, $classes, $theme_wrapper);
   }
 
 }

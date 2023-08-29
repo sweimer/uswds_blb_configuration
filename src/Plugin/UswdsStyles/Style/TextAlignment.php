@@ -94,12 +94,7 @@ class TextAlignment extends StylePluginBase {
     }
 
     // Add the classes to the build.
-    $build = $this->addClassesToBuild($build, $classes, $theme_wrapper);
-
-    // Attach uswds-classes to the build.
-    $build['#attached']['library'][] = 'uswds_blb_configuration/plugin.text_alignment.build';
-
-    return $build;
+    return $this->addClassesToBuild($build, $classes, $theme_wrapper);
   }
 
 }

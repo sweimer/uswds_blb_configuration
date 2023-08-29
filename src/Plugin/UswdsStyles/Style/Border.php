@@ -538,12 +538,7 @@ class Border extends StylePluginBase {
     }
 
     // Add the classes to the build.
-    $build = $this->addClassesToBuild($build, $classes, $theme_wrapper);
-
-    // Attach uswds-classes to the build.
-    $build['#attached']['library'][] = 'uswds_blb_configuration/plugin.border.build';
-
-    return $build;
+    return $this->addClassesToBuild($build, $classes, $theme_wrapper);
   }
 
 }

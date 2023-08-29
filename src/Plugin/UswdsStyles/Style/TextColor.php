@@ -93,12 +93,7 @@ class TextColor extends StylePluginBase {
     }
 
     // Add the classes to the build.
-    $build = $this->addClassesToBuild($build, $classes, $theme_wrapper);
-
-    // Attach uswds-classes to the build.
-    $build['#attached']['library'][] = 'uswds_blb_configuration/plugin.text_color.build';
-
-    return $build;
+    return $this->addClassesToBuild($build, $classes, $theme_wrapper);
   }
 
 }

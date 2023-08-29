@@ -121,10 +121,9 @@
   /* LTR */
   font-family: inherit;
   font-size: 1.25rem;
-  max-width: auto;
 }
 
-[dir="rtl"] .ui-dialog.ui-dialog-off-canvas .ui-dialog-title {
+[dir='rtl'] .ui-dialog.ui-dialog-off-canvas .ui-dialog-title {
   padding-right: 40px;
 }
 
@@ -915,7 +914,7 @@
 }
 
 #drupal-off-canvas table .region-message {
-  color: #fff;
+  color: #ffffff;
 }
 
 #drupal-off-canvas table .region-populated {
@@ -939,13 +938,7 @@
   background-image: none;
 }
 
-#drupal-off-canvas [dir="rtl"] .draggable a.tabledrag-handle {
-  float: right;
-  margin-right: 0;
-  margin-left: 5px;
-}
-
-#drupal-off-canvas a.tabledrag-handle .handle {
+#drupal-off-canvas .draggable a.tabledrag-handle .handle {
   transition: all .3s ease-in-out;
   width: auto;
   height: auto;
@@ -973,11 +966,6 @@
 #drupal-off-canvas tr td abbr {
   margin-left: 5px;
   /* LTR */
-}
-
-#drupal-off-canvas [dir="rtl"] tr td abbr {
-  margin-right: 5px;
-  margin-left: 0;
 }
 
 #drupal-off-canvas tr:hover td {
@@ -1016,19 +1004,15 @@
   padding: 10px 0;
 }
 
-#drupal-off-canvas .touchevents a.tabledrag-handle {
+#drupal-off-canvas .touchevents .tabledrag-handle {
   width: 40px;
   height: 44px;
 }
 
-#drupal-off-canvas .touchevents a.tabledrag-handle .handle {
+#drupal-off-canvas .touchevents .tabledrag-handle .handle {
   height: 21px;
   background-position: 40% 19px;
   /* LTR */
-}
-
-#drupal-off-canvas [dir="rtl"] .touch a.tabledrag-handle .handle {
-  background-position: right 40% top 19px;
 }
 
 #drupal-off-canvas .touchevents .draggable.drag a.tabledrag-handle .handle {
@@ -1041,22 +1025,37 @@
   /* LTR */
 }
 
-#drupal-off-canvas [dir="rtl"] .tabledrag-toggle-weight-wrapper {
-  text-align: left;
-}
-
 #drupal-off-canvas .indentation {
-  float: left;
-  /* LTR */
-  width: auto;
-  height: auto;
   margin: 0 3px 0 -10px;
   /* LTR */
   padding: 0 0 0 10px;
   /* LTR */
+  float: left;
+  /* LTR */
+  width: auto;
+  height: auto;
 }
 
-#drupal-off-canvas [dir="rtl"] .indentation {
+#drupal-off-canvas [dir='rtl'] .draggable .tabledrag-handle {
+  float: right;
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+#drupal-off-canvas [dir='rtl'] tr td abbr {
+  margin-right: 5px;
+  margin-left: 0;
+}
+
+#drupal-off-canvas [dir='rtl'] .touch .tabledrag-handle .handle {
+  background-position: right 40% top 19px;
+}
+
+#drupal-off-canvas [dir='rtl'] .tabledrag-toggle-weight-wrapper {
+  text-align: left;
+}
+
+#drupal-off-canvas [dir='rtl'] .indentation {
   float: right;
   margin: 0 -10px 0 3px;
   padding: 0 10px 0 0;
