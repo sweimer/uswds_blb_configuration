@@ -73,9 +73,9 @@ class BlockComponentRenderArraySubscriber implements EventSubscriberInterface {
     $build = $event->getBuild();
 
     $block_style_configs = [];
-    if ($bootstrap_styles = $event->getComponent()->get('bootstrap_styles')) {
-      if (isset($bootstrap_styles['block_style'])) {
-        $block_style_configs = $bootstrap_styles['block_style'];
+    if ($uswds_styles = $event->getComponent()->get('uswds_styles')) {
+      if (isset($uswds_styles['block_style'])) {
+        $block_style_configs = $uswds_styles['block_style'];
       }
     }
 

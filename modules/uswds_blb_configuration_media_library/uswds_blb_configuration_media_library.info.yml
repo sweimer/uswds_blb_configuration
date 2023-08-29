@@ -1,6 +1,6 @@
 name: USWDS Bootstrap Layout Builder Configuration - Media Library
 type: module
-description: Configuration for using USWDS with layout builder and media library.
+description: Configuration for using USWDS with layout builder and media library. (WARNING DOESN'T WORK WELL)
 core_version_requirement: ^9 || ^10
 package: 'Layout Builder'
 dependencies:
