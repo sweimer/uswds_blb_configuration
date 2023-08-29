@@ -4,8 +4,6 @@
  */
 
 (function ($, _, Drupal, drupalSettings) {
-  "use strict";
-
   Drupal.behaviors.LayoutBuilderBlocksContentTab = {
     attach: function (context) {
 

@@ -1,6 +1,7 @@
 // Function to convert hex format to a rgb color
+// eslint-disable-next-line no-unused-vars
 function rgb2hex(orig) {
-  var rgb = orig.replace(/\s/g, '').match(/^rgba?\((\d+),(\d+),(\d+)/i);
+  let rgb = orig.replace(/\s/g, '').match(/^rgba?\((\d+),(\d+),(\d+)/i);
   return (rgb && rgb.length === 4) ? "#" +
     ("0" + parseInt(rgb[1], 10).toString(16)).slice(-2) +
     ("0" + parseInt(rgb[2], 10).toString(16)).slice(-2) +
@@ -14,7 +15,8 @@ function rgb2hex(orig) {
  * @param  {String} A hexcolor value
  * @return {String} The contrasting color (black or white)
  */
-var getContrast = function (hexcolor) {
+// eslint-disable-next-line no-unused-vars
+let getContrast = function (hexcolor) {
   // If a leading # is provided, remove it
   if (hexcolor.slice(0, 1) === '#') {
     hexcolor = hexcolor.slice(1);

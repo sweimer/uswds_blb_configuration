@@ -75,8 +75,10 @@ trait ResponsiveTrait {
         $form['uswds_responsive_' . $group_name]['#options'][$breakpoint_key] = $this->getSvgIconMarkup($icon_path . 'responsive/device-' . $breakpoint_key . '.svg');
       }
       else {
-        // todo default image.
-        // $form['uswds_responsive_' . $group_name]['#options'][$breakpoint_key] = file_get_contents(DRUPAL_ROOT . '/' . $icon_path . 'responsive/uswds-default.png');
+        // @todo Default image.
+        // $form['uswds_responsive_' . $group_name]['#options'][$breakpoint_key]
+        // = file_get_contents(DRUPAL_ROOT . '/' . $icon_path .
+        // 'responsive/uswds-default.png');
       }
     }
     $form['#attached']['library'][] = 'uswds_blb_configuration/uswds_responsive';

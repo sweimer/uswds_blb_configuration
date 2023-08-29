@@ -77,7 +77,7 @@ interface LayoutOptionInterface extends ConfigEntityInterface {
   /**
    * Sets the breakspoint for a specific layout option.
    *
-   * @param $breakpoints
+   * @param array $breakpoints
    *   Array of breakpoints that are checked.
    *
    * @return $this

@@ -4,7 +4,6 @@
  */
 
 (function ($, Drupal, once) {
-  "use strict";
 
   // Adds value from input to the label to emulate a "preview" on our inputs.
   Drupal.behaviors.bootstrapStylesInputCircles = {

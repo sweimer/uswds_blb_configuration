@@ -1,5 +1,5 @@
-@import "../../variables";
-@import "../../mixins";
+@import '../../variables';
+@import '../../mixins';
 
 /**
  * @file
@@ -57,10 +57,9 @@
   padding-left: 40px; /* LTR */
   font-family: inherit;
   font-size: 1.25rem;
-  max-width: auto;
 }
 
-[dir="rtl"] .ui-dialog.ui-dialog-off-canvas .ui-dialog-title {
+[dir='rtl'] .ui-dialog.ui-dialog-off-canvas .ui-dialog-title {
   padding-right: 40px;
 }
 

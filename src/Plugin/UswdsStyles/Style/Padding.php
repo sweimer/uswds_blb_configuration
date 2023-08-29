@@ -2,9 +2,9 @@
 
 namespace Drupal\uswds_blb_configuration\Plugin\UswdsStyles\Style;
 
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\uswds_blb_configuration\ResponsiveTrait;
 use Drupal\uswds_blb_configuration\Style\StylePluginBase;
-use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Padding style plugin.

@@ -4,22 +4,21 @@
  */
 
 (function ($, Drupal, once) {
-  "use strict";
 
   // Shadow preview box.
   Drupal.behaviors.shadowPreview = {
     attach: function (context) {
 
-      var previewElement = $('.uswds-shadow-preview [data-uswds-element="uswds_preview-element"]');
+      let previewElement = $('.uswds-shadow-preview [data-uswds-element="uswds_preview-element"]');
 
       // Refresh preview classes.
       function refreshShadowClasses(el) {
 
-        var shadow_classes = '';
+        let shadow_classes = '';
 
         // Setup our shadow classes.
         $('input.uswds-field-box-shadow').each(function() {
-          if ($(this).is(':checked') && $(this).val() != '_none') {
+          if ($(this).is(':checked') && $(this).val() !== '_none') {
             shadow_classes += $(this).val() + ' ';
           }
         });
@@ -34,7 +33,7 @@
       refreshShadowClasses();
 
       // Refresh the box shadow classes on change.
-      var input_triggers = [
+      let input_triggers = [
         'input[class^="uswds-field-box-shadow"]',
       ];
 
@@ -46,7 +45,7 @@
 
       // Toggle our bg color mode.
       function togglePreviewBackgroundColor(el) {
-        var previewBgElement = el.closest('[data-uswds-element="uswds_preview-box"]');
+        let previewBgElement = el.closest('[data-uswds-element="uswds_preview-box"]');
         previewBgElement.attr('data-uswds-mode', previewBgElement.attr('data-uswds-mode') === 'light' ? 'dark' : 'light');
       }
 

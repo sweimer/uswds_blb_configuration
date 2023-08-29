@@ -21,7 +21,7 @@
           const colsLabel = $(elem).find("label");
           let col_classes = "uswds_breakpoint_col";
           const checked = $(elem).find("input").prop("checked");
-          if (typeof checked !== typeof undefined && checked !== false) {
+          if (typeof checked !== typeof 'undefined' && checked !== false) {
             col_classes += " uswds-selected";
           }
 

@@ -3,8 +3,8 @@
 namespace Drupal\uswds_blb_configuration\Entity;
 
 use Drupal\Core\Config\Entity\ConfigEntityBase;
-use Drupal\uswds_blb_configuration\LayoutOptionInterface;
 use Drupal\Core\Entity\EntityStorageInterface;
+use Drupal\uswds_blb_configuration\LayoutOptionInterface;
 
 /**
  * Defines the layout option entity class.

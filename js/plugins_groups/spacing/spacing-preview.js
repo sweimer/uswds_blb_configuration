@@ -4,44 +4,43 @@
  */
 
 (function ($, Drupal, once) {
-  "use strict";
 
   // Spacing preview box.
   Drupal.behaviors.spacingPreview = {
     attach: function (context,settings) {
-      var spacing = settings.uswds_blb_configuration.spacing;
-      var breakpoints = settings.uswds_blb_configuration.breakpoints;
+      let spacing = settings.uswds_blb_configuration.spacing;
+      let breakpoints = settings.uswds_blb_configuration.breakpoints;
 
-      var padding_box_shadow = $('.spacing-preview .padding-box').css('box-shadow');
-      var margin_box_shadow = $('.spacing-preview .margin-box').css('box-shadow');
-      var box_shadow = '0 0 0 1.5rem';
+      let padding_box_shadow = $('.spacing-preview .padding-box').css('box-shadow');
+      let margin_box_shadow = $('.spacing-preview .margin-box').css('box-shadow');
+      let box_shadow = '0 0 0 1.5rem';
 
       // Padding.
       function calcPadding() {
-        var padding_val = $('input.uswds-field-padding').val();
-        var padding_left_val = $('input.uswds-field-padding-left').val();
-        var padding_top_val = $('input.uswds-field-padding-top').val();
-        var padding_right_val = $('input.uswds-field-padding-right').val();
-        var padding_bottom_val = $('input.uswds-field-padding-bottom').val();
-        var padding_classes = '';
-        var padding_class = spacing.padding_classes_options.padding[padding_val];
-        if (padding_class != '_none') {
+        let padding_val = $('input.uswds-field-padding').val();
+        let padding_left_val = $('input.uswds-field-padding-left').val();
+        let padding_top_val = $('input.uswds-field-padding-top').val();
+        let padding_right_val = $('input.uswds-field-padding-right').val();
+        let padding_bottom_val = $('input.uswds-field-padding-bottom').val();
+        let padding_classes = '';
+        let padding_class = spacing.padding_classes_options.padding[padding_val];
+        if (padding_class !== '_none') {
           padding_classes += padding_class + ' ';
         }
-        var padding_left_class = spacing.padding_classes_options.padding_left[padding_left_val];
-        if (padding_left_class != '_none') {
+        let padding_left_class = spacing.padding_classes_options.padding_left[padding_left_val];
+        if (padding_left_class !== '_none') {
           padding_classes += padding_left_class + ' ';
         }
-        var padding_top_class = spacing.padding_classes_options.padding_top[padding_top_val];
-        if (padding_top_class != '_none') {
+        let padding_top_class = spacing.padding_classes_options.padding_top[padding_top_val];
+        if (padding_top_class !== '_none') {
           padding_classes += padding_top_class + ' ';
         }
-        var padding_right_class = spacing.padding_classes_options.padding_right[padding_right_val];
-        if (padding_right_class != '_none') {
+        let padding_right_class = spacing.padding_classes_options.padding_right[padding_right_val];
+        if (padding_right_class !== '_none') {
           padding_classes += padding_right_class + ' ';
         }
-        var padding_bottom_class = spacing.padding_classes_options.padding_bottom[padding_bottom_val];
-        if (padding_bottom_class != '_none') {
+        let padding_bottom_class = spacing.padding_classes_options.padding_bottom[padding_bottom_val];
+        if (padding_bottom_class !== '_none') {
           padding_classes += padding_bottom_class + ' ';
         }
 
@@ -61,37 +60,36 @@
 
       // Responsive.
       function getActiveBreakpointPaddingClasses() {
-        var padding_classes = '';
-        var active_breakpoint = $('.uswds_responsive_spacing input:checked').val();
+        let padding_classes = '';
+        let active_breakpoint = $('.uswds_responsive_spacing input:checked').val();
 
         if (typeof active_breakpoint !== 'undefined') {
-          var i;
-          var padding_classes = '';
+          let i;
           for (i = 0; i < breakpoints.length; i++) {
-            if (active_breakpoint == breakpoints[i]) {
-              var padding_val = $('input.uswds-field-padding-' + breakpoints[i]).val();
-              var padding_left_val = $('input.uswds-field-padding-left-' + breakpoints[i]).val();
-              var padding_top_val = $('input.uswds-field-padding-top-' + breakpoints[i]).val();
-              var padding_right_val = $('input.uswds-field-padding-right-' + breakpoints[i]).val();
-              var padding_bottom_val = $('input.uswds-field-padding-bottom-' + breakpoints[i]).val();
-              var padding_class = spacing.padding_classes_options['padding_' + breakpoints[i]][padding_val];
-              if (padding_class != '_none') {
+            if (active_breakpoint === breakpoints[i]) {
+              let padding_val = $('input.uswds-field-padding-' + breakpoints[i]).val();
+              let padding_left_val = $('input.uswds-field-padding-left-' + breakpoints[i]).val();
+              let padding_top_val = $('input.uswds-field-padding-top-' + breakpoints[i]).val();
+              let padding_right_val = $('input.uswds-field-padding-right-' + breakpoints[i]).val();
+              let padding_bottom_val = $('input.uswds-field-padding-bottom-' + breakpoints[i]).val();
+              let padding_class = spacing.padding_classes_options['padding_' + breakpoints[i]][padding_val];
+              if (padding_class !== '_none') {
                 padding_classes += padding_class + ' ';
               }
-              var padding_left_class = spacing.padding_classes_options['padding_left_' + breakpoints[i]][padding_left_val];
-              if (padding_left_class != '_none') {
+              let padding_left_class = spacing.padding_classes_options['padding_left_' + breakpoints[i]][padding_left_val];
+              if (padding_left_class !== '_none') {
                 padding_classes += padding_left_class + ' ';
               }
-              var padding_top_class = spacing.padding_classes_options['padding_top_' + breakpoints[i]][padding_top_val];
-              if (padding_top_class != '_none') {
+              let padding_top_class = spacing.padding_classes_options['padding_top_' + breakpoints[i]][padding_top_val];
+              if (padding_top_class !== '_none') {
                 padding_classes += padding_top_class + ' ';
               }
-              var padding_right_class = spacing.padding_classes_options['padding_right_' + breakpoints[i]][padding_right_val];
-              if (padding_right_class != '_none') {
+              let padding_right_class = spacing.padding_classes_options['padding_right_' + breakpoints[i]][padding_right_val];
+              if (padding_right_class !== '_none') {
                 padding_classes += padding_right_class + ' ';
               }
-              var padding_bottom_class = spacing.padding_classes_options['padding_bottom_' + breakpoints[i]][padding_bottom_val];
-              if (padding_bottom_class != '_none') {
+              let padding_bottom_class = spacing.padding_classes_options['padding_bottom_' + breakpoints[i]][padding_bottom_val];
+              if (padding_bottom_class !== '_none') {
                 padding_classes += padding_bottom_class + ' ';
               }
             }
@@ -103,31 +101,31 @@
 
       // Margin.
       function calcMargin() {
-        var margin_val = $('input.uswds-field-margin').val();
-        var margin_left_val = $('input.uswds-field-margin-left').val();
-        var margin_top_val = $('input.uswds-field-margin-top').val();
-        var margin_right_val = $('input.uswds-field-margin-right').val();
-        var margin_bottom_val = $('input.uswds-field-margin-bottom').val();
+        let margin_val = $('input.uswds-field-margin').val();
+        let margin_left_val = $('input.uswds-field-margin-left').val();
+        let margin_top_val = $('input.uswds-field-margin-top').val();
+        let margin_right_val = $('input.uswds-field-margin-right').val();
+        let margin_bottom_val = $('input.uswds-field-margin-bottom').val();
 
-        var margin_classes = '';
-        var margin_class = spacing.margin_classes_options.margin[margin_val];
-        if (margin_class != '_none') {
+        let margin_classes = '';
+        let margin_class = spacing.margin_classes_options.margin[margin_val];
+        if (margin_class !== '_none') {
           margin_classes += margin_class + ' ';
         }
-        var margin_left_class = spacing.margin_classes_options.margin_left[margin_left_val];
-        if (margin_left_class != '_none') {
+        let margin_left_class = spacing.margin_classes_options.margin_left[margin_left_val];
+        if (margin_left_class !== '_none') {
           margin_classes += margin_left_class + ' ';
         }
-        var margin_top_class = spacing.margin_classes_options.margin_top[margin_top_val];
-        if (margin_top_class != '_none') {
+        let margin_top_class = spacing.margin_classes_options.margin_top[margin_top_val];
+        if (margin_top_class !== '_none') {
           margin_classes += margin_top_class + ' ';
         }
-        var margin_right_class = spacing.margin_classes_options.margin_right[margin_right_val];
-        if (margin_right_class != '_none') {
+        let margin_right_class = spacing.margin_classes_options.margin_right[margin_right_val];
+        if (margin_right_class !== '_none') {
           margin_classes += margin_right_class + ' ';
         }
-        var margin_bottom_class = spacing.margin_classes_options.margin_bottom[margin_bottom_val];
-        if (margin_bottom_class != '_none') {
+        let margin_bottom_class = spacing.margin_classes_options.margin_bottom[margin_bottom_val];
+        if (margin_bottom_class !== '_none') {
           margin_classes += margin_bottom_class + ' ';
         }
 
@@ -153,10 +151,10 @@
         calcPadding();
       });
 
-      // On focus, gray out margin box so we can "focus" on changing padding values.
+      // On focus, gray out margin box, so we can "focus" on changing padding values.
       $('input[class^="uswds-field-padding"]', context).on('focus', function() {
-        var panel_bg = $(this).parents('details').find('summary').css('background-color');
-        var inactive_box_shadow = box_shadow + ' ' + panel_bg;
+        let panel_bg = $(this).parents('details').find('summary').css('background-color');
+        let inactive_box_shadow = box_shadow + ' ' + panel_bg;
         $('.spacing-preview .margin-box').css('box-shadow', inactive_box_shadow);
         $('.spacing-preview .padding-box').addClass('uswds-adjusting');
       });
@@ -176,8 +174,8 @@
 
       // On focus, gray out margin box so we can "focus" on changing padding values.
       $('input[class^="uswds-field-margin"]', context).on('focus', function() {
-        var panel_bg = $(this).parents('details').find('summary').css('background-color');
-        var inactive_box_shadow = box_shadow + ' ' + panel_bg;
+        let panel_bg = $(this).parents('details').find('summary').css('background-color');
+        let inactive_box_shadow = box_shadow + ' ' + panel_bg;
         $('.spacing-preview .padding-box').css('box-shadow', inactive_box_shadow);
         $('.spacing-preview .margin-box').addClass('uswds-adjusting');
       });

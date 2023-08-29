@@ -35,8 +35,8 @@ One issue with layout builder is the lack of space on the off canvas sidebar.
 
 Some workarounds
 * [Paragraph Blocks](https://www.drupal.org/project/paragraph_blocks)
-  * Allows users to create the components on the edit screen. And they get turned
-  * into blocks to be used in layout builder
+  * Allows users to create the components on the edit screen. And they get
+    turned into blocks to be used in layout builder
 * [Layout Builder iFrame Modal](https://www.drupal.org/project/layout_builder_iframe_modal)
   * Renders the layout builder sidebar in a centered iframe.
 
@@ -49,7 +49,8 @@ Some workarounds
 
 ## CONFIGURATION
 
-* Go to /admin/config/uswds-layout-builder/breakpoints is the main configuration page for
+* Go to /admin/config/uswds-layout-builder/breakpoints is
+  the main configuration page for
   * Breakpoints
   * Layouts
   * Styles

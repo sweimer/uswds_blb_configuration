@@ -2,8 +2,8 @@
 
 namespace Drupal\uswds_blb_configuration\Style;
 
-use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Component\Plugin\PluginInspectionInterface;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 
 /**
  * Provides an interface defining a Styles Group.

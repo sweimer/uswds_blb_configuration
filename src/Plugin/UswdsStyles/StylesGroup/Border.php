@@ -2,8 +2,8 @@
 
 namespace Drupal\uswds_blb_configuration\Plugin\UswdsStyles\StylesGroup;
 
-use Drupal\uswds_blb_configuration\StylesGroup\StylesGroupPluginBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\uswds_blb_configuration\StylesGroup\StylesGroupPluginBase;
 
 /**
  * Border styles group.

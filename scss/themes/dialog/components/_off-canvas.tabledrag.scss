@@ -1,5 +1,5 @@
-@import "../../../variables";
-@import "../../../mixins";
+@import '../../../variables';
+@import '../../../mixins';
 
 /**
  * @file
@@ -16,12 +16,14 @@ tr.region-title {
   font-weight: normal;
 }
 
-table .region-message {
-  color: #fff;
-}
+table {
+  .region-message {
+    color: #ffffff;
+  }
 
-table .region-populated {
-  display: none;
+  .region-populated {
+    display: none;
+  }
 }
 
 .add-new .tabledrag-changed {
@@ -38,56 +40,51 @@ table .region-populated {
   cursor: move;
   text-decoration: none;
   background-image: none;
-}
 
-[dir="rtl"] .draggable a.tabledrag-handle {
-  float: right;
-  margin-right: 0;
-  margin-left: 5px;
-}
-
-a.tabledrag-handle .handle {
-  @include smooth-all-transition;
-  width: auto;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  /* Use lighter drag icon against dark background. */
-  background-image: $move_icon;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  opacity: .75;
+  .handle {
+    @include smooth-all-transition;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    /* Use lighter drag icon against dark background. */
+    background-image: $move_icon;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    opacity: .75;
+  }
 }
 
 .draggable a.tabledrag-handle:hover .handle,
 .draggable a.tabledrag-handle:focus .handle {
   text-decoration: none;
-  //background-image: url(../icons/787878/move.svg);
   opacity: 1;
 }
 
-tr td {
-  transition: background 0.3s ease;
+tr {
+  td {
+    transition: background 0.3s ease;
+
+    abbr {
+      margin-left: 5px; /* LTR */
+    }
+  }
+
+  &:hover {
+    td {
+      background: darken($panel_bg_color, 5%);
+    }
+  }
+
+  &.drag {
+    td {
+      background: darken($panel_bg_color, 7%);
+    }
+  }
 }
 
-tr td abbr {
-  margin-left: 5px; /* LTR */
-}
-
-[dir="rtl"] tr td abbr {
-  margin-right: 5px;
-  margin-left: 0;
-}
-
-tr:hover td {
-  background: darken($panel_bg_color, 5%);
-}
-
-tr.drag td {
-  background: darken($panel_bg_color, 7%);
-}
 
 tr.drag-previous {
   td {
@@ -110,31 +107,29 @@ div.tabledrag-changed-warning {
   margin-bottom: 1.5rem;
 }
 
-.touchevents .draggable td {
-  padding: 0 10px;
-}
+.touchevents {
+  .draggable td {
+    padding: 0 10px;
+  }
 
-.touchevents .draggable .menu-item__link {
-  display: inline-block;
-  padding: 10px 0;
-}
+  .draggable .menu-item__link {
+    display: inline-block;
+    padding: 10px 0;
+  }
 
-.touchevents a.tabledrag-handle {
-  width: 40px;
-  height: 44px;
-}
+  .tabledrag-handle {
+    width: 40px;
+    height: 44px;
 
-.touchevents a.tabledrag-handle .handle {
-  height: 21px;
-  background-position: 40% 19px; /* LTR */
-}
+    .handle {
+      height: 21px;
+      background-position: 40% 19px; /* LTR */
+    }
+  }
 
-[dir="rtl"] .touch a.tabledrag-handle .handle {
-  background-position: right 40% top 19px;
-}
-
-.touchevents .draggable.drag a.tabledrag-handle .handle {
-  background-position: 50% -32px;
+  .draggable.drag a.tabledrag-handle .handle {
+    background-position: 50% -32px;
+  }
 }
 
 .tabledrag-toggle-weight-wrapper {
@@ -142,20 +137,37 @@ div.tabledrag-changed-warning {
   text-align: right; /* LTR */
 }
 
-[dir="rtl"] .tabledrag-toggle-weight-wrapper {
-  text-align: left;
-}
-
 .indentation {
+  margin: 0 3px 0 -10px; /* LTR */
+  padding: 0 0 0 10px; /* LTR */
   float: left; /* LTR */
   width: auto;
   height: auto;
-  margin: 0 3px 0 -10px; /* LTR */
-  padding: 0 0 0 10px; /* LTR */
 }
 
-[dir="rtl"] .indentation {
-  float: right;
-  margin: 0 -10px 0 3px;
-  padding: 0 10px 0 0;
+[dir='rtl'] {
+  .draggable .tabledrag-handle {
+    float: right;
+    margin-right: 0;
+    margin-left: 5px;
+  }
+
+  tr td abbr {
+    margin-right: 5px;
+    margin-left: 0;
+  }
+
+  .touch .tabledrag-handle .handle {
+    background-position: right 40% top 19px;
+  }
+
+  .tabledrag-toggle-weight-wrapper {
+    text-align: left;
+  }
+
+  .indentation {
+    float: right;
+    margin: 0 -10px 0 3px;
+    padding: 0 10px 0 0;
+  }
 }

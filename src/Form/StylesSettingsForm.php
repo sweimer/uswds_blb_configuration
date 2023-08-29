@@ -4,9 +4,9 @@ namespace Drupal\uswds_blb_configuration\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\uswds_blb_configuration\StylesGroup\StylesGroupManager;
 use Drupal\uswds_blb_configuration\Style\StyleManager;
+use Drupal\uswds_blb_configuration\StylesGroup\StylesGroupManager;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Configure USWDS Styles settings.

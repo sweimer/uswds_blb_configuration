@@ -2,12 +2,12 @@
 
 namespace Drupal\uswds_blb_configuration\Plugin\Deriver;
 
-use Drupal\uswds_blb_configuration\Plugin\Layout\UswdsLayout;
 use Drupal\Component\Plugin\Derivative\DeriverBase;
-use Drupal\Core\Layout\LayoutDefinition;
-use Drupal\Core\StringTranslation\StringTranslationTrait;
-use Drupal\Core\Plugin\Discovery\ContainerDeriverInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Layout\LayoutDefinition;
+use Drupal\Core\Plugin\Discovery\ContainerDeriverInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
+use Drupal\uswds_blb_configuration\Plugin\Layout\UswdsLayout;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**

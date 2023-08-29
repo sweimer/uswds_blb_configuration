@@ -5,12 +5,12 @@ namespace Drupal\uswds_blb_configuration\EventSubscriber;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\layout_builder\Event\SectionComponentBuildRenderArrayEvent;
-use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Drupal\layout_builder\LayoutBuilderEvents;
 use Drupal\uswds_blb_configuration\StylesGroup\StylesGroupManager;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
- * Class BlockComponentRenderArraySubscriber.
+ * Class subscriber for uswds blocks.
  */
 class BlockComponentRenderArraySubscriber implements EventSubscriberInterface {
 
@@ -56,7 +56,10 @@ class BlockComponentRenderArraySubscriber implements EventSubscriberInterface {
    * {@inheritdoc}
    */
   public static function getSubscribedEvents() {
-    $events[LayoutBuilderEvents::SECTION_COMPONENT_BUILD_RENDER_ARRAY] = ['onBuildRender', 50];
+    $events[LayoutBuilderEvents::SECTION_COMPONENT_BUILD_RENDER_ARRAY] = [
+      'onBuildRender',
+      50,
+    ];
     return $events;
   }
 

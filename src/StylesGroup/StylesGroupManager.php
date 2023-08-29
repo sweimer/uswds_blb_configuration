@@ -2,12 +2,12 @@
 
 namespace Drupal\uswds_blb_configuration\StylesGroup;
 
-use Drupal\Core\Plugin\DefaultPluginManager;
 use Drupal\Core\Cache\CacheBackendInterface;
-use Drupal\Core\Extension\ModuleHandlerInterface;
-use Drupal\uswds_blb_configuration\Style\StylePluginManagerInterface;
-use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Extension\ModuleHandlerInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Plugin\DefaultPluginManager;
+use Drupal\uswds_blb_configuration\Style\StylePluginManagerInterface;
 
 /**
  * Provides an StylesGroup plugin manager.

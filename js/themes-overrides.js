@@ -4,14 +4,12 @@
  */
 
 (function ($, Drupal, once) {
-  "use strict";
-
   Drupal.behaviors.bootstrapStylesThemesOverrides = {
     attach: function (context) {
 
       // Layout builder modal
       // @todo: we need to add this class somewhere else
-      if($('#layout-builder-modal').length) {
+      if ($('#layout-builder-modal').length) {
         $(document).ajaxComplete(function() {
           $('#layout-builder-modal').parent().addClass('ui-layout-builder-modal');
         });

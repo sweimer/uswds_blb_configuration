@@ -3,12 +3,12 @@
 namespace Drupal\uswds_blb_configuration\StylesGroup;
 
 use Drupal\Component\Plugin\PluginBase;
-use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\uswds_blb_configuration\HelperTrait;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * A base class to help developers implement their own Styles Group plugins.

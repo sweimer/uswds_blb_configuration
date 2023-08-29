@@ -2,8 +2,8 @@
 
 namespace Drupal\uswds_blb_configuration\Plugin\UswdsStyles\Style;
 
-use Drupal\uswds_blb_configuration\Style\StylePluginBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\uswds_blb_configuration\Style\StylePluginBase;
 
 /**
  * Scroll effect style plugin.
