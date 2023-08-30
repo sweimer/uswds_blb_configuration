@@ -62,3 +62,5 @@ Some workarounds
 ## Shout-outs
 To the maintainers of [Bootstrap Layout Builider](https://www.drupal.org/project/bootstrap_layout_builder) module +
 [Bootstrap Styles](https://www.drupal.org/project/bootstrap_styles) who did most of the leg work allowing me to fork.
+
+To the maintainers of [Claro Media Library theme](https://www.drupal.org/project/claro_media_library_theme)
