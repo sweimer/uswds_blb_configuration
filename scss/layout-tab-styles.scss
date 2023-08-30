@@ -1,35 +1,36 @@
 @import "variables";
 @import "mixins";
 
+/* stylelint-disable selector-max-id */
 #drupal-off-canvas {
 
   // Graphical Layout Columns
   .uswds_breakpoint_cols {
     label {
-      font-size: .875rem;
       position: relative;
       display: flex !important;
       margin: 0 -5px;
       cursor: pointer;
+      font-size: 0.875rem;
 
       &:hover {
         .uswds_tooltip {
-          opacity: 1;
+          transform: translateY(0);
           pointer-events: auto;
-          transform: translateY(0px);
+          opacity: 1;
         }
 
         .uswds_breakpoint_col {
-          background-color: $white;
           color: $gray-444;
+          background-color: $white;
         }
       }
     }
 
     input {
-      opacity: 0;
-      height: 0;
       display: block;
+      height: 0;
+      opacity: 0;
 
       &:checked + label .uswds_breakpoint_col {
         color: $white;
@@ -39,13 +40,13 @@
   }
 
   .uswds_breakpoint_col {
-    padding: 6px 10px;
     margin: 5px;
+    padding: 6px 10px;
+    transition: all 0.25s ease-out;
     text-align: center;
     color: $gray-444;
-    background-color: rgba($white, .7);
-    transition: all .25s ease-out;
     border-radius: 3px;
+    background-color: rgba($white, 0.7);
 
     &.uswds-selected {
       &:hover {
@@ -54,3 +55,4 @@
     }
   }
 }
+/* stylelint-enable selector-max-id */

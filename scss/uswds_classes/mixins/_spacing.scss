@@ -1,64 +1,25 @@
 // Main spacing.
 @mixin make-spacing($prop, $abbrev) {
   // Generate the general spacing classes first.
-  @each $size, $length in $uswds_spacers {
+  @each $size, $length in $uswds-spacers {
     .#{$abbrev}-#{$size} {
       #{$prop}: $length !important;
     }
+
     .#{$abbrev}-left-#{$size} {
       #{$prop}-left: $length !important;
     }
+
     .#{$abbrev}-right-#{$size} {
       #{$prop}-right: $length !important;
     }
+
     .#{$abbrev}-top-#{$size} {
       #{$prop}-top: $length !important;
     }
+
     .#{$abbrev}-bottom-#{$size} {
       #{$prop}-bottom: $length !important;
     }
   }
-
-  // Then generate the spacing classes for Breakpoints.
-  //TODO Setup when breakpoints are added to stable release of bootstrap layout builder
-  //@each $size, $length in $uswds_spacers {
-  //  @each $breakpoint_key, $media in $uswds_breakpoints {
-  //    @media #{$media} {
-  //      .#{$abbrev}-#{$breakpoint_key}-#{$size} {
-  //        #{$prop}: $length !important;
-  //      }
-  //      .#{$abbrev}-left-#{$breakpoint_key}-#{$size} {
-  //        #{$prop}-left: $length !important;
-  //      }
-  //      .#{$abbrev}-right-#{$breakpoint_key}-#{$size} {
-  //        #{$prop}-right: $length !important;
-  //      }
-  //      .#{$abbrev}-top-#{$breakpoint_key}-#{$size} {
-  //        #{$prop}-top: $length !important;
-  //      }
-  //      .#{$abbrev}-bottom-#{$breakpoint_key}-#{$size} {
-  //        #{$prop}-bottom: $length !important;
-  //      }
-  //    }
-  //
-  //    // Fix the padding and margin for breakpoints in the layout builder dialog.
-  //    .ui-dialog-off-canvas {
-  //      .#{$abbrev}-#{$breakpoint_key}-#{$size} {
-  //        #{$prop}: $length !important;
-  //      }
-  //      .#{$abbrev}-left-#{$breakpoint_key}-#{$size} {
-  //        #{$prop}-left: $length !important;
-  //      }
-  //      .#{$abbrev}-right-#{$breakpoint_key}-#{$size} {
-  //        #{$prop}-right: $length !important;
-  //      }
-  //      .#{$abbrev}-top-#{$breakpoint_key}-#{$size} {
-  //        #{$prop}-top: $length !important;
-  //      }
-  //      .#{$abbrev}-bottom-#{$breakpoint_key}-#{$size} {
-  //        #{$prop}-bottom: $length !important;
-  //      }
-  //    }
-  //  }
-  //}
 }

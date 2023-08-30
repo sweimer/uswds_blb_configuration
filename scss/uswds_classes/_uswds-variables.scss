@@ -1,45 +1,45 @@
 // The Drupal off canvas selector.
 // Change it only if drupal core change that selector.
-$bs_off_canvas_selector:       '.ui-dialog-off-canvas';
+$bs-off-canvas-selector: ".ui-dialog-off-canvas";
 
 // Define the breakpoints and its media query.
-$uswds_breakpoints: (
-  card: 'screen and (max-width: 160px)',
-  card-lg: '(min-width: 160px) and (max-width: 240px)',
-  mobile: '(min-width: 240px) and (max-width: 320px)',
-  mobile-lg: '(min-width: 320px) and (max-width: 480px)',
-  tablet: '(min-width: 480px) and (max-width: 640px)',
-  tablet-lg: '(min-width: 640px) and (max-width: 800px)',
-  desktop: '(min-width: 800px) and (max-width: 1040px)',
-  desktop-lg: '(min-width: 1040px) and (max-width: 1200px)',
-  widscreen: '(min-width: 1400px)'
+$uswds-breakpoints: (
+  card: "screen and (max-width: 160px)",
+  card-lg: "(min-width: 160px) and (max-width: 240px)",
+  mobile: "(min-width: 240px) and (max-width: 320px)",
+  mobile-lg: "(min-width: 320px) and (max-width: 480px)",
+  tablet: "(min-width: 480px) and (max-width: 640px)",
+  tablet-lg: "(min-width: 640px) and (max-width: 800px)",
+  desktop: "(min-width: 800px) and (max-width: 1040px)",
+  desktop-lg: "(min-width: 1040px) and (max-width: 1200px)",
+  widscreen: "(min-width: 1400px)"
 ) !default;
 
 // Spacer options for paddings and margins.
-$bs_spacer: 1rem !default;
-$uswds_spacers: (
-  1: ($bs_spacer * .25),
-  2: ($bs_spacer * .5),
-  3: $bs_spacer,
-  4: ($bs_spacer * 1.5),
-  5: ($bs_spacer * 3)
+$bs-spacer: 1rem !default;
+$uswds-spacers: (
+  1: ($bs-spacer * 0.25),
+  2: ($bs-spacer * 0.5),
+  3: $bs-spacer,
+  4: ($bs-spacer * 1.5),
+  5: ($bs-spacer * 3)
 ) !default;
 
-$uswds_radius: (
+$uswds-radius: (
   sm: 2px,
   md: 4px,
   lg: 8px,
   pill: 99rem
 ) !default;
 
-$uswds_border-styles: (
+$uswds-border-styles: (
   solid: solid,
   dashed: dashed,
   dotted: dotted
 ) !default;
 
 // Text colors.
-$uswds_text_colors: (
+$uswds-text-colors: (
   base-lightest: #f0f0f0,
   base-lighter: #dfe1e2,
   base-light: #a9aeb1,

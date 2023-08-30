@@ -12,54 +12,59 @@ a,
   font-family: inherit;
 
   &:hover {
-    border: 1px solid $panel_link_color;
+    border: 1px solid $panel-link-color;
   }
 }
 
 hr {
-  background: $panel_text_color;
+  background: $panel-text-color;
 }
 
 /* Override jQuery UI */
-.ui-widget-content a {
-  color: $panel_link_color !important;
+.ui-widget-content {
+  a {
+    color: $panel-link-color !important;
+  }
 }
 
 .messages {
   margin-bottom: 2rem;
   padding-left: 3rem;
-  background-size: 40px;
-  background-position: 5px 10px;
   background-repeat: no-repeat;
+  background-position: 5px 10px;
+  background-size: 40px;
 }
 
 .messages--status {
-  color: darken($state_success, 20%);
-  background-color: lighten($state_success, 30%);
-  background-image: $state_success_icon;
+  color: darken($state-success, 20%); /* stylelint-disable-line */
+  background-color: lighten($state-success, 30%); /* stylelint-disable-line */
+  background-image: $state-success-icon;
 
-  div, em {
-    color: darken($state_success, 20%);
+  div,
+  em {
+    color: darken($state-success, 20%); /* stylelint-disable-line */
   }
 }
 
 .messages--warning {
-  color: darken($state_warning, 20%);
-  background-color: lighten($state_warning, 30%);
-  background-image: $state_warning_icon;
+  color: darken($state-warning, 20%); /* stylelint-disable-line */
+  background-color: lighten($state-warning, 30%); /* stylelint-disable-line */
+  background-image: $state-warning-icon;
 
-  div, em {
-    color: darken($state_warning, 20%);
+  div,
+  em {
+    color: darken($state-warning, 20%); /* stylelint-disable-line */
   }
 }
 
 .messages--error {
-  color: darken($state_error, 20%);
-  background-color: lighten($state_error, 30%);
-  background-image: $state_error_icon;
+  color: darken($state-error, 20%); /* stylelint-disable-line */
+  background-color: lighten($state-error, 30%); /* stylelint-disable-line */
+  background-image: $state-error-icon;
 
-  div, em {
-    color: darken($state_error, 20%);
+  div,
+  em {
+    color: darken($state-error, 20%); /* stylelint-disable-line */
   }
 }
 

@@ -4,13 +4,13 @@
 // Horizontal Icon Tabs
 #uswds_nav-tabs {
   position: relative;
+  z-index: 2;
   display: flex;
-  justify-content: center;
   flex-wrap: nowrap;
+  justify-content: center;
+  width: 100%;
   margin: 0 0 30px;
   padding: 0;
-  width: 100%;
-  z-index: 2;
 
   li {
     flex: 1 1 auto;
@@ -18,73 +18,74 @@
     list-style: none;
 
     a {
-      @include smooth-all-transition;
-      cursor: pointer;
       position: relative;
-      padding: .5rem .75rem;
-      min-height: 68px;
-      min-width: 16.666%;
-      color: $tab_text_color;
-      background: $tab_bg_color;
-      text-overflow: ellipsis;
-      white-space: nowrap;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: .2s background-color ease-in-out;
+      min-width: 16.666%;
+      min-height: 68px;
+      padding: 0.5rem 0.75rem;
+      cursor: pointer;
+      transition: 0.2s background-color ease-in-out;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: $tab-text-color;
+      background: $tab-bg-color;
 
-      &:after {
-        @include smooth-all-transition;
-        content: '';
+      &::after {
         position: absolute;
-        left: 0;
-        bottom: 0;
+        z-index: 1;
         right: 0;
+        bottom: 0;
+        left: 0;
         width: 100%;
         height: 2px;
-        background-color: $tabs_bottom_border_color;
-        z-index: 1;
+        content: "";
+
+        @include smooth-all-transition;
+
+        background-color: $tabs-bottom-border-color;
       }
 
       &:hover {
-        color: $tab_text_color_hover;
         text-decoration: none;
+        color: $tab-text-color-hover;
 
         .uswds_tooltip {
-          opacity: 1;
+          transform: translateY(0);
           pointer-events: auto;
-          transform: translateY(0px);
+          opacity: 1;
         }
 
         svg * {
-          fill: $tab_text_color_hover;
+          fill: $tab-text-color-hover;
         }
       }
 
       &.active,
       &.active:hover {
-        color: $tab_text_color_active;
-        background-color: $tab_bg_color_active;
+        color: $tab-text-color-active;
+        background-color: $tab-bg-color-active;
 
-        &:after {
-          background-color: $tab_text_color_active;
-          left: -1px;
-          bottom: 0;
+        &::after {
           right: -1px;
+          bottom: 0;
+          left: -1px;
           width: calc(100% + 2px);
           height: 5px;
-          border-radius: $border_radius;
+          border-radius: $border-radius;
+          background-color: $tab-text-color-active;
         }
 
         svg * {
-          fill: $tab_text_color_active;
+          fill: $tab-text-color-active;
         }
       }
 
       .blb_icon,
-      span[role='img'] {
+      span[role="img"] {
         max-width: 25px;
-        margin: 0 .75rem;
+        margin: 0 0.75rem;
       }
 
       svg {
@@ -94,7 +95,8 @@
 
         * {
           @include smooth-all-transition;
-          fill: $tab_text_color;
+
+          fill: $tab-text-color;
         }
       }
     }

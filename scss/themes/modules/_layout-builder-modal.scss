@@ -2,18 +2,18 @@
 @import "../../mixins";
 
 #layout-builder-modal {
-  color: $panel_text_color;
-  background: $panel_bg_color;
   padding: 1.5rem 2rem;
-  border-radius: 0 0 $border_radius $border_radius;
+  color: $panel-text-color;
+  border-radius: 0 0 $border-radius $border-radius;
+  background: $panel-bg-color;
 
   // Update Button.
   #uswds_lb_ui  {
     margin: -1.5rem -2rem;
 
     #uswds_nav-tabs {
-      margin: 0 -40px 30px -40px;
       width: calc(100% + 40px);
+      margin: 0 -40px 30px -40px;
     }
 
     .blb_tab-content {
@@ -28,8 +28,8 @@
       ~ button.button,
       ~ input[type="submit"].button {
         float: right;
-        margin: 1.5rem 0;
         width: auto !important;
+        margin: 1.5rem 0;
       }
     }
   }
@@ -38,39 +38,38 @@
 // Layout Builder Modal
 .ui-dialog.ui-layout-builder-modal {
   border: 0;
-  border-radius: $border_radius;
+  border-radius: $border-radius;
   background: transparent;
 
   .ui-dialog-titlebar {
-    font-weight: normal;
-    font-size: 1.5rem;
     padding: 1rem 2rem;
-    border-radius: $border_radius $border_radius 0 0;
-    background-color: $tab_bg_color;
-    color: $panel_text_color;
+    color: $panel-text-color;
     border: 0;
+    border-radius: $border-radius $border-radius 0 0;
+    background-color: $tab-bg-color;
+    font-size: 1.5rem;
+    font-weight: normal;
   }
 
   .ui-dialog-titlebar-close {
-    right: 2rem;
     top: 50%;
-    margin-top: -.75rem;
+    right: 2rem;
     width: 1.5rem;
     height: 1.5rem;
-    opacity: .6;
+    margin-top: -0.75rem;
+    opacity: 0.6;
     border: 0;
-    background: #{$close_circle_icon} center center no-repeat $panel_bg_color;
-    background-size: contain;
-    outline: 0;
     border-radius: 1.5rem;
+    outline: 0;
+    background: #{$close-circle-icon} center center no-repeat $panel-bg-color;
+    background-size: contain;
 
     &:hover,
     &:focus {
       opacity: 1;
       border: 0;
-      background: #{$close_circle_icon} center center no-repeat $panel_bg_color;
+      background: #{$close-circle-icon} center center no-repeat $panel-bg-color;
       background-size: contain;
     }
   }
 }
-

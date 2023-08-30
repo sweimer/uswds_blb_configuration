@@ -1,16 +1,19 @@
 @import "../dialog/off-canvas.theme";
 @import "../dialog/dialog.resizable";
 
+/* stylelint-disable declaration-empty-line-before, order/order */
 #drupal-off-canvas {
+
   width: 100% !important;
 
   /* Set some global attributes. */
   *,
   *:not(div) {
-    color: $panel_text_color;
+    color: $panel-text-color;
     background: unset;
     font-family: inherit;
   }
 
   @import "../dialog/components/*";
 }
+/* stylelint-enable declaration-empty-line-before, order/order */

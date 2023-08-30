@@ -2,40 +2,46 @@
 
 @mixin make-border-style($prop, $abbrev) {
   // Generate the general classes first.
-  @each $style_key, $style_value in $uswds_border-styles {
+  @each $style-key, $style-value in $uswds-border-styles {
     // The class style.
-    @include base-rule(".#{$abbrev}-#{$style_key}", "#{$prop}", "#{$style_value} !important");
+    @include base-rule(".#{$abbrev}-#{$style-key}", "#{$prop}", "#{$style-value} !important");
 
-    .#{$abbrev}-left-#{$style_key} {
-      #{$prop}-left-style: $style_value !important;
+    .#{$abbrev}-left-#{$style-key} {
+      #{$prop}-left-style: $style-value !important;
     }
-    .#{$abbrev}-right-#{$style_key} {
-      #{$prop}-right-style: $style_value !important;
+
+    .#{$abbrev}-right-#{$style-key} {
+      #{$prop}-right-style: $style-value !important;
     }
-    .#{$abbrev}-bottom-#{$style_key} {
-      #{$prop}-bottom-style: $style_value !important;
+
+    .#{$abbrev}-bottom-#{$style-key} {
+      #{$prop}-bottom-style: $style-value !important;
     }
-    .#{$abbrev}-top-#{$style_key} {
-      #{$prop}-top-style: $style_value !important;
+
+    .#{$abbrev}-top-#{$style-key} {
+      #{$prop}-top-style: $style-value !important;
     }
   }
 }
 
 @mixin make-border-width($prop, $abbrev) {
   // Generate the general classes first.
-  @each $size, $length in $uswds_spacers {
+  @each $size, $length in $uswds-spacers {
     // The class style.
     @include base-rule(".#{$abbrev}-#{$size}", "#{$prop}", "#{$length} !important");
 
     .#{$abbrev}-left-#{$size} {
       #{$prop}-left-width: $length !important;
     }
+
     .#{$abbrev}-top-#{$size} {
       #{$prop}-top-width: $length !important;
     }
+
     .#{$abbrev}-bottom-#{$size} {
       #{$prop}-bottom-width: $length !important;
     }
+
     .#{$abbrev}-right-#{$size} {
       #{$prop}-right-width: $length !important;
     }
@@ -44,42 +50,48 @@
 
 @mixin make-border-color($prop, $abbrev) {
   // Generate the general classes first.
-  @each $color_key, $color_value in $uswds_text_colors {
+  @each $color-key, $color-value in $uswds-text-colors {
     // The class style.
-    @include base-rule(".#{$abbrev}-#{$color_key}", "#{$prop}-color", "#{$color_value} !important");
+    @include base-rule(".#{$abbrev}-#{$color-key}", "#{$prop}-color", "#{$color-value} !important");
 
-    .#{$abbrev}-left-#{$color_key} {
-      #{$prop}-left-color: $color_value !important;
+    .#{$abbrev}-left-#{$color-key} {
+      #{$prop}-left-color: $color-value !important;
     }
-    .#{$abbrev}-top-#{$color_key} {
-      #{$prop}-top-color: $color_value !important;
+
+    .#{$abbrev}-top-#{$color-key} {
+      #{$prop}-top-color: $color-value !important;
     }
-    .#{$abbrev}-bottom-#{$color_key} {
-      #{$prop}-bottom-color: $color_value !important;
+
+    .#{$abbrev}-bottom-#{$color-key} {
+      #{$prop}-bottom-color: $color-value !important;
     }
-    .#{$abbrev}-right-#{$color_key} {
-      #{$prop}-right-color: $color_value !important;
+
+    .#{$abbrev}-right-#{$color-key} {
+      #{$prop}-right-color: $color-value !important;
     }
   }
 }
 
 @mixin make-border-radius($prop, $abbrev) {
   // Generate the general classes first.
-  @each $radius_key, $radius_value in $uswds_radius {
+  @each $radius-key, $radius-value in $uswds-radius {
     // The class style.
-    @include base-rule(".#{$abbrev}-#{$radius_key}", "#{$prop}-radius", "#{$radius_value} !important");
+    @include base-rule(".#{$abbrev}-#{$radius-key}", "#{$prop}-radius", "#{$radius-value} !important");
 
-    .#{$abbrev}-top-left-#{$radius_key} {
-      #{$prop}-top-left-radius: $radius_value !important;
+    .#{$abbrev}-top-left-#{$radius-key} {
+      #{$prop}-top-left-radius: $radius-value !important;
     }
-    .#{$abbrev}-top-right-#{$radius_key} {
-      #{$prop}-top-right-radius: $radius_value !important;
+
+    .#{$abbrev}-top-right-#{$radius-key} {
+      #{$prop}-top-right-radius: $radius-value !important;
     }
-    .#{$abbrev}-bottom-left-#{$radius_key} {
-      #{$prop}-bottom-left-radius: $radius_value !important;
+
+    .#{$abbrev}-bottom-left-#{$radius-key} {
+      #{$prop}-bottom-left-radius: $radius-value !important;
     }
-    .#{$abbrev}-bottom-right-#{$radius_key} {
-      #{$prop}-bottom-right-radius: $radius_value !important;
+
+    .#{$abbrev}-bottom-right-#{$radius-key} {
+      #{$prop}-bottom-right-radius: $radius-value !important;
     }
   }
 }

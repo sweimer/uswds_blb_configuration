@@ -7,19 +7,24 @@
  */
 
 table {
-  color: $panel_text_color;
+  color: $panel-text-color;
 }
 
 td,
 th {
-  border-bottom: 1px solid rgba($panel_text_color, .2);
+  border-bottom: 1px solid rgba($panel-text-color, 0.2);
 }
 
 td {
-  color: $panel_text_color;
   vertical-align: middle;
+  color: $panel-text-color;
 }
 
-tr:hover td {
-  background-color: rgba($panel_text_color, .035);
+tr {
+  &:hover {
+    td {
+      background-color: rgba($panel-text-color, 0.035);
+    }
+
+  }
 }

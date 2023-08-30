@@ -2,14 +2,15 @@
 @import "mixins";
 @import "animations";
 
+/* stylelint-disable selector-max-id */
 // General styles.
 #drupal-off-canvas,
 #layout-builder-modal {
   .form-type-checkbox,
   .form-radios > div {
-    padding: 0;
-    margin: 0;
     width: auto;
+    margin: 0;
+    padding: 0;
   }
 
   .form-control {
@@ -18,9 +19,9 @@
 
   // Bario theme.
   .custom-control-input {
-    opacity: 1;
     margin-top: 10px;
     margin-bottom: 10px;
+    opacity: 1;
   }
 
   .uswds_flex {
@@ -61,19 +62,20 @@
   }
 
   .uswds-group-title {
-    margin-left: 15px;
     display: flex;
     align-items: center;
+    margin-left: 15px;
   }
 
   .sr-only {
     position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
     overflow: hidden;
     clip: rect(0,0,0,0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
     border: 0;
   }
 }
+/* stylelint-enable selector-max-id */

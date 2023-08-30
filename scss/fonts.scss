@@ -1,7 +1,9 @@
 @import "variables";
 
+/* stylelint-disable selector-max-id */
 .ui-widget.ui-dialog.ui-layout-builder-modal,
 .ui-widget.ui-dialog.ui-dialog-off-canvas,
 #layout-builder-modal {
-  font-family: $offcanvas_font;
+  font-family: $offcanvas-font;
 }
+/* stylelint-enable selector-max-id */

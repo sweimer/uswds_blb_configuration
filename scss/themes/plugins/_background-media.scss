@@ -2,22 +2,21 @@
 @import "../../mixins";
 
 .media-library-item {
-  flex: 1 1 auto;
   position: relative;
+  flex: 1 1 auto;
   justify-content: center;
-  vertical-align: top;
   min-width: 25%;
-  background: rgba($panel_text_color, .1);
-  border: 1px solid $box_input_hover_border;
+  padding: 0.5rem;
   transition: border-color 0.2s, color 0.2s, background 0.2s;
-  padding: .5rem;
+  vertical-align: top;
+  border: 1px solid $box-input-hover-border;
+  background: rgba($panel-text-color, 0.1);
 
   *, *:not(div) {
     background: transparent;
   }
 
   .button.media-library-item__remove {
-    @include smooth-all-transition;
     position: absolute;
     z-index: 1;
     top: 10px;
@@ -26,24 +25,27 @@
     min-width: auto;
     max-width: 1.5rem;
     height: 1.5rem;
-    margin: .5rem;
+    margin: 0.5rem;
     padding: 0;
+
+    @include smooth-all-transition;
+
     color: transparent;
-    font-size: 0;
     border-radius: 1.5rem;
-    background: #{$close_circle_icon} center center no-repeat $panel_bg_color;
+    background: #{$close-circle-icon} center center no-repeat $panel-bg-color;
     background-size: contain;
     text-shadow: none;
+    font-size: 0;
 
     &:hover,
     &:focus {
-      background: #{$close_circle_icon} center center no-repeat $panel_bg_color;
+      background: #{$close-circle-icon} center center no-repeat $panel-bg-color;
       background-size: contain;
     }
 
     &.button {
       &:disabled, &:disabled:active, &:hover, &:focus {
-        opacity: .7;
+        opacity: 0.7;
       }
     }
   }
@@ -78,9 +80,9 @@
 
 .media-library-item__attributes {
   position: absolute;
-  bottom: .75rem;
-  left: .5rem;
-  right: .5rem;
+  right: 0.5rem;
+  bottom: 0.75rem;
+  left: 0.5rem;
   display: block;
   overflow: hidden;
   max-width: calc(100% - 1rem);
@@ -89,21 +91,21 @@
 }
 
 .media-library-item__name {
-  font-size: .75rem;
   display: block;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  color: rgba($panel_text_color, .8);
+  color: rgba($panel-text-color, 0.8);
+  font-size: 0.75rem;
 }
 
-.media-library-item--grid:before {
+.media-library-item--grid::before {
   display: none;
 }
 
 .media-library-selection {
-  margin: 0;
   display: flex;
+  margin: 0;
 }
 
 .media-library-item--grid .field--name-thumbnail {
@@ -112,18 +114,18 @@
 }
 
 .media-library-item--grid .field--name-thumbnail img {
+  overflow: hidden;
+  width: 100%;
   height: 135px;
   object-fit: contain;
   object-position: center center;
-  width: 100%;
-  overflow: hidden;
   border-radius: 5px 5px 0 0;
-  background-color: rgba($panel_bg_color, .1);
+  background-color: rgba($panel-bg-color, 0.1);
 }
 
-.media-library-item--grid.is-hover:before,
-.media-library-item--grid.checked:before,
-.media-library-item--grid.is-focus:before {
+.media-library-item--grid.is-hover::before,
+.media-library-item--grid.checked::before,
+.media-library-item--grid.is-focus::before {
   top: 5px;
   left: 5px;
   border-width: 3px;
@@ -131,7 +133,7 @@
   border-radius: 3px;
 }
 
-.media-library-item--grid.checked:before {
+.media-library-item--grid.checked::before {
   border-color: #0076c0;
 }
 
@@ -166,8 +168,8 @@
 // Background Opacity
 .form-type-range {
   label {
-    font-weight: normal;
     margin-bottom: 15px;
+    font-weight: normal;
   }
 
   input {
@@ -195,7 +197,7 @@
 
     // Our actual form item.
     > div {
-      @include uswds_boxed_inputs($height: 42px, $bg: $panel_bg_color, $active_color: $panel_bg_color, $active_bg: $panel_link_color, $responsive: true);
+      @include uswds_boxed_inputs($height: 42px, $bg: $panel-bg-color, $active_color: $panel-bg-color, $active_bg: $panel-link-color, $responsive: true);
     }
   }
 }

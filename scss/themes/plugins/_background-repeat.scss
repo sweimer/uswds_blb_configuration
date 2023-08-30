@@ -5,19 +5,19 @@
 .uswds_background--repeat {
   .fieldset-wrapper > div {
     display: flex;
-    flex-wrap: wrap;
-    border-top: 1px solid $box_input_hover_border;
     overflow: hidden;
+    flex-wrap: wrap;
     min-width: 70px;
     max-width: 50%;
+    border-top: 1px solid $box-input-hover-border;
 
     // Our actual form item.
     > div {
-      @include blb_box_inputs($width: 50%, $height: 35px, $border-color: $box_input_hover_border);
+      @include blb_box_inputs($width: 50%, $height: 35px, $border-color: $box-input-hover-border);
 
       // Repeat Y
       input {
-        &[value='repeat-y'] + label svg {
+        &[value="repeat-y"] + label svg { /* stylelint-disable-line */
           transform: rotate(90deg);
         }
       }
@@ -28,8 +28,8 @@
       }
 
       &:nth-child(2) input + label {
-        border-left: 0;
         border-top: 0;
+        border-left: 0;
       }
 
       &:nth-child(3) input + label {
@@ -38,8 +38,8 @@
 
       // first item
       &:nth-child(4) input + label {
-        border-left: 0;
         border-top: 0;
+        border-left: 0;
       }
     }
   }

@@ -4,24 +4,26 @@
 // Shared previewer box styles
 // @todo: combine all plugins into 1 previewer.
 [data-uswds-element="uswds_preview-box"] {
-  @include smooth-all-transition;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 200px;
   margin: 0.5rem 0 1.5rem;
-  display: flex;
-  align-items: center;
+
+  @include smooth-all-transition;
+
   text-align: center;
-  justify-content: center;
-  background: $border_preview_box_bg;
-  color: rgba($panel_text_color, .3);
+  color: rgba($panel-text-color, 0.3);
+  background: $border-preview-box-bg;
 
   // Light Mode
   &[data-uswds-mode="light"] {
     background: $gray-e2e;
 
     [data-uswds-element="uswds_preview-element"] {
-      background-color: $white;
       color: $black;
+      background-color: $white;
     }
   }
 
@@ -30,20 +32,22 @@
     background-color: $black;
 
     [data-uswds-element="uswds_preview-element"] {
-      background-color: $gray-212;
       color: $white;
+      background-color: $gray-212;
     }
   }
 }
 
 // The actual element that gets our JS styles applied to it.
 [data-uswds-element="uswds_preview-element"] {
-  @include smooth-all-transition;
-  background-color: $white;
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  @include smooth-all-transition;
+
   text-align: center;
+  background-color: $white;
 }

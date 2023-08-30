@@ -1,5 +1,11 @@
+/* stylelint-disable-line */
+/* stylelint-disable-line */
+/* stylelint-disable-line */
+/* stylelint-disable selector-max-id */
 .ui-widget.ui-dialog.ui-layout-builder-modal,
 .ui-widget.ui-dialog.ui-dialog-off-canvas,
 #layout-builder-modal {
   font-family: "PT Sans", sans-serif;
 }
+
+/* stylelint-enable selector-max-id */

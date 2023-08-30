@@ -1,61 +1,67 @@
 @import "../../../variables";
 @import "../../../mixins";
 
-button.link {
-  color: $button_text_color;
-}
+button,
+[type="submit"] {
+  &.link {
+    color: $button-text-color;
 
-button.link:hover,
-button.link:focus {
-  color: $button_text_color_hover;
-}
+    &:hover,
+    &:focus {
+      color: $button-text-color-hover;
+    }
+  }
 
-button.button,
-input[type="submit"].button:not(.media-library-item__remove button) {
-  margin: 1rem 0 0 0;
-  padding: 11px 20px;
-  color: $button_text_color;
-  border-radius: $border_radius;
-  background: $button_bg_color !important;
-  font-weight: normal;
-  font-family: inherit;
-  border: 0;
-  width: 100%;
-  min-width: auto;
+  &:disabled,
+  &.is-disabled {
+    color: #5c5c5c;
+    background: #555;
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: $button_text_color;
-    background: $button_bg_color_hover;
+    &:active {
+      color: #5c5c5c;
+      background: #555;
+    }
+  }
+
+  &.button {
+    &:not(.media-library-item__remove button) {
+      width: 100%;
+      min-width: auto;
+      margin: 1rem 0 0;
+      padding: 11px 20px;
+      color: $button-text-color;
+      border: 0;
+      border-radius: $border-radius;
+      background: $button-bg-color !important;
+      font-family: inherit;
+      font-weight: normal;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $button-text-color;
+        background: $button-bg-color;
+      }
+    }
   }
 }
 
-button.button--primary,
-input[type="submit"].button--primary {
+.button--primary {
   &:hover,
   &:focus,
   &:active {
-    color: $button_text_color;
-    background: $button_bg_color_hover;
+    color: $button-text-color;
+    background: $button-bg-color-hover;
   }
-}
-
-.button:disabled,
-.button:disabled:active,
-.button.is-disabled,
-.button.is-disabled:active {
-  color: #5c5c5c;
-  background: #555;
 }
 
 .button--danger {
-  color: $state_error;
+  color: $state-error;
 
   &:hover,
   &:focus,
   &:active {
-    color: darken($state_error, 10%);
+    color: darken($state-error, 10%); /* stylelint-disable-line */
   }
 
   &:disabled,

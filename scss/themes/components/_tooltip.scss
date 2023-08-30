@@ -3,26 +3,26 @@
 
 // Tooltips
 .uswds_tooltip {
-  bottom: 100%;
-  color: $tooltip_text_color;
-  background: $tooltip_bg_color;
-  display: block;
-  left: 50%;
-  margin-left: -37.5px;
-  margin-bottom: 15px;
-  opacity: 0;
-  padding: 9px 10px;
-  pointer-events: none;
   position: absolute;
-  text-align: center;
-  width: 75px;
-  transform: translateY(-10px);
-  transition: all .25s ease-in-out;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
-  border-radius: $border_radius / 2;
-  white-space: normal;
   z-index: 1;
-  font-size: .875rem;
+  bottom: 100%;
+  left: 50%;
+  display: block;
+  width: 75px;
+  margin-bottom: 15px;
+  margin-left: -37.5px;
+  padding: 9px 10px;
+  transition: all 0.25s ease-in-out;
+  transform: translateY(-10px);
+  text-align: center;
+  white-space: normal;
+  pointer-events: none;
+  opacity: 0;
+  color: $tooltip-text-color;
+  border-radius: $border-radius / 2;
+  background: $tooltip-bg-color;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  font-size: 0.875rem;
   font-weight: normal;
   will-change: opacity;
 
@@ -31,30 +31,30 @@
     margin-left: -75px;
   }
 
-  &:after {
-    border-left: solid transparent 10px;
-    border-right: solid transparent 10px;
-    border-top: solid $tooltip_bg_color 10px;
-    bottom: -10px;
-    content: " ";
-    height: 0;
-    left: 50%;
-    margin-left: -13px;
+  &::after {
     position: absolute;
+    bottom: -10px;
+    left: 50%;
     width: 0;
+    height: 0;
+    margin-left: -13px;
+    content: " ";
+    border-top: solid $tooltip-bg-color 10px;
+    border-right: solid transparent 10px;
+    border-left: solid transparent 10px;
   }
 
   &[data-placement="bottom"] {
-    bottom: auto;
     top: 100%;
+    bottom: auto;
     margin-top: 15px;
     transform: translateY(10px);
 
-    &:after {
-      border-top: 0;
-      border-bottom: solid $tooltip_bg_color 10px;
+    &::after {
       top: -10px;
       bottom: auto;
+      border-top: 0;
+      border-bottom: solid $tooltip-bg-color 10px;
     }
   }
 }
@@ -64,9 +64,9 @@ label {
   position: relative;
 
   &:hover .uswds_tooltip {
-    opacity: 1;
+    transform: translateY(0);
     pointer-events: auto;
-    transform: translateY(0px);
+    opacity: 1;
   }
 }
 
@@ -79,7 +79,7 @@ label {
     width: 100%;
     margin-left: -50%;
 
-    &:after {
+    &::after {
       left: 2rem;
     }
   }

@@ -10,71 +10,61 @@
 
 textarea,
 select,
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"] {
-  color: $panel_text_color;
-  padding: .65rem 1rem;
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"] {
   height: auto;
+  padding: 0.65rem 1rem;
   vertical-align: middle;
-  border-radius: $border_radius;
-  border: 2px solid $tabs_bottom_border_color;
+  color: $panel-text-color;
+  border: 2px solid $tabs-bottom-border-color;
+  border-radius: $border-radius;
   background-color: transparent;
 
   &::placeholder {
-    color: rgba($panel_text_color, .5);
+    color: rgba($panel-text-color, 0.5);
+  }
+
+  &[disabled] {
+    background-color: rgba($panel-text-color, 0.1);
   }
 }
 
-textarea[disabled],
-select[disabled],
-input[type="date"][disabled],
-input[type="datetime"][disabled],
-input[type="datetime-local"][disabled],
-input[type="email"][disabled],
-input[type="month"][disabled],
-input[type="number"][disabled],
-input[type="password"][disabled],
-input[type="search"][disabled],
-input[type="tel"][disabled],
-input[type="text"][disabled],
-input[type="time"][disabled],
-input[type="url"][disabled],
-input[type="week"][disabled] {
-  background-color: rgba($panel_text_color, .1);
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: rgba($panel_text_color, .8);
+input,
+textarea {
+  &::placeholder {
+    color: rgba($panel-text-color, 0.8);
+  }
 }
 
 optgroup {
-  color: black;
+  color: $black;
 }
 
 * button {
-  color: black;
-  border: none;
+  color: $black;
+  border: 0;
 }
 
 * textarea,
 * select,
-*:not(div) textarea,
-*:not(div) select {
-  color: black;
-  border: 1px solid grey;
-  background: white;
+*:not(div) {
+  textarea,
+  select {
+    color: $black;
+    border: 1px solid $gray-f8f;
+    background: $white;
+  }
 }
 
 /* To standardize off-canvas selection color. */

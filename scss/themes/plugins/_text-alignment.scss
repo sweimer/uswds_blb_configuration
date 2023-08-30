@@ -1,32 +1,32 @@
 @import "../../variables";
 @import "../../mixins";
 
-$text_alignment_icon_path: '../../images/plugins/text-alignment/';
+$text-alignment-icon-path: "../../images/plugins/text-alignment/";
 
 // Text Alignment
-.field-text-alignment .fieldset-wrapper > div > div {
+.field-text-alignment {
   input {
     + label {
-      font-size: 0;
       text-indent: -999em;
+      font-size: 0;
 
       .input-icon {
         margin-bottom: 0;
 
         &[class*="left"] {
-          background-image: url($text_alignment_icon_path + 'text-left.svg');
+          background-image: url($text-alignment-icon-path + 'text-left.svg');
         }
 
         &[class*="center"] {
-          background-image: url($text_alignment_icon_path + 'text-center.svg');
+          background-image: url($text-alignment-icon-path + 'text-center.svg');
         }
 
         &[class*="right"] {
-          background-image: url($text_alignment_icon_path + 'text-right.svg');
+          background-image: url($text-alignment-icon-path + 'text-right.svg');
         }
 
         &[class*="justify"] {
-          background-image: url($text_alignment_icon_path + 'text-justify.svg');
+          background-image: url($text-alignment-icon-path + 'text-justify.svg');
         }
       }
     }

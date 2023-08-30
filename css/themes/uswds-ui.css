@@ -1,11 +1,12 @@
+/* stylelint-disable selector-max-id, selector-id-pattern */
 .layout-builder-form #drupal-off-canvas .form-item {
   width: 100%;
 }
 
 .layout-builder-form #drupal-off-canvas .js-media-library-open-button {
-  margin: 0 auto !important;
   display: block !important;
   width: 80% !important;
+  margin: 0 auto !important;
 }
 
 .layout-builder-form #drupal-off-canvas .block-categories {
@@ -55,8 +56,8 @@
 }
 
 .layout-builder-form #drupal-off-canvas .usa-radio__label {
-  padding-left: 0 !important;
   padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 
 .layout-builder-form #drupal-off-canvas #uswds-border-preview {
@@ -85,3 +86,5 @@
 .layout-builder-form .entity-view-display-layout-builder-form .layout-builder__message {
   padding-top: 1rem;
 }
+
+/* stylelint-enable selector-max-id, selector-id-pattern */

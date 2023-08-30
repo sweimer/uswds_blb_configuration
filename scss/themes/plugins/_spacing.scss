@@ -1,44 +1,46 @@
 @import "../../variables";
 @import "../../mixins";
 
-#uswds_spacing_preview_calc {
+#uswds_spacing_preview_calc { /* stylelint-disable-line */
   display: none;
   visibility: hidden;
 }
 
 // Spacing previewer
 .spacing-preview {
-  padding: 1rem 1.5rem;
-  margin: 1.5rem 0;
   display: flex;
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
 
   // Shared preview box styles.
   .preview-box {
-    @include smooth-all-transition;
     position: relative;
+    display: flex;
     width: 100%;
     padding: 1.5rem;
     font-size: 10px;
-    display: flex;
+
 
     .title,
     .left,
     .top,
     .right,
     .bottom {
-      @include smooth-all-transition;
       position: absolute;
+      z-index: 1;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 1.5rem;
-      z-index: 1;
-      color: $panel_bg_color;
+
+      @include smooth-all-transition;
+
+      color: $panel-bg-color;
     }
 
     .title {
       top: -1.5rem;
-      left: -.125rem;
+      left: -0.125rem;
     }
 
     .left,
@@ -49,27 +51,27 @@
     }
 
     .left {
-      left: -1.5rem;
-      margin-top: -.75rem;
       top: 50%;
+      left: -1.5rem;
+      margin-top: -0.75rem;
     }
 
     .right {
-      right: -1.5rem;
-      margin-top: -.75rem;
       top: 50%;
+      right: -1.5rem;
+      margin-top: -0.75rem;
     }
 
     .top {
       top: -1.5rem;
-      margin-left: -.75rem;
       left: 50%;
+      margin-left: -0.75rem;
     }
 
     .bottom {
       bottom: -1.5rem;
-      margin-left: -.75rem;
       left: 50%;
+      margin-left: -0.75rem;
     }
 
     // When our range slider gets adjusted
@@ -86,12 +88,12 @@
 
   .margin-box {
     height: 150px;
-    box-shadow: 0 0 0 1.5rem $state_warning;
+    box-shadow: 0 0 0 1.5rem $state-warning;
   }
 
   .padding-box {
     height: 100%;
-    box-shadow: 0 0 0 1.5rem $state_success;
+    box-shadow: 0 0 0 1.5rem $state-success;
   }
 }
 
@@ -102,110 +104,110 @@
     // all
     &[value="padding"],
     &[value="margin"] {
-      + label:after,
-      &:hover + label:after {
+      + label::after,
+      &:hover + label::after {
         border-color: $white;
       }
     }
 
     // padding/margin all
-    &[value="padding"]:checked + label:after {
-      border-color: $state_success;
+    &[value="padding"]:checked + label::after {
+      border-color: $state-success;
     }
 
-    &[value="margin"]:checked + label:after {
-      border-color: $state_warning;
+    &[value="margin"]:checked + label::after {
+      border-color: $state-warning;
     }
 
     // left
     &[value="padding_left"] {
-      + label:after,
-      &:hover + label:after {
+      + label::after,
+      &:hover + label::after {
         border-left-color: $white;
       }
 
-      &:checked + label:after {
-        border-left-color: $state_success;
+      &:checked + label::after {
+        border-left-color: $state-success;
       }
     }
 
     &[value="margin_left"] {
-      + label:after,
-      &:hover + label:after {
+      + label::after,
+      &:hover + label::after {
         border-left-color: $white;
       }
 
-      &:checked + label:after {
-        border-left-color: $state_warning;
+      &:checked + label::after {
+        border-left-color: $state-warning;
       }
     }
 
     // top
     &[value="padding_top"] {
-      + label:after,
-      &:hover + label:after {
+      + label::after,
+      &:hover + label::after {
         border-top-color: $white;
       }
 
-      &:checked + label:after {
-        border-top-color: $state_success;
+      &:checked + label::after {
+        border-top-color: $state-success;
       }
     }
 
     &[value="margin_top"] {
-      + label:after,
-      &:hover + label:after {
+      + label::after,
+      &:hover + label::after {
         border-top-color: $white;
       }
 
-      &:checked + label:after {
-        border-top-color: $state_warning;
+      &:checked + label::after {
+        border-top-color: $state-warning;
       }
     }
 
     // right
     &[value="padding_right"] {
-      + label:after,
-      &:hover + label:after {
+      + label::after,
+      &:hover + label::after {
         border-right-color: $white;
       }
 
-      &:checked + label:after {
-        border-right-color: $state_success;
+      &:checked + label::after {
+        border-right-color: $state-success;
       }
     }
 
     &[value="margin_right"] {
-      + label:after,
-      &:hover + label:after {
+      + label::after,
+      &:hover + label::after {
         border-right-color: $white;
       }
 
-      &:checked + label:after {
-        border-right-color: $state_warning;
+      &:checked + label::after {
+        border-right-color: $state-warning;
       }
     }
 
     // bottom
     &[value="padding_bottom"] {
-      + label:after ,
-      &:hover + label:after {
+      + label::after ,
+      &:hover + label::after {
         border-bottom-color: $white;
       }
 
-      &:checked + label:after {
-        border-bottom-color: $state_success;
+      &:checked + label::after {
+        border-bottom-color: $state-success;
       }
     }
 
     &[value="margin_bottom"] {
-      + label:after,
-      &:hover + label:after {
+      + label::after,
+      &:hover + label::after {
         border-bottom-color: $white;
       }
 
-      &:checked + label:after {
-        border-bottom-color: $state_warning;
+      &:checked + label::after {
+        border-bottom-color: $state-warning;
       }
     }
   }
@@ -213,10 +215,10 @@
 
 // Padding range sliders
 input[type=range][class^="uswds-field-padding"] {
-  @include uswds_range_sliders($state_success);
+  @include uswds_range_sliders($state-success);
 }
 
 // Margin range sliders
 input[type=range][class^="uswds-field-margin"] {
-  @include uswds_range_sliders($state_warning);
+  @include uswds_range_sliders($state-warning);
 }

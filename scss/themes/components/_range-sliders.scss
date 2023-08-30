@@ -3,32 +3,32 @@
 
 // Range sliders
 input[type=range] {
-  -webkit-appearance: none;
-  border-radius: $border_radius;
-  background: transparent;
-  height: 20px;
   width: 100%;
+  height: 20px;
+  border-radius: $border-radius;
+  background: transparent;
+  -webkit-appearance: none;
 
   // Webkit browsers
   &::-webkit-slider-runnable-track {
     width: 100%;
     height: 4px;
     cursor: pointer;
-    box-shadow: none;
-    background: $gray-979;
     border: 0;
-    border-radius: $border_radius;
+    border-radius: $border-radius;
+    background: $gray-979;
+    box-shadow: none;
   }
 
   &::-webkit-slider-thumb {
-    box-shadow: none;
-    height: 14px;
     width: 14px;
+    height: 14px;
+    margin-top: -5px;
+    cursor: pointer;
     border-radius: 25px;
     background: $gray-727;
-    cursor: pointer;
+    box-shadow: none;
     -webkit-appearance: none;
-    margin-top: -5px;
   }
 
   // Firefox
@@ -36,18 +36,18 @@ input[type=range] {
     width: 100%;
     height: 5px;
     cursor: pointer;
-    background: $gray-979;
-    border-radius: 1px;
     border: 0;
+    border-radius: 1px;
+    background: $gray-979;
   }
 
   &::-moz-range-thumb {
-    border: 0;
-    height: 14px;
     width: 14px;
+    height: 14px;
+    cursor: pointer;
+    border: 0;
     border-radius: 25px;
     background: $gray-727;
-    cursor: pointer;
   }
 
   &::-moz-focus-outer {
@@ -59,33 +59,33 @@ input[type=range] {
     width: 100%;
     height: 4px;
     cursor: pointer;
-    background: transparent;
-    border-color: transparent;
     color: transparent;
+    border-color: transparent;
+    background: transparent;
   }
 
   &::-ms-fill-lower {
-    background: $panel_link_color;
     border: 0;
-    border-radius: $border_radius;
+    border-radius: $border-radius;
+    background: $panel-link-color;
     box-shadow: none;
   }
 
   &::-ms-fill-upper {
-    background: $panel_link_color;
     border: 0;
-    border-radius: $border_radius;
+    border-radius: $border-radius;
+    background: $panel-link-color;
     box-shadow: none;
   }
 
   &::-ms-thumb {
-    margin-top: 1px;
-    box-shadow: none;
-    height: 14px;
     width: 14px;
+    height: 14px;
+    margin-top: 1px;
+    cursor: pointer;
     border-radius: 50%;
     background: $gray-727;
-    cursor: pointer;
+    box-shadow: none;
   }
 
   // Focus
@@ -93,12 +93,12 @@ input[type=range] {
     outline: none;
 
     &::-webkit-slider-runnable-track {
-      background: $panel_link_color;
+      background: $panel-link-color;
     }
 
     &::-ms-fill-lower,
     &::-ms-fill-upper {
-      background: $panel_link_color;
+      background: $panel-link-color;
     }
   }
 }

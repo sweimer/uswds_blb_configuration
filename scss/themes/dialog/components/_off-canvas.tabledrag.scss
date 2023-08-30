@@ -1,5 +1,5 @@
-@import '../../../variables';
-@import '../../../mixins';
+@import "../../../variables";
+@import "../../../mixins";
 
 /**
  * @file
@@ -12,13 +12,9 @@
   cursor: move;
 }
 
-tr.region-title {
-  font-weight: normal;
-}
-
 table {
   .region-message {
-    color: #ffffff;
+    color: #fff;
   }
 
   .region-populated {
@@ -26,41 +22,48 @@ table {
   }
 }
 
-.add-new .tabledrag-changed {
-  display: none;
-}
-
-.draggable a.tabledrag-handle {
-  float: left; /* LTR */
-  overflow: hidden;
-  min-width: 20px;
-  height: auto;
-  margin: 0 5px 0 0;
-  padding: 0;
-  cursor: move;
-  text-decoration: none;
-  background-image: none;
-
-  .handle {
-    @include smooth-all-transition;
-    width: auto;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-    /* Use lighter drag icon against dark background. */
-    background-image: $move_icon;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    opacity: .75;
+.add-new {
+  .tabledrag-changed {
+    display: none;
   }
 }
 
-.draggable a.tabledrag-handle:hover .handle,
-.draggable a.tabledrag-handle:focus .handle {
-  text-decoration: none;
-  opacity: 1;
+.draggable {
+  .tabledrag-handle {
+    float: left; /* LTR */
+    overflow: hidden;
+    min-width: 20px;
+    height: auto;
+    margin: 0 5px 0 0;
+    padding: 0;
+    cursor: move;
+    text-decoration: none;
+    background-image: none;
+
+    .handle {
+      width: auto;
+      height: auto;
+      margin: 0;
+      padding: 0;
+
+      @include smooth-all-transition;
+
+      opacity: 0.75;
+      background-color: transparent;
+      background-image: $move-icon;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+    }
+
+    &:hover,
+    &:focus {
+      .handle {
+        text-decoration: none;
+        opacity: 1;
+      }
+    }
+  }
 }
 
 tr {
@@ -74,47 +77,56 @@ tr {
 
   &:hover {
     td {
-      background: darken($panel_bg_color, 5%);
+      background: darken($panel-bg-color, 5%); /* stylelint-disable-line */
     }
   }
 
   &.drag {
     td {
-      background: darken($panel_bg_color, 7%);
+      background: darken($panel-bg-color, 7%); /* stylelint-disable-line */
+    }
+  }
+
+  &.region-title {
+    font-weight: normal;
+  }
+
+  &.drag-previous {
+    td {
+      background: darken($panel-bg-color, 10%); /* stylelint-disable-line */
+    }
+
+    &:hover {
+      td {
+        background: darken($panel-bg-color, 12%); /* stylelint-disable-line */
+      }
     }
   }
 }
 
-
-tr.drag-previous {
-  td {
-    background: darken($panel_bg_color, 10%);
-  }
-
-  &:hover td {
-    background: darken($panel_bg_color, 12%);
+.link {
+  &.tabledrag-toggle-weight {
+    margin-bottom: 1rem;
+    color: $panel-link-color;
+    outline: none;
   }
 }
 
-button.link.tabledrag-toggle-weight {
-  color: $panel_link_color;
-  outline: none;
-  margin-bottom: 1rem;
-}
-
-div.tabledrag-changed-warning {
-  color: darken($state-warning, 10%);
+.tabledrag-changed-warning {
   margin-bottom: 1.5rem;
+  color: darken($state-warning, 10%); /* stylelint-disable-line */
 }
 
 .touchevents {
-  .draggable td {
-    padding: 0 10px;
-  }
+  .draggable {
+    td {
+      padding: 0 10px;
+    }
 
-  .draggable .menu-item__link {
-    display: inline-block;
-    padding: 10px 0;
+    .menu-item__link {
+      display: inline-block;
+      padding: 10px 0;
+    }
   }
 
   .tabledrag-handle {
@@ -127,9 +139,14 @@ div.tabledrag-changed-warning {
     }
   }
 
-  .draggable.drag a.tabledrag-handle .handle {
-    background-position: 50% -32px;
+  &.drag {
+    .tabledrag-handle {
+      .handle {
+        background-position: 50% -32px;
+      }
+    }
   }
+
 }
 
 .tabledrag-toggle-weight-wrapper {
@@ -138,27 +155,37 @@ div.tabledrag-changed-warning {
 }
 
 .indentation {
-  margin: 0 3px 0 -10px; /* LTR */
-  padding: 0 0 0 10px; /* LTR */
   float: left; /* LTR */
   width: auto;
   height: auto;
+  margin: 0 3px 0 -10px; /* LTR */
+  padding: 0 0 0 10px; /* LTR */
 }
 
-[dir='rtl'] {
-  .draggable .tabledrag-handle {
-    float: right;
-    margin-right: 0;
-    margin-left: 5px;
+[dir="rtl"] {
+  .draggable {
+    .tabledrag-handle {
+      float: right;
+      margin-right: 0;
+      margin-left: 5px;
+    }
   }
 
-  tr td abbr {
-    margin-right: 5px;
-    margin-left: 0;
+  tr {
+    td {
+      abbr {
+        margin-right: 5px;
+        margin-left: 0;
+      }
+    }
   }
 
-  .touch .tabledrag-handle .handle {
-    background-position: right 40% top 19px;
+  .touch {
+    .tabledrag-handle {
+      .handle {
+        background-position: right 40% top 19px;
+      }
+    }
   }
 
   .tabledrag-toggle-weight-wrapper {

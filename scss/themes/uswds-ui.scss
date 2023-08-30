@@ -1,5 +1,6 @@
 // Custom CSS to get uswds working with the bootstrap_layout_builder UI.
 
+/* stylelint-disable selector-max-id, selector-id-pattern */
 .layout-builder-form {
 
   // CSS for when the right sidebar is open.
@@ -12,9 +13,9 @@
 
     // Fix issue with overflowing buttons.
     .js-media-library-open-button {
-      margin: 0 auto !important;
       display: block !important;
       width: 80% !important;
+      margin: 0 auto !important;
     }
 
     .block-categories {
@@ -66,8 +67,8 @@
 
     // Fixes issue with container icons.
     .usa-radio__label {
-      padding-left: 0 !important;
       padding-right: 0 !important;
+      padding-left: 0 !important;
     }
 
     // Fixes issues where padding square is going past the margin.
@@ -102,3 +103,4 @@
     }
   }
 }
+/* stylelint-enable selector-max-id, selector-id-pattern */

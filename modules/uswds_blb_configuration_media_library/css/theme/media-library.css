@@ -3,16 +3,17 @@
 }
 
 .media-library-add-form__input-wrapper .js-form-item-upload .form-file {
+  box-sizing: border-box;
   margin-bottom: 1rem;
+  padding: calc(0.75rem - 1px) calc(1rem - 1px);
+  color: #232429;
   border: 1px solid #919297;
   border-radius: 15px;
-  background: #ffffff;
-  padding: calc(0.75rem - 1px) calc(1rem - 1px);
+  background: #fff;
   line-height: 1.5rem;
-  color: #232429;
-  box-sizing: border-box;
 }
 
+/* stylelint-disable */
 #views-exposed-form-media-library-widget .media-library-content {
   width: unset !important;
 }
@@ -21,6 +22,7 @@
   margin-top: 2rem !important;
 }
 
+/* stylelint-enable */
 .media-library-views-form {
   display: block;
   flex-wrap: wrap !important;
@@ -30,9 +32,9 @@
   display: block !important;
   width: 100% !important;
   max-width: 50% !important;
-  border: 1px solid lightgrey;
   margin: 1rem;
   padding: 1rem;
+  border: 1px solid #d3d3d3;
 }
 
 .media-library-view .views-exposed-form.usa-form {

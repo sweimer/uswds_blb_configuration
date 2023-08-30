@@ -7,89 +7,87 @@ $bg-pos-toggle-size: 15px;
 .uswds_background--position {
 
   .form-radios {
-    border: 1px solid $white;
-    height: 70px;
     position: relative;
     display: flex;
     width: 100%;
     max-width: 50%;
+    height: 70px;
     margin-top: 4px;
+    border: 1px solid $white;
 
     input {
       @include sr-only;
 
       &:checked + label,
       &:checked + label:hover {
-        background-color: $panel_link_color;
-        border: 1px solid $box_input_bg;
-        box-shadow: inset 0 0 0 2px $panel_bg_color;
         transform: scale(1.2);
+        border: 1px solid $box-input-bg;
+        background-color: $panel-link-color;
+        box-shadow: inset 0 0 0 2px $panel-bg-color;
       }
 
       ~ label {
         position: absolute;
-        background-color: $box_input_bg_checked;
-        border: 2px solid $panel_bg_color;
-        border-radius: 50%;
         width: $bg-pos-toggle-size;
         height: $bg-pos-toggle-size;
-        font-size: 0;
-        cursor: pointer;
         margin: 0;
-
-        transform: perspective(1px) translateZ(0);
+        cursor: pointer;
         transition-duration: 0.5s;
+        transform: perspective(1px) translateZ(0);
+        border: 2px solid $panel-bg-color;
+        border-radius: 50%;
+        background-color: $box-input-bg-checked;
+        font-size: 0;
 
         &:hover {
-          background-color: $panel_text_color;
-          animation: hover-pop 0.3s linear 1;
+          background-color: $panel-text-color;
         }
       }
 
       // Left side
-      &[value='left top'] ~ label {
-        left: calc(-15px / 2);
+      &[value="left top"] ~ label {
         top: calc(-15px / 2);
+        left: calc(-15px / 2);
       }
 
-      &[value='left center'] ~ label {
-        left: calc(-15px / 2);
+      &[value="left center"] ~ label {
         top: calc(50% - calc(15px / 2));
+        left: calc(-15px / 2);
       }
 
-      &[value='left bottom'] ~ label {
-        left: calc(-15px / 2);
+      &[value="left bottom"] ~ label {
         bottom: calc(-15px / 2);
+        left: calc(-15px / 2);
       }
 
       // Center
-      &[value='center top'] ~ label {
-        left: calc(50% - calc(15px / 2));
+      &[value="center top"] ~ label {
         top: calc(-15px / 2);
+        left: calc(50% - calc(15px / 2));
       }
 
-      &[value='center'] ~ label {
-        left: calc(50% - calc(15px / 2));
+      &[value="center"] ~ label {
         top: calc(50% - calc(15px / 2));
+        left: calc(50% - calc(15px / 2));
       }
 
-      &[value='center bottom'] ~ label {
-        left: calc(50% - calc(15px / 2));
+      &[value="center bottom"] ~ label {
         bottom: calc(-15px / 2);
+        left: calc(50% - calc(15px / 2));
       }
 
       // Right
-      &[value='right top'] ~ label {
-        right: calc(-15px / 2);
+      &[value="right top"] ~ label {
         top: calc(-15px / 2);
-      }
-
-      &[value='right center'] ~ label {
         right: calc(-15px / 2);
-        top: calc(50% - calc(15px / 2));
       }
 
-      &[value='right bottom'] ~ label {
+      &[value="right center"] ~ label {
+        top: calc(50% - calc(15px / 2));
+        right: calc(-15px / 2);
+      }
+
+      &[value="right bottom"] ~ label {
         right: calc(-15px / 2);
         bottom: calc(-15px / 2);
       }

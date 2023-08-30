@@ -2,46 +2,45 @@
 @import "base";
 
 // Mixin that generate a color based classes like
-// "color" or "background-color".
+// 'color' or 'background-color'.
 //
 // @param $prop
 //   Like color or background-color.
 // @param $abbrev
 //   The word after class prefix like text or bg.
-@mixin make-color($prop, $abbrev, $is_bg_color: false) {
+@mixin make-color($prop, $abbrev, $is-bg-color: false) {
   // Generate the general classes first.
-  @each $color_key, $color_value in $uswds_text_colors {
+  @each $color-key, $color-value in $uswds-text-colors {
     // The class style.
-    @include base-rule(".#{$abbrev}-#{$color_key}", "#{$prop}", "#{$color_value} !important");
+    @include base-rule(".#{$abbrev}-#{$color-key}", "#{$prop}", "#{$color-value} !important");
 
-    @if $is_bg_color == false {
-      @include base-rule(".#{$abbrev}-#{$color_key} .field--type-text-long a", "#{$prop}", "#{$color_value}");
-      @include base-rule(".#{$abbrev}-#{$color_key} h2", "#{$prop}", "#{$color_value}");
-      @include base-rule(".#{$abbrev}-#{$color_key} .field--type-text-with-summary a", "#{$prop}", "#{$color_value}");
-
-      @include base-rule(".#{$abbrev}-#{$color_key} .field--type-text-long a:visited", "#{$prop}", "#{$color_value}");
-      @include base-rule(".#{$abbrev}-#{$color_key} .field--type-text-with-summary a:visited", "#{$prop}", "#{$color_value}");
+    @if $is-bg-color == false {
+      @include base-rule(".#{$abbrev}-#{$color-key} .field--type-text-long a", "#{$prop}", "#{$color-value}");
+      @include base-rule(".#{$abbrev}-#{$color-key} h2", "#{$prop}", "#{$color-value}");
+      @include base-rule(".#{$abbrev}-#{$color-key} .field--type-text-with-summary a", "#{$prop}", "#{$color-value}");
+      @include base-rule(".#{$abbrev}-#{$color-key} .field--type-text-long a:visited", "#{$prop}", "#{$color-value}");
+      @include base-rule(".#{$abbrev}-#{$color-key} .field--type-text-with-summary a:visited", "#{$prop}", "#{$color-value}");
     }
 
     // Fix the dispaly on off-canvas dialog.
-    #{$bs_off_canvas_selector} {
-      @include base-rule(".#{$abbrev}-#{$color_key}", "#{$prop}", "#{$color_value} !important");
+    #{$bs-off-canvas-selector} {
+      @include base-rule(".#{$abbrev}-#{$color-key}", "#{$prop}", "#{$color-value} !important");
     }
   }
 
   // Then generate the classes for Breakpoints.
-  @each $breakpoint_key, $media in $uswds_breakpoints {
+  @each $breakpoint-key, $media in $uswds-breakpoints {
     @media #{$media} {
-      @each $color_key, $color_value in $uswds_text_colors {
+      @each $color-key, $color-value in $uswds-text-colors {
         // The class style.
-        @include base-rule(".#{$abbrev}-#{$breakpoint_key}-#{$color_key}", "#{$prop}", "#{$color_value} !important");
+        @include base-rule(".#{$abbrev}-#{$breakpoint-key}-#{$color-key}", "#{$prop}", "#{$color-value} !important");
       }
     }
 
     // Fix the dispaly on off-canvas dialog.
-    @each $color_key, $color_value in $uswds_text_colors {
-      #{$bs_off_canvas_selector} {
-        @include base-rule(".#{$abbrev}-#{$breakpoint_key}-#{$color_key}", "#{$prop}", "#{$color_value} !important");
+    @each $color-key, $color-value in $uswds-text-colors {
+      #{$bs-off-canvas-selector} {
+        @include base-rule(".#{$abbrev}-#{$breakpoint-key}-#{$color-key}", "#{$prop}", "#{$color-value} !important");
       }
     }
   }

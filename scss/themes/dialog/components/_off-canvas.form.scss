@@ -7,59 +7,56 @@
  */
 
 form {
-  color: $panel_text_color;
-  font-family: inherit;
   display: inline-block;
   width: 100%;
+  color: $panel-text-color;
+  font-family: inherit;
 }
 
-input[type="checkbox"] {
-  margin-right: .5rem;
-}
-
-input[type="radio"] {
-  margin-right: .5rem;
+input {
+  &[type="checkbox"],
+  &[type="radio"] {
+    margin-right: 0.5rem;
+  }
 }
 
 label {
-  color: $panel_text_color;
+  color: $panel-text-color;
   font-size: 1rem;
   font-weight: normal;
 }
 
-.description,
-.form-item .description,
-.details-description {
-  color: rgba($panel_text_color, .5);
-  font-size: .875rem;
-  margin-top: .25rem;
-  margin-bottom: 1rem;
-}
-
 .form-item {
-  margin-top: .25rem;
-  margin-bottom: 1rem;
   width: 100%;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
 
-  // Safari only
-  @media not all and (min-resolution: .001dpcm) {
-    @supports (-webkit-appearance:none) and (display:flow-root) {
-      display: block;
-    }
+  .description {
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+    color: rgba($panel-text-color, 0.5);
+    font-size: 0.875rem;
   }
 }
 
+.details-description {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  color: rgba($panel-text-color, 0.5);
+  font-size: 0.875rem;
+}
+
 .fieldset-legend {
-  font-size: .875rem;
-  margin-bottom: 0.5rem;
   display: inline-block;
+  margin-bottom: 0.5rem;
+  color: rgba($panel-text-color, 0.6);
+  font-size: 0.875rem;
   font-weight: normal;
-  color: rgba($panel_text_color, .6);
 }
 
 .form-select {
-  background-size: 25px;
   background: no-repeat right 10px center;
+  background-size: 25px;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -88,99 +85,27 @@ label {
 .form-textarea,
 .form-date,
 .form-time {
-  @include smooth-all-transition;
-  color: inherit;
-  font-size: 1rem;
   width: 100%;
-  border-radius: $border_radius;
-  padding: .65rem 1rem;
-  border: 2px solid $tabs_bottom_border_color;
+  padding: 0.65rem 1rem;
+
+  @include smooth-all-transition;
+
+  color: inherit;
+  border: 2px solid $tabs-bottom-border-color;
+  border-radius: $border-radius;
   background-color: transparent;
   box-shadow: none;
+  font-size: 1rem;
+
 
   &:hover {
-    border-color: rgba($panel_text-color, .75);
+    border-color: rgba($panel-text-color, 0.75);
   }
 
   &:focus {
-    border-color: $panel_link_color;
+    border-color: $panel-link-color;
+    outline: 0;
     background-color: transparent;
     box-shadow: none;
-    outline: 0;
   }
-}
-
-// Inline Entity Forms & Inline Containers with buttons.
-.container-inline,
-.ief-form .form-wrapper .form-wrapper:last-child[data-drupal-selector$="-actions"],
-.ief-form > .fieldset-wrapper > .form-wrapper:last-child[data-drupal-selector$="-actions"] {
-  display: flex;
-  margin: 0 -1rem;
-
-  > div {
-    flex-grow: 1;
-    padding: 0 1rem;
-  }
-
-  > input[type="submit"].button {
-    margin-right: 1rem;
-    margin-left: 1rem;
-  }
-}
-
-.ief-form {
-  background-color: rgba($panel_text_color, .035);
-  padding: 1rem 2rem 2rem 2rem;
-  border-radius: $border-radius;
-
-  > legend {
-    float: left;
-  }
-}
-
-// IEF Entity Table
-.ief-entity-table {
-  tr:hover td {
-    background-color: rgba($panel_text_color, .035);
-  }
-
-  .ief-row-entity td:last-child {
-    width: 200px;
-  }
-}
-
-// Operations table
-.ief-entity-operations {
-  display: flex;
-
-  input[type="submit"].button {
-    font-size: .85rem;
-    padding: .5rem .75rem;
-    margin: .5rem;
-  }
-}
-
-
-// Fixes for CKEditor
-.cke {
-  background-color: $white;
-}
-
-.filter-wrapper .form-item {
-  margin-bottom: .25rem;
-}
-
-.cke_reset_all,
-.cke_reset_all *,
-.cke_reset_all a,
-.cke_reset_all textarea {
-  color: $black;
-}
-
-.js-text-format-wrapper .form-type-textarea {
-  margin-bottom: 0;
-}
-
-.filter-wrapper {
-  border-radius: 0 0 $border-radius $border-radius;
 }
