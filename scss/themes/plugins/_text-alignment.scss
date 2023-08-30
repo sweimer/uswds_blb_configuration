@@ -5,6 +5,11 @@ $text-alignment-icon-path: "../../images/plugins/text-alignment/";
 
 // Text Alignment
 .field-text-alignment {
+  .form-radios {
+    display: flex;
+    justify-content: space-between;
+  }
+
   input {
     + label {
       text-indent: -999em;

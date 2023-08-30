@@ -3552,6 +3552,12 @@
   /* stylelint-disable-line */
 }
 
+#drupal-off-canvas .field-text-alignment .form-radios,
+#layout-builder-modal .field-text-alignment .form-radios {
+  display: flex;
+  justify-content: space-between;
+}
+
 #drupal-off-canvas .field-text-alignment input + label,
 #layout-builder-modal .field-text-alignment input + label {
   text-indent: -999em;
